@@ -120,10 +120,12 @@
 
 		<div class="left_column">
 
+<% products.forEach(function(group) { %> 
+	
 
 <div style="width:60%;float:left;">
-<h1 style="font-family:TP;font-size:36pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;">Ace of<br/> Hearts</h1>
-<img src="/images/invitations/ace/browse.jpg" style="width:100%;" />
+<h1 style="font-family:TP;font-size:36pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[0].name %></h1>
+<img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" />
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
@@ -131,9 +133,9 @@
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
-<div style="width:40%;float:right;"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;">Enchanted</h1>
+<div style="width:40%;float:right;"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1>
 
-<img src="/images/invitations/rose/browse.jpg" style="width:100%;" />
+<img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" />
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
@@ -142,9 +144,9 @@
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
 <div style="clear:both;width:80%;margin:0 auto;">
-<h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;">Birds of<br/>Paradise</h1>
+<h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1>
 
-<img src="/images/invitations/bop_spirals/browse.jpg" style="width:100%;" />
+<img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" />
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.1em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
@@ -152,7 +154,7 @@
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
-
+<% }) %>
 				<div id="form_panel" style="clear:both;">
 					<img src="/images/homepage/icons/book-3.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
 

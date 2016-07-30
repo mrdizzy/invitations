@@ -6,8 +6,8 @@
 	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
 ]>
 <svg  version="1.1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 width="157" height="43" viewBox="-0.442 -0.332 157 43" enable-background="new -0.442 -0.332 157 43" xml:space="preserve">
+	 width="157" height="41" viewBox="-0.44 -0.33 157 41" enable-background="new -0.44 -0.33 157 41" xml:space="preserve">
 <defs>
 </defs>
-<polygon fill="#F0EFEF" points="77.815,0 116.723,20.971 155.631,41.943 77.815,41.943 0,41.943 38.908,20.971 "/>
+<polygon fill="#F0EFEF" points="77.81,0 116.72,20.08 155.63,40.16 77.81,40.16 0,40.16 38.91,20.08 "/>
 </svg>
