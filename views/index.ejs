@@ -250,25 +250,14 @@
 
 
 		<div id="slides">
+		
+		<% products.forEach(function(invitation) { %>
+		
 
-			<img src="/images/invitations/ace/invitation_collage_ribbon.jpg" />
-			<img src="/images/invitations/ace/four.jpg" />
+			<img src="/images/invitations/<%= invitation.name %>/invitation_collage.jpg" />
+			<img src="/images/invitations/<%= invitation.name %>/four.jpg" />
 
-			<img src="/images/invitations/butterfly/invitation_collage.jpg" />
-			<img src="/images/invitations/butterfly/four.jpg" />
-
-			<img src="/images/invitations/bop_spirals/invitation_collage_grass.jpg" />
-			<img src="/images/invitations/bop_spirals/four.jpg" />
-
-
-			<img src="/images/invitations/serif_frame/collage.jpg" />
-			<img src="/images/invitations/serif_frame/four.jpg" />
-
-			<img src="/images/invitations/rose/invitation_collage_grass.jpg" />
-			<img src="/images/invitations/rose/four.jpg" />
-
-			<img src="/images/invitations/floral_woodcut/collage_ribbon.jpg" />
-			<img src="/images/invitations/floral_woodcut/four.jpg" />
+		<%}) %>
 
 		</div>
 		<img src="/images/logo/genesis_horizontal.svg" id="genesis" />
