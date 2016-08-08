@@ -1,6 +1,7 @@
 <!doctype html>
 
 <body>
+<head>
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans:400,300,300italic,800,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
@@ -13,12 +14,11 @@
 		
 		#headline {
 			font-family: 'Gara';
-			background-color: #F1F0F0;
 			padding-top: 0em;
-			width: 75%;
+			width: 85%;
 			text-align: center;
 			color: #222;
-			font-size: 36pt;
+			font-size: 32pt;
 			margin: 0;
 			line-height: 1.4em;
 			border-bottom: 0;
@@ -60,7 +60,7 @@
 			line-height: 1.5em;
 			font-size: 13pt;
 			padding-top: 1em;
-			width: 85%;
+			width: 90%;
 			margin: 0 auto;
 		}
 		
@@ -72,7 +72,7 @@
 		}
 		
 		a {
-			color: darkred;
+			color: black;
 		}
 		
 		#casamiento_logo {
@@ -85,6 +85,23 @@
 			padding: 5px;
 			background-color: white;
 			border-bottom-right-radius: 10px;
+		}
+		
+		#browse { 
+		position:fixed;
+		margin: 0 auto;
+		text-align:center;
+		font-family:"Avenir";
+		font-size:14pt;
+		font-weight:300;
+	
+		z-index:100;
+		width:100%;
+		}
+		
+		#browse a
+		{
+			text-decoration:none;
 		}
 		
 		.pure-button {
@@ -143,14 +160,19 @@
 			margin-left: 10%;
 		}
 		
-		.left_column {
-			margin: 0 auto;
-			width: 75%;
+		#left_column {
+			width: 65%;
+			float:left;
+		}
+		#right_column {
+			margin-left:65%;
 		}
 		
 		input {
 			background-color: #EEE;
 			border: 1px solid black;
+			font-family:Avenir;
+			font-weight:100;
 		}
 		
 		input:hover {
@@ -236,7 +258,21 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<script src="/javascripts/jquery.slides.min.js"></script>
+	<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
+fbq('init', '1165096770179288');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
 	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 	
 	-->
@@ -245,7 +281,13 @@
 
 
 		<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
-
+ <div id="browse">
+ <div id="browse_container" style="background-color:white;border-bottom-right-radius:10px;width:225px;margin:0 auto;border-bottom-left-radius:10px;text-align:center;padding-bottom:5px;padding-left:5px;padding-right:5px;">
+			<a href="/products"><img src="/images/furniture/browse.svg" style="vertical-align:middle" /></a>
+			<a href="/products"><span id="browse_link">BROWSE DESIGNS</a>
+			</div>
+		</div>
+	 
 		<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
 
@@ -254,7 +296,7 @@
 		<% products.forEach(function(invitation) { %>
 		
 
-			<img src="/images/invitations/<%= invitation.name %>/invitation_collage.jpg" />
+			<img src="/images/invitations/<%= invitation.name %>/collage.jpg" />
 			<img src="/images/invitations/<%= invitation.name %>/four.jpg" />
 
 		<%}) %>
@@ -262,13 +304,12 @@
 		</div>
 		<img src="/images/logo/genesis_horizontal.svg" id="genesis" />
 
+		<div id="left_column">
+
 		<p id="headline" style="font-family:TP">
 
 	&ldquo;If the invitation was anything to go by, then I was already dreading the actual wedding&hellip;&rdquo;</p>
-		<img src="/images/furniture/triangle.svg" style="margin-left:20%;padding:0;display:block;" />
-
-		<div class="left_column">
-
+<img src="/images/furniture/flourish_line.svg" style="display:block;margin:0 auto;width:50%;"/>
 
 			<p class="benefit" style="font-size:18pt">
 
@@ -282,11 +323,11 @@
 
 
 				<div id="form_panel">
-					<img src="/images/homepage/icons/book-3.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
+					<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
 
 					<div style="padding:0.5em;">
 
-						<p style="text-align:center;font-family:'Open Sans';font-size:11pt;font-weight:300;width:75%;margin:0 auto;padding-bottom:1em;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
+						<p style="text-align:center;font-family:'Avenir';font-size:12pt;font-weight:300;width:85%;margin:0 auto;padding-bottom:1em;line-height:16pt;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
 
 						<form class="pure-form form-aligned">
 							<div class="pure-control-group">
@@ -381,25 +422,6 @@
 
 				<!---------------------------- SECTION -->
 
-
-				<div id="form_panel">
-					
-					<img src="/images/homepage/icons/book.svg" style="margin-top:-1.5em;"/>
-					<p class="benefit" style="font-size:18pt;font-weight:bold;text-align:center;">Avoid embarassing mistakes!</p>
-					<p class="benefit" style="text-align:center;">
-					&hellip;download our ebook <span style="font-style:italic;">The Complete Guide to Wedding Stationery</span>, completely free today&hellip;</p>
-					<img src="/images/homepage/ebook_cover.png" style="width:90%;"/>
-					
-					<ul style="padding:0;margin:0;">
-					<li> everything you need to know about wedding invitation etiquette: from choosing the right wording, to addressing your guests, </li>
-
-<li>5 top tips for getting people to RSVP to your wedding invitation</li>
-
-<li>three wedding invitation horror stories that are unsurprisingly common, and how to prevent them from happening to you!</li>
-</ul>
-
-
-					</div>
 
 
 				<!---------------------------- SECTION -->
@@ -939,8 +961,32 @@ It's monotonous and rage-inducing to keep hearing the same questions again and a
 
 </p>
 	</div>
+	
+	<div id="right_column">
+	
+				<div id="form_panel" style="width:95%;">
+					
+					<img src="/images/homepage/icons/open-book-top-view.svg" style="width:50px;margin-top:-1.5em;"/>
+					<p class="benefit" style="font-size:18pt;font-weight:bold;text-align:center;margin-top:0;padding-top:0;">Empower yourself with knowledge!</p>
+					<p class="benefit" style="text-align:center;">
+					&hellip;download our ebook <span style="font-style:italic;">The Complete Guide to Wedding Stationery</span>, completely free today&hellip;</p>
+					<img src="/images/homepage/ebook_cover.png" style="width:80%;"/>
+					
+					<ul style="padding:0;margin:0;">
+					
+<li>three wedding invitation horror stories that are unsurprisingly common, and how to prevent them from happening to you!</li>
+					<li> everything you need to know about wedding invitation etiquette: from choosing the right wording, to addressing your guests</li>
 
-they're one-offs, unique keepsakes for you, your family and your guests to treasure forever: something to pass down to your children and grandchildren.
+<li>5 top tips for getting people to RSVP to your invitations</li>
+
+<li>the embarassing mistakes people make that you can avoid</li>
+</ul>
+
+
+					</div>
+
+	</div>
+
 	<script>
 		$(function() {
 

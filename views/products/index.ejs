@@ -29,11 +29,16 @@
 			margin: 0 auto;
 			width: 95%;
 		}
-		
 		a {
 			color: darkred;
+			
+		text-decoration: none;
 		}
+		a:hover { text-decoration:underline;color:black;}
 		
+		a h1 { 
+		color:black;
+		}
 		#casamiento_logo {
 			display: block;
 			top: 0;
@@ -124,33 +129,35 @@
 	
 
 <div style="width:60%;float:left;">
-<h1 style="font-family:TP;font-size:36pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[0].name %></h1>
-<img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" />
+
+<a href="/products/<%= group[0].name %>"><h1 style="font-family:TP;font-size:36pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[0].name %></h1></a>
+<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					Inspired by Lewis Carrol, this feaures a guilloche pattern seen on the back of playing cards to go with the Ace of Hearts theme. </div>
+					<%= group[0].description %></div>
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
-<div style="width:40%;float:right;"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1>
+<div style="width:40%;float:right;">
+<a href="/products/<%= group[1].name %>"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1></a>
 
-<img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" />
+<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					Inspired by Lewis Carrol, this feaures a guilloche pattern seen on the back of playing cards to go with the Ace of Hearts theme. </div>
+					<%= group[1].description %></div>
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
 <div style="clear:both;width:80%;margin:0 auto;">
-<h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1>
+<a href="/products/<%= group[2].name %>"><h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1><a>
 
-<img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" />
+<a href="/products/<%= group[2].name %>"><img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" /></a>
 <div style="position:relative;top:-3em;z-index:4;">
 		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 			<div class="blurb" style="position:relative;top:-0.1em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					Inspired by Lewis Carrol, this feaures a guilloche pattern seen on the back of playing cards to go with the Ace of Hearts theme. </div>
+					<%= group[2].description %></div>
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
