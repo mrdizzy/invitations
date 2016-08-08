@@ -16,6 +16,27 @@ MongoClient.connect(url, function(err, db) {
 
 }
 
+exports.show = function(req, res) {	
+var id = req.params.id;
+MongoClient.connect(url, function(err, db) {
+	assert.equal(null, err);
+	findProduct(db, id, function(results) {
+	
+		res.render('products/show', { product: results[0]})
+		db.close();
+	})
+});
+}
+
+
+var findProduct = function(db, id, callback) {
+ var results = db.collection('products').find({ "name": id} ).toArray(function(err, results) {
+
+		callback(results)
+	 })
+	
+	
+}
 var findProducts = function(db, callback) {
    var results = db.collection('products').find().toArray(function(err, results) {
 	

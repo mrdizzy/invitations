@@ -5,5 +5,6 @@ var router = express.Router();
 router.get('/', require('./../controllers/homepage').index);
 
 router.get('/products', require('./../controllers/products').index)
+router.get('/products/:id', require('./../controllers/products').show)
 
 module.exports = router;
