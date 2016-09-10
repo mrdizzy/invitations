@@ -17,7 +17,7 @@
 		
 		#form_panel {
 			padding: 0;
-			width: 95%;
+			width: 75%;
 			text-align: center;
 			background-color: #EEE;
 			border-radius: 1em;
@@ -152,7 +152,7 @@
 	<div id="inner_page_container_casamiento">
 
 
-		<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
+	<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
 
 		<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
@@ -169,6 +169,38 @@
 			</div>
 			
 			
+			<div id="form_panel">
+				<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
+
+				<div style="padding:0.5em;">
+
+					<p style="text-align:center;font-family:'Avenir';font-size:14pt;font-weight:100;width:75%;margin:0 auto;padding-bottom:1em;">To get a <span style="font-weight:bold;">FREE</span> sample of this stunning invitation suite posted to you in 24 hours, just enter your email and address&hellip;</p>
+
+					<form class="pure-form form-aligned">
+					<div class="pure-control-group">
+
+							<input type="email" name="email" placeholder="Email address"></input>
+						</div>
+
+						<div class="pure-control-group">
+
+							<input type="text" name="address" placeholder="House number or name"></input>
+						</div>
+
+
+						<div class="pure-control-group">
+
+							<input type="text" name="postcode" placeholder="Your postcode"></input>
+						</div>
+
+						</fieldset>
+						<div style="text-align:center;">
+							<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em;font-size:14pt;font-family:Avenir">Yes, post my sample now!</button>
+
+						</div>
+					</form>
+				</div>
+				</div>
 						<div style="margin-top:0.5em;background-color:#F1EFF0;">
 				<img src="/images/product/swirling-ribbon-silhouette.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:40px;" />
 			</div>
@@ -214,36 +246,10 @@
 
 
 			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">
-				&mdash;Ace of Hearts&mdash;</h1>
+				&mdash;<%= product.name %>&mdash;</h1>
 			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
-			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;">A beautiful set of stationery with inspiration taken from Lewis Caroll’s Alice in Wonderland</h2>
+			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;"><%= product.description %></h2>
 
-			<div id="form_panel">
-				<img src="/gfx/sample_envelope.svg" style="width:50px;display:block;margin:0 auto;" />
-
-				<div style="padding:0.5em;">
-
-					<p style="text-align:center;font-family:'Open Sans';font-size:12pt;font-weight:300;width:75%;margin:0 auto;padding-bottom:1em;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
-
-					<form class="pure-form form-aligned">
-						<div class="pure-control-group">
-
-							<input type="text" name="address" placeholder="House number or name"></input>
-						</div>
-
-
-						<div class="pure-control-group">
-
-							<input type="text" name="postcode" placeholder="Your postcode"></input>
-						</div>
-
-						</fieldset>
-						<div style="text-align:center;">
-							<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em;font-size:14pt;">Post my sample!</button>
-
-						</div>
-					</form>
-				</div>
 			</div>
 		</div>
 	</div>
