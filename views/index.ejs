@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 	<style type="text/css">
-	
+
 		#slides img {
 			display: block;
 		}
-		
+
 		#headline {
 			font-family: 'Gara';
 			padding-top: 0em;
@@ -29,7 +29,7 @@
 			padding-bottom: 0.5em;
 			padding-top: 0.5em;
 		}
-		
+
 		#form_panel {
 			padding: 0;
 			width: 70%;
@@ -39,19 +39,19 @@
 			margin: 0 auto;
 			margin-top: 3em;
 		}
-		
+
 		#slides {
 			width: 95;
 			margin: 0 auto;
 			display: none;
 			clear: both;
 		}
-		
+
 		label {
 			font-family: "Gara";
 			font-size: 12pt;
 		}
-		
+
 		.benefit {
 			text-align: left;
 			text-indent: 0.75em;
@@ -60,21 +60,21 @@
 			line-height: 1.5em;
 			font-size: 13pt;
 			padding-top: 1em;
-			width: 90%;
+			width: 70%;
 			margin: 0 auto;
 		}
-		
+
 		#inner_page_container_casamiento {
 			color: #000;
 			padding: 0;
 			margin: 0 auto;
 			width: 95%;
 		}
-		
+
 		a {
 			color: black;
 		}
-		
+
 		#casamiento_logo {
 			display: block;
 			top: 0;
@@ -86,24 +86,31 @@
 			background-color: white;
 			border-bottom-right-radius: 10px;
 		}
-		
-		#browse { 
+
+		#browse {
 		position:fixed;
 		margin: 0 auto;
 		text-align:center;
 		font-family:"Avenir";
 		font-size:14pt;
 		font-weight:300;
-	
+
 		z-index:100;
 		width:100%;
 		}
-		
+
+		.error {
+			text-align:center;
+			font-family:'Avenir';
+			font-weight:bold;
+			font-size:12pt;font-weight:100;
+			color:#B50000;
+		}
 		#browse a
 		{
 			text-decoration:none;
 		}
-		
+
 		.pure-button {
 			background-color: grey;
 			font-family: 'Open Sans';
@@ -112,7 +119,7 @@
 			padding-top: 1em;
 			padding-bottom: 1em;
 		}
-		
+
 		#dreams_slogan {
 			display: block;
 			top: 0;
@@ -124,7 +131,7 @@
 			border-bottom-left-radius: 10px;
 			width: 180px;
 		}
-		
+
 		ul {
 		font-family:Avenir;
 			line-height: 1.2em;
@@ -132,55 +139,48 @@
 			padding-top: 1em;
 			text-align: left;
 		}
-		
+
 		li {
 			padding-top: 0.45em;
 			margin-left:3.5em;
 		}
-		
+
 		#genesis {
 			display: block;
 			margin: 0 auto;
 			position: relative;
-			z-index: 99999999;
+			z-index: 99;
 			background-color: white;
-			padding: 0.5em;
+			padding: 1em;
 			border-radius: 1em;
 			margin-top: -1.5em;
 		}
-		
+
 		.slidesjs-pagination {
 			margin-top: 0;
 		}
-		
+
 		.slidesjs-previous,
 		.slidesjs-next {}
-		
+
 		.slidesjs-next {
 			margin-left: 10%;
 		}
-		
-		#left_column {
-			width: 65%;
-			float:left;
-		}
-		#right_column {
-			margin-left:65%;
-		}
-		
+
+
 		input {
 			background-color: #EEE;
 			border: 1px solid black;
 			font-family:Avenir;
 			font-weight:100;
 		}
-		
+
 		input:hover {
 			background-color: white;
 		}
 		/* Smartphone */
 		/* ----------------------------------------------------------------------------- */
-		
+
 		@media all and (min-width: 260px) and (max-width: 680px) {
 			#inner_page_container_casamiento {
 				width: 100%;
@@ -236,21 +236,21 @@
 			}
 		}
 		/* Phablet */
-		
+
 		@media all and (min-width: 681px) and (max-width: 900px) {
 			/* ----------------------------------------------------------------------------- */
 		}
-		
+
 		@media all and (min-width: 500px) and (max-width: 800px) {
 			/* ----------------------------------------------------------------------------- */
 		}
 		/* IN BETWEEN */
-		
+
 		@media all and (min-width: 680px) and (max-width: 830px) {
 			/* ----------------------------------------------------------------------------- */
 		}
 		/* IN BETWEEN */
-		
+
 		@media all and (min-width: 831px) and (max-width: 1170px) {
 			/* ----------------------------------------------------------------------------- */
 		}
@@ -273,8 +273,8 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 </head>
-	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-	
+	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 	-->
 
 	<div id="inner_page_container_casamiento">
@@ -287,14 +287,14 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 			<a href="/products"><span id="browse_link">BROWSE DESIGNS</a>
 			</div>
 		</div>
-	 
+
 		<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
 
 		<div id="slides">
-		
+
 		<% products.forEach(function(invitation) { %>
-		
+
 
 			<img src="/images/invitations/<%= invitation.name %>/collage.jpg" />
 			<img src="/images/invitations/<%= invitation.name %>/four.jpg" />
@@ -304,9 +304,8 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 		</div>
 		<img src="/images/logo/genesis_horizontal.svg" id="genesis" />
 
-		<div id="left_column">
 
-		<p id="headline" style="font-family:TP">
+		<p id="headline" style="font-family:Gara;width:70%;font-size:3em;">
 
 	&ldquo;If the invitation was anything to go by, then I was already dreading the actual wedding&hellip;&rdquo;</p>
 <img src="/images/furniture/flourish_line.svg" style="display:block;margin:0 auto;width:50%;"/>
@@ -314,43 +313,61 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 			<p class="benefit" style="font-size:18pt">
 
 				&ldquo;I remember getting a homemade wedding invitation in the mail which had completely fallen apart. The stuck-on ribbon and lace had fallen off as had the fake flower because of the cheap glue they used&hellip;&rdquo;</p>
-				
+
 			<p class="benefit" style="font-size:18pt">
 			&ldquo;The paper was cut crooked and you could see the pencil outlines they used to cut along&mdash;it just made me cringe. I couldn't believe they could send that to people&hellip; I'd be too ashamed.&rdquo;</p>
-			
+
 			<p class="benefit" style="FONT-SIZE:18PT">&ldquo;I know weddings are incredibly expensive but it really set the mood for the whole wedding: I already started to imagine how awful the actual event was going to be.&rdquo;</p>
 
 
+
+
+
+<!-- SAMPLE FORM
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+-->
 
 				<div id="form_panel">
 					<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
 
 					<div style="padding:0.5em;">
+						<p style="text-align:center;font-family:'Avenir';font-size:14pt;font-weight:100;width:85%;margin:0 auto;padding-bottom:1em;line-height:18pt;">&hellip;sorry to interrupt, but I don't want you to miss out: to get your own <span style="font-weight:800;">FREE</span> sample box containing:</p> <ul>
+						<li>three beautiful invitation suites (card, envelope, rsvp, info sheet and embellishments) from our collection </li>
+						<li>swatches of our card textures for you to see and touch</li>
+						<li>colour chart so you can find your exact colour match; <span style="font-style:italic;">and</span></li>
+						<li>our breathtaking luxury catalogue for you to browse</li></ul>
+							<p style="text-align:center;font-family:'Avenir';font-size:14pt;font-weight:100;width:85%;margin:0 auto;padding-bottom:1em;line-height:18pt;"><span style="font-weight:800;">usually worth £14.99</span>, enter your name and address now&hellip;</p>
 
-						<p style="text-align:center;font-family:'Avenir';font-size:14pt;font-weight:100;width:85%;margin:0 auto;padding-bottom:1em;line-height:18pt;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
+<img src="/images/homepage/sample_box.png" style="width:300px;" />
 
-						<form class="pure-form form-aligned">
+						<form class="pure-form form-aligned" name="sample" id="form_sample">
+
 							<div class="pure-control-group">
-
-								<input type="text" name="address" placeholder="House number or name"></input>
+								<p class="error" id="error_address"></p>
+								<input type="text" id="address" name="address" placeholder="House number or name"></input>
 							</div>
 
 
 							<div class="pure-control-group">
 
-								<input type="text" name="postcode" placeholder="Your postcode"></input>
+								<p class="error" id="error_postcode"></p>
+								<input type="text" id="postcode" name="postcode" placeholder="Your postcode"></input>
 							</div>
 
 							</fieldset>
 							<div style="text-align:center;">
-								<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my FREE catalogue now!</button>
+								<button type="submit" id="get_sample" class="pure-button pure-button-primary" style="margin:0.5em">Post my FREE sample box now!</button>
 
 							</div>
 						</form>
 					</div>
 				</div>
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-			
+
 
 			<p class="benefit">The above is a quote from one of our brides remembering a wedding invitation she'd once received: the memory of that invitation haunted her, and she vowed never to make the same mistakes!</p>
 
@@ -359,14 +376,14 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 		<p class="benefit">They're just as important as the photographs and the dress when it comes to a record of your special day.
 
 				</p>
-				
-				
+
+
 				<!---------------------------- SECTION -->
 
 				<div style="margin-top:0.5em;background-color:#F1EFF0;">
-					<img src="/images/homepage/icons/package.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:45px;" />
+					<img src="/images/homepage/icons/ribbon.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:45px;" />
 				</div>
-				
+
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
 
@@ -436,14 +453,60 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 <p class="benefit" style="font-size:18pt;">
 	Nothing lets a good invitation down like a bad envelope:
 </p>
-			
+
 			<p class="benefit">
-				
+
 isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag?</p>
 
 			<p class="benefit">
 That's why companies spend millions of pounds wrapping boring things like rice in elegant, carefully-designed foil (and shoving an extra £1 on the price in the process!).</p>
 
+
+
+
+
+<!-- HORROR STORIES FORM
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+-->
+
+				<div id="form_panel" style="width:65%;">
+
+					<img src="/images/homepage/icons/open-book-top-view.svg" style="width:50px;margin-top:-1.5em;"/>
+					<p class="benefit" style="font-size:18pt;font-weight:bold;text-align:center;margin-top:0;padding-top:0;">Avoid expensive mistakes&hellip;</p>
+					<p class="benefit" style="text-align:center;">
+					&hellip;empower yourself with knowledge by learning from the devastating mistakes made by others! Download  <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
+					<ul style="padding:0;margin:0;">
+
+											<li>three important reasons why you must never order your stationery without asking for this first</li>
+<li>the one thing no one thinks to ask their stationery company: this can spoil the most beautiful invitations if you don't check first</li>
+<li>what you won't know about until your guests tell you: don't hear it from your guests first, avoid these four embarassing horror stories  </li>
+
+</ul>
+					<img src="/images/homepage/ebook_horror.png" style="width:300px;"/>
+
+											<form class="pure-form form-aligned" name="sample" id="form_sample">
+
+												<div class="pure-control-group">
+													<p class="error" id="error_address"></p>
+													<input type="email" id="email" name="email" placeholder="Your email address"></input>
+												</div>
+
+
+												</fieldset>
+												<div style="text-align:center;">
+													<button type="submit" id="get_sample" class="pure-button pure-button-primary" style="margin:0.5em">Download now</button>
+
+												</div>
+											</form>
+
+
+
+
+	</div>
 
 			<p class="benefit">
 Needless to say, boring, plain envelopes with smudged, hand-scribbled addresses will not do justice to what is inside.</p>
@@ -455,19 +518,19 @@ Needless to say, boring, plain envelopes with smudged, hand-scribbled addresses 
 			Envelopes are printed with your guest names and addresses for the perfect, saving time and looking beautiful</p>
 			<img src="/images/homepage/pointer_down.svg" />
 			</div>
-			
+
 	<img src="/images/homepage/big_illustrations/envelope.png" style="margin:0 auto;width:700px;display:block;" />
 <div style="width:50%;text-align:center;margin-top:-10em;">
 
 			<img src="/images/homepage/pointer_up.svg" />
-			
-			
+
+
 			<p class="benefit" style="text-indent:0;text-align:center;width:90%:margin:0 auto;font-size:12pt;font-style:italic;margin:0;border:0;padding:0;">
 			Our envelopes are highly tailored, with patterns and monograms printed inside and outside</div>
 			<p class="benefit">
 The envelope is the first thing your guests will see and when it arrives through the letterbox you want them to be impressed and excited to find out what's inside, not think it's another badly-written birthday card from Aunty Emily or a bill from British Gas.</p>
 
-				
+
 			<p class="benefit">
 When people see our invitations for the first time, it's usually the envelope that they are first surprised and impressed with. </p>
 
@@ -483,33 +546,33 @@ Because our highly tailored envelopes are simply so rare to see: printed both in
 And it's because envelopes are wrongly the least considered element of a wedding invitation that our high level of customisation really does make your invitation stand out: everyone is so used to boring envelopes that it's a real surprise to see something so beautiful&mdash;your invitations will be the talk of your guests who will be asking "Where did you get these made?" </p>
 
 			<p class="benefit">
-If you want to go one step further, our box envelopes really do make your guests feel as though they are receiving an expensive present (they're just like little presentation box), a gift they simply won't be able to throw away. 
+If you want to go one step further, our box envelopes really do make your guests feel as though they are receiving an expensive present (they're just like little presentation box), a gift they simply won't be able to throw away.
 
-				
+
 			</p>
-			
-			
-			
+
+
+
 
 				<!---------------------------- SECTION -->
 
 				<div style="margin-top:0.5em;background-color:#F1EFF0;"> <img src="/images/homepage/icons/crocodile-shape.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:45px;" /></div><img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
 
-				<p class="benefit" style="padding-top:0;margin-top:0;text-align:center;font-family:GaraI;line-height:1.2em;font-size:24pt;padding-bottom:0.5em;margin-top:0;width:70%;border-bottom:1px solid black;">
+				<p class="benefit subhead" style="padding-top:0;margin-top:0;text-align:center;font-family:GaraI;line-height:1.2em;font-size:24pt;padding-bottom:0.5em;margin-top:0;width:70%;border-bottom:1px solid black;">
 				The journey from postbox to letterbox is fraught with dangers&hellip;
 
 				</p>
 <p class="benefit" style="font-size:18pt;">
 	Ever wondered what happens to your invitations when they go in the post box?
 </p>
-			
+
 			<p class="benefit">
 	Does a magic fairy with clean hands magically fly them to their destination?</p>
 
 
 			<p class="benefit">No.</p>
- 
+
 
 			<p class="benefit">They are handled by at least a dozen different people, pressed between rollers, rained-upon and X-rayed&mdash;just for starters. </p>
 
@@ -549,11 +612,11 @@ If you want to go one step further, our box envelopes really do make your guests
 				<div style="width:50%;margin:0 auto;text-align:center;margin-top:-3em;">
 
 			<img src="/images/homepage/pointer_up.svg" />
-			
-			
+
+
 			<p class="benefit" style="text-indent:0;text-align:center;width:90%:margin:0 auto;font-size:12pt;font-style:italic;margin:0;border:0;padding:0;">
 			Our tissue paper not only looks stunning printed with your matching design, but acts as a seperator between cards to prevent ink transferring during transit.</div>
-			
+
 
 
 			<p class="benefit">Our waterproof vellum covers protect your invitation in the event that even the smallest bit of rain gets in. </p>
@@ -576,7 +639,7 @@ If you want to go one step further, our box envelopes really do make your guests
 <p class="benefit" style="font-size:18pt;">
 Have you any idea how long it takes to individually address each invitation and envelope?
 </p>
-			
+
 			<p class="benefit">It's probably something you haven't thought too hard about... but handwriting guest names on each invitation is a messy, time consuming , physically demanding and error prone business&hellip;</p>
 
 	<p class="benefit">Your hand will ache after a while and the beautiful handwriting you inscribed on the first invitation will start looking like a Doctor's signature by invitation number 32.</p>
@@ -739,7 +802,7 @@ Weddings are stressful enough as it is: don't add to your stress unless you care
 
 
 				<p class="benefit" style="padding-top:0;margin-top:0;text-align:center;font-family:GaraI;line-height:1.2em;font-size:24pt;padding-bottom:0.5em;margin-top:0;width:70%;border-bottom:1px solid black;">
-				
+
 Murphy's Law: Anything that can go wrong, will go wrong&hellip;
 
 				</p>
@@ -792,11 +855,11 @@ Until technology gets really intelligent, it's still really important that a hum
 				<div style="width:50%;margin:0 auto;text-align:center;margin-top:-3em;">
 
 			<img src="/images/homepage/pointer_up.svg" />
-			
-			
+
+
 			<p class="benefit" style="text-indent:0;text-align:center;width:90%:margin:0 auto;font-size:12pt;font-style:italic;margin:0;border:0;padding:0;">
 			Our tissue paper not only looks stunning printed with your matching design, but acts as a seperator between cards to prevent ink transferring during transit.</div>
-			
+
 <p class="benefit">
 I know how important it is for you to be kept informed as to what's going on. I won't hide problems from you&mdash;I'll tell you straight away so you can make informed decisions.</p>
 
@@ -804,7 +867,7 @@ I know how important it is for you to be kept informed as to what's going on. I 
 If you (or I!) have the slightest concerns about how your invitation is going to look in the flesh (colours on screen never look the same as on card, for example), I'll send you a print of every item in your suite in the post before printing goes ahead so you can be 100% confident. </p>
 
 <p class="benefit">
-If the paper you want isn't in stock, we'll tell you as soon as you place your order and I'll be honest about how long it will take to get it back in stock so you can make an informed decision rather than taking your money and then apologising for "unexpected delays" later down the line. 
+If the paper you want isn't in stock, we'll tell you as soon as you place your order and I'll be honest about how long it will take to get it back in stock so you can make an informed decision rather than taking your money and then apologising for "unexpected delays" later down the line.
 </p>
 
 
@@ -891,7 +954,7 @@ But it's only half the battle: caught up in the delight of making sure everythin
 </p>
 <p class="benefit">
 
-To do that, you need to think of all the possible questions your guests are going to have and try to answer them in the content of your invitation.  
+To do that, you need to think of all the possible questions your guests are going to have and try to answer them in the content of your invitation.
 
 </p>
 <p class="benefit">
@@ -899,7 +962,7 @@ You're also going to need to figure out what information you're going to need ba
 
 </p>
 <p class="benefit">
-Your guests are human, and like most humans, they're more likely to do something if it's easy and pain-free, so you also need to make it as easy as possible for them to reply. 
+Your guests are human, and like most humans, they're more likely to do something if it's easy and pain-free, so you also need to make it as easy as possible for them to reply.
 
 </p>
 <p class="benefit">
@@ -957,35 +1020,10 @@ Can they give vouchers or money instead of buying you another garlic press?
 
 </p>
 <p class="benefit">
-It's monotonous and rage-inducing to keep hearing the same questions again and again: avoid the bitterness by answering questions in advance with a comprehensive information enclosure. 
+It's monotonous and rage-inducing to keep hearing the same questions again and again: avoid the bitterness by answering questions in advance with a comprehensive information enclosure.
 
 </p>
-	</div>
-	
-	<div id="right_column">
-	
-				<div id="form_panel" style="width:95%;">
-					
-					<img src="/images/homepage/icons/open-book-top-view.svg" style="width:50px;margin-top:-1.5em;"/>
-					<p class="benefit" style="font-size:18pt;font-weight:bold;text-align:center;margin-top:0;padding-top:0;">Avoid expensive mistakes&hellip;</p>
-					<p class="benefit" style="text-align:center;">
-					&hellip;download our ebook <span style="font-style:italic;">The Complete Guide to Wedding Stationery</span>, completely free now&hellip;</p>
-					<img src="/images/homepage/ebook_cover.png" style="width:80%;"/>
-					
-					<ul style="padding:0;margin:0;">
-					
-<li>three wedding invitation horror stories that are unsurprisingly common, and how to prevent them from happening to you!</li>
-					<li> everything you need to know about wedding invitation etiquette: from choosing the right wording, to addressing your guests</li>
 
-<li>5 top tips for getting people to RSVP to your invitations</li>
-
-<li>the embarassing mistakes people make that you can avoid</li>
-</ul>
-
-
-					</div>
-
-	</div>
 
 	<script>
 		$(function() {
@@ -1024,6 +1062,45 @@ It's monotonous and rage-inducing to keep hearing the same questions again and a
 				}
 			})
 
-		})
+	$('#form_sample').submit(function(e) {
+		e.preventDefault();
+
+		var message = {
+			address: $('#address').val(),
+			postcode: $('#postcode').val()
+		}
+
+		var postcode_regex = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/gi;
+
+var postcode = message.postcode.match(postcode_regex);
+
+
+		if (!message.address) {
+			$('#error_address').text("Please enter a house name or number!")
+
+			$('#address').css("border-color", "#B50000")
+
+			$('#address').css("border-width", "2px")
+		}
+		if (!postcode) {
+			$('#error_postcode').text("Please enter a valid UK postcode!")
+
+			$('#postcode').css("border-color", "#B50000")
+
+			$('#postcode').css("border-width", "2px")
+		}
+		if(message_address && postcode) {
+			$.ajax({
+				type: "POST",
+				url: "/email",
+				data: message,
+				success: function(data) {	}
+			});
+		}
+
+
+	})
+
+})
 	</script>
 </body>
