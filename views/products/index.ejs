@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 	<style type="text/css">
-	
-		
+
+
 		#form_panel {
 			padding: 0;
 			width: 55%;
@@ -17,12 +17,12 @@
 			margin: 0 auto;
 			margin-top: 3em;
 		}
-		
+
 		label {
 			font-family: "Gara";
 			font-size: 12pt;
 		}
-				
+
 		#inner_page_container_casamiento {
 			color: #000;
 			padding: 0;
@@ -31,12 +31,12 @@
 		}
 		a {
 			color: darkred;
-			
+
 		text-decoration: none;
 		}
 		a:hover { text-decoration:underline;color:black;}
-		
-		a h1 { 
+
+		a h1 {
 		color:black;
 		}
 		#casamiento_logo {
@@ -50,7 +50,7 @@
 			background-color: white;
 			border-bottom-right-radius: 10px;
 		}
-		
+
 		.pure-button {
 			background-color: grey;
 			font-family: 'Open Sans';
@@ -59,7 +59,7 @@
 			padding-top: 1em;
 			padding-bottom: 1em;
 		}
-		
+
 		#dreams_slogan {
 			display: block;
 			top: 0;
@@ -71,8 +71,8 @@
 			border-bottom-left-radius: 10px;
 			width: 180px;
 		}
-		
-		
+
+
 		#genesis {
 			display: block;
 			margin: 0 auto;
@@ -83,22 +83,22 @@
 			border-radius: 1em;
 			margin-top: -1.5em;
 		}
-		
+
 		.left_column {
 			margin: 0 auto;
 			width: 75%;
 		}
-		
+
 		input {
 			background-color: #EEE;
 			border: 1px solid black;
 		}
-		
+
 		input:hover {
 			background-color: white;
-		
+
 		}
-		
+
 		.blurb {
 			text-align: center;
 			font-family: 'Avenir';
@@ -110,8 +110,8 @@
 	</style>
 
 
-	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-	
+	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 	-->
 
 	<div id="inner_page_container_casamiento">
@@ -125,8 +125,8 @@
 
 		<div class="left_column">
 
-<% products.forEach(function(group) { %> 
-	
+<% products.forEach(function(group) { %>
+
 
 <div style="width:60%;float:left;">
 
@@ -139,6 +139,7 @@
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
+<% if (group[1]) { %>
 <div style="width:40%;float:right;">
 <a href="/products/<%= group[1].name %>"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1></a>
 
@@ -150,6 +151,8 @@
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
+<% } %>
+<% if (group[2]) { %>
 <div style="clear:both;width:80%;margin:0 auto;">
 <a href="/products/<%= group[2].name %>"><h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1><a>
 
@@ -161,6 +164,7 @@
 </div>
 <img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 </div>
+<% } %>
 <% }) %>
 				<div id="form_panel" style="clear:both;">
 					<img src="/images/homepage/icons/book-3.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
@@ -190,8 +194,8 @@
 					</div>
 				</div>
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-			
-				
+
+
 	</div>
 
 </body>
