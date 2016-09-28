@@ -31,7 +31,10 @@
 				background-color: white;
 				border-bottom-right-radius: 10px;
 			}
-
+h5 {
+	font-size:16pt;
+	font-family:'Raleway';font-weight:300;line-height:1.2em;
+}
 			#browse {
 				position: fixed;
 				margin: 0 auto;
@@ -42,6 +45,8 @@
 				z-index: 100;
 				width: 100%;
 			}
+
+
 
 			#dreams_slogan {
 				display: block;
@@ -76,7 +81,9 @@
 			.slidesjs-next {
 				margin-left: 10%;
 			}
-
+#book {
+	vertical-align:middle;
+}
 			#browse_container {
 				background-color: white;
 				border-bottom-right-radius: 10px;
@@ -277,6 +284,10 @@
 				background-color: #F1EFF0;
 			}
 
+			.image_100 {
+				margin:0 auto;width:95%;display:block;
+			}
+
 			.triangle {
 				margin: 0 auto;
 				padding: 0;
@@ -290,11 +301,23 @@
 					width: 100%;
 					padding: 0;
 				}
-				#headline {
-					width: 95%;
-					padding-top: 0;
-					margin-top: 0;
-					font-size: 1pt;
+
+				#book { width:25px;}
+
+							#browse {
+								position: fixed;
+								margin: 0 auto;
+								text-align: center;
+								padding-top:4px;
+								font-family: "Avenir";
+								font-size: 12pt;
+								font-weight: 300;
+								z-index: 100;
+								width: 100%;
+							}
+
+				.image_100 {
+					width:100%;
 				}
 				#form_panel {
 					margin: 0 auto;
@@ -303,7 +326,7 @@
 				}
 				#genesis {
 					margin-top: -0.75em;
-					width: 60%;
+					width: 50%;
 					max-width: 280px;
 					padding: 0.25em;
 					position: relative;
@@ -311,8 +334,7 @@
 				}
 				#casamiento_logo {
 					position: static;
-					width: 130px;
-					padding: 0px;
+					width: 120px;
 					float: left;
 					background-color: white;
 					border-bottom-right-radius: 5px;
@@ -329,14 +351,15 @@
 				}
 				.left_column,
 				.right_column {
-					float: right;
-					width: 100%;
-					margin: 0;
+					float: none;
+					width: 90%;
+					margin: 0 auto;
 				}
 				#slides {
 					width: 100%;
 					float: none;
 				}
+				h1 { font-size:24pt; line-height:1.3em;width:100%;}
 			}
 			/* Phablet */
 
@@ -350,6 +373,9 @@
 					padding: 0;
 					margin: 0 auto;
 					float: none;
+				}
+				.image_100 {
+					width:95%;
 				}
 				h1 {
 					width: 95%;
@@ -368,6 +394,10 @@
 
 			@media all and (min-width: 500px) and (max-width: 800px) {
 				/* ----------------------------------------------------------------------------- */
+				p {
+					width:65%;
+					margin:0 auto;
+				}
 			}
 			/* IN BETWEEN */
 
@@ -420,7 +450,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 		<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
 		<div id="browse">
 			<div id="browse_container">
-				<a href="/products"><img src="/images/furniture/browse.svg" style="vertical-align:middle" /></a>
+				<a href="/products"><img src="/images/furniture/browse.svg" id="book"/></a>
 				<a href="/products"><span id="browse_link">BROWSE DESIGNS</a>
 			</div>
 		</div>
@@ -457,7 +487,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 
 				<div style="padding:0.5em;">
 
-					<h4 style="font-family:'Raleway';font-weight:300;line-height:1.2em;"><span style="font-weight:600;font-family:'Raleway'">FREE until Saturday 22nd September&hellip;</span><br/>
+					<h5><span style="font-weight:600;font-family:'Raleway'">FREE until Saturday 22nd September&hellip;</span><br/>
 															 get your own sample box<br/>
 															 <span style="font-weight:600;">usually worth £14.99</span>, containing:</h4>
 
@@ -656,18 +686,17 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 				</div>
 
 
-				<img src="/images/homepage/big_illustrations/envelope.png" style="margin:0 auto;width:100%;display:block;" />
+				<img src="/images/homepage/big_illustrations/envelope.png"  class="image_100" />
 				<div style="width:50%;text-align:center;margin-top:-10em;">
 
 					<img src="/images/homepage/pointer_up.svg" />
-
 
 					<p style="text-indent:0;text-align:center;width:90%:margin:0 auto;font-size:12pt;font-style:italic;margin:0;border:0;padding:0;">
 						Our envelopes are highly tailored, with patterns and monograms printed inside and outside</div>
 
 				<img src="/images/furniture/flourish_line.svg" class="flourish" />
 
-				<img src="/images/homepage/big_illustrations/box_envelope.png" style="margin:0 auto;width:650px;display:block;" />
+				<img src="/images/homepage/big_illustrations/box_envelope.png" class="image_100" />
 				<div style="width:50%;text-align:center;margin-top:-10em;">
 
 					<img src="/images/homepage/pointer_up.svg" />
@@ -1010,23 +1039,23 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 				<div id="form_panel" style="width:80%;padding:1em;">
 
 					<img src="/images/homepage/icons/open-book-top-view.svg" style="width:50px;margin-top:-1.5em;" />
-					<p style="font-size:18pt;font-weight:bold;font-family:Raleway;text-align:center;margin-top:0;padding-top:0;">Avoid expensive mistakes&hellip;</p>
+					<h5 style="font-weight:600;">Avoid expensive mistakes&hellip;</h5>
 
-					<p style="line-height:140%;text-align:center;padding-bottom:1em;">
+					<p>
 						&hellip;empower yourself with knowledge by learning from the devastating mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
-					<ul style="padding:0;margin:0;line-height:140%;">
+					<ul>
 
-						<li><span style="font-weight:bold">three important reasons</span> why you must never order your stationery without asking for this first</li>
+						<li><span style="font-weight:600">three important reasons</span> why you must never order your stationery without asking for this first</li>
 
-						<li>in our online age, <span style="font-weight:bold;">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it</li>
+						<li>in our online age, <span style="font-weight:600;">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it</li>
 
-						<li>the one thing no one thinks to ask their stationery company: <span style="font-weight:bold;">this can spoil the most beautiful invitations</span> if you don't check first</li>
+						<li>the one thing no one thinks to ask their stationery company: <span style="font-weight:600;">this can spoil the most beautiful invitations</span> if you don't check first</li>
 
-						<li>what you won't know about until your guests tell you: don't hear it from your guests first, <span style="font-weight:bold;">avoid this happening to you</span> </li>
+						<li>what you won't know about until your guests tell you: don't hear it from your guests first, <span style="font-weight:600;">avoid this happening to you</span> </li>
 
 					</ul>
 
-					<img src="/images/homepage/ebook_horror.png" style="width:300px;" />
+					<img src="/images/homepage/ebook_horror.png" style="width:75%;" />
 
 					<form class="pure-form form-aligned" name="sample" id="form_sample">
 
@@ -1192,7 +1221,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 		<div style="border-top:1px dotted;clear:both;">
 
 			<div class="left_column">
-				<img src="/images/homepage/big_illustrations/infomap.png" style="width:500px;display:block;margin:0 auto;" />
+				<img src="/images/homepage/big_illustrations/infomap.png" class="image_100" />
 
 			</div>
 			<div class="right_column">
