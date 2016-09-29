@@ -1,7 +1,7 @@
 /* Smartphone */
 /* ----------------------------------------------------------------------------- */
 
-@media all and (min-width: 260px) and (max-width: 680px) {
+@media all and (min-width: 260px) and (max-width: 600px) {
 
   #inner_page_container_casamiento {
     width: 100%;
@@ -13,7 +13,7 @@
     display:block;
     margin:0 auto;
   }
-
+.flourish { width:95%; }
   #browse_container {
     width:150px;
     padding-top:0;
@@ -74,8 +74,8 @@
     line-height: 1.3em;
     width: 100%;
     padding:0;
-    margin-top:0.5em;
-    margin-bottom:0.5em;
+    margin-top:1em;
+    margin-bottom:1em;
   }
   h6 {
     text-align:center;
@@ -96,7 +96,7 @@
 }
 /* Phablet */
 
-@media all and (min-width: 681px) and (max-width: 900px) {
+@media all and (min-width: 601px) and (max-width: 900px) {
   /* ----------------------------------------------------------------------------- */
   #slides {
     width: 100%;
@@ -123,5 +123,5 @@
     font-size: 28pt;
   }
   ul, p, h6 { width:60%;margin: 0 auto;}
-.image_100 { width:90%;}
+.image_100 { width:95%;}
 }
