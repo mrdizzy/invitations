@@ -1,0 +1,306 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+
+#inner_page_container_casamiento {
+  color: #000;
+  padding: 0;
+  margin: 0 auto;
+  width: 95%;
+}
+
+#casamiento_logo {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 182px;
+  z-index: 100;
+  padding: 5px;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+      #browse_container {
+        background-color: white;
+        width: 225px;
+        margin: 0 auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+#browse {
+  position: fixed;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Avenir";
+  font-size: 14pt;
+  font-weight: 300;
+  z-index: 100;
+  width: 100%;
+}
+
+#browse a {
+  text-decoration: none;
+}
+
+#dreams_slogan {
+  display: block;
+  top: 0;
+  right: 0;
+  padding-left: 5px;
+  background-color: white;
+  z-index: 100;
+  position: fixed;
+  border-bottom-left-radius: 10px;
+  width: 180px;
+}
+
+#slides {
+  width: 95%;
+  margin: 0 auto;
+  display: none;
+  clear: both;
+}
+
+#slides img {
+  display: block;
+}
+
+.slidesjs-pagination {
+  margin-top: 0;
+}
+
+.slidesjs-previous,
+.slidesjs-next {}
+
+.slidesjs-next {
+  margin-left: 10%;
+}
+
+
+#book {
+  vertical-align: middle;
+}
+
+#genesis {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 99;
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+  margin-top: -1.5em;
+}
+
+.left_column {
+  float: left;
+  width: 50%;
+}
+
+.right_column {
+  width: 50%;
+  float: right;
+}
+
+h1 {
+  font-weight: 300;
+  font-family: 'Playfair Display';
+  text-align: center;
+  color: #000;
+  font-size: 32pt;
+  line-height: 1.2em;
+  margin: 0 auto;
+  width: 75%;
+  padding-bottom: 1.2em;
+}
+
+h4 {
+  margin: 0 auto;
+  font-weight: 300;
+  font-family: 'Playfair Display';
+  font-size: 22pt;
+  text-align: center;
+  width: 75%;
+}
+
+h5 {
+  font-size: 16pt;
+  font-family: 'Raleway';
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+h6 {
+  padding-top:1em;
+  padding-bottom:0.75em;
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Playfair Display';
+  font-size: 16pt;
+}
+
+ul {
+  font-family: 'Raleway';
+  line-height: 1.3em;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  font-size: 14pt;
+  text-align: left;
+}
+
+.form_panel ul {
+  font-size: 14pt;
+  padding-left: 1em;
+}
+
+li {
+  padding-top: 1em;
+  margin-left: 1em;
+}
+
+p {
+  font-family: 'Raleway';
+  font-weight: 300;
+  line-height: 1.3em;
+  font-size: 14pt;
+  padding-top: 1em;
+  margin:0;
+}
+
+a {
+  color: black;
+}
+
+      label {
+        font-family: "Raleway";
+        font-size: 12pt;
+      }
+
+            .error {
+              text-align: center;
+              font-family: 'Raleway';
+              font-weight: bold;
+              font-size: 12pt;
+              font-weight: 100;
+              color: #B50000;
+            }
+
+            .pure-button {
+              background-color: grey;
+              font-family: 'Raleway';
+              font-weight: 400;
+              border-radius: 2em;
+              padding-top: 1em;
+              padding-bottom: 1em;
+              font-size: 16pt;
+            }
+input {
+  background-color: #EEE;
+  border: 1px solid black;
+  font-family: "Raleway";
+  font-size: 16pt;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+input:hover {
+  background-color: white;
+}
+.divider {
+  border-top: 1px dotted black;
+  margin-top: 5em;
+}
+
+.form_panel {
+  width: 70%;
+  text-align: center;
+  background-color: #EEE;
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.embellishment {
+  padding: 0.5em;
+  width: 225px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.flourish {
+  padding-top: 1em;
+  padding-bottom: 3em;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 5em;
+}
+
+
+.testimonial_container {
+  margin: 0 auto;
+  border-bottom: 1px dotted black;
+  width: 90%;
+  padding: 1em;
+}
+
+.testimonial_photo {
+  display: block;
+  position: relative;
+  float: left;
+  width: 175px;
+  margin-right: 2em;
+}
+
+.testimonia_quote_icon {
+  width: 50px;
+  float: left;
+  margin-bottom: 8em;
+  margin-right: 0.5em;
+}
+
+.testimonial_quote {
+  font-style: italic;
+  font-family: 'Playfair Display';
+  line-height: 160%;
+  padding-right: 4em;
+}
+
+.testimonial_name {
+  padding-top: 1em;
+  font-family: 'Playfair Display SC';
+  font-size: 28px;
+  letter-spacing: 0.02em;
+}
+
+.testimonial_date {
+  font-family: 'Raleway';
+  font-size: 18px;
+  margin-top: 0.25em;
+  padding-left: 1.7em;
+}
+
+.subheader_container {
+  background-color: #F1EFF0;
+}
+
+.image_100 {
+  margin: 0 auto;
+  width: 95%;
+  display: block;
+}
+
+.triangle {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}

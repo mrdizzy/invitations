@@ -1,0 +1,126 @@
+/* Smartphone */
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 680px) {
+
+  #inner_page_container_casamiento {
+    width: 100%;
+    padding: 0;
+  }
+
+  #book {
+    width: 25px;
+    display:block;
+    margin:0 auto;
+  }
+
+  #browse_container {
+    width:150px;
+    padding-top:0;
+    margin-top:0;
+  }
+
+  #browse {
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 4px;
+    font-family: "Avenir";
+    font-size: 10pt;
+    font-weight: 300;
+    z-index: 100;
+    width: 100%;
+  }
+  .image_100 {
+    width: 100%;
+  }
+  .form_panel {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 95%;
+  }
+  #genesis {
+    display:none;
+  }
+  #casamiento_logo {
+    position: static;
+    width: 120px;
+    float: left;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+  }
+  #dreams_slogan {
+    padding-top: 5px;
+    float: right;
+    position: static;
+    padding-left: 2px;
+    background-color: white;
+    z-index: 100;
+    border-bottom-left-radius: 5px;
+    width: 140px;
+  }
+  .left_column,
+  .right_column {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #slides {
+    width: 100%;
+    float: none;
+  }
+  h1 {
+    font-size: 24pt;
+    line-height: 1.3em;
+    width: 100%;
+    padding:0;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+  }
+  h6 {
+    text-align:center;
+    width:60%;
+    margin:0 auto;
+  }
+
+  .testimonial_photo {
+    float:none;
+    margin:0 auto;
+  }
+
+  .testimonial_quote {
+    margin: 0 auto;
+  }
+
+}
+/* Phablet */
+
+@media all and (min-width: 681px) and (max-width: 900px) {
+  /* ----------------------------------------------------------------------------- */
+  #slides {
+    width: 100%;
+  }
+  #inner_page_container_casamiento {
+    width: 100%;
+  }
+
+  .left_column,
+  .right_column {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+    width:100%;
+  }
+  .image_100 {
+    width: 95%;
+  }
+  h1 {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 28pt;
+  }
+  ul, p, h6 { width:60%;margin: 0 auto;}
+.image_100 { width:90%;}
+}
