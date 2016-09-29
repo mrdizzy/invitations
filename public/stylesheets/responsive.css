@@ -92,6 +92,7 @@
     margin: 0 auto;
   }
 
+  p {  line-height:1.4em; padding-top:1.5em; }
 }
 /* Phablet */
 
