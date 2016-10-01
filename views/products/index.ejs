@@ -6,7 +6,16 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 	<style type="text/css">
-
+		h1 {
+			font-family: 'TP';
+			font-size: 36pt;
+			font-weight: 300;
+			letter-spacing: 0.1em;
+			text-align: center;
+			margin: 0;
+			padding;
+			0;
+		}
 
 		#form_panel {
 			padding: 0;
@@ -18,27 +27,27 @@
 			margin-top: 3em;
 		}
 
-		label {
-			font-family: "Gara";
-			font-size: 12pt;
-		}
-
 		#inner_page_container_casamiento {
 			color: #000;
 			padding: 0;
 			margin: 0 auto;
 			width: 95%;
 		}
+
 		a {
 			color: darkred;
-
-		text-decoration: none;
+			text-decoration: none;
 		}
-		a:hover { text-decoration:underline;color:black;}
+
+		a:hover {
+			text-decoration: underline;
+			color: black;
+		}
 
 		a h1 {
-		color:black;
+			color: black;
 		}
+
 		#casamiento_logo {
 			display: block;
 			top: 0;
@@ -72,7 +81,6 @@
 			width: 180px;
 		}
 
-
 		#genesis {
 			display: block;
 			margin: 0 auto;
@@ -96,7 +104,6 @@
 
 		input:hover {
 			background-color: white;
-
 		}
 
 		.blurb {
@@ -105,8 +112,7 @@
 			font-weight: 300;
 			line-height: 1.5em;
 			font-size: 13pt;
-			}
-
+		}
 	</style>
 
 
@@ -125,77 +131,82 @@
 
 		<div class="left_column">
 
-<% products.forEach(function(group) { %>
+			<% products.forEach(function(group) { %>
 
 
-<div style="width:60%;float:left;">
+				<div style="width:60%;float:left;">
 
-<a href="/products/<%= group[0].name %>"><h1 style="font-family:TP;font-size:36pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[0].name %></h1></a>
-<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
-<div style="position:relative;top:-3em;z-index:4;">
-		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					<%= group[0].description %></div>
-</div>
-<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
-</div>
-<% if (group[1]) { %>
-<div style="width:40%;float:right;">
-<a href="/products/<%= group[1].name %>"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1></a>
+					<a href="/products/<%= group[0].name %>"><h1 ><%= group[0].name %></h1></a>
+					<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
+					<div style="position:relative;top:-3em;z-index:4;">
+						<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
+						<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
+							<%= group[0].description %>
+						</div>
+					</div>
+					<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
+				</div>
+				<% if (group[1]) { %>
+					<div style="width:40%;float:right;">
+						<a href="/products/<%= group[1].name %>"><h1 style="font-family:TP;font-size:24pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[1].name %></h1></a>
 
-<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
-<div style="position:relative;top:-3em;z-index:4;">
-		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-			<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					<%= group[1].description %></div>
-</div>
-<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
-</div>
-<% } %>
-<% if (group[2]) { %>
-<div style="clear:both;width:80%;margin:0 auto;">
-<a href="/products/<%= group[2].name %>"><h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1><a>
+						<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
+						<div style="position:relative;top:-3em;z-index:4;">
+							<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
+							<div class="blurb" style="position:relative;top:-0.05em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
+								<%= group[1].description %>
+							</div>
+						</div>
+						<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
+					</div>
+					<% } %>
+						<% if (group[2]) { %>
+							<div style="clear:both;width:80%;margin:0 auto;">
+								<a href="/products/<%= group[2].name %>"><h1 style="font-family:TP;font-size:48pt;font-weight:300;letter-spacing:0.1em;text-align:center;margin:0;padding;0;"><%= group[2].name %></h1><a>
 
 <a href="/products/<%= group[2].name %>"><img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" /></a>
-<div style="position:relative;top:-3em;z-index:4;">
-		<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-			<div class="blurb" style="position:relative;top:-0.1em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
-					<%= group[2].description %></div>
-</div>
-<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
-</div>
-<% } %>
-<% }) %>
-				<div id="form_panel" style="clear:both;">
-					<img src="/images/homepage/icons/book-3.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
-
-					<div style="padding:0.5em;">
-
-						<p style="text-align:center;font-family:'Open Sans';font-size:11pt;font-weight:300;width:75%;margin:0 auto;padding-bottom:1em;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
-
-						<form class="pure-form form-aligned">
-							<div class="pure-control-group">
-
-								<input type="text" name="address" placeholder="House number or name"></input>
+								<div style="position:relative;top:-3em;z-index:4;">
+									<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
+									<div class="blurb" style="position:relative;top:-0.1em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
+										<%= group[2].description %>
+									</div>
+								</div>
+								<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 							</div>
+							<% } %>
+								<% }) %>
 
 
-							<div class="pure-control-group">
+									<div id="form_panel" style="clear:both;">
+										<img src="/images/homepage/icons/book-3.svg" style="width:50px;display:block;margin:0 auto;margin-top:-1.5em;" />
 
-								<input type="text" name="postcode" placeholder="Your postcode"></input>
-							</div>
+										<div style="padding:0.5em;">
 
-							</fieldset>
-							<div style="text-align:center;">
-								<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my catalogue!</button>
+											<p style="text-align:center;font-family:'Open Sans';font-size:11pt;font-weight:300;width:75%;margin:0 auto;padding-bottom:1em;">&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</p>
 
-							</div>
-						</form>
-					</div>
-				</div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+											<form class="pure-form form-aligned">
+												<div class="pure-control-group">
+
+													<input type="text" name="address" placeholder="House number or name"></input>
+												</div>
 
 
-	</div>
+												<div class="pure-control-group">
+
+													<input type="text" name="postcode" placeholder="Your postcode"></input>
+												</div>
+
+												</fieldset>
+												<div style="text-align:center;">
+													<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my catalogue!</button>
+
+												</div>
+											</form>
+										</div>
+									</div>
+									<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+
+		</div>
 
 </body>

@@ -2,19 +2,21 @@
 <html>
 
 <head>
-	<title>Casamiento: Personalised wedding invitations: Ace of Hearts</title>
+	<title>Casamiento: Personalised wedding invitations</title>
 	<meta name="description" content="Casamiento:: Personalised wedding invitations: Ace of Hearts" />
 
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
-	<link href='https://fonts.googleapis.com/css?familyOpen+Sans:300,300italic,800' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
-	
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
+
 
 	<style type="text/css">
-	
-		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
 		#form_panel {
 			padding: 0;
 			width: 75%;
@@ -24,51 +26,24 @@
 			margin: 0 auto;
 			margin-top: 3em;
 		}
-		
-		.pure-button {
-			background-color: grey;
-			font-family: 'Open Sans';
-			font-weight: 300;
-			border-radius: 10px;
-			padding-top: 1em;
-			padding-bottom: 1em;
-		}
-		
-		input {
-			background-color: #EEE;
-			border: 1px solid black;
-		}
-		
-		input:hover {
-			background-color: white;
-		}
-		
+
 		#slides {
 			display: none;
 		}
-		
+
 		#slides img {
 			border-radius: 20px;
 			display: block;
 			width: 100%;
 			border-bottom-left-radius: 0;
 		}
-		
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		
+
 		#inner_page_container_casamiento {
 			color: #000;
 			padding: 0;
 			margin: 0 auto;
 		}
-		
-		a {
-			color: darkred;
-		}
-		
+
 		#casamiento_logo {
 			display: block;
 			top: 0;
@@ -80,7 +55,7 @@
 			background-color: white;
 			border-bottom-right-radius: 10px;
 		}
-		
+
 		#dreams_slogan {
 			display: block;
 			top: 0;
@@ -92,67 +67,70 @@
 			border-bottom-left-radius: 10px;
 			width: 180px;
 		}
-		
+
 		.slidesjs-pagination {
 			margin-top: 0;
 		}
-		
+
 		.slidesjs-previous,
 		.slidesjs-next {}
-		
+
 		.slidesjs-next {
 			margin-left: 10%;
 		}
-		
+
 		#left_column {
 			width: 70%;
 			float: left;
 		}
-		
+
 		#right_column {
 			text-align: center;
 			margin: 0 auto;
 			margin-left: 70%;
 		}
-		
-		h1 {
-			padding-top: 1em;
-			line-height: 1.5em;
+		#steps {
+			width:90%;
 			margin: 0 auto;
-			font-weight:normal;
-			width: 90%;
+			text-align:center;
 		}
-		
-		h2 {
-			line-height: 1.6em;
-			margin: 0 auto;
-			
-			font-weight:normal;
-			width: 90%;
-		}
-		
-		h3 {
-			text-align: center;
-			font-family: GaraI;
-			font-size: 20pt;
-		}
-		
-		h4 {
-			font-family: 'Avenir';
-			font-size: 12pt;
-			font-weight: 300;
+
+		.embellishment {
+			display: inline-block;
+			width: 150px;
 			text-align: center;
 		}
-	
+
+		.paper { display:inline-block;
+		width:100px;
+	text-align:center;
+}
+
+		.choice {
+			padding-top:1em;
+			padding-bottom:1em;
+			margin-bottom:2em;
+			width:30%;border-radius:30px;
+			margin-right:2%;
+			display:inline-block;
+		}
+
+			.step_divider {
+				 margin-top:0.5em;background-color:#F1EFF0;height:40px;
+			}
+
+			.step_heading {
+				border-bottom:1px solid black;width:30%;margin:0 auto;
+			}
 	</style>
+
 </head>
 
 <body>
 
 	<div id="inner_page_container_casamiento">
 
-
-	<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
+		<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
 
 		<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
@@ -165,16 +143,128 @@
 				<img src="/images/invitations/<%= product.name %>/closeup.jpg" />
 				<img src="/images/invitations/<%= product.name %>/rsvp.jpg" />
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
-
 			</div>
-			
-			
+<div id="steps">
+			<div class="step_divider"></div>
+			<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+		<div class="step_heading">
+				<h2>Step 1</h2>
+			</div>
+			<h5>Choose your embellishment</h5>
+
+			<div style="text-align:center;">
+        <div class="choice">
+				<img src="/images/product/ribbon.png" class="embellishment" />
+				<p style="font-family:Playfair Display;font-size:14pt;">
+					Pearl buckle
+				</p>
+				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+ To give real impact, our range of buckle embellishments will take your guest's breath away.
+ </p>
+			</div>
+			  <div class="choice">
+				<img src="/images/product/wrap.png" class="embellishment" />
+				<p style="font-family:Playfair Display;font-size:14pt;">
+				Ribbon
+				</p>
+				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+ To give real impact, our range of buckle embellishments will take your guest's breath away.
+ </p>
+			</div>
+			  <div class="choice" style="background-color:#F1EFF0;">
+				<img src="/images/product/pearl.png" class="embellishment" />
+				<p style="font-family:Playfair Display;font-size:14pt;">
+					Wrap
+				</p>
+				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+ To give real impact, our range of buckle embellishments will take your guest's breath away.
+ </p>
+			</div>
+			</div>
+
+
+
+
+
+
+<!-- SECTION -->
+
+
+
+
+
+
+<div class="step_divider"></div>
+<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+<div class="step_heading">
+	<h2>Step 2</h2>
+</div>
+<h5>Choose your texture</h5>
+
+<div style="text-align:center;">
+	<div class="choice">
+	<img src="/images/product/paper_plain.svg" class="paper" />
+	<p style="font-family:Playfair Display;font-size:14pt;">
+	 Plain
+	</p>
+	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+To give real impact, our range of buckle embellishments will take your guest's breath away.
+</p>
+</div>
+	<div class="choice">
+	<img src="/images/product/paper_hammered.svg" class="paper" />
+	<p style="font-family:Playfair Display;font-size:14pt;">
+	Hammered
+	</p>
+	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+To give real impact, our range of buckle embellishments will take your guest's breath away.
+</p>
+</div>
+	<div class="choice" style="background-color:#F1EFF0;">
+	<img src="/images/product/paper_pearlescent.svg" class="paper" />
+	<p style="font-family:Playfair Display;font-size:14pt;">
+		Pearlescent
+	</p>
+	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+To give real impact, our range of buckle embellishments will take your guest's breath away.
+</p>
+</div>
+
+<div class="choice" style="background-color:#F1EFF0;">
+<img src="/images/product/paper_linen.svg" class="paper" />
+<p style="font-family:Playfair Display;font-size:14pt;">
+	Linen
+</p>
+<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+To give real impact, our range of buckle embellishments will take your guest's breath away.
+</p>
+</div>
+</div>
+
+
+		</div>
+		</div>
+
+
+
+		<div id="right_column">
+
+			<img src="/images/logo/genesis_product.svg" id="genesis" style="border-bottom:1px solid black;padding-bottom:2em;padding-top:75px;width:150px;" />
+
+
+			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">
+				&mdash;<%= product.name %>&mdash;</h1>
+
+			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
+			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;"><%= product.description %></h2>
 			<div id="form_panel">
 				<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
 
 				<div style="padding:0.5em;">
 
-					<p style="text-align:center;font-family:'Avenir';font-size:14pt;font-weight:100;width:75%;margin:0 auto;padding-bottom:1em;">To get a <span style="font-weight:bold;">FREE</span> sample of this stunning invitation suite posted to you in 24 hours, just enter your email and address&hellip;</p>
+					<h5>Get a FREE sample of this stunning invitation suite posted to you in 24 hours, just enter your email and address&hellip;</p>
 
 					<form class="pure-form form-aligned">
 					<div class="pure-control-group">
@@ -195,61 +285,12 @@
 
 						</fieldset>
 						<div style="text-align:center;">
-							<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em;font-size:14pt;font-family:Avenir">Yes, post my sample now!</button>
+							<button type="submit" class="pure-button pure-button-primary">Yes, post my sample now!</button>
 
 						</div>
 					</form>
 				</div>
 				</div>
-						<div style="margin-top:0.5em;background-color:#F1EFF0;">
-				<img src="/images/product/swirling-ribbon-silhouette.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:40px;" />
-			</div>
-			<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-			<h3>Step 1</h3>
-			<h4>Choose your embellishment</h4>
-			
-			<div style="text-align:center;">
-
-				<img src="/images/homepage/big_illustrations/ribbon.png" style="padding:0.5em;display:inline-block;width:225px;text-align:center;" />
-				<img src="/images/homepage/big_illustrations/wrap.png" style="padding:0.5em;display:inline-block;width:225px;text-align:center;" />
-				<img src="/images/homepage/big_illustrations/pearl.png" style="padding:0.5em;display:inline-block;width:225px;text-align:center;" />
-			</div>
-			
-			<div style="margin-top:0.5em;background-color:#F1EFF0;">
-				<img src="/images/product/interface-1.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:40px;" />
-			</div>
-			<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-			<h3>Step 2</h3>
-			<h4>Choose your card format</h4>
-
-
-
-			<div style="margin-top:0.5em;background-color:#F1EFF0;">
-				<img src="/images/product/bees-panel-texture.svg" style="padding-top:1em;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:40px;" />
-			</div>
-			<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-			<h3>Step 3</h3>
-			<h4>Choose your texture</h4>
-
-			<div style="text-align:center;">
-				<img src="/images/product/pearlescent.jpg" style="padding:0.5em;display:inline-block;width:250px;text-align:center;" />
-				<img src="/images/product/hammered.jpg" style="padding:0.5em;display:inline-block;width:250px;text-align:center;" />
-				<img src="/images/product/linen.jpg" style="padding:0.5em;display:inline-block;width:250px;text-align:center;" />
-			</div>
-		</div>
-		
-		
-		
-		<div id="right_column">
-
-			<img src="/images/logo/genesis_product.svg" id="genesis" style="border-bottom:1px solid black;padding-bottom:2em;padding-top:75px;width:150px;" />
-
-
-			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">
-				&mdash;<%= product.name %>&mdash;</h1>
-			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
-			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;"><%= product.description %></h2>
-
 			</div>
 		</div>
 	</div>
