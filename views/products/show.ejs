@@ -279,8 +279,8 @@
 					<h2>Step 7</h2>
 				</div>
 				<h5>Choose a colour</h5>
-				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-				The colour of this design can be changed. Please note that colours on screen are only approximate&mdash;the only way you can be certain is to get a free printed colour swatch so you can see exactly how colours look on paper. 
+				<p style="font-family:Raleway;width:50%;margin:0 auto;font-weight:300;font-style:italic;font-size:12pt;padding-bottom:2em;">
+				The colour of this design can be changed. Please note that colours on screen are only approximate&mdash;the only way you can be certain is to get a free printed colour swatch so you can see exactly how colours look on paper.
 				</p>
 				<div id="colour_picker"></div>
 				<div class="step_divider"></div>
@@ -461,13 +461,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<div id="right_column">
 
-			<img src="/images/logo/genesis_product.svg" id="genesis" style="border-bottom:1px solid black;padding-bottom:2em;padding-top:75px;width:150px;" />
+			<img src="/images/logo/genesis_product.svg" id="genesis" style="border-bottom:1px solid black;padding-bottom:2em;margin-bottom:2em;padding-top:75px;width:150px;" />
 
 
 			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">
-				&mdash;<%= product.name %>&mdash;</h1>
+				&mdash;<%= product.clean_name %>&mdash;</h1>
 
 			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
 			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;"><%= product.description %></h2>
