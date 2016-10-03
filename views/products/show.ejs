@@ -5,11 +5,12 @@
 	<title>Casamiento: Personalised wedding invitations</title>
 	<meta name="description" content="Casamiento:: Personalised wedding invitations: Ace of Hearts" />
 
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 
+		<link rel="stylesheet" href="/stylesheets/colour_picker.css" type="text/css">
 
 	<style type="text/css">
 		body {
@@ -89,42 +90,63 @@
 			margin: 0 auto;
 			margin-left: 70%;
 		}
-		#steps {
-			width:90%;
-			margin: 0 auto;
-			text-align:center;
-		}
 
-		.embellishment {
-			display: inline-block;
-			width: 150px;
+		#steps {
+			width: 90%;
+			margin: 0 auto;
 			text-align: center;
 		}
 
-		.paper { display:inline-block;
-		width:100px;
-	text-align:center;
-}
-
-.guest { display:inline-block;
-width:300px;
-text-align:center;}
-		.choice {
-			padding-top:1em;
-			padding-bottom:1em;
-			margin-bottom:2em;
-			width:30%;border-radius:30px;
-			margin-right:2%;
-			display:inline-block;
+		.step_divider {
+			margin-top: 4em;
+			background-color: #F1EFF0;
+			height: 40px;
 		}
 
-			.step_divider {
-				 margin-top:4em;background-color:#F1EFF0;height:40px;
-			}
+		.step_heading {
+			border-bottom: 1px solid black;
+			width: 30%;
+			margin: 0 auto;
+		}
 
-			.step_heading {
-				border-bottom:1px solid black;width:30%;margin:0 auto;
-			}
+		.embellishment,
+		.guest,
+		.paper,
+		.envelope,
+		.guest_envelope {
+			display: inline-block;
+			text-align: center;
+		}
+
+		.embellishment {
+			width: 150px;
+		}
+
+		.guest_envelope {
+		width:55%;}
+
+		.envelope {
+			width: 50%;
+		}
+
+		.paper {
+			width: 100px;
+		}
+
+		.guest {
+			width: 300px;
+		}
+
+		.choice {
+			padding-top: 1em;
+			padding-bottom: 1em;
+			margin-bottom: 2em;
+			width: 30%;
+			border-radius: 30px;
+			margin-right: 2%;
+			display: inline-block;
+		}
+
 	</style>
 
 </head>
@@ -147,148 +169,294 @@ text-align:center;}
 				<img src="/images/invitations/<%= product.name %>/rsvp.jpg" />
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
 			</div>
-<div id="steps">
-			<div class="step_divider"></div>
-			<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+			<div id="steps">
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
-		<div class="step_heading">
-				<h2>Step 1</h2>
-			</div>
-			<h5>Choose your embellishment</h5>
+				<div class="step_heading">
+					<h2>Step 1</h2>
+				</div>
+				<h5>Choose your embellishment</h5>
 
-			<div style="text-align:center;">
-        <div class="choice">
-				<img src="/images/product/ribbon.png" class="embellishment" />
-				<p style="font-family:Playfair Display;font-size:14pt;">
-					Pearl buckle
-				</p>
+				<div style="text-align:center;">
+					<div class="choice">
+						<img src="/images/product/ribbon.png" class="embellishment" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Pearl buckle
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+					<div class="choice">
+						<img src="/images/product/wrap.png" class="embellishment" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Ribbon
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+					<div class="choice" style="background-color:#F1EFF0;">
+						<img src="/images/product/pearl.png" class="embellishment" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Wrap
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+
+				<!-- SECTION -->
+
+
+
+
+
+
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+				<div class="step_heading">
+					<h2>Step 2</h2>
+				</div>
+				<h5>Choose your texture</h5>
+
+				<div style="text-align:center;">
+					<div class="choice">
+						<img src="/images/product/paper_plain.svg" class="paper" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Plain
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+					<div class="choice">
+						<img src="/images/product/paper_hammered.svg" class="paper" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Hammered
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+					<div class="choice" style="background-color:#F1EFF0;">
+						<img src="/images/product/paper_pearlescent.svg" class="paper" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Pearlescent
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+
+					<div class="choice" style="background-color:#F1EFF0;">
+						<img src="/images/product/paper_linen.svg" class="paper" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Linen
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							To give real impact, our range of buckle embellishments will take your guest's breath away.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+				<div class="step_heading">
+					<h2>Step 7</h2>
+				</div>
+				<h5>Choose a colour</h5>
 				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
- To give real impact, our range of buckle embellishments will take your guest's breath away.
- </p>
-			</div>
-			  <div class="choice">
-				<img src="/images/product/wrap.png" class="embellishment" />
-				<p style="font-family:Playfair Display;font-size:14pt;">
-				Ribbon
+				The colour of this design can be changed. Please note that colours on screen are only approximate&mdash;the only way you can be certain is to get a free printed colour swatch so you can see exactly how colours look on paper. 
 				</p>
-				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
- To give real impact, our range of buckle embellishments will take your guest's breath away.
- </p>
+				<div id="colour_picker"></div>
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+				<div class="step_heading">
+					<h2>Step 3</h2>
+				</div>
+				<h5>Choose your guest personalisation</h5>
+
+				<div style="text-align:center;">
+					<div class="choice" style="width:45%;">
+						<img src="/images/product/guest_no.png" class="guest" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Guest names blank
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will not personalise your guest names, but leave invitations and RSVP cards blank for you to write guest names in yourself.
+						</p>
+					</div>
+
+					<div class="choice" style="background-color:#F1EFF0;width:45%;">
+						<img src="/images/product/guest_yes.png" class="guest" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Guest names printed
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+				<div class="step_heading">
+					<h2>Step 4</h2>
+				</div>
+				<h5>Choose your envelope style</h5>
+
+				<div style="text-align:center;">
+					<div class="choice" style="width:45%;">
+						<img src="/images/product/envelope_blank.png" class="envelope" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Blank envelopes
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will not personalise your guest names, but leave invitations and RSVP cards blank for you to write guest names in yourself.
+						</p>
+					</div>
+
+					<div class="choice" style="background-color:#F1EFF0;width:45%;">
+						<img src="/images/product/envelope_box_blank.png" class="envelope" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Blank box envelopes
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+						</p>
+					</div>
+
+
+
+
+					<div class="choice" style="width:45%;">
+						<img src="/images/product/envelope_pattern.png" class="envelope" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Matching envelopes
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+						</p>
+					</div>
+
+
+					<div class="choice" style="width:45%;">
+						<img src="/images/product/envelope_box_pattern.png" class="envelope" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Matching box envelopes
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+						</p>
+					</div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="step_divider"></div>
+				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+				<div class="step_heading">
+					<h2>Step 5</h2>
+				</div>
+				<h5>Choose your card style</h5>
+
+				<div style="text-align:center;">
+					<div class="choice" style="width:45%;">
+						<img src="/images/product/flat.png" class="guest" /><br/>
+
+						<img src="/images/product/flat_icon.svg" style="width:120px;margin:1em;" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Flat, printed both sides
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will not personalise your guest names, but leave invitations and RSVP cards blank for you to write guest names in yourself.
+						</p>
+					</div>
+
+					<div class="choice" style="background-color:#F1EFF0;width:45%;">
+						<img src="/images/product/foldout.png" class="guest" /><br/>
+
+						<img src="/images/product/foldout_icon.svg" style="width:120px;margin:1em;" />
+						<p style="font-family:Playfair Display;font-size:14pt;">
+							Foldout, printed inside and out
+						</p>
+						<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+							We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<div class="step_divider"></div>
+								<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+
+								<div class="step_heading">
+									<h2>Step 6</h2>
+								</div>
+								<h5>Choose your envelope addressing</h5>
+
+								<div style="text-align:center;">
+									<div class="choice" style="width:45%;">
+										<img src="/images/product/guest_envelope_no.png" class="guest_envelope" />
+										<p style="font-family:Playfair Display;font-size:14pt;">
+											No addressing
+										</p>
+										<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+											We will not personalise your guest names, but leave invitations and RSVP cards blank for you to write guest names in yourself.
+										</p>
+									</div>
+
+									<div class="choice" style="background-color:#F1EFF0;width:45%;">
+										<img src="/images/product/guest_envelope_yes.png" class="guest_envelope" />
+										<p style="font-family:Playfair Display;font-size:14pt;">
+										Guest addresses individually printed
+										</p>
+										<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
+											We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
+										</p>
+									</div>
+								</div>
 			</div>
-			  <div class="choice" style="background-color:#F1EFF0;">
-				<img src="/images/product/pearl.png" class="embellishment" />
-				<p style="font-family:Playfair Display;font-size:14pt;">
-					Wrap
-				</p>
-				<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
- To give real impact, our range of buckle embellishments will take your guest's breath away.
- </p>
-			</div>
-			</div>
-
-
-
-
-
-
-<!-- SECTION -->
-
-
-
-
-
-
-<div class="step_divider"></div>
-<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-
-<div class="step_heading">
-	<h2>Step 2</h2>
-</div>
-<h5>Choose your texture</h5>
-
-<div style="text-align:center;">
-	<div class="choice">
-	<img src="/images/product/paper_plain.svg" class="paper" />
-	<p style="font-family:Playfair Display;font-size:14pt;">
-	 Plain
-	</p>
-	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-To give real impact, our range of buckle embellishments will take your guest's breath away.
-</p>
-</div>
-	<div class="choice">
-	<img src="/images/product/paper_hammered.svg" class="paper" />
-	<p style="font-family:Playfair Display;font-size:14pt;">
-	Hammered
-	</p>
-	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-To give real impact, our range of buckle embellishments will take your guest's breath away.
-</p>
-</div>
-	<div class="choice" style="background-color:#F1EFF0;">
-	<img src="/images/product/paper_pearlescent.svg" class="paper" />
-	<p style="font-family:Playfair Display;font-size:14pt;">
-		Pearlescent
-	</p>
-	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-To give real impact, our range of buckle embellishments will take your guest's breath away.
-</p>
-</div>
-
-<div class="choice" style="background-color:#F1EFF0;">
-<img src="/images/product/paper_linen.svg" class="paper" />
-<p style="font-family:Playfair Display;font-size:14pt;">
-	Linen
-</p>
-<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-To give real impact, our range of buckle embellishments will take your guest's breath away.
-</p>
-</div>
-</div>
-
-
-
-
-
-
-<div class="step_divider"></div>
-<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-
-<div class="step_heading">
-	<h2>Step 3</h2>
-</div>
-<h5>Choose your guest personalisation</h5>
-
-<div style="text-align:center;">
-	<div class="choice" style="width:45%;">
-	<img src="/images/product/guest_no.png" class="guest" />
-	<p style="font-family:Playfair Display;font-size:14pt;">
-	  Guest names blank
-	</p>
-	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-We will not personalise your guest names, but leave invitations and RSVP cards blank for you to write guest names in yourself.
-</p>
-</div>
-
-	<div class="choice" style="background-color:#F1EFF0;width:45%;">
-	<img src="/images/product/guest_yes.png" class="guest" />
-	<p style="font-family:Playfair Display;font-size:14pt;">
-		Guest names printed
-	</p>
-	<p style="font-family:Raleway;font-weight:300;font-style:italic;font-size:12pt;">
-We will personalise and print your guest names for you on invitations and RSVP cards, saving you time and giving a professional, cohesive look.
-</p>
-</div>
-</div>
-
-
-
-
-
-
-
-
-		</div>
 		</div>
 
 
@@ -334,16 +502,41 @@ We will personalise and print your guest names for you on invitations and RSVP c
 						</div>
 					</form>
 				</div>
+
+				</div>
+				<!-- TESTIMONIAL
+							-----------------------------------------------------------------------
+							-----------------------------------------------------------------------
+							-----------------------------------------------------------------------
+							-----------------------------------------------------------------------
+
+							-->
+
+				<div class="testimonial_container" style="width:80%;margin-left:10%;margin-right:10%;margin-top:30em;padding-bottom:1em;border-bottom:1px dotted grey;border-top:1px dotted grey;padding-top:1em;">
+					<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo" style="width:60%;"/><br/>
+					<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" style="float:left;"/>
+					<p class="testimonial_quote">It’s all the little touches, the way the envelopes match and the vellum is imprinted with your own design... it just feels and looks so luxurious and my guests were all really impressed as my stationery really did stand out from the crowd.”</p>
+
+					<div style="margin:0 auto;width:50%;padding-left:50%;">
+						<p class="testimonial_name">&mdash;<a href="http://www.facebook.com/chlo.campbell">Chloé Corney</a></p>
+						<p class="testimonial_date">married January 2016</p>
+					</div>
+
 				</div>
 			</div>
+
+
 		</div>
 	</div>
 
-
+<script src="
+http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.slides.min.js"></script>
 	<script src="/javascripts/libraries/jquery.elevateZoom-3.0.8.min.js"></script>
 
+		<script src="/javascripts/in_groups_of.js"></script>
+	<script src="/javascripts/colour_picker.js"></script>
 	<script>
 		$(function() {
 
@@ -382,7 +575,11 @@ We will personalise and print your guest names for you on invitations and RSVP c
 					}
 				}
 			})
-
+$('#colour_picker').colorPicker({
+        default_color: '#000000',
+        listen_to: {on:function() {}},
+        index: 1
+      });
 		})
 	</script>
 </body>
