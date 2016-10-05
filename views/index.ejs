@@ -121,6 +121,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 
 						</fieldset>
 						<div style="text-align:center;">
+							<img src="/images/furniture/360.gif" style="width:80px;" id="form_sample_spinner"/>
 							<button type="submit" id="get_sample" style="" class="pure-button pure-button-primary">
 								Post my sample box now!
 							</button>
@@ -158,12 +159,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 
 			<p>You want them to think, "Wow! Sarah's invitations look amazing&hellip; look, it says everyone gets a free cocktail on the day&hellip; and she's invited James along todo! Something for me to really look forward to!"</p>
 
-			<p>Your invitations are the first chance your guests will get to make a judgement about your special day and they have three important purposes:</p>
-
-			<li>To convey the style of the event</li>
-			<li></li>
-			<li></li>
-		 that's why it's so important to get them right.  </p>
+			<p>Giving your guests the first impression of your special day is one of the many important purposes your invitations serve, that's why it's so important to get them right.  </p>
 
 						<p>Your invitations should: </p>
 
@@ -182,12 +178,16 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 
 			<ul>
 				<li>
-					First there's searching for the pull-strip that goes around the pack so that you can tear open the cellophane in one quick motion. </li>
+					First you search for the pull-strip that surrounds the shrink-wrapped box</li>
+						<li> pack so that you can tear open the cellophane in one quick motion. </li>
 				<li>Then, gently pulling at cardboard lid until you feel the tabs holding it down start to give. </li>
 				<li>Usually there's a layer of light corrugated card to lift up, underneath which each chocolate sits in its own unique shape on the carefully moulded tray.</li>
 
 				<li> Some chocolates are individually wrapped in foil, each embossed with their own patterns, and of course there's the little instruction booklet too. </li>
 			</ul>
+
+			<p>Depending on the box, you might also have to undo ribbons to get inside too. </p>
+
 			<p>All of these things add to the pleasure of eating the chocolate&mdash;it's very different than putting your fingers into a bag of minstrels. </p>
 
 			<p>It's both a tactile and visual experience which delights your senses, and the design of the box itself is as important as the chocolates inside.</p>
@@ -688,17 +688,18 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 
 					<img src="/images/homepage/ebook_horror.png" style="width:75%;" />
 
-					<form class="pure-form form-aligned" name="sample" id="form_sample">
-
+					<form class="pure-form form-aligned" name="form_download" id="form_download">
+						<fieldset>
 						<div class="pure-control-group">
-							<p class="error" id="error_address"></p>
+							<p class="error" id="error_email"></p>
 							<input type="email" id="email" name="email" placeholder="Your email address"></input>
 						</div>
 
 
 						</fieldset>
 						<div style="text-align:center;">
-							<button type="submit" id="get_sample" class="pure-button pure-button-primary" style="margin:0.5em">Download now</button>
+								<img src="/images/furniture/360.gif" style="width:80px;" id="form_download_spinner"/>
+							<button type="submit" id="get_download" class="pure-button pure-button-primary" style="margin:0.5em">Download now</button>
 
 						</div>
 					</form>
@@ -987,44 +988,77 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 				}
 			})
 
+
+		// Sample form
 			$('#form_sample').submit(function(e) {
 				e.preventDefault();
 
 				var message = {
 					address: $('#address').val(),
-					postcode: $('#postcode').val()
+					postcode: $('#postcode').val(),
+					template: 'sample',
 				}
 
 				var postcode_regex = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/gi;
-
 				var postcode = message.postcode.match(postcode_regex);
-
 
 				if (!message.address) {
 					$('#error_address').text("Please enter a house name or number!")
-
 					$('#address').css("border-color", "#B50000")
-
 					$('#address').css("border-width", "2px")
 				}
 				if (!postcode) {
 					$('#error_postcode').text("Please enter a valid UK postcode!")
-
 					$('#postcode').css("border-color", "#B50000")
-
 					$('#postcode').css("border-width", "2px")
 				}
-				if (message_address && postcode) {
+				if (message.address && postcode) {
+					$('#get_sample').hide();
+					$('#form_sample_spinner').show();
 					$.ajax({
 						type: "POST",
-						url: "/email",
+						url: "/emails",
 						data: message,
-						success: function(data) {}
+						success: function(data) {
+							$('#get_sample').hide();
+							$('#form_sample_spinner').hide();
+						}
 					});
 				}
-
-
 			})
+
+
+
+
+
+
+
+
+					// Download form
+						$('#form_download').submit(function(e) {
+							e.preventDefault();
+							var email = $('#email').val();
+							var message = {
+								template: 'download',
+								email: email
+							}
+
+							if (!email) {
+								$('#error_email').text("Please enter a valid email!")
+								$('#email').css("border-color", "#B50000")
+								$('#email').css("border-width", "2px")
+							}
+							if (email) {
+								$('#get_download').hide();
+								$('#form_download_spinner').show();
+								$.ajax({
+									type: "POST",
+									url: "/emails",
+									data: message,
+									success: function(data) {}
+								});
+							}
+						})
 
 		})
 	</script>

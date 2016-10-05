@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', require('./../controllers/homepage').index);
 
+router.post('/emails', require('./../controllers/emails').create);
 router.get('/products', require('./../controllers/products').index)
 router.get('/products/:id', require('./../controllers/products').show)
 

@@ -122,6 +122,11 @@ div {
   margin-top: 2em;
 }
 
+#form_sample_spinner,
+#form_download_spinner {
+  display:none;
+}
+
 .embellishment {
   padding: 0.5em;
   width: 225px;

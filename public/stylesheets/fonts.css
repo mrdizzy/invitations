@@ -100,9 +100,10 @@
 				            .error {
 				              text-align: center;
 				              font-family: 'Raleway';
-				              font-weight: bold;
-				              font-size: 12pt;
-				              font-weight: 100;
+				              font-weight: 300;
+											font-style:italic;
+											margin-bottom:0.5em;
+				              font-size: 14pt;
 				              color: #B50000;
 				            }
 
