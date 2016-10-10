@@ -104,7 +104,9 @@ div {
 }
 
 .right_column {
-  width: 50%;
+  width: 40%;
+  margin-right:5%;
+  margin-left:5%;
   float: right;
 }
 
