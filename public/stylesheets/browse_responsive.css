@@ -18,5 +18,7 @@
   /* ----------------------------------------------------------------------------- */
   #inner_page_container_casamiento {
     width:95%;
+    border-top:1px dotted black;
+    margin-top:5em;
   }
 }
