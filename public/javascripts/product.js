@@ -42,31 +42,31 @@ var StepView = Backbone.View.extend({
         this.render();
     },
     events: {
-        "click .choice": "chosen"
+        "click .choice": "chosen",
+        "click .checkbox_choice": "checkboxChosen"
     },
     chosen: function(e) {
-      var $element = $(e.currentTarget);
-      var id = $(e.currentTarget).attr('id')
-      var ary = id.split("_");
-      var option = ary[0];
-      var choice = ary[1];
-      $('.'+ 'choice_' + option).removeClass("selected_choice")
-      $element.addClass("selected_choice")
-      $("input:radio[name='" + option + "']").each(function(i) {
-       this.checked = false;
-       $(":radio[value='" + choice + "']").prop("checked", true)
-});
+        var $element = $(e.currentTarget);
+        var id = $(e.currentTarget).attr('id')
+        var ary = id.split("_");
+        var option = ary[0];
+        var choice = ary[1];
+        $('.' + 'choice_' + option).removeClass("selected_choice")
+        $element.addClass("selected_choice")
+        $("input:radio[name='" + option + "']").each(function(i) {
+            this.checked = false;
+            $(":radio[value='" + choice + "']").prop("checked", true)
+        });
     },
-    radioPressed: function(e) {
-      console.log($(e.currentTarget).attr('name'));
+    checkboxChosen: function(e) {
+        var $element = $(e.currentTarget);
+        var id = $(e.currentTarget).attr('id')
+        var $checkbox = $(":checkbox[name='" + id + "']")
+        console.log();
+        $checkbox.prop("checked", !$checkbox.is(":checked"))
     },
-    // When the guests entry textarea is selected we add a class to the root element to enable us to detect that it
-    // has been focused and therefore make adjustments to the layout for mobile devices that do not have enough
-    // screen space when the onscreen keyboard appears
 
-
-    render: function() {
-    }
+    render: function() {}
 })
 
 var sv = new StepView({

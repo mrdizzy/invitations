@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
+	<link rel="stylesheet" href="/stylesheets/product_responsive.css" type="text/css" />
 	<style type="text/css">
 
 									h6.deselected {
@@ -479,44 +480,16 @@
 
 
 
+
+<!--------------------------------------------------------- GUEST ADDRESSING -->
+
 				<div class="step_divider">
 					<img src="/images/product/5.svg" class="number" /></div>
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
-				<h5>Guest addressing</h5>
+				<h5>Guest personalisation</h5>
 
-
-				<div class="choice control-group">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_no.svg" style="width:80px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																<input type="radio" name="envelope_addressing" checked="checked"/>
-																																<div class="control__indicator"></div>
-
-																															</label>
-					</div>
-					<div class="choice_description">
-						<h6>No addresses</h6>
-
-						<h3>No guest addresses printed: you will need to write your own guest addresses on the envelope.</h3>
-					</div>
-
-				</div>
-
-
-
-
-
-
-
-
-				<div class="choice control-group">
+				<div class="checkbox_choice choice_addressing control-group" id="addressing">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_yes.svg" style="width:80px;" />
@@ -524,9 +497,9 @@
 
 
 					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
+						<label class="radio_button control control--checkbox">
 
-																																				<input type="radio" name="envelope_addressing" />
+																																				<input type="checkbox" value="addressing" name="addressing" />
 																																				<div class="control__indicator"></div>
 
 																																			</label>
@@ -546,40 +519,7 @@
 
 
 
-
-
-				<div class="step_divider">
-					<img src="/images/product/6.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
-
-				<h5>Guest name personalisation</h5>
-
-
-				<div class="choice control-group">
-
-					<div class="choice_image">
-						<img src="/images/product/guest_no.svg" style="width:80px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																								<input type="radio" name="guest_addressing" checked="checked"/>
-																																								<div class="control__indicator"></div>
-
-																																							</label>
-					</div>
-					<div class="choice_description">
-						<h6>No guest names printed</h6>
-
-						<h3>No guest names will be printed on invitations or RSVP cards.</h3>
-					</div>
-
-				</div>
-
-
-				<div class="choice control-group">
+				<div class="checkbox_choice control-group" id="guests">
 
 					<div class="choice_image">
 						<img src="/images/product/guest_yes.svg" style="width:80px;" />
@@ -587,9 +527,9 @@
 
 
 					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
+						<label class="radio_button control control--checkbox">
 
-																																																								<input type="radio" name="guest_addressing" />
+																																																								<input type="checkbox" value="guests" name="guests" />
 																																																								<div class="control__indicator"></div>
 
 																																																							</label>
@@ -612,13 +552,13 @@
 
 
 				<div class="step_divider">
-					<img src="/images/product/7.svg" class="number" /></div>
+					<img src="/images/product/6.svg" class="number" /></div>
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
 				<h5>Choose your extras</h5>
 
 
-				<div class="choice control-group">
+				<div class="checkbox_choice control-group" id="rsvps">
 
 					<div class="choice_image">
 						<img src="/images/product/rsvp.svg" style="width:100px;" />
@@ -628,7 +568,7 @@
 					<div class="radio_button_container">
 						<label class="control control--checkbox">
 
-																																				<input type="checkbox" name="extras" value="rsvp"/>
+																																				<input type="checkbox" name="rsvps" value="rsvps"/>
 																																				<div class="control__indicator"></div>
 
 																																			</label>
@@ -648,7 +588,7 @@
 
 
 
-				<div class="choice control-group">
+				<div class="checkbox_choice control-group" id="info">
 
 					<div class="choice_image">
 						<img src="/images/product/info.svg" style="width:80px;" />
@@ -658,7 +598,7 @@
 					<div class="radio_button_container">
 						<label class="control control--checkbox">
 
-																																								<input type="checkbox" name="extras" value="info" />
+																																								<input type="checkbox" name="info" value="info" />
 																																								<div class="control__indicator"></div>
 
 																																							</label>
@@ -678,7 +618,7 @@
 
 
 
-				<div class="choice control-group">
+				<div class="checkbox_choice control-group" id="map">
 
 					<div class="choice_image">
 						<img src="/images/product/map.svg" style="width:90px;" />
@@ -688,7 +628,7 @@
 					<div class="radio_button_container">
 						<label class="control control--checkbox">
 
-																																								<input type="checkbox" name="extras" value="map"/>
+																																								<input type="checkbox" name="map" value="map"/>
 																																								<div class="control__indicator"></div>
 
 																																							</label>
@@ -814,7 +754,6 @@ http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></s
 	<script src="/javascripts/jquery.slides.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="/javascripts/product.js"></script>
-		<script src="/javascripts/in_groups_of.js"></script>
 
 	<script>
 		$(function() {

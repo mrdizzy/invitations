@@ -122,7 +122,7 @@ label {
     padding: 0;
 }
 
-.choice {
+.choice, .checkbox_choice {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     width: 70%;
@@ -136,7 +136,7 @@ label {
     width: 50%;
 }
 
-.choice:hover {
+.choice:hover, .checkbox_choice:hover {
     background-color: #EEE;
     cursor: pointer;
 }
