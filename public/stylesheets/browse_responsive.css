@@ -1,0 +1,22 @@
+/* Smartphone */
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 600px) {
+  #inner_page_container_casamiento {
+    width:98%;
+    border-top:1px dotted black;
+    margin-top:5em;
+  }
+  h2 { font-size:28pt;}
+  h3 { font-size:20pt; }
+  h1 { font-size:32pt; }
+  .blurb { width:95%;}
+}
+/* Phablet */
+
+@media all and (min-width: 601px) and (max-width: 900px) {
+  /* ----------------------------------------------------------------------------- */
+  #inner_page_container_casamiento {
+    width:95%;
+  }
+}
