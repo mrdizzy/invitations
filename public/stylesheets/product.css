@@ -123,13 +123,11 @@ label {
 }
 
 .choice {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     width: 70%;
-    border-radius: 30px;
     margin: 0 auto;
-    float: none;
-    clear: both;
+    border-bottom:1px dotted black;
 }
 
 .choice_description {
@@ -141,6 +139,10 @@ label {
 .choice:hover {
     background-color: #EEE;
     cursor: pointer;
+}
+
+.selected_choice {
+background-color:#EEE;
 }
 
 .choice_image {

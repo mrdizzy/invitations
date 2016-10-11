@@ -5,7 +5,7 @@
 	<title>Casamiento: Personalised wedding invitations:
 		<%= product.clean_name %>
 	</title>
-	<meta name="description" content="Casamiento:: Personalised wedding invitations: <%= product.clean_name %>" />
+	<meta name="description" content="Casamiento::Personalised wedding invitations: <%= product.clean_name %>" />
 
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
@@ -13,6 +13,13 @@
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
+	<style type="text/css">
+
+									h6.deselected {
+										color:#999;
+									}
+
+	</style>
 </head>
 
 <body>
@@ -33,6 +40,11 @@
 				<img src="/images/invitations/<%= product.name %>/rsvp.jpg" />
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
 			</div>
+
+
+
+
+
 			<div id="steps" style="margin-top:2em;">
 
 
@@ -44,7 +56,7 @@
 
 
 
-				<!-- EMBELLISHMENTS -->
+				<!--------------------------------------------------------------------------- EMBELLISHMENTS -->
 
 
 				<div class="step_divider">
@@ -55,17 +67,17 @@
 				<h5>Choose your embellishment</h5>
 
 
-				<div class="choice control-group">
+				<div class="choice choice_embellishment control-group" id="embellishment_ribbon">
 
 					<div class="choice_image">
-						<img src="/images/product/ribbon.png" style="width:75px;" />
+						<img src="/images/product/ribbon.png" style="width:80px;" />
 					</div>
 
 
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-								<input type="radio" name="embellishment" checked="checked"/>
+								<input type="radio" name="embellishment" value="ribbon" checked="checked"/>
 								<div class="control__indicator"></div>
 
 							</label>
@@ -77,61 +89,59 @@
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
 
 
 
 
-
-
-
-				<div class="choice control-group">
+				<div class="choice choice_embellishment control-group" id="embellishment_pearl">
 
 					<div class="choice_image">
-						<img src="/images/product/pearl.png" style="width:75px;" />
+						<img src="/images/product/pearl.png" style="width:80px;" />
 					</div>
 
 
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-												<input type="radio" name="embellishment" />
+												<input type="radio" value="pearl" name="embellishment" />
 												<div class="control__indicator"></div>
 
 											</label>
 					</div>
 					<div class="choice_description">
-						<h6>Pearl buckle</h6>
+						<h6 class="deselected">Pearl buckle</h6>
 
 						<h3>To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+
+
+
+				<div class="choice choice_embellishment control-group" id="embellishment_wrap">
 
 					<div class="choice_image">
-						<img src="/images/product/wrap.png" style="width:75px;" />
+						<img src="/images/product/wrap.png" style="width:80px;" />
 					</div>
 
 
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																				<input type="radio" name="embellishment" />
+																				<input type="radio" value="wrap" name="embellishment" />
 																				<div class="control__indicator"></div>
 
 																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Paper wrap</h6>
+						<h6 class="deselected">Paper wrap</h6>
 
 						<h3>To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
 
 
 
@@ -142,7 +152,8 @@
 
 
 
-				<!-- CARD STYLE -->
+
+				<!-------------------------------------------------------------------------------------- CARD STYLE -->
 
 
 				<div class="step_divider">
@@ -153,7 +164,7 @@
 				<h5>Choose your card format</h5>
 
 
-				<div class="choice control-group">
+				<div class="choice choice_format control-group" id="format_flat">
 
 					<div class="choice_image">
 						<img src="/images/product/flat.svg" style="width:100px;" />
@@ -163,7 +174,7 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																								<input type="radio" name="card_format" checked="checked"/>
+																								<input type="radio" name="format" value="flat" checked="checked"/>
 																								<div class="control__indicator"></div>
 
 																							</label>
@@ -175,7 +186,6 @@
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
 
 
 
@@ -183,7 +193,8 @@
 
 
 
-				<div class="choice control-group">
+
+				<div class="choice choice_format control-group"  id="format_foldout">
 
 					<div class="choice_image">
 						<img src="/images/product/foldout.svg" style="width:100px;" />
@@ -193,19 +204,19 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																												<input type="radio" name="card_format" />
+																												<input type="radio" name="format" value="foldout" />
 																												<div class="control__indicator"></div>
 
 																											</label>
 					</div>
 					<div class="choice_description">
-						<h6>Foldout A6</h6>
+						<h6 class="deselected">Foldout A6</h6>
 
 						<h3>To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 
 
@@ -226,7 +237,7 @@
 				<h5>Choose your card texture</h5>
 
 
-				<div class="choice control-group">
+				<div class="choice choice_texture control-group" id="texture_plain">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_plain.svg" style="width:70px;" />
@@ -236,7 +247,7 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																				<input type="radio" name="texture" checked="checked"/>
+																																				<input type="radio" name="texture" value="plain" checked="checked"/>
 																																				<div class="control__indicator"></div>
 
 																																			</label>
@@ -250,9 +261,9 @@
 				</div>
 
 
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+				<div class="choice choice_texture control-group" id="texture_hammered">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_hammered.svg" style="width:70px;" />
@@ -262,22 +273,22 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																				<input type="radio" name="texture" />
+																																				<input type="radio" value="hammered" name="texture" />
 																																				<div class="control__indicator"></div>
 
 																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Hammered</h6>
+						<h6 class="deselected">Hammered</h6>
 
 						<h3>To give real impact, our range of buckle ivembellishments will take your guest's breath away.</h3>
 					</div>
 
 				</div>
 
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+				<div class="choice choice_texture control-group" id="texture_linen">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_linen.svg" style="width:70px;" />
@@ -287,13 +298,13 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																				<input type="radio" name="texture"/>
+																																				<input type="radio" value="linen" name="texture"/>
 																																				<div class="control__indicator"></div>
 
 																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Linen</h6>
+						<h6 class="deselected">Linen</h6>
 
 						<h3>Linen paper looks and feels like the fine linen fabric for which it is named. It has a subtle embossed texture with a crosshatch pattern that is reminiscent of a fine linen table cloth.</h3>
 					</div>
@@ -302,9 +313,9 @@
 
 
 
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+				<div class="choice choice_texture control-group" id="texture_pearlescent">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_pearlescent.svg" style="width:70px;" />
@@ -314,19 +325,18 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																				<input type="radio" name="texture"/>
+																																				<input type="radio" value="pearlescent" name="texture"/>
 																																				<div class="control__indicator"></div>
 
 																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Pearlescent</h6>
+						<h6 class="deselected">Pearlescent</h6>
 
 						<h3>This card has a luxurious sheen on both sides that glistens in the light and gives the ink an almost metallic feel&mdash;greys look like silver.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
 
 
 
@@ -337,7 +347,16 @@
 
 
 
-				<!-- EMBELLISHMENTS -->
+
+
+
+
+
+
+
+
+
+				<!-------------------------------------------------------------------- ENVELOPE STYLE -->
 
 
 				<div class="step_divider">
@@ -347,7 +366,7 @@
 				<h5>Choose your envelope style</h5>
 
 
-				<div class="choice control-group">
+				<div class="choice choice_envelopestyle control-group" id="envelopestyle_plain">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_plain.svg" style="width:80px;" />
@@ -356,7 +375,7 @@
 
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
-	<input type="radio" name="envelope" checked="checked"/>
+	<input type="radio" name="envelopestyle" value="plain" checked="checked"/>
 				<div class="control__indicator"></div>
 
 																																																			</label>
@@ -370,8 +389,8 @@
 				</div>
 
 
-				<div class="dashed_line"></div>
-				<div class="choice control-group">
+
+				<div class="choice choice_envelopestyle control-group" id="envelopestyle_boxplain">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_box_plain.svg" style="width:100px;" />
@@ -381,13 +400,13 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																																				<input type="radio" name="envelope"/>
+																																																				<input type="radio" value="boxplain" name="envelopestyle"/>
 																																																				<div class="control__indicator"></div>
 
 																																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Plain envelope box</h6>
+						<h6 class="deselected">Plain envelope box</h6>
 
 						<h3>An envelope box, unprinted and in the same card texture as your invitation.</h3>
 					</div>
@@ -395,9 +414,9 @@
 				</div>
 
 
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+				<div class="choice choice_envelopestyle control-group" id="envelopestyle_matching">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_matching.png" style="width:80px;" />
@@ -407,7 +426,7 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																																				<input type="radio" name="envelope"/>
+																																																				<input type="radio" value="matching" name="envelopestyle"/>
 																																																				<div class="control__indicator"></div>
 
 																																																			</label>
@@ -415,7 +434,7 @@
 
 
 					<div class="choice_description">
-						<h6>Matching</h6>
+						<h6 class="deselected">Matching</h6>
 
 						<h3>To give real impact, our range of buckle ivembellishments will take your guest's breath away.</h3>
 					</div>
@@ -424,9 +443,9 @@
 
 
 
-				<div class="dashed_line"></div>
 
-				<div class="choice control-group">
+
+				<div class="choice choice_envelopestyle control-group" id="envelopestyle_boxmatching">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_box_matching.png" style="width:100px;" />
@@ -436,20 +455,20 @@
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
 
-																																																				<input type="radio" name="envelope"/>
+																																																				<input type="radio"	value="boxmatching" name="envelopestyle"/>
 																																																				<div class="control__indicator"></div>
 
 																																																			</label>
 					</div>
 
 					<div class="choice_description">
-						<h6>Matching envelope box</h6>
+						<h6 class="deselected">Matching envelope box</h6>
 
 						<h3>To give real impact, our range of buckle ivembellishments will take your guest's breath away.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 
 
@@ -489,7 +508,7 @@
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 
 
@@ -513,7 +532,7 @@
 																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>Individual addresses printed</h6>
+						<h6 class="deselected">Individual addresses printed</h6>
 
 						<h3>Send us a list of your guest names and addresses and we will individually print each one on the envelope.</h3>
 					</div>
@@ -558,7 +577,7 @@
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 				<div class="choice control-group">
 
@@ -576,7 +595,7 @@
 																																																							</label>
 					</div>
 					<div class="choice_description">
-						<h6>Guest names printed</h6>
+						<h6 class="deselected">Guest names printed</h6>
 
 						<h3>Your guest names will be printed on each invitation and any accompanying RSVP cards, just send us a list.</h3>
 					</div>
@@ -615,13 +634,13 @@
 																																			</label>
 					</div>
 					<div class="choice_description">
-						<h6>RSVP Cards</h6>
+						<h6 class="deselected">RSVP Cards</h6>
 
 						<h3>Make it easy for guests to reply to your invitation.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 
 
@@ -645,13 +664,13 @@
 																																							</label>
 					</div>
 					<div class="choice_description">
-						<h6>Information cards</h6>
+						<h6 class="deselected">Information cards</h6>
 
 						<h3>Provide essential information for guests about your wedding.</h3>
 					</div>
 
 				</div>
-				<div class="dashed_line"></div>
+
 
 
 
@@ -675,7 +694,7 @@
 																																							</label>
 					</div>
 					<div class="choice_description">
-						<h6>Direction map</h6>
+						<h6 class="deselected">Direction map</h6>
 
 						<h3>Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests.</h3>
 					</div>
