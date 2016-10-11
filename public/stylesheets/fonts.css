@@ -64,6 +64,14 @@
 					margin-bottom:1em;
 				}
 
+				.form_panel h5 {
+					font-weight:300;
+					font-size:16pt;
+					border:0;
+					padding:0;
+					margin-bottom:0;
+				}
+
 				h6 {
 				  padding-top:1em;
 				  padding-bottom:0.75em;
@@ -149,4 +157,48 @@
 
 				input:hover {
 				  background-color: white;
+				}
+
+
+				.testimonial_container {
+				  margin: 0 auto;
+				  border-bottom: 1px dotted black;
+				  width: 90%;
+				  padding: 1em;
+				}
+
+				.testimonial_photo {
+				  display: block;
+				  position: relative;
+				  float: left;
+				  width: 175px;
+				  margin-right: 2em;
+				}
+
+				.testimonia_quote_icon {
+				  width: 50px;
+				  float: left;
+				  margin-bottom: 8em;
+				  margin-right: 0.5em;
+				}
+
+				.testimonial_quote {
+				  font-style: italic;
+				  font-family: 'Playfair Display';
+				  line-height: 160%;
+				  padding-right: 4em;
+				}
+
+				.testimonial_name {
+				  padding-top: 1em;
+				  font-family: 'Playfair Display SC';
+				  font-size: 28px;
+				  letter-spacing: 0.02em;
+				}
+
+				.testimonial_date {
+				  font-family: 'Raleway';
+				  font-size: 18px;
+				  margin-top: 0.25em;
+				  padding-left: 1.7em;
 				}

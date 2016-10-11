@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.number {
+    position: relative;
+    top: 0.5em;
+}
+
+label {
+    display: inline-block;
+}
+
+#genesis {
+    border-bottom: 1px solid black;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    padding-top: 75px;
+    width: 150px;
+}
+
+.form_panel {
+    padding: 0;
+    width: 95%;
+    text-align: center;
+    background-color: #EEE;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+#slides {
+    display: none;
+}
+
+#slides img {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    border-bottom-left-radius: 0;
+}
+
+#inner_page_container_casamiento {
+    color: #000;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#casamiento_logo {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 182px;
+    z-index: 100;
+    padding: 5px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+}
+
+#dreams_slogan {
+    display: block;
+    top: 0;
+    right: 0;
+    padding-left: 5px;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    width: 180px;
+}
+
+.slidesjs-pagination {
+    margin-top: 0;
+}
+
+.slidesjs-previous, .slidesjs-next {}
+
+.slidesjs-next {
+    margin-left: 10%;
+}
+
+#left_column {
+    width: 75%;
+    float: left;
+}
+
+#right_column {
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 75%;
+}
+
+.dashed_line {
+    width: 75%;
+    border-top: 1px dotted black;
+    margin: 0 auto;
+}
+
+#steps {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.step_divider {
+    background-color: #F1EFF0;
+    height: 40px;
+}
+
+.step_heading {
+    border-bottom: 1px solid black;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.choice_description h6 {
+    text-align: left;
+    margin: 0;
+    font-size: 14pt;
+    padding: 0;
+}
+
+.choice {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 70%;
+    border-radius: 30px;
+    margin: 0 auto;
+    float: none;
+    clear: both;
+}
+
+.choice_description {
+    float: left;
+    text-align: left;
+    width: 50%;
+}
+
+.choice:hover {
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.choice_image {
+    text-align: center;
+    width: 20%;
+    float: left;
+}
+
+.radio_button_container {
+    float: left;
+    width: 10%;
+}
+
+.radio_button, .control--checkbox {
+    display: block;
+    float: right;
+}
