@@ -2,18 +2,18 @@
 <html>
 
 <head>
-	<title>Casamiento: Personalised wedding invitations:
-		<%= product.clean_name %>
-	</title>
+	<title>Casamiento: Personalised wedding invitations: <%= product.clean_name %></title>
+
 	<meta name="description" content="Casamiento::Personalised wedding invitations: <%= product.clean_name %>" />
 
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 
+		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
-	<link rel="stylesheet" href="/stylesheets/product_responsive.css" type="text/css" />
+
 	<style type="text/css">
 
 									h6.deselected {
@@ -57,7 +57,9 @@
 
 
 
-				<!--------------------------------------------------------------------------- EMBELLISHMENTS -->
+				<!---------------------------------------------------------
+				-------------------------------------------------------
+				------------------------------------------------------- EMBELLISHMENTS -->
 
 
 				<div class="step_divider">
@@ -153,8 +155,9 @@
 
 
 
-
-				<!-------------------------------------------------------------------------------------- CARD STYLE -->
+				<!---------------------------------------------------------
+				-------------------------------------------------------
+				------------------------------------------------------- CARD STYLE -->
 
 
 				<div class="step_divider">
@@ -228,7 +231,9 @@
 
 
 
-				<!-- EMBELLISHMENTS -->
+				<!---------------------------------------------------------
+				-------------------------------------------------------
+				------------------------------------------------------- TEXTURE -->
 
 
 				<div class="step_divider">
@@ -357,7 +362,9 @@
 
 
 
-				<!-------------------------------------------------------------------- ENVELOPE STYLE -->
+				<!---------------------------------------------------------
+				-------------------------------------------------------
+				------------------------------------------------------- ENVELOPE STYLE -->
 
 
 				<div class="step_divider">
@@ -481,7 +488,9 @@
 
 
 
-<!--------------------------------------------------------- GUEST ADDRESSING -->
+<!---------------------------------------------------------
+-------------------------------------------------------
+------------------------------------------------------- GUEST ADDRESSING -->
 
 				<div class="step_divider">
 					<img src="/images/product/5.svg" class="number" /></div>
@@ -547,7 +556,9 @@
 
 
 
-
+				<!---------------------------------------------------------
+				-------------------------------------------------------
+				------------------------------------------------------- EXTRAS -->
 
 
 
@@ -645,16 +656,10 @@
 
 
 
-
-
-
-
-
 			</div>
 
 			<div style="text-align:center;">
 				<button type="submit" class="pure-button pure-button-primary">Place order now</button>
-
 			</div>
 
 
@@ -674,45 +679,52 @@
 
 			<img src="/images/logo/genesis_product.svg" id="genesis" />
 
-
-			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">
-				&mdash;<%= product.clean_name %>&mdash;</h1>
+			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">&mdash;<%= product.clean_name %>&mdash;</h1>
 
 			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
-			<h2 style="font-family:'Gara';letter-spacing:0.25em;font-size:16pt;"><%= product.description %></h2>
-			<div class="form_panel">
-				<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
 
-				<div style="padding:0.5em;">
+			<h2 id="description"><%= product.description %></h2>
 
-					<h5><span style="font-weight:600;">Get a FREE sample</span> of this stunning invitation suite posted to you in 24 hours, just enter your email and address&hellip;</p>
+
+
+
+
+							<!-- FORM PANEL
+										-----------------------------------------------------------------------
+										-----------------------------------------------------------------------
+										-----------------------------------------------------------------------
+										-----------------------------------------------------------------------
+
+										-->
+
+
+
+<div class="form_panel">
+	<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
+
+	<h5><span style="font-weight:600;">Get a FREE sample of this stunning invitation suite usually worth £9.99</span> posted to you in 24 hours, just enter your email and address&hellip;</p>
 
 					<img src="/images/homepage/sample_box.png" style="width:200px;" />
 
 					<form class="pure-form form-aligned">
-					<div class="pure-control-group">
 
+					<div class="pure-control-group">
 							<input type="email" name="email" placeholder="Email address"></input>
 						</div>
 
 						<div class="pure-control-group">
-
 							<input type="text" name="address" placeholder="House number or name"></input>
 						</div>
 
-
 						<div class="pure-control-group">
-
 							<input type="text" name="postcode" placeholder="Your postcode"></input>
 						</div>
 
 						</fieldset>
-						<div style="text-align:center;">
+
 							<button type="submit" class="pure-button pure-button-primary">Yes, post my sample now!</button>
 
-						</div>
 					</form>
-				</div>
 
 				</div>
 
@@ -748,10 +760,9 @@
 		</div>
 	</div>
 
-<script src="
-http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="/javascripts/jquery.slides.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/javascripts/jquery.slides.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="/javascripts/product.js"></script>
 
@@ -776,8 +787,6 @@ http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></s
 							// [boolean] Cross-fade the transition.
 					}
 				},
-
-
 				play: {
 					active: false,
 					auto: true,

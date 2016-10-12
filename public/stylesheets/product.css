@@ -3,15 +3,6 @@ body {
     padding: 0;
 }
 
-.number {
-    position: relative;
-    top: 0.5em;
-}
-
-label {
-    display: inline-block;
-}
-
 #genesis {
     border-bottom: 1px solid black;
     padding-bottom: 2em;
@@ -20,14 +11,13 @@ label {
     width: 150px;
 }
 
-.form_panel {
-    padding: 0;
+#description {
+    font-family: 'Gara';
+    line-height: 1.4em;
     width: 95%;
-    text-align: center;
-    background-color: #EEE;
-    border-radius: 1em;
     margin: 0 auto;
-    margin-top: 3em;
+    letter-spacing: 0.05em;
+    font-size: 16pt;
 }
 
 #slides {
@@ -45,30 +35,6 @@ label {
     color: #000;
     padding: 0;
     margin: 0 auto;
-}
-
-#casamiento_logo {
-    display: block;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 182px;
-    z-index: 100;
-    padding: 5px;
-    background-color: white;
-    border-bottom-right-radius: 10px;
-}
-
-#dreams_slogan {
-    display: block;
-    top: 0;
-    right: 0;
-    padding-left: 5px;
-    background-color: white;
-    z-index: 100;
-    position: fixed;
-    border-bottom-left-radius: 10px;
-    width: 180px;
 }
 
 .slidesjs-pagination {
@@ -92,16 +58,23 @@ label {
     margin-left: 75%;
 }
 
-.dashed_line {
-    width: 75%;
-    border-top: 1px dotted black;
-    margin: 0 auto;
+.form_panel {
+    width: 98%;
+    margin: 0;
+    padding: 0;
+    margin-top: 5em;
 }
 
 #steps {
     width: 90%;
     margin: 0 auto;
     text-align: center;
+}
+
+.dashed_line {
+    width: 75%;
+    border-top: 1px dotted black;
+    margin: 0 auto;
 }
 
 .step_divider {
@@ -127,7 +100,7 @@ label {
     padding-bottom: 1.5em;
     width: 70%;
     margin: 0 auto;
-    border-bottom:1px dotted black;
+    border-bottom: 1px dotted black;
 }
 
 .choice_description {
@@ -142,7 +115,7 @@ label {
 }
 
 .selected_choice {
-background-color:#EEE;
+    background-color: #EEE;
 }
 
 .choice_image {
@@ -159,4 +132,150 @@ background-color:#EEE;
 .radio_button, .control--checkbox {
     display: block;
     float: right;
+}
+
+.number {
+    position: relative;
+    top: 0.5em;
+}
+
+label {
+    display: inline-block;
+}
+
+
+/* Smartphone */
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 600px) {
+
+  #inner_page_container_casamiento {
+    width: 100%;
+    padding: 0;
+  }
+
+  #book {
+    width: 25px;
+    display:block;
+    margin:0 auto;
+  }
+.flourish { width:95%; }
+  #browse_container {
+    width:150px;
+    padding-top:0;
+    margin-top:0;
+  }
+
+  #browse {
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 4px;
+    font-family: "Avenir";
+    font-size: 10pt;
+    font-weight: 300;
+    z-index: 100;
+    width: 100%;
+  }
+  .image_100 {
+    width: 100%;
+  }
+  .form_panel {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 95%;
+  }
+  #genesis {
+    display:none;
+  }
+  #casamiento_logo {
+    position: static;
+    width: 120px;
+    float: left;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+  }
+  #dreams_slogan {
+    padding-top: 5px;
+    float: right;
+    position: static;
+    padding-left: 2px;
+    background-color: white;
+    z-index: 100;
+    border-bottom-left-radius: 5px;
+    width: 140px;
+  }
+  #left_column,
+  #right_column {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #slides {
+    width: 100%;
+    float: none;
+  }
+  h1 {
+    font-size: 24pt;
+    line-height: 1.3em;
+    width: 100%;
+    padding:0;
+    margin-top:1em;
+    margin-bottom:1em;
+  }
+  h6 {
+    text-align:center;
+    width:60%;
+    margin:0 auto;
+  }
+
+  .testimonial_photo {
+    float:none;
+    margin:0 auto;
+  }
+
+  .testimonial_quote {
+    margin: 0 auto;
+  }
+#steps { width:100%;}
+
+.checkboice_choice, .choice{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px dotted black;
+}
+  p {  line-height:1.4em; padding-top:1.5em; }
+}
+/* Phablet */
+
+@media all and (min-width: 601px) and (max-width: 900px) {
+  /* ----------------------------------------------------------------------------- */
+  #slides {
+    width: 100%;
+  }
+  #inner_page_container_casamiento {
+    width: 100%;
+  }
+
+  #left_column,
+  #right_column {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
+    width:100%;
+  }
+  .image_100 {
+    width: 95%;
+  }
+  h1 {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 28pt;
+  }
+  ul, p, h6 { width:60%;margin: 0 auto;}
+.image_100 { width:95%;}
 }

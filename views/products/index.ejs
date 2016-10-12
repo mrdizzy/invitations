@@ -4,17 +4,20 @@
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
+	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
+	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 
 	<style type="text/css">
-	.form_panel {
-	    padding: 0;
-	    width: 75%;
-	    text-align: center;
-	    background-color: #EEE;
-	    border-radius: 1em;
-	    margin: 0 auto;
-	    margin-top: 5em;
+	.left_column {width:60%;float:left;}
+	.right_column { width:40%; float:right;}
+	.middle_column {
+	clear:both;width:80%;margin:0 auto;
+	}
+	.middle_column .blurb {
+	font-size:16pt;}
+
+	.right_column .blurb {
+		font-size:12pt;
 	}
 
 		h1, h2, h3 {
@@ -49,56 +52,13 @@
 			text-decoration: underline;
 		}
 
-		#casamiento_logo {
-			display: block;
-			top: 0;
-			left: 0;
-			position: fixed;
-			width: 182px;
-			z-index: 100;
-			padding: 5px;
-			background-color: white;
-			border-bottom-right-radius: 10px;
-		}
-
-		.pure-button {
-			background-color: grey;
-			font-family: 'Open Sans';
-			font-weight: 300;
-			border-radius: 10px;
-			padding-top: 1em;
-			padding-bottom: 1em;
-		}
-
-		#dreams_slogan {
-			display: block;
-			top: 0;
-			right: 0;
-			padding-left: 5px;
-			background-color: white;
-			z-index: 100;
-			position: fixed;
-			border-bottom-left-radius: 10px;
-			width: 180px;
-		}
-
-		#genesis {
-			display: block;
-			margin: 0 auto;
-			position: relative;
-			z-index: 99999999;
-			background-color: white;
-			padding: 0.5em;
-			border-radius: 1em;
-			margin-top: -1.5em;
-		}
 
 		.blurb {
 			text-align: center;
 			font-family: 'Raleway';
 			font-weight: 400;
 			line-height: 1.5em;
-			font-size: 13pt;
+			font-size: 14pt;
 			position:relative;
 			top:-0.05em;
 			padding:1em;
@@ -158,10 +118,11 @@
 										</div>
 
 <% } %>
-				<div style="width:60%;float:left;">
+				<div class="left_column" >
 
 					<a href="/products/<%= group[0].name %>"><h2 ><%= group[0].clean_name %></h2></a>
 					<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
+
 					<div style="position:relative;top:-3em;z-index:4;">
 						<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
 						<div class="blurb">
@@ -171,7 +132,7 @@
 					<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 				</div>
 				<% if (group[1]) { %>
-					<div style="width:40%;float:right;">
+					<div class="right_column">
 						<a href="/products/<%= group[1].name %>"><h3><%= group[1].clean_name %></h3></a>
 
 						<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
@@ -185,7 +146,7 @@
 					</div>
 					<% } %>
 						<% if (group[2]) { %>
-							<div style="clear:both;width:80%;margin:0 auto;">
+							<div class="middle_column">
 								<a href="/products/<%= group[2].name %>"><h1><%= group[2].clean_name %></h1><a>
 
 <a href="/products/<%= group[2].name %>"><img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" /></a>
