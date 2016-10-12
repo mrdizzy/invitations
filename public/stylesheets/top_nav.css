@@ -1,95 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 
 #casamiento_logo {
-  display: block;
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 182px;
-  z-index: 100;
-  padding: 5px;
-  background-color: white;
-  border-bottom-right-radius: 10px;
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 182px;
+    z-index: 100;
+    padding: 5px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
 }
 
-      #browse_container {
-        background-color: white;
-        width: 225px;
-        margin: 0 auto;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        text-align: center;
-        padding-bottom: 5px;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
+#browse_container {
+    background-color: white;
+    width: 225px;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 #browse {
-  position: fixed;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "Avenir";
-  font-size: 14pt;
-  font-weight: 300;
-  z-index: 100;
-  width: 100%;
-}
-
-#browse a {
-  text-decoration: none;
-}
-
-#dreams_slogan {
-  display: block;
-  top: 0;
-  right: 0;
-  padding-left: 5px;
-  background-color: white;
-  z-index: 100;
-  position: fixed;
-  border-bottom-left-radius: 10px;
-  width: 180px;
-}
-
-
-/* Smartphone */
-/* ----------------------------------------------------------------------------- */
-
-@media all and (min-width: 260px) and (max-width: 600px) {
-
-  #browse_container {
-    width:150px;
-    padding-top:0;
-    margin-top:0;
-  }
-
-  #browse {
     position: fixed;
     margin: 0 auto;
     text-align: center;
-    padding-top: 4px;
     font-family: "Avenir";
-    font-size: 10pt;
+    font-size: 14pt;
     font-weight: 300;
     z-index: 100;
     width: 100%;
-  }
-  #genesis {
-    display:none;
-  }
-  #casamiento_logo {
-    position: static;
-    width: 120px;
-    float: left;
-    background-color: white;
-    border-bottom-right-radius: 5px;
-  }
-  #dreams_slogan {
-    padding-top: 5px;
-    float: right;
-    position: static;
-    padding-left: 2px;
+}
+
+#browse a {
+    text-decoration: none;
+}
+
+#browse a:hover {
+  text-decoration:underline;
+}
+
+#dreams_slogan {
+    display: block;
+    top: 0;
+    right: 0;
+    padding-left: 5px;
     background-color: white;
     z-index: 100;
-    border-bottom-left-radius: 5px;
-    width: 140px;
-  }
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    width: 180px;
+}
+
+/* Smartphone */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 600px) {
+    #browse_container {
+        width: 150px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    #browse {
+        position: fixed;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 4px;
+        font-family: "Avenir";
+        font-size: 10pt;
+        font-weight: 300;
+        z-index: 100;
+        width: 100%;
+    }
+    #genesis {
+        display: none;
+    }
+    #casamiento_logo {
+        position: static;
+        width: 120px;
+        float: left;
+        background-color: white;
+        border-bottom-right-radius: 5px;
+    }
+    #dreams_slogan {
+        padding-top: 5px;
+        float: right;
+        position: static;
+        padding-left: 2px;
+        background-color: white;
+        z-index: 100;
+        border-bottom-left-radius: 5px;
+        width: 140px;
+    }
+
+
+    #inner_page_container_casamiento {
+      width: 100%;
+      padding: 0;
+    }
+
 }
