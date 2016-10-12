@@ -4,15 +4,15 @@
 <head>
 	<title>Casamiento: Personalised wedding invitations: <%= product.clean_name %></title>
 
-	<meta name="description" content="Casamiento::Personalised wedding invitations: <%= product.clean_name %>" />
+	<meta name="description" content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
 
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 
-		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
+	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
 
 	<style type="text/css">
 
@@ -27,7 +27,7 @@
 
 	<div id="inner_page_container_casamiento">
 
-				<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
+				<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
 				<div id="browse">
 					<div id="browse_container">
 						<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
@@ -37,8 +37,9 @@
 
 				<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
-
 		<div id="left_column">
+
+
 			<div id="slides">
 				<img src="/images/invitations/<%= product.name %>/collage.jpg" />
 				<img src="/images/invitations/<%= product.name %>/vellum.jpg" />
@@ -51,13 +52,7 @@
 
 
 
-
-
-			<div id="steps" style="margin-top:2em;">
-
-
-
-
+			<div id="steps">
 
 
 
@@ -79,22 +74,18 @@
 
 				<div class="choice choice_embellishment control-group" id="embellishment_ribbon">
 
-					<div class="choice_image">
-						<img src="/images/product/ribbon.png" style="width:80px;" />
-					</div>
+					<div class="choice_image"><img src="/images/product/ribbon.png" style="width:80px;" /></div>
 
 
 					<div class="radio_button_container">
 						<label class="radio_button control control--radio">
-
 								<input type="radio" name="embellishment" value="ribbon" checked="checked"/>
 								<div class="control__indicator"></div>
-
 							</label>
 					</div>
+
 					<div class="choice_description">
 						<h6>Ribbon</h6>
-
 						<h3>To give real impact, our range of buckle ivembellishments will take your guest's breath away.</h3>
 					</div>
 
@@ -105,9 +96,7 @@
 
 				<div class="choice choice_embellishment control-group" id="embellishment_pearl">
 
-					<div class="choice_image">
-						<img src="/images/product/pearl.png" style="width:80px;" />
-					</div>
+					<div class="choice_image"><img src="/images/product/pearl.png" style="width:80px;" /></div>
 
 
 					<div class="radio_button_container">
@@ -499,8 +488,8 @@
 -------------------------------------------------------
 ------------------------------------------------------- GUEST ADDRESSING -->
 
-				<div class="step_divider">
-					<img src="/images/product/5.svg" class="number" /></div>
+				<div class="step_divider"><img src="/images/product/5.svg" class="number" /></div>
+
 				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
 				<h5>Guest personalisation</h5>

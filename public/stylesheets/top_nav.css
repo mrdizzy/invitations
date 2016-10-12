@@ -3,7 +3,6 @@ body {
     padding: 0;
 }
 
-
 #casamiento_logo {
     display: block;
     top: 0;
@@ -30,6 +29,7 @@ body {
 
 #browse {
     position: fixed;
+    opacity: 0.8;
     margin: 0 auto;
     text-align: center;
     font-family: "Avenir";
@@ -44,7 +44,7 @@ body {
 }
 
 #browse a:hover {
-  text-decoration:underline;
+    text-decoration: underline;
 }
 
 #dreams_slogan {
@@ -59,15 +59,52 @@ body {
     width: 180px;
 }
 
+
+/* Phablet */
+
+@media all and (min-width: 601px) and (max-width: 900px) {
+    /* ----------------------------------------------------------------------------- */
+    #inner_page_container_casamiento {
+        width: 100%;
+    }
+
+
+    #casamiento_logo {
+        width: 170px;
+    }
+
+    #dreams_slogan {
+      width:160px;
+      padding-top:10px;
+    }
+}
+
+
 /* Smartphone */
+
+
 /* ----------------------------------------------------------------------------- */
+
+
 /* ----------------------------------------------------------------------------- */
+
+
 /* ----------------------------------------------------------------------------- */
+
+
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
+
+  #casamiento_logo {
+      position: static;
+      width: 120px;
+      float: left;
+      background-color: white;
+      border-bottom-right-radius: 5px;
+  }
     #browse_container {
-        width: 150px;
+        width: 140px;
         padding-top: 0;
         margin-top: 0;
     }
@@ -75,22 +112,20 @@ body {
         position: fixed;
         margin: 0 auto;
         text-align: center;
-        padding-top: 4px;
         font-family: "Avenir";
         font-size: 10pt;
         font-weight: 300;
         z-index: 100;
         width: 100%;
     }
+    #book {
+        width: 25px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 2px;
+    }
     #genesis {
         display: none;
-    }
-    #casamiento_logo {
-        position: static;
-        width: 120px;
-        float: left;
-        background-color: white;
-        border-bottom-right-radius: 5px;
     }
     #dreams_slogan {
         padding-top: 5px;
@@ -102,11 +137,14 @@ body {
         border-bottom-left-radius: 5px;
         width: 140px;
     }
-
-
     #inner_page_container_casamiento {
-      width: 100%;
-      padding: 0;
+        width: 100%;
+        padding: 0;
     }
-
+    #left_column, #right_column {
+        clear: both;
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+    }
 }

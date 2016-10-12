@@ -1,246 +1,211 @@
 div {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #inner_page_container_casamiento {
-  color: #000;
-  padding: 0;
-  margin: 0 auto;
-  width: 95%;
+    color: #000;
+    padding: 0;
+    margin: 0 auto;
+    width: 95%;
 }
 
-
 #slides {
-  width: 95%;
-  margin: 0 auto;
-  display: none;
-  clear: both;
+    width: 95%;
+    margin: 0 auto;
+    display: none;
+    clear: both;
 }
 
 #slides img {
-  display: block;
+    display: block;
+    width: 100%;
 }
 
 .slidesjs-pagination {
-  margin-top: 0;
+    margin-top: 0;
 }
 
-.slidesjs-previous,
-.slidesjs-next {}
+.slidesjs-previous, .slidesjs-next {}
 
 .slidesjs-next {
-  margin-left: 10%;
+    margin-left: 10%;
 }
 
-
 #book {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 #genesis {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  z-index: 99;
-  background-color: white;
-  padding: 2em;
-  border-radius: 1em;
-  margin-top: -1.5em;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99;
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    margin-top: -1.5em;
 }
 
 .left_column {
-  float: left;
-  width: 50%;
+    float: left;
+    width: 50%;
 }
 
 .right_column {
-  width: 40%;
-  margin-right:5%;
-  margin-left:5%;
-  float: right;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    float: right;
 }
 
 .divider {
-  border-top: 1px dotted black;
-  margin-top: 12em;
+    border-top: 1px dotted black;
+    margin-top: 12em;
 }
 
 .form_panel {
-  width: 70%;
-  text-align: center;
-  background-color: #EEE;
-  border-radius: 1em;
-  margin: 0 auto;
-  margin-top: 2em;
+    width: 70%;
+    text-align: center;
+    background-color: #EEE;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: 2em;
 }
 
 .form_panel {}
 
-#form_sample_spinner,
-#form_download_spinner {
-  display:none;
+#form_sample_spinner, #form_download_spinner {
+    display: none;
 }
 
 .embellishment {
-  padding: 0.5em;
-  width: 225px;
-  display: block;
-  margin: 0 auto;
+    padding: 0.5em;
+    width: 225px;
+    display: block;
+    margin: 0 auto;
 }
-
 
 .flourish {
-  padding-top: 1em;
-  padding-bottom: 3em;
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  padding-top: 5em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 5em;
 }
 
-
 .subheader_container {
-  background-color: #F1EFF0;
+    background-color: #F1EFF0;
 }
 
 .image_100 {
-  margin: 0 auto;
-  width: 95%;
-  display: block;
+    margin: 0 auto;
+    width: 95%;
+    display: block;
 }
 
 .triangle {
-  margin: 0 auto;
-  padding: 0;
-  display: block;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
 }
 
 
 /* Smartphone */
+
+
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-
-  #inner_page_container_casamiento {
-    width: 100%;
-    padding: 0;
-  }
-
-  #book {
-    width: 25px;
-    display:block;
-    margin:0 auto;
-  }
-.flourish { width:95%; }
-  #browse_container {
-    width:150px;
-    padding-top:0;
-    margin-top:0;
-  }
-
-  #browse {
-    position: fixed;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 4px;
-    font-family: "Avenir";
-    font-size: 10pt;
-    font-weight: 300;
-    z-index: 100;
-    width: 100%;
-  }
-  .image_100 {
-    width: 100%;
-  }
-  .form_panel {
-    margin: 0 auto;
-    margin-top: 2em;
-    width: 95%;
-  }
-  #genesis {
-    display:none;
-  }
-  #casamiento_logo {
-    position: static;
-    width: 120px;
-    float: left;
-    background-color: white;
-    border-bottom-right-radius: 5px;
-  }
-  #dreams_slogan {
-    padding-top: 5px;
-    float: right;
-    position: static;
-    padding-left: 2px;
-    background-color: white;
-    z-index: 100;
-    border-bottom-left-radius: 5px;
-    width: 140px;
-  }
-  .left_column,
-  .right_column {
-    float: none;
-    width: 90%;
-    margin: 0 auto;
-  }
-  #slides {
-    width: 100%;
-    float: none;
-  }
-  h1 {
-    font-size: 24pt;
-    line-height: 1.3em;
-    width: 100%;
-    padding:0;
-    margin-top:1em;
-    margin-bottom:1em;
-  }
-  h6 {
-    text-align:center;
-    width:60%;
-    margin:0 auto;
-  }
-
-  .testimonial_photo {
-    float:none;
-    margin:0 auto;
-  }
-
-  .testimonial_quote {
-    margin: 0 auto;
-  }
-
-  p {  line-height:1.4em; padding-top:1.5em; }
+    #slides {
+        width: 100%;
+    }
+    #inner_page_container_casamiento {
+        width: 100%;
+        padding: 0;
+    }
+    .flourish {
+        width: 95%;
+    }
+    .image_100 {
+        width: 100%;
+    }
+    .form_panel {
+        margin: 0 auto;
+        margin-top: 2em;
+        width: 95%;
+    }
+    #genesis {
+        display: none;
+    }
+    .left_column, .right_column {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .divider {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    h1 {
+        font-size: 24pt;
+        line-height: 1.3em;
+        width: 100%;
+        padding: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    h6 {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .testimonial_photo {
+        float: none;
+        margin: 0 auto;
+    }
+    .testimonial_quote {
+        margin: 0 auto;
+    }
+    p {
+        line-height: 1.4em;
+        padding-top: 1.5em;
+    }
 }
+
+
 /* Phablet */
 
 @media all and (min-width: 601px) and (max-width: 900px) {
-  /* ----------------------------------------------------------------------------- */
-  #slides {
-    width: 100%;
-  }
-  #inner_page_container_casamiento {
-    width: 100%;
-  }
-
-  .left_column,
-  .right_column {
-    clear: both;
-    margin: 0;
-    padding: 0;
-    margin: 0 auto;
-    float: none;
-    width:100%;
-  }
-  .image_100 {
-    width: 95%;
-  }
-  h1 {
-    width: 75%;
-    margin: 0 auto;
-    font-size: 28pt;
-  }
-  ul, p, h6 { width:60%;margin: 0 auto;}
-.image_100 { width:95%;}
+    /* ----------------------------------------------------------------------------- */
+    #slides {
+        width: 100%;
+    }
+    #inner_page_container_casamiento {
+        width: 100%;
+    }
+    .left_column, .right_column {
+        clear: both;
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+    }
+    .image_100 {
+        width: 95%;
+    }
+    h1 {
+        width: 75%;
+        margin: 0 auto;
+        font-size: 28pt;
+    }
+    ul, p, h6 {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .image_100 {
+        width: 95%;
+    }
 }
