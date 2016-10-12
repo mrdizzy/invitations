@@ -124,10 +124,40 @@
 
 
 
-
+<% var counter = 0; %>
 			<% products.forEach(function(group) { %>
 
+<% if (counter == 1) { %>
 
+										<div class="form_panel" style="clear:both;">
+											<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
+
+
+											<div style="padding:0.5em;">
+
+												<h5>&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</h5>
+
+																	<img src="/images/homepage/sample_box.png" style="width:300px;" />
+												<form class="pure-form form-aligned">
+
+													<div class="pure-control-group">
+														<input type="text" name="address" placeholder="House number or name"></input>
+													</div>
+
+
+													<div class="pure-control-group">
+														<input type="text" name="postcode" placeholder="Your postcode"></input>
+													</div>
+
+													</fieldset>
+
+													<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my catalogue!</button>
+
+												</form>
+											</div>
+										</div>
+
+<% } %>
 				<div style="width:60%;float:left;">
 
 					<a href="/products/<%= group[0].name %>"><h2 ><%= group[0].clean_name %></h2></a>
@@ -168,37 +198,11 @@
 								<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 							</div>
 							<% } %>
+							<% counter = counter + 1 %>
 								<% }) %>
 
 
-									<div class="form_panel" style="clear:both;">
-										<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
-
-
-										<div style="padding:0.5em;">
-
-											<h5>&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</h5>
-
-																<img src="/images/homepage/sample_box.png" style="width:200px;" />
-											<form class="pure-form form-aligned">
-
-												<div class="pure-control-group">
-													<input type="text" name="address" placeholder="House number or name"></input>
-												</div>
-
-
-												<div class="pure-control-group">
-													<input type="text" name="postcode" placeholder="Your postcode"></input>
-												</div>
-
-												</fieldset>
-
-												<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my catalogue!</button>
-
-											</form>
-										</div>
 									</div>
-									<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
 
 
 </body>

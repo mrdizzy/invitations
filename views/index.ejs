@@ -4,7 +4,7 @@
 
 	<head>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,200,400,400i|Playfair+Display+SC|Raleway:100,200,300,400,500,600,700,800,200i,300i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,200,400,400i|Raleway:100,200,300,400,500,600,700,800,200i,300i" rel="stylesheet">
 
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
@@ -61,8 +61,8 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 		<div id="slides">
 
 			<% products.forEach(function(invitation) { %>
-				<img src="/images/invitations/<%= invitation.name %>/collage.jpg" />
-				<img src="/images/invitations/<%= invitation.name %>/four.jpg" />
+				<a href="/products/<%= invitation.name %>"><img src="/images/invitations/<%= invitation.name %>/collage.jpg" /></a>
+				<a href="/products/<%= invitation.name %>"><img src="/images/invitations/<%= invitation.name %>/four.jpg" /></a>
 				<%}) %>
 
 		</div>
@@ -100,7 +100,6 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 						<li>printed colour chart so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
 						<li>our breathtaking luxury catalogue for you to browse</li>
 					</ul>
-
 
 					<p>
 					Enter your name and address now to get it posted today&hellip;
@@ -681,7 +680,7 @@ src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
 						&hellip;empower yourself with knowledge by learning from the devastating mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
 
 
-											<img src="/images/homepage/ebook_inside.png" style="width:66%;" />
+											<img src="/images/homepage/ebook_horror.png" style="width:75%;padding-top:1em;" />
 
 					<ul>
 
