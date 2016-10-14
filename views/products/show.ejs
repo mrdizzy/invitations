@@ -11,16 +11,9 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
-	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
+	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
 
-	<style type="text/css">
-
-									h6.deselected {
-										color:#999;
-									}
-
-	</style>
 </head>
 
 <body>
@@ -28,14 +21,15 @@
 	<div id="inner_page_container_casamiento">
 
 				<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
-				<div id="browse">
-					<div id="browse_container">
-						<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
-						<a href="/products"><span id="browse_link">BROWSE DESIGNS</span></a>
-					</div>
-				</div>
 
-				<img src="/images/logo/drms.svg" id="dreams_slogan" />
+						<div id="browse">
+							<div id="browse_container">
+								<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
+								<a href="/products"><span id="browse_link">BROWSE DESIGNS</span></a>
+							</div>
+						</div>
+
+						<img src="/images/logo/drms.svg" id="dreams_slogan" />
 
 		<div id="left_column">
 
@@ -52,6 +46,12 @@
 
 
 
+						<h1>&mdash;<%= product.clean_name %>&mdash;</h1>
+
+						<img src="/images/furniture/shell.svg" class="shell" />
+
+						<h2 id="description"><%= product.description %></h2>
+
 			<div id="steps">
 
 
@@ -67,7 +67,7 @@
 				<div class="step_divider">
 					<img src="/images/product/1.svg" class="number" />
 				</div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your embellishment</h5>
 
@@ -158,7 +158,7 @@
 
 				<div class="step_divider">
 					<img src="/images/product/2.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 
 				<h5>Choose your card format</h5>
@@ -234,7 +234,7 @@
 
 				<div class="step_divider">
 					<img src="/images/product/3.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your card texture</h5>
 
@@ -365,7 +365,7 @@
 
 				<div class="step_divider">
 					<img src="/images/product/4.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your envelope style</h5>
 
@@ -490,7 +490,7 @@
 
 				<div class="step_divider"><img src="/images/product/5.svg" class="number" /></div>
 
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Guest personalisation</h5>
 
@@ -560,7 +560,7 @@
 
 				<div class="step_divider">
 					<img src="/images/product/6.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" style="margin:0 auto;padding:0;display:block;" />
+				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your extras</h5>
 
@@ -673,14 +673,8 @@
 
 		<div id="right_column">
 
-			<img src="/images/logo/genesis_product.svg" id="genesis" />
 
-			<h1 style="font-family:'TP';font-size:24pt;letter-spacing:0.2em">&mdash;<%= product.clean_name %>&mdash;</h1>
-
-			<img src="/images/furniture/shell.svg" style="width:25px;padding:1em;" />
-
-			<h2 id="description"><%= product.description %></h2>
-
+									<img src="/images/logo/genesis_product.svg" id="genesis" />
 
 
 
