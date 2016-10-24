@@ -1,6 +1,41 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge');
+
+h1 {
+    font-family: 'TP';
+    font-size: 24pt;
+    letter-spacing: 0.2em;
+    padding-top: 1em;
+}
+
+h3 {
+    font-size: 12pt;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+h5 {
+    text-align: left;
+    padding-top: 2em;
+    font-size: 18pt;
+    letter-spacing: 0.05em;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 200;
+}
+
+h6 {
+    font-family: 'Raleway';
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.5em;
+    font-weight: 100;
+    font-size: 16pt;
+    text-align: left;
+}
+
+h6.deselected {
+    color: #999;
+}
+
 #genesis {
     border-bottom: 1px solid black;
     padding-bottom: 2em;
@@ -35,12 +70,21 @@
     margin-left: 75%;
 }
 
-
 .form_panel {
-    width: 98%;
+    width: 93%;
     margin-top: 5em;
 }
-
+.form_panel h5 {
+  font-family:'Raleway';
+  padding:0;
+  padding-top:1em;
+  line-height:1.4em;
+  margin:0;
+  margin:0 auto;
+  font-size:15pt;
+  text-align:center;
+  letter-spacing:0;
+}
 #steps {
     width: 90%;
     margin: 0 auto;
@@ -57,9 +101,13 @@
 .step_divider {
     background-color: #F1EFF0;
     height: 40px;
-    display:none;
+    display: none;
 }
-.down_triangle { display:none;}
+
+.down_triangle {
+    display: none;
+}
+
 .step_heading {
     border-bottom: 1px solid black;
     width: 30%;
@@ -71,26 +119,24 @@
     text-align: left;
     width: 50%;
 }
-#description  {
-  text-justify:inter-word
-  font-family: 'Junge';
-  line-height: 1.6em;
-  width: 65%;
-  text-align:center;
-  margin: 0 auto;
-  font-size: 16pt;
-  font-family:Junge;
-}
-.shell {display:block;
-  width:25px;padding:1em;margin:0 auto;
-}
-h1 {
-  font-family:'TP';font-size:24pt;letter-spacing:0.2em;padding-top:1em;padding-bottom:0.25em;
-}
-h3 {font-size:12pt;font-style:italic;
-line-height:1.6em;}
 
-h5 { text-align:left;padding-top:2em;font-size:18pt;letter-spacing:0.05em;font-family: 'Julius Sans One', sans-serif;font-weight:200;}
+#description {
+    text-justify: inter-word font-family: 'Junge';
+    line-height: 1.6em;
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16pt;
+    font-family: Junge;
+}
+
+.shell {
+    display: block;
+    width: 25px;
+    padding-bottom: 2em;
+    margin: 0 auto;
+}
+
 .choice, .checkbox_choice {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -98,6 +144,7 @@ h5 { text-align:left;padding-top:2em;font-size:18pt;letter-spacing:0.05em;font-f
     margin: 0 auto;
     border-bottom: 1px dotted black;
 }
+
 .choice:hover, .checkbox_choice:hover {
     background-color: #EEE;
     cursor: pointer;
@@ -132,11 +179,6 @@ label {
     display: inline-block;
 }
 
-h6 { font-family:'Raleway';padding:0;margin:0;padding-bottom:0.5em;font-weight:100;font-size:16pt;text-align:left;}
-
-									h6.deselected {
-										color:#999;
-									}
 
 /* Smartphone */
 
@@ -156,8 +198,7 @@ h6 { font-family:'Raleway';padding:0;margin:0;padding-bottom:0.5em;font-weight:1
         margin-top: 2em;
         width: 95%;
     }
-    #left_column,
-    #right_column {
+    #left_column, #right_column {
         float: none;
         clear: both;
         width: 100%;

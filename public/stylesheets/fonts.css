@@ -147,6 +147,7 @@ label {
 
 .testimonial_quote {
     font-style: italic;
+    font-weight:normal;
     font-family: 'Playfair Display';
     line-height: 160%;
     padding-right: 4em;

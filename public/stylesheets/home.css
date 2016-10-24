@@ -167,6 +167,8 @@ div {
     }
     .testimonial_quote {
         margin: 0 auto;
+        font-style:italic;
+        font-family:'Playfair Display'
     }
     p {
         line-height: 1.4em;
