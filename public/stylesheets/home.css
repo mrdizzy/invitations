@@ -3,13 +3,6 @@ div {
     padding: 0;
 }
 
-#inner_page_container_casamiento {
-    color: #000;
-    padding: 0;
-    margin: 0 auto;
-    width: 95%;
-}
-
 #slides {
     width: 95%;
     margin: 0 auto;
@@ -35,46 +28,31 @@ div {
 #book {
     vertical-align: middle;
 }
-
-#genesis {
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    z-index: 99;
-    background-color: white;
-    padding: 2em;
-    border-radius: 1em;
-    margin-top: -1.5em;
+#headline {
+  font-family: 'TP';
+  border-radius: 20px;
+  font-size: 36pt;
+  line-height: 1.3em;
+  position: relative;
+  padding: 0.25em;
+  top: -0.5em;
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  z-index: 99999999999999;
+  font-weight: 300;
+  text-align: center;
+  color: #000;
+  margin: 0 auto;
 }
-
-.left_column {
-    float: left;
-    width: 50%;
-}
-
-.right_column {
-    width: 40%;
-    margin-right: 5%;
-    margin-left: 5%;
-    float: right;
+article {
+   width:50%;margin:0 auto;
 }
 
 .divider {
     border-top: 1px dotted black;
-    margin-top: 12em;
+    margin-top:4em;margin-bottom:3em;
 }
-
-.form_panel {
-    width: 70%;
-    text-align: center;
-    background-color: #EEE;
-    border-radius: 1em;
-    margin: 0 auto;
-    margin-top: 2em;
-}
-
-.form_panel {}
-
 #form_sample_spinner, #form_download_spinner {
     display: none;
 }
@@ -95,10 +73,6 @@ div {
     padding-top: 5em;
 }
 
-.subheader_container {
-    background-color: #F1EFF0;
-}
-
 .image_100 {
     margin: 0 auto;
     width: 95%;
@@ -111,103 +85,90 @@ div {
     display: block;
 }
 
-
 /* Smartphone */
-
-
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
     #slides {
         width: 100%;
     }
-    #inner_page_container_casamiento {
-        width: 100%;
-        padding: 0;
-    }
-    .flourish {
-        width: 95%;
-    }
-    .image_100 {
-        width: 100%;
-    }
-    .form_panel {
-        margin: 0 auto;
-        margin-top: 2em;
-        width: 95%;
-    }
-    #genesis {
-        display: none;
-    }
-    .left_column, .right_column {
-        float: none;
+    #headline {
+        font-size: 25pt;
         width: 90%;
-        margin: 0 auto;
+        line-height: 1.6em;
     }
-    .divider {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    h1 {
-        font-size: 24pt;
-        line-height: 1.3em;
-        width: 100%;
-        padding: 0;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    h4 {
+        font-size: 20pt;
+        line-height: 1.7em;
     }
     h6 {
-        text-align: center;
-        width: 60%;
-        margin: 0 auto;
+      font-size:20pt;
+        width: 70%;
     }
-    .testimonial_photo {
-        float: none;
+    article {
+        width: 90%;
         margin: 0 auto;
-    }
-    .testimonial_quote {
-        margin: 0 auto;
-        font-style:italic;
-        font-family:'Playfair Display'
-    }
-    p {
-        line-height: 1.4em;
-        padding-top: 1.5em;
     }
 }
 
 
 /* Phablet */
+/* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 601px) and (max-width: 900px) {
-    /* ----------------------------------------------------------------------------- */
     #slides {
         width: 100%;
     }
-    #inner_page_container_casamiento {
-        width: 100%;
-    }
-    .left_column, .right_column {
-        clear: both;
-        margin: 0;
-        padding: 0;
-        margin: 0 auto;
-        float: none;
-        width: 100%;
-    }
     .image_100 {
         width: 95%;
     }
-    h1 {
-        width: 75%;
+    #headline {
+        width: 85%;
         margin: 0 auto;
         font-size: 28pt;
+        line-height:1.5em;
     }
-    ul, p, h6 {
-        width: 60%;
-        margin: 0 auto;
+    h4 {
+        font-size: 20pt;
+        line-height: 1.7em;
+    }
+    h6 {
+      font-size:20pt;
+        width: 70%;
+    }
+
+    article {
+      width:80%;
+    }
+}
+
+
+/* Tablet */
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 901px) and (max-width: 1100px) {
+    #slides {
+        width: 100%;
     }
     .image_100 {
         width: 95%;
+    }
+    #headline {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 36pt;
+        line-height:1.5em;
+    }
+    h4 {
+        font-size: 20pt;
+        line-height: 1.7em;
+    }
+    h6 {
+      font-size:20pt;
+        width: 70%;
+    }
+
+    article {
+      width:60%;
     }
 }

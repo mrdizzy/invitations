@@ -1,29 +1,13 @@
-@font-face {
-    font-family: "Avenir";
-    src: url('/fonts/avenir-light-webfont.eot?') format('eot'), url('/fonts/avenir-light-webfont.woff') format('woff');
-}
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i');
 @font-face {
     font-family: "TP";
     src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff');
 }
 
-@font-face {
-    font-family: "Gara";
-    src: url('/fonts/garamond.eot?') format('eot'), url('/fonts/garamond.woff') format('woff');
-}
 
-h1 {
-    font-weight: 300;
-    font-family: 'Playfair Display';
-    text-align: center;
-    color: #000;
-    font-size: 32pt;
-    line-height: 1.4em;
-    margin: 0 auto;
-    width: 75%;
-    padding-bottom: 1.2em;
-}
+
 
 h2 { font-weight:normal; }
 h3 {
@@ -38,10 +22,8 @@ h3 {
 h4 {
     margin: 0 auto;
     font-weight: 300;
-    font-family: 'Playfair Display';
     font-size: 22pt;
-    text-align: center;
-    width: 75%;
+    font-family:Junge;line-height:1.6em;width:100%;text-align:left;
 }
 
 h5 {
@@ -71,34 +53,47 @@ h6 {
     text-align: center;
     font-weight: 300;
     width: 80%;
-    font-family: 'Playfair Display';
-    font-size: 16pt;
+    font-family: Junge;
+      font-size: 22pt;
+      line-height: 1.4em;
+      width: 50%;
+}
+
+h6.smaller {
+
 }
 
 ul {
     font-family: 'Raleway';
     line-height: 1.3em;
     font-weight: 400;
-    padding: 0;
-    margin: 0;
     font-size: 14pt;
     text-align: left;
-}
+    	list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
 
-.form_panel ul {
-    font-size: 14pt;
-    padding-left: 1em;
-}
+  .form_panel ul {
+      font-size: 14pt;
+      padding-left: 1em;
+  }
 
 li {
-    padding-top: 1em;
     margin-left: 1em;
+    padding-left: 18px;
+    margin-top: 1em;
+    line-height:1.6em;
+    background: url('/images/homepage/bullet.svg') no-repeat;
+    padding-top: 0;
+    background-size: 5px;
+    background-position: 0 11px;
 }
 
 p {
     font-family: 'Raleway';
     font-weight: 400;
-    line-height: 1.5em;
+    line-height: 1.6em;
     font-size: 14pt;
     padding-top: 1em;
     margin: 0;
@@ -125,8 +120,6 @@ label {
 
 .testimonial_container {
     margin: 0 auto;
-    border-bottom: 1px dotted black;
-    width: 90%;
     padding: 1em;
 }
 
@@ -165,4 +158,8 @@ label {
     font-size: 18px;
     margin-top: 0.25em;
     padding-left: 1.7em;
+}
+
+footer {
+  border-top:1px dotted black;padding:3em;margin-top:2em;margin-bottom:2em;
 }
