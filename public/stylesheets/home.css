@@ -62,12 +62,6 @@ article {
 .icon {
 padding-top:1em;display:inline-block;margin:0 auto;padding-bottom:0;margin-bottom:0;width:50px;
 }
-.shell {
-  background-color:white;padding:0.25em;width:25px;margin:0 auto;display:block;position:relative;top:-0.75em;
-}
-.shell_line {
-  width:100%;margin:0 auto;border-top:1px dotted black;
-}
 
 .david_photo {
 width:150px;;display:block;margin:0 auto;margin-top:4em;

@@ -18,18 +18,23 @@
 
 <body>
 
-	<div id="inner_page_container_casamiento">
 
-				<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
 
-						<div id="browse">
-							<div id="browse_container">
-								<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
-								<a href="/products"><span id="browse_link">BROWSE DESIGNS</span></a>
-							</div>
-						</div>
+		<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
+		<div id="browse">
+			<div id="browse_container">
+				<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
+				<a href="/products"><span id="browse_link">BROWSE DESIGNS</span></a>
+			</div>
+		</div>
 
-						<img src="/images/logo/drms.svg" id="dreams_slogan" />
+		<img src="/images/logo/drms.svg" id="dreams_slogan" />
+
+
+
+
+
+
 
 		<div id="left_column">
 
@@ -46,13 +51,16 @@
 
 
 
-						<h1>&mdash;<%= product.clean_name %>&mdash;</h1>
+						<h1 id="product_name" class="text_center">&mdash;<%= product.clean_name %>&mdash;</h1>
 
-						<h2 id="description"><%= product.description %></h2>
+						<h2 id="description" class="text_center font_smaller"><%= product.description %></h2>
+<div id="steps">
+										<img src="/images/furniture/shell.svg" class="shell" />
 
-												<img src="/images/furniture/shell.svg" class="shell" />
 
-			<div id="steps">
+
+
+
 
 
 
@@ -63,11 +71,6 @@
 				-------------------------------------------------------
 				------------------------------------------------------- EMBELLISHMENTS -->
 
-
-				<div class="step_divider">
-					<img src="/images/product/1.svg" class="number" />
-				</div>
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your embellishment</h5>
 
@@ -151,14 +154,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 				<!---------------------------------------------------------
 				-------------------------------------------------------
 				------------------------------------------------------- CARD STYLE -->
-
-
-				<div class="step_divider">
-					<img src="/images/product/2.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 
 				<h5>Choose your card format</h5>
@@ -227,14 +236,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 				<!---------------------------------------------------------
 				-------------------------------------------------------
 				------------------------------------------------------- TEXTURE -->
 
-
-				<div class="step_divider">
-					<img src="/images/product/3.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your card texture</h5>
 
@@ -358,14 +373,14 @@
 
 
 
+
+
+
+
 				<!---------------------------------------------------------
 				-------------------------------------------------------
 				------------------------------------------------------- ENVELOPE STYLE -->
 
-
-				<div class="step_divider">
-					<img src="/images/product/4.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your envelope style</h5>
 
@@ -484,13 +499,15 @@
 
 
 
+
+
+
+
 <!---------------------------------------------------------
 -------------------------------------------------------
 ------------------------------------------------------- GUEST ADDRESSING -->
 
-				<div class="step_divider"><img src="/images/product/5.svg" class="number" /></div>
 
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Guest personalisation</h5>
 
@@ -552,15 +569,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<!---------------------------------------------------------
 				-------------------------------------------------------
 				------------------------------------------------------- EXTRAS -->
 
-
-
-				<div class="step_divider">
-					<img src="/images/product/6.svg" class="number" /></div>
-				<img src="/images/furniture/triangle.svg" class="down_triangle" />
 
 				<h5>Choose your extras</h5>
 
@@ -674,25 +703,17 @@
 		<div id="right_column">
 
 
-									<img src="/images/logo/genesis_product.svg" id="genesis" />
+									<img src="/images/logo/genesis_product.svg" id="genesis" style="padding-bottom:3em;" />
+
+
+									<img src="/images/furniture/flourish_line.svg" style="width:95%;display:block;margin:0 auto;" />
 
 
 
-
-							<!-- FORM PANEL
-										-----------------------------------------------------------------------
-										-----------------------------------------------------------------------
-										-----------------------------------------------------------------------
-										-----------------------------------------------------------------------
-
-										-->
-
-
-
-<div class="form_panel">
-	<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
-
-	<h5><span style="font-weight:600;">Get a FREE sample of this stunning invitation suite usually worth £9.99</span> posted to you in 24 hours, just enter your email and address&hellip;</p>
+<div class="form_panel" style="padding-top:5em;">
+	<img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;" />
+<h2 class="small width_large text_center">Get a free sample&hellip;</h2>
+	<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address&hellip;</p>
 
 					<img src="/images/homepage/sample_box.png" style="width:240px;" />
 
@@ -733,26 +754,29 @@
 
 							-->
 
-				<div class="testimonial_container" style="width:80%;margin-left:10%;margin-right:10%;margin-top:30em;padding-bottom:1em;border-bottom:1px dotted grey;border-top:1px dotted grey;padding-top:1em;">
-					<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo" style="width:60%;"/><br/>
-					<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" style="float:left;"/>
-					<p class="testimonial_quote">It’s all the little touches, the way the envelopes match and the vellum is imprinted with your own design... it just feels and looks so luxurious and my guests were all really impressed as my stationery really did stand out from the crowd.”</p>
+									<div class="testimonial_container">
+										<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo" />
+										<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" />
+										<p class="testimonial_quote">It&rsquo;s all the little touches, the beauty of the printed envelopes, and the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and bespoke: my guests were all really impressed as my stationery really did
+											stand out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
 
-					<div style="margin:0 auto;width:50%;padding-left:50%;">
-						<p class="testimonial_name">&mdash;<a href="http://www.facebook.com/chlo.campbell">Chloé Corney</a></p>
-						<p class="testimonial_date">married January 2016</p>
-					</div>
+											<p class="testimonial_name">&mdash;Chloé Campbell</p>
+											<p class="testimonial_date">married January 2016</p>
 
-				</div>
-			</div>
+									</div>
 
 
-		</div>
+</div>
+
+
 	</div>
 
 
 
-	<footer>
+
+
+
+	<footer style="clear:both;">
 		<img src="/images/logo/casamiento_black.svg" style="width:100px;float:left;display:block;" />
 		<div style="float:right;">
 			<a style="font-size:9pt;font-family:Avenir" href="/privacy.html">Privacy Policy</a></div>

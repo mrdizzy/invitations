@@ -6,76 +6,11 @@
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
-
-	<style type="text/css">
-	.left_column {width:60%;float:left;}
-	.right_column { width:40%; float:right;}
-	.middle_column {
-	clear:both;width:80%;margin:0 auto;
-	}
-	.middle_column .blurb {
-	font-size:16pt;}
-
-	.right_column .blurb {
-		font-size:12pt;
-	}
-
-		h1, h2, h3 {
-			font-family: 'TP';
-			font-weight: 300;
-			font-style:normal;
-			letter-spacing: 0.1em;
-			text-align: center;
-			margin:0 auto;
-			line-height:1.2em;
-			padding:	0;
-		}
-
-		h1 { font-size:44pt; padding-top:0.5em;}
-
-		h2 { font-size:36pt;padding-top:0.5em;padding-bottom:0.25em;}
-
-		h3 { font-size:24pt; padding-top:0.25em;padding-bottom:0.25em;}
-
-		#inner_page_container_casamiento {
-			color: #000;
-			padding: 0;
-			margin: 0 auto;
-			width: 70%;
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
-
-
-		.blurb {
-			text-align: center;
-			font-family: 'Raleway';
-			font-weight: 400;
-			line-height: 1.5em;
-			font-size: 14pt;
-			position:relative;
-			top:-0.05em;
-			padding:1em;
-			width:75%;
-			margin:0 auto;
-			border-radius:0.5em;
-			background-color:#F1EFF0;
-		}
-	</style>
-
-				<link rel="stylesheet" href="/stylesheets/browse_responsive.css" type="text/css">
+	<link rel="stylesheet" href="/stylesheets/browse.css" type="text/css">
 
 	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	-->
-
-	<div id="inner_page_container_casamiento">
 
 
 		<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
@@ -118,9 +53,19 @@
 										</div>
 
 <% } %>
+
+
+
+
+
+
+
+
+
 				<div class="left_column" >
 
-					<a href="/products/<%= group[0].name %>"><h2 ><%= group[0].clean_name %></h2></a>
+					<a href="/products/<%= group[0].name %>"><h1 class="font_medium text_center product_name"><%= group[0].clean_name %></h1></a>
+
 					<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
 
 					<div style="position:relative;top:-3em;z-index:4;">
@@ -131,9 +76,19 @@
 					</div>
 					<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 				</div>
+
+
+
+
+
+
+
+
+
+
 				<% if (group[1]) { %>
 					<div class="right_column">
-						<a href="/products/<%= group[1].name %>"><h3><%= group[1].clean_name %></h3></a>
+						<a href="/products/<%= group[1].name %>"><h1 class="font_small text_center product_name"><%= group[1].clean_name %></h1></a>
 
 						<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
 						<div style="position:relative;top:-3em;z-index:4;">
@@ -145,14 +100,25 @@
 						<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
 					</div>
 					<% } %>
+
+
+
+
+
+
+
+
+
+
+
 						<% if (group[2]) { %>
 							<div class="middle_column">
-								<a href="/products/<%= group[2].name %>"><h1><%= group[2].clean_name %></h1><a>
+								<a href="/products/<%= group[2].name %>"><h1 class="font_large text_center product_name"><%= group[2].clean_name %></h1><a>
 
 <a href="/products/<%= group[2].name %>"><img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" /></a>
 								<div style="position:relative;top:-3em;z-index:4;">
 									<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-									<div class="blurb" style="position:relative;top:-0.1em;padding:1em;width:75%;margin:0 auto;border-radius:0.5em;background-color:#F1EFF0;">
+									<div class="blurb">
 										<%= group[2].description %>
 									</div>
 								</div>
@@ -163,7 +129,6 @@
 								<% }) %>
 
 
-									</div>
 
 
 </body>

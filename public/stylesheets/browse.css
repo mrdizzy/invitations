@@ -1,0 +1,76 @@
+.left_column {
+    width: 50%;
+    margin-left: 10%;
+    float: left;
+    margin-top: 3em;
+}
+
+.right_column {
+    width: 30%;
+    margin-right: 10%;
+    float: right;
+    margin-top: 3em;
+}
+
+.middle_column {
+    clear: both;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.product_name {
+    margin: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.blurb {
+  font-style:normal;
+    text-align: center;
+    line-height: 1.7em;
+    font-size: 14pt;
+    position: relative;
+    top: -0.05em;
+    padding: 1em;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    background-color: #F1EFF0;
+}
+
+.middle_column .blurb {
+    font-size: 16pt;
+}
+
+.right_column .blurb {
+    font-size: 12pt;
+}
+
+
+/* Smartphone */
+
+
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 600px) {
+    .blurb {
+        width: 95%;
+    }
+}
+
+
+/* Phablet */
+
+@media all and (min-width: 601px) and (max-width: 900px) {
+    /* ----------------------------------------------------------------------------- */
+}

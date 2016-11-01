@@ -1,11 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
-h1 {
-    font-family: 'TP';
-    font-size: 24pt;
+#genesis {
+
+    padding-top: 75px;
+    width: 140px;
+}
+
+#slides {
+    display: none;
+}
+
+#slides img {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    border-bottom-left-radius: 0;
+}
+
+#left_column {
+    width: 73%;
+    float: left;
+}
+#product_name {
     letter-spacing: 0.2em;
     padding-top: 1em;
+    font-size:36pt;
 }
+
+#description {
+    line-height: 1.9em;
+    width: 65%;
+    margin-bottom:2em;
+}
+
+#steps { width:80%; margin:0 auto;}
 
 h3 {
     font-size: 12pt;
@@ -14,12 +42,13 @@ h3 {
 }
 
 h5 {
-    text-align: left;
+font-size: 18pt;
+width:100%;
+font-family: 'Julius Sans One', sans-serif;
+font-weight: 200;
+letter-spacing: 0.05em;
     padding-top: 2em;
-    font-size: 18pt;
-    letter-spacing: 0.05em;
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 200;
+        text-align: left;
 }
 
 h6 {
@@ -36,82 +65,10 @@ h6.deselected {
     color: #999;
 }
 
-#genesis {
-    border-bottom: 1px solid black;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-    padding-top: 75px;
-    width: 140px;
-}
-
-#slides {
-    display: none;
-}
-
-#slides img {
-    border-radius: 20px;
-    display: block;
-    width: 100%;
-    border-bottom-left-radius: 0;
-}
-
-#inner_page_container_casamiento {
-    color: #000;
-    margin: 0 auto;
-}
-
-#left_column {
-    width: 75%;
-    float: left;
-}
-
-#right_column {
-    text-align: center;
-    margin-left: 75%;
-}
-
-.form_panel {
-    width: 93%;
-    margin-top: 5em;
-}
-.form_panel h5 {
-  font-family:'Raleway';
-  padding:0;
-  padding-top:1em;
-  line-height:1.4em;
-  margin:0;
-  margin:0 auto;
-  font-size:15pt;
-  text-align:center;
-  letter-spacing:0;
-}
-#steps {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2em;
-    text-align: center;
-}
-
 .dashed_line {
+border-top: 1px dotted black;
+margin: 0 auto;
     width: 75%;
-    border-top: 1px dotted black;
-    margin: 0 auto;
-}
-
-.step_divider {
-    background-color: #F1EFF0;
-    height: 40px;
-    display: none;
-}
-
-.down_triangle {
-    display: none;
-}
-
-.step_heading {
-    border-bottom: 1px solid black;
-    width: 30%;
-    margin: 0 auto;
 }
 
 .choice_description {
@@ -120,29 +77,13 @@ h6.deselected {
     width: 50%;
 }
 
-#description {
-    text-justify: inter-word font-family: 'Junge';
-    line-height: 1.6em;
-    width: 65%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 16pt;
-    font-family: Junge;
-}
-
-.shell {
-    display: block;
-    width: 25px;
-    padding-bottom: 2em;
-    margin: 0 auto;
-}
 
 .choice, .checkbox_choice {
+border-bottom: 1px dotted black;
+margin: 0 auto;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     width: 70%;
-    margin: 0 auto;
-    border-bottom: 1px dotted black;
 }
 
 .choice:hover, .checkbox_choice:hover {
@@ -170,16 +111,22 @@ h6.deselected {
     float: right;
 }
 
-.number {
-    position: relative;
-    top: 0.5em;
+
+#right_column {
+    text-align: center;
+    margin-left: 74%;
 }
-
-label {
-    display: inline-block;
+.testimonial_container {
+margin:0 auto;
+  margin-top:10em;
 }
-
-
+.testimonial_photo {
+    float: none;
+    margin: 0 auto;
+}
+.testimonial_quote {
+    margin: 0 auto
+}
 /* Smartphone */
 
 
@@ -192,11 +139,6 @@ label {
     }
     #slides img {
         border-radius: 0;
-    }
-    .form_panel {
-        margin: 0 auto;
-        margin-top: 2em;
-        width: 95%;
     }
     #left_column, #right_column {
         float: none;
@@ -234,9 +176,6 @@ label {
         width: 100%;
         clear: both;
         float: none;
-    }
-    .form_panel {
-        width: 75%;
     }
     .choice, .checkbox_choice {
         width: 80%;
