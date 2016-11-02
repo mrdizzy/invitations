@@ -16,7 +16,13 @@
     width: 100%;
     border-bottom-left-radius: 0;
 }
-
+#pinterest_button {
+	width:30px;padding:2px;opacity:0.5;
+}
+#pinterest_button:hover {
+	opacity:1;
+	cursor:pointer;
+}
 #left_column {
     width: 73%;
     float: left;

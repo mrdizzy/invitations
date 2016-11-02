@@ -49,8 +49,11 @@
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
 			</div>
 
-
-
+<div id="pinit" style="float:right;">
+			<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
+			    <img src="/images/social_media_buttons/pinterest.svg" id="pinterest_button" />
+			</a>
+</div>
 						<h1 id="product_name" class="text_center">&mdash;<%= product.clean_name %>&mdash;</h1>
 
 						<h2 id="description" class="text_center font_smaller"><%= product.description %></h2>
@@ -790,7 +793,11 @@
 <script src="/javascripts/jquery.slides.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="/javascripts/product.js"></script>
-
+<script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"
+></script>
 	<script>
 		$(function() {
 
