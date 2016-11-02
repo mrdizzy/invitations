@@ -7,7 +7,11 @@
 	<meta name="description" content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
 
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
-
+	<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
+	<meta property="og:type"               content="product" />
+	<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
+	<meta property="og:description"        content="How much does culture influence creative thinking?" />
+	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" />
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
@@ -17,7 +21,14 @@
 </head>
 
 <body>
-
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 
 		<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
@@ -49,11 +60,11 @@
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
 			</div>
 
+			<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>"
+data-layout="button_count" class="fb-share-button" id="facebook">
+<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=Chess Stuff&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
+						    <img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button"  /></a>
 
-			<div id="facebook">
-						<a href="">
-						    <img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button" />
-						</a>
 			</div>
 
 			<div id="pinit">
@@ -802,6 +813,24 @@
 <script src="/javascripts/jquery.slides.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="/javascripts/product.js"></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <script
     type="text/javascript"
     async defer
