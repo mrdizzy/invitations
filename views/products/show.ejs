@@ -49,11 +49,20 @@
 				<img src="/images/invitations/<%= product.name %>/info.jpg" />
 			</div>
 
-<div id="pinit" style="float:right;">
-			<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
-			    <img src="/images/social_media_buttons/pinterest.svg" id="pinterest_button" />
-			</a>
-</div>
+
+			<div id="facebook">
+						<a href="">
+						    <img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button" />
+						</a>
+			</div>
+
+			<div id="pinit">
+						<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
+						    <img src="/images/social_media_buttons/pinterest-2.svg" id="pinterest_button" />
+						</a>
+			</div>
+			<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" />
+
 						<h1 id="product_name" class="text_center">&mdash;<%= product.clean_name %>&mdash;</h1>
 
 						<h2 id="description" class="text_center font_smaller"><%= product.description %></h2>
@@ -691,7 +700,7 @@
 			</div>
 
 
-
+</div>
 		</div>
 
 

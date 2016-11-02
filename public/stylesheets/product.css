@@ -1,45 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
 #genesis {
-
     padding-top: 75px;
     width: 140px;
 }
 
-#slides {
-    display: none;
-}
-
-#slides img {
-    border-radius: 20px;
-    display: block;
-    width: 100%;
-    border-bottom-left-radius: 0;
-}
-#pinterest_button {
-	width:30px;padding:2px;opacity:0.5;
-}
-#pinterest_button:hover {
-	opacity:1;
-	cursor:pointer;
-}
 #left_column {
     width: 73%;
     float: left;
 }
-#product_name {
-    letter-spacing: 0.2em;
-    padding-top: 1em;
-    font-size:36pt;
-}
+  #slides {
+      display: none;
+  }
 
-#description {
-    line-height: 1.9em;
-    width: 65%;
-    margin-bottom:2em;
-}
+  #slides img {
+      border-radius: 20px;
+      display: block;
+      width: 100%;
+      border-bottom-left-radius: 0;
+  }
 
-#steps { width:80%; margin:0 auto;}
+  #share_icon {
+    width:30px;opacity:0.35;display:block;float:right;padding:6px;
+  }
+  #pinit, #facebook {
+    float:right;padding:4px;width:30px;
+  }
+  #pinterest_button,
+  #facebook_button {
+  	width:100%;opacity:0.35;
+  }
+    #pinterest_button:hover,
+    #facebook_button:hover {
+    	opacity:1;
+    	cursor:pointer;
+    }
+    
+  #product_name {
+      letter-spacing: 0.2em;
+      padding-top: 1em;
+      font-size:36pt;
+  }
+
+  #description {
+      line-height: 1.9em;
+      width: 65%;
+      margin-bottom:2em;
+  }
+
+  #steps { width:80%; margin:0 auto;}
 
 h3 {
     font-size: 12pt;
@@ -130,8 +139,14 @@ margin:0 auto;
     float: none;
     margin: 0 auto;
 }
+.testimonial_quote_icon {
+  padding:1em;
+  width:60px;
+}
 .testimonial_quote {
-    margin: 0 auto
+    margin: 0 auto;
+    padding-left:1.5em;
+    padding-right:1.5em;
 }
 /* Smartphone */
 
@@ -149,6 +164,7 @@ margin:0 auto;
     #left_column, #right_column {
         float: none;
         clear: both;
+        margin:0;
         width: 100%;
     }
     #steps {
@@ -182,11 +198,9 @@ margin:0 auto;
         width: 100%;
         clear: both;
         float: none;
+        margin:0;
     }
     .choice, .checkbox_choice {
-        width: 80%;
-    }
-    #right_column {
         width: 80%;
     }
 }

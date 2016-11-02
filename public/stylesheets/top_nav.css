@@ -48,11 +48,21 @@ body {
 }
 
 .shell {
-  background-color:white;padding:0.25em;width:25px;margin:0 auto;display:block;position:relative;top:-0.75em;
+    background-color: white;
+    padding: 0.25em;
+    width: 25px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -0.75em;
 }
+
 .shell_line {
-  width:100%;margin:0 auto;border-top:1px dotted black;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px dotted black;
 }
+
 #dreams_slogan {
     display: block;
     top: 0;
@@ -97,7 +107,8 @@ body {
 .testimonial_name {
     font-family: 'Playfair Display SC';
     font-size: 28px;
-    padding:0;margin:0;
+    padding: 0;
+    margin: 0;
     letter-spacing: 0.02em;
 }
 
@@ -105,7 +116,7 @@ body {
     font-size: 14pt;
     padding: 0;
     margin: 0;
-    font-family:'Junge'
+    font-family: 'Junge'
 }
 
 footer {
@@ -123,10 +134,9 @@ footer {
     #casamiento_logo {
         width: 170px;
     }
-
     #dreams_slogan {
-      width:160px;
-      padding-top:10px;
+        width: 160px;
+        padding-top: 10px;
     }
 }
 
@@ -140,20 +150,14 @@ footer {
 /* ----------------------------------------------------------------------------- */
 
 
-/* ----------------------------------------------------------------------------- */
-
-
-/* ----------------------------------------------------------------------------- */
-
 @media all and (min-width: 260px) and (max-width: 600px) {
-
-  #casamiento_logo {
-      position: static;
-      width: 120px;
-      float: left;
-      background-color: white;
-      border-bottom-right-radius: 5px;
-  }
+    #casamiento_logo {
+        position: static;
+        width: 120px;
+        float: left;
+        background-color: white;
+        border-bottom-right-radius: 5px;
+    }
     #browse_container {
         width: 140px;
         padding-top: 0;
