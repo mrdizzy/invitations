@@ -134,6 +134,11 @@ label {
 
 @media all and (min-width: 260px) and (max-width: 600px) {
 
+  .form_panel ul {
+      font-size: 14pt;
+      padding-left: 0;
+  }
+
   .font_large { font-size:32pt;}
   .font_medium { font-size:24pt;}
   .font_small { font-size: 16pt; }
@@ -148,4 +153,8 @@ label {
 @media all and (min-width: 601px) and (max-width: 900px) {
     /* ----------------------------------------------------------------------------- */
 
+      .form_panel ul {
+          font-size: 14pt;
+          padding-left: 0;
+      }
 }

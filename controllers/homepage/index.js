@@ -14,7 +14,7 @@ MongoClient.connect(url, function(err, db) {
 }
 
 var findProducts = function(db, callback) {
-   var results = db.collection('products').find().limit(5).toArray(function(err, results) {
+   var results = db.collection('products').find().limit(6).sort({"position": -1}).toArray(function(err, results) {
 		callback(results)
 	 })
 
