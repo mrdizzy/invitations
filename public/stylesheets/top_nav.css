@@ -138,6 +138,11 @@ footer {
         width: 160px;
         padding-top: 10px;
     }
+
+    .testimonal_quote_icon {
+      display:block;
+    margin:0 auto;
+    }
 }
 
 
@@ -202,5 +207,18 @@ footer {
         margin: 0 auto;
         float: none;
         width: 100%;
+    }
+    .testimonial_photo {
+        float: none;
+        margin: 0 auto;
+        padding:0;
+    }
+    .testimonial_quote {
+        margin: 0 auto;
+        padding:0;
+    }
+    .testimonal_quote_icon {
+      display:block;
+    margin:0 auto;
     }
 }
