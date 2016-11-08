@@ -80,16 +80,19 @@ width:150px;;display:block;margin:0 auto;margin-top:4em;
         width: 100%;
     }
     #headline {
-        font-size: 25pt;
-        width: 90%;
+        font-size: 22pt;
+        width: 95%;
         line-height: 1.6em;
     }
+  h2 {
+    font-size:18pt;
+  }
     h4 {
-        font-size: 20pt;
+        font-size: 18pt;
         line-height: 1.7em;
     }
     h6 {
-      font-size:20pt;
+      font-size:18pt;
         width: 70%;
     }
     article {

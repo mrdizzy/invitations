@@ -12,8 +12,14 @@ h1 { font-family:'TP'}
 
 h2, .blurb { font-family: 'Junge'; font-size:22pt; line-height:1.5em;margin:0 auto;}
 
-h3, p, ul, .caption { font-family:'Raleway'}
+h3, h6, p, ul, .caption { font-family:'Raleway'}
 
+
+  h4 {
+
+  font-family: 'Julius Sans One', sans-serif;#
+
+}
 h5 {
     border-bottom: 1px solid black;
     font-size: 18pt;
@@ -40,7 +46,9 @@ h6 {
 .font_medium { font-size:36pt;}
 .font_small { font-size: 24pt; }
 
-.font_smaller { font-size: 18pt; }
+.font_smaller { font-size: 20pt; }
+.font_smallest { font-size:16pt;}
+.font_tiny { font-size:14pt; }
 
 .width_tiny { width:30%;}
 .width_smaller { width:40%;}
@@ -115,4 +123,29 @@ label {
     margin-bottom: 0.5em;
     font-size: 14pt;
     color: #B50000;
+}
+
+
+
+/* Smartphone */
+
+
+/* ----------------------------------------------------------------------------- */
+
+@media all and (min-width: 260px) and (max-width: 600px) {
+
+  .font_large { font-size:32pt;}
+  .font_medium { font-size:24pt;}
+  .font_small { font-size: 16pt; }
+  .font_smaller { font-size:14pt; }
+  .font_smallest {font-size:12pt;}
+  .font_tiny { font-size:12pt; }
+}
+
+
+/* Phablet */
+
+@media all and (min-width: 601px) and (max-width: 900px) {
+    /* ----------------------------------------------------------------------------- */
+
 }

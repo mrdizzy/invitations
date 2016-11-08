@@ -2,20 +2,55 @@ var Product = Backbone.Model.extend({
     ////////////////////////////////////////////////////////////////
     urlRoot: '/products',
     idAttribute: "_id",
-
-    initialize: function() {
-        this.listenTo(this.model, "change", this.calculatePrice)
+    defaults: {
+      "embellishment": false,
+      "format": "flat",
+      "texture": "plain",
+      "envelopestyle": "plain",
+      "personalisation": [],
+      "extras": [],
+      "quantity": 20,
+      "price": 1.29
     },
-
+    initialize: function() {
+        this.on("change", this.calculatePrice)
+    },
     calculatePrice: function() {
-        var price,
-            quantity = this.quantity(),
+        var price = this.get("price"),
+            quantity = this.get("quantity"),
+            texture = this.get("texture"),
+            embellishment = this.get("embellishment"),
+            format = this.get("format"),
+            envelopestyle = this.get("envelopestyle"),
             total;
 
-        total = total.toFixed(2);
-        split_total = total.toString().split(".")
 
-        this.set("pounds", split_total[0]).set("pence", split_total[1]).set("total", total)
+          if(format == "foldout") {
+            price = price + 0.30
+          }
+            if(envelopestyle == "boxplain") {
+              price = price + 0.30
+            } else if(envelopestyle == "matching") {
+              price = price + 0.25
+            } else if (envelopestyle =="boxmatching") {
+                price = price + 0.55
+            }
+
+            if(texture == "linen") {
+                price = price + 0.10
+            } else if (texture == "hammered") {
+
+                  price = price + 0.10
+            } else if (texture == "pearlescent") {
+
+                  price = price + 0.20
+            }
+
+            alert(price * quantity)
+      //  total = total.toFixed(2);
+      //split_total = total.toString().split(".")
+
+      //  this.set("pounds", split_total[0]).set("pence", split_total[1]).set("total", total)
 
     },
     makePurchase: function() {
@@ -38,7 +73,7 @@ var product = new Product();
 var StepView = Backbone.View.extend({
     el: '#steps',
     initialize: function() {
-        this.listenTo(this.guests, 'change', this._renderQuickGuests)
+      //  this.listenTo(this.guests, 'change', this._renderQuickGuests)
         this.render();
     },
     events: {
@@ -57,12 +92,14 @@ var StepView = Backbone.View.extend({
             this.checked = false;
             $(":radio[value='" + choice + "']").prop("checked", true)
         });
+        this.model.set(option, choice)
+        this.model.trigger("change")
     },
     checkboxChosen: function(e) {
         var $element = $(e.currentTarget);
         var id = $(e.currentTarget).attr('id')
         var $checkbox = $(":checkbox[name='" + id + "']")
-        console.log();
+
         $checkbox.prop("checked", !$checkbox.is(":checked"))
     },
 

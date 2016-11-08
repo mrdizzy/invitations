@@ -24,33 +24,37 @@
 
 <% if (counter == 1) { %>
 
-										<div class="form_panel" style="clear:both;">
-											<img src="/images/homepage/icons/sample.svg" style="width:50px;display:block;margin:0 auto;margin-top:-2em;" />
+	<div class="form_panel" style="width:80%;padding-top:2em;text-align:center;margin:0 auto;">
+		<img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;" />
+	<h2 class="small width_small text_center">Get a free sample&hellip;</h2>
+		<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address&hellip;</p>
 
+						<img src="/images/homepage/sample_box.png" style="width:205px;" />
 
-											<div style="padding:0.5em;">
+						<form class="pure-form form-aligned">
 
-												<h5>&hellip;to get your own <span style="font-weight:800;">FREE</span> sample pack usually worth £9.99, just enter your name and address&hellip;</h5>
+						<div class="pure-control-group">
+								<input type="email" name="email" placeholder="Email address"></input>
+							</div>
 
-																	<img src="/images/homepage/sample_box.png" style="width:300px;" />
-												<form class="pure-form form-aligned">
+							<div class="pure-control-group">
+								<input type="text" name="address" placeholder="House number or name"></input>
+							</div>
 
-													<div class="pure-control-group">
-														<input type="text" name="address" placeholder="House number or name"></input>
-													</div>
+							<div class="pure-control-group">
+								<input type="text" name="postcode" placeholder="Your postcode"></input>
+							</div>
 
+							</fieldset>
 
-													<div class="pure-control-group">
-														<input type="text" name="postcode" placeholder="Your postcode"></input>
-													</div>
+								<button type="submit" style="font-family:Playfair;font-size:18pt;font-style:italic;font-weight:400;"class="pure-button pure-button-primary">Post my sample now!</button>
 
-													</fieldset>
+						</form>
 
-													<button type="submit" class="pure-button pure-button-primary" style="margin:0.5em">Post my catalogue!</button>
+					</div>
 
-												</form>
-											</div>
-										</div>
+					<img src="/images/furniture/flourish_line.svg" style="width:85%;display:block;margin:0 auto;" />
+
 
 <% } %>
 
@@ -68,9 +72,9 @@
 
 					<a href="/products/<%= group[0].name %>"><img src="/images/invitations/<%= group[0].name %>/browse.jpg" style="width:100%;" /></a>
 
-					<div style="position:relative;top:-3em;z-index:4;">
+					<div class="triangle_up">
 						<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-						<div class="blurb">
+						<div class="blurb font_smaller">
 							<%= group[0].description %>
 						</div>
 					</div>
@@ -91,9 +95,9 @@
 						<a href="/products/<%= group[1].name %>"><h1 class="font_small text_center product_name"><%= group[1].clean_name %></h1></a>
 
 						<a href="/products/<%= group[1].name %>"><img src="/images/invitations/<%= group[1].name %>/browse.jpg" style="width:100%;" /></a>
-						<div style="position:relative;top:-3em;z-index:4;">
+						<div class="triangle_up">
 							<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-							<div class="blurb">
+							<div class="blurb font_tiny">
 								<%= group[1].description %>
 							</div>
 						</div>
@@ -116,9 +120,9 @@
 								<a href="/products/<%= group[2].name %>"><h1 class="font_large text_center product_name"><%= group[2].clean_name %></h1><a>
 
 <a href="/products/<%= group[2].name %>"><img src="/images/invitations/<%= group[2].name %>/browse.jpg" style="width:100%;" /></a>
-								<div style="position:relative;top:-3em;z-index:4;">
+								<div class="triangle_up">
 									<img src="/images/furniture/triangle_up.svg" style="margin:0 auto;padding:0;display:block;" />
-									<div class="blurb">
+									<div class="blurb font_small">
 										<%= group[2].description %>
 									</div>
 								</div>

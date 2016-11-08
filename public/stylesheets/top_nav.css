@@ -192,6 +192,11 @@ footer {
         border-bottom-left-radius: 5px;
         width: 140px;
     }
+    .shell {
+
+        width: 20px;
+    }
+
     #left_column, #right_column {
         clear: both;
         margin: 0 auto;

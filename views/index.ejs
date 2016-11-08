@@ -31,8 +31,12 @@
 
 	<div id="slides">
 		<% products.forEach(function(invitation) { %>
-			<a href="/products/<%= invitation.name %>"><img src="/images/invitations/<%= invitation.name %>/collage.jpg" /></a>
-			<a href="/products/<%= invitation.name %>"><img src="/images/invitations/<%= invitation.name %>/four.jpg" /></a>
+			<a href="/products/<%= invitation.name %>"><img sizes="100vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite">
+
+</a>
+			<a href="/products/<%= invitation.name %>">
+				<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="100vw"
+	    srcset="/images/invitations/<%= invitation.name %>/four_700.jpg 700w, /images/invitations/<%= invitation.name %>/four.jpg 1300w"></a>
 			<%}) %>
 	</div>
 
@@ -48,10 +52,9 @@
 
 	<article id="homepage_copywriting">
 
-
 				<div class="shell_line"></div>
-				<img src="/images/furniture/shell.svg" class="shell" />
 
+				<img src="/images/furniture/shell.svg" class="shell" />
 
 		<h2> When people see our invitations for the first time, it's usually the envelope that instantly delights and impresses them:</h2>
 
@@ -60,7 +63,9 @@
 		<h2 class="smaller width_large text_center">They lend an	exclusivity to your wedding invitations that will have your guests wondering where on Earth they came from.</h2>
 
 <div class="caption width_small text_center">Your envelopes are printed with guest addresses for the ultimate in perfection: there's nothing worse than badly handwritten addresses to spoil a beautiful envelope, not to mention the hours of time it saves you&hellip;<br/>
+
 				<img src="/images/homepage/pointer_down.svg" />
+
 </div>
 
 
@@ -70,21 +75,13 @@
 				<img src="/images/homepage/pointer_up.svg" />
 
 				<div class="caption">
-					Our envelopes are tailor-made with matching designs personalised with you own unique monograms </div>
-
-
-
-
-
-
-
+					Our envelopes are tailor-made with matching designs personalised with you own unique monogram.
+				</div>
 
 
 		<h2 class="smaller text_center width_small">But the envelopes are just the beginning&hellip;.</h2>
 
-		<p>
-			Inside, your invitation is dressed in one of a range of embellishments to add that wow factor: whether it's uwrapping the paper sleeve adorned with your monogram, unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel
-			like they're engaging with something really special.</p>
+		<p>Inside, your invitation is dressed in one of a range of embellishments to add that wow factor: whether it's uwrapping the paper sleeve adorned with your monogram, unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel like they're engaging with something really special.</p>
 
 		<h2 class="smaller text_center width_medium">The delicate, frosted-vellum cover, watermarked with your monogram in a matching design, evokes a feeling of quality that card alone cannot match.</h2>
 
