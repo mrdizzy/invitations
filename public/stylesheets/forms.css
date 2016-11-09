@@ -137,8 +137,16 @@
     background: #ccc;
 }
 
+form { text-align:left}
 
+label {
+  
+    font-family: "Julius Sans One";
+    letter-spacing:0.1em;
+  padding-top:2em;
+  text-align:left;
 
+}
 .pure-button {
     background-color: grey;
     font-family: 'Raleway';
@@ -160,6 +168,7 @@ input {
     font-family: "Raleway";
     font-size: 16pt;
     padding: 0;
+    width:90%;
     margin: 0;
     font-weight: 300;
 }

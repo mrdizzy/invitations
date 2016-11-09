@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
-
 #genesis {
     padding-top: 75px;
     width: 140px;
@@ -10,6 +8,12 @@
     float: left;
 }
 
+#right_column {
+  text-align: center;
+  margin-left: 74%;
+  padding:0;
+
+}
 #slides {
     display: none;
 }
@@ -87,12 +91,6 @@ h6.deselected {
     color: #999;
 }
 
-.dashed_line {
-    border-top: 1px dotted black;
-    margin: 0 auto;
-    width: 75%;
-}
-
 .choice, .checkbox_choice {
     margin: 0 auto;
     clear:both;
@@ -148,13 +146,8 @@ h6.deselected {
   .no_border {
     border:0;
   }
-#right_column {
-    text-align: center;
-    margin-left: 74%;
-}
 
 .testimonial_container {
-    margin: 0 auto;
     margin-top: 10em;
 }
 
@@ -169,11 +162,13 @@ h6.deselected {
 }
 
 .testimonial_quote {
-    margin: 0 auto;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: 0.5em;
+    padding-right:0.5em;
 }
 
+form {
+  text-align:left;
+}
 
 /* Smartphone */
 
@@ -184,6 +179,10 @@ h6.deselected {
     #slides {
         width: 100%;
         float: none;
+    }
+    .form_panel {
+      padding-left:0.5em;
+      text-align:center;
     }
     #slides img {
         border-radius: 0;
@@ -215,6 +214,8 @@ h6.deselected {
 
     .choice_image {
       float:none;
+      padding:0;
+      width:100%;
     margin:0 auto;
     }
     .radio_button_container {
@@ -244,6 +245,12 @@ h6.deselected {
     #slides {
         width: 100%;
     }
+    #steps {
+      width:95%;
+    }
+    #description {
+      width:80%;
+    }
     #left_column, #right_column {
         width: 100%;
         clear: both;
@@ -253,4 +260,17 @@ h6.deselected {
     .choice, .checkbox_choice {
         width: 80%;
     }
+    .form_panel {
+      width:70%;
+      margin:0 auto;
+    }
+    .testimonial_container {
+
+        margin: 0 auto;
+        margin-top: 10em;
+        text-align:left;
+        width:70%;
+    }
+
+
 }

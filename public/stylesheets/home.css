@@ -1,8 +1,7 @@
 #slides {
     width: 95%;
-    margin: 0 auto;
     display: none;
-    clear: both;
+    margin: 0 auto;
 }
 
 #slides img {
@@ -10,25 +9,10 @@
     width: 100%;
 }
 
-.slidesjs-pagination {
-    margin-top: 0;
-}
-
-.slidesjs-previous, .slidesjs-next {}
-
-.slidesjs-next {
-    margin-left: 10%;
-}
-
-#book {
-    vertical-align: middle;
-}
-
 #headline {
     background-color: white;
     border-radius: 20px;
     font-family: 'TP';
-    font-size: 36pt;
     line-height: 1.3em;
     margin: 0 auto;
     padding: 0.25em;
@@ -54,19 +38,11 @@ article {
     display: none;
 }
 
-.embellishment {
-    padding: 0.5em;
-    width: 225px;
+.icon {
     display: block;
     margin: 0 auto;
-}
-
-.icon {
     padding-top: 1em;
-    display: inline-block;
-    margin: 0 auto;
     padding-bottom: 0;
-    margin-bottom: 0;
     width: 50px;
 }
 
@@ -78,7 +54,11 @@ article {
 }
 
 #david_quote_icon {
-  padding-bottom:0.5em;display:block;margin:0 auto;width:40px;padding-top:0.5em
+    padding-bottom: 0.5em;
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    padding-top: 0.5em
 }
 
 .image_100 {
@@ -98,34 +78,20 @@ article {
         width: 100%;
     }
     #headline {
-        font-size: 22pt;
         width: 95%;
         line-height: 1.6em;
-    }
-    h2 {
-        font-size: 18pt;
-    }
-    h4 {
-        font-size: 18pt;
-        line-height: 1.7em;
-    }
-    h6 {
-        font-size: 18pt;
-        width: 70%;
     }
     article {
         width: 90%;
         margin: 0 auto;
     }
     .david_photo {
-      margin-top: 1em;
+        margin-top: 1em;
     }
 }
 
 
-/* Phablet */
-
-
+/* Phablet *
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 601px) and (max-width: 900px) {
@@ -140,14 +106,6 @@ article {
         margin: 0 auto;
         font-size: 28pt;
         line-height: 1.5em;
-    }
-    h4 {
-        font-size: 20pt;
-        line-height: 1.7em;
-    }
-    h6 {
-        font-size: 20pt;
-        width: 70%;
     }
     article {
         width: 80%;
@@ -170,16 +128,7 @@ article {
     #headline {
         width: 70%;
         margin: 0 auto;
-        font-size: 36pt;
         line-height: 1.5em;
-    }
-    h4 {
-        font-size: 20pt;
-        line-height: 1.7em;
-    }
-    h6 {
-        font-size: 20pt;
-        width: 70%;
     }
     article {
         width: 60%;
