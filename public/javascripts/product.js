@@ -46,7 +46,6 @@ var Product = Backbone.Model.extend({
                   price = price + 0.20
             }
 
-            alert(price * quantity)
       //  total = total.toFixed(2);
       //split_total = total.toString().split(".")
 

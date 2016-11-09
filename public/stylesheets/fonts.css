@@ -1,25 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400i|Raleway:300,300i,600,600i|Junge');
 @font-face {
     font-family: "TP";
     src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400i|Raleway:300,300i,600,600i|Junge');
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-h1 { font-family:'TP'}
-
-h2, .blurb { font-family: 'Junge'; font-size:22pt; line-height:1.5em;margin:0 auto;}
-
-h3, h6, p, ul, .caption { font-family:'Raleway'}
-
-
-  h4 {
-
-  font-family: 'Julius Sans One', sans-serif;#
-
+h1 {
+    font-family: 'TP'
 }
+
+h2, .blurb {
+    font-family: 'Junge';
+    font-size: 22pt;
+    line-height: 1.5em;
+    margin: 0 auto;
+}
+
+h3, h6, p, ul, .caption {
+    font-family: 'Raleway'
+}
+
+h4 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
 h5 {
     border-bottom: 1px solid black;
     font-size: 18pt;
@@ -42,44 +49,10 @@ h6 {
     width: 50%;
 }
 
-.font_large { font-size:44pt;}
-.font_medium { font-size:36pt;}
-.font_small { font-size: 24pt; }
-
-.font_smaller { font-size: 20pt; }
-.font_smallest { font-size:16pt;}
-.font_tiny { font-size:14pt; }
-
-.width_tiny { width:30%;}
-.width_smaller { width:40%;}
-.width_small { width:50%;}
-.width_medium { width:75%; }
-.width_large { width:80%; }
-.width_full { width:100%; }
-
-.smaller { font-size:18pt;}
-.text_center { text-align:center;}
-
-.form_panel h5 {
-    font-weight: 300;
-    font-size: 16pt;
-    border: 0;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-
 ul {
-    line-height: 1.3em;
-    font-weight: 400;
     font-size: 14pt;
     text-align: left;
     list-style-type: none;
-}
-
-.form_panel ul {
-    font-size: 14pt;
-    padding-left: 1em;
 }
 
 li {
@@ -93,13 +66,73 @@ li {
     background-position: 0 11px;
 }
 
-.caption {
-  text-align:center;
-  width:90%;
-  margin:0 auto;
-  font-size:12pt;
-  font-style:italic;
+.font_large {
+    font-size: 44pt;
 }
+
+.font_medium {
+    font-size: 36pt;
+}
+
+.font_small {
+    font-size: 24pt;
+}
+
+.font_smaller {
+    font-size: 20pt;
+}
+
+.font_smallest {
+    font-size: 16pt;
+}
+
+.font_tiny {
+    font-size: 14pt;
+}
+
+.width_tiny {
+    width: 30%;
+}
+
+.width_smaller {
+    width: 40%;
+}
+
+.width_small {
+    width: 50%;
+}
+
+.width_medium {
+    width: 75%;
+}
+
+.width_large {
+    width: 80%;
+}
+
+.width_full {
+    width: 100%;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.form_panel h5 {
+    font-weight: 300;
+    font-size: 16pt;
+    border: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.caption {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12pt;
+    font-style: italic;
+}
+
 p {
     line-height: 1.6em;
     font-size: 14pt;
@@ -126,25 +159,37 @@ label {
 }
 
 
-
 /* Smartphone */
 
 
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-
-  .form_panel ul {
-      font-size: 14pt;
-      padding-left: 0;
-  }
-
-  .font_large { font-size:32pt;}
-  .font_medium { font-size:24pt;}
-  .font_small { font-size: 16pt; }
-  .font_smaller { font-size:14pt; }
-  .font_smallest {font-size:12pt;}
-  .font_tiny { font-size:12pt; }
+    ul {
+        font-size: 14pt;
+        padding-left: 0;
+    }
+    .image_100 {
+        width: 115%;
+    }
+    .font_large {
+        font-size: 32pt;
+    }
+    .font_medium {
+        font-size: 24pt;
+    }
+    .font_small {
+        font-size: 16pt;
+    }
+    .font_smaller {
+        font-size: 14pt;
+    }
+    .font_smallest {
+        font-size: 12pt;
+    }
+    .font_tiny {
+        font-size: 12pt;
+    }
 }
 
 
@@ -152,9 +197,8 @@ label {
 
 @media all and (min-width: 601px) and (max-width: 900px) {
     /* ----------------------------------------------------------------------------- */
-
-      .form_panel ul {
-          font-size: 14pt;
-          padding-left: 0;
-      }
+    ul {
+        font-size: 14pt;
+        padding-left: 0;
+    }
 }

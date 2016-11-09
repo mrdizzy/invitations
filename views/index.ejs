@@ -31,11 +31,11 @@
 
 	<div id="slides">
 		<% products.forEach(function(invitation) { %>
-			<a href="/products/<%= invitation.name %>"><img sizes="100vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite">
+			<a href="/products/<%= invitation.name %>"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite">
 
 </a>
 			<a href="/products/<%= invitation.name %>">
-				<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="100vw"
+				<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="(max-width: 1100px) 100vw, 95vw"
 	    srcset="/images/invitations/<%= invitation.name %>/four_700.jpg 700w, /images/invitations/<%= invitation.name %>/four.jpg 1300w"></a>
 			<%}) %>
 	</div>
@@ -62,7 +62,7 @@
 
 		<h2 class="smaller width_large text_center">They lend an	exclusivity to your wedding invitations that will have your guests wondering where on Earth they came from.</h2>
 
-<div class="caption width_small text_center">Your envelopes are printed with guest addresses for the ultimate in perfection: there's nothing worse than badly handwritten addresses to spoil a beautiful envelope, not to mention the hours of time it saves you&hellip;<br/>
+<div class="caption width_small text_center" style="padding-top:2em;margin-bottom:-8em;float:right;position:relative;z-index:10">Your envelopes are printed with guest addresses for the ultimate in perfection: there's nothing worse than badly handwritten addresses to spoil a beautiful envelope, not to mention the hours of time it saves you&hellip;<br/>
 
 				<img src="/images/homepage/pointer_down.svg" />
 
@@ -72,14 +72,14 @@
 			<img src="/images/homepage/big_illustrations/envelope.png" class="image_100" />
 
 
-				<img src="/images/homepage/pointer_up.svg" />
 
-				<div class="caption">
+				<div class="width_small text_center caption" style="float:left;position:relative;z-index:10;margin-top:-6em;padding-bottom:2em;">
+								<img src="/images/homepage/pointer_up.svg" /><br/>
 					Our envelopes are tailor-made with matching designs personalised with you own unique monogram.
 				</div>
 
 
-		<h2 class="smaller text_center width_small">But the envelopes are just the beginning&hellip;.</h2>
+		<h2 class="smaller text_center width_small" style="clear:both;">But the envelopes are just the beginning&hellip;.</h2>
 
 		<p>Inside, your invitation is dressed in one of a range of embellishments to add that wow factor: whether it's uwrapping the paper sleeve adorned with your monogram, unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel like they're engaging with something really special.</p>
 
@@ -124,7 +124,9 @@
 		<h2 class="text_center width_small">
 
 
-					<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" style="padding-bottom:0.5em;display:block;margin:0 auto;width:40px;"/>Hi I'm David. I'd like to post you a free sample box today, usually worth £9.99&hellip;</h2>
+					<img src="/images/homepage/leftquote.svg" id="david_quote_icon"/>
+
+					Hi I'm David. I'd like to post you a free sample box today, usually worth £9.99&hellip;</h2>
 
 
 
@@ -139,7 +141,7 @@
 
 		<h2 class="text_center smaller width_medium">&hellip;so for a limited time I'm giving away free sample boxes containing:</h2>
 
-		<img src="/images/homepage/sample_box.png" style="width:300px;display:block;margin:0 auto" />
+		<img src="/images/homepage/sample_box.png" style="width:40%;display:block;margin:0 auto" />
 
 
 			<ul>
@@ -507,13 +509,13 @@
 
 		<p>
 			a ribbon which is slightly off colour to everything else&hellip;</p>
-		<img src="/images/homepage/big_illustrations/invite_vellum.png" class="width_large text_center" />
+		<img src="/images/homepage/big_illustrations/invite_vellum.png" style="margin:0 auto;display:block;" class="width_large text_center" />
 		<div class="width_small text_center">
 
-			<img src="/images/homepage/pointer_up.svg" />
 
 
-			<div class="caption">
+			<div class="caption text_center" style="margin-top:-2em;position:relative;z-index:10;">
+						<img src="/images/homepage/pointer_up.svg" /><br/>
 				Vellum covers are watermarked with your design and monogram, giving your invitations an unrivalled air of sophistication</div>
 			</div>
 

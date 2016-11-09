@@ -51,13 +51,23 @@
 
 
 			<div id="slides">
-				<img src="/images/invitations/<%= product.name %>/collage.jpg" />
-				<img src="/images/invitations/<%= product.name %>/vellum.jpg" />
-				<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" />
-				<img src="/images/invitations/<%= product.name %>/envelope.jpg" />
-				<img src="/images/invitations/<%= product.name %>/closeup.jpg" />
-				<img src="/images/invitations/<%= product.name %>/rsvp.jpg" />
-				<img src="/images/invitations/<%= product.name %>/info.jpg" />
+				<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage.jpg 1300w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
+
+
+					<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/vellum.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
+
+
+						<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/pocketfold.jpg 1300w, /images/invitations/<%= product.name %>/pocketfold_800.jpg 800w" />
+
+							<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/envelope.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
+
+								<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/closeup.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
+
+
+									<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/rsvp.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
+
+										<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/info.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
+
 			</div>
 
 			<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>"
@@ -74,7 +84,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 			</div>
 			<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" />
 
-						<h1 id="product_name" class="text_center">&mdash;<%= product.clean_name %>&mdash;</h1>
+						<h1 id="product_name" class="font_large text_center">&mdash;<%= product.clean_name %>&mdash;</h1>
 
 						<h2 id="description" class="text_center font_smaller"><%= product.description %></h2>
 <div id="steps">
@@ -95,10 +105,10 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 				------------------------------------------------------- EMBELLISHMENTS -->
 
 
-				<h4 class="smaller">Choose your embellishment</h4>
+				<h4 class="font_smaller">Choose your embellishment</h4>
 
 
-				<div class="choice choice_embellishment control-group" id="embellishment_ribbon">
+				<div class="choice choice_embellishment no_border" id="embellishment_ribbon">
 
 					<div class="choice_image"><img src="/images/product/ribbon.png" style="width:80px;" /></div>
 
@@ -124,7 +134,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_embellishment control-group" id="embellishment_pearl">
+				<div class="choice choice_embellishment" id="embellishment_pearl">
 
 					<div class="choice_image"><img src="/images/product/pearl.png" style="width:80px;" /></div>
 
@@ -153,7 +163,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_embellishment control-group" id="embellishment_wrap">
+				<div class="choice choice_embellishment" id="embellishment_wrap">
 
 					<div class="choice_image">
 						<img src="/images/product/wrap.png" style="width:80px;" />
@@ -204,10 +214,10 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 				------------------------------------------------------- CARD STYLE -->
 
 
-				<h4 class="smaller">Choose your card format</h4>
+				<h4 class="font_smaller">Choose your card format</h4>
 
 
-				<div class="choice choice_format control-group" id="format_flat">
+				<div class="choice choice_format no_border" id="format_flat">
 
 					<div class="choice_image">
 						<img src="/images/product/flat.svg" style="width:100px;" />
@@ -237,7 +247,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_format control-group"  id="format_foldout">
+				<div class="choice choice_format"  id="format_foldout">
 
 					<div class="choice_image">
 						<img src="/images/product/foldout.svg" style="width:100px;" />
@@ -288,10 +298,10 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 				------------------------------------------------------- TEXTURE -->
 
 
-				<h4 class="smaller">Choose your card texture</h4>
+				<h4 class="font_smaller">Choose your card texture</h4>
 
 
-				<div class="choice choice_texture control-group" id="texture_plain">
+				<div class="choice choice_texture no_border" id="texture_plain">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_plain.svg" style="width:70px;" />
@@ -317,7 +327,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_texture control-group" id="texture_hammered">
+				<div class="choice choice_texture" id="texture_hammered">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_hammered.svg" style="width:70px;" />
@@ -342,7 +352,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_texture control-group" id="texture_linen">
+				<div class="choice choice_texture" id="texture_linen">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_linen.svg" style="width:70px;" />
@@ -369,7 +379,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_texture control-group" id="texture_pearlescent">
+				<div class="choice choice_texture" id="texture_pearlescent">
 
 					<div class="choice_image">
 						<img src="/images/product/paper_pearlescent.svg" style="width:70px;" />
@@ -419,10 +429,10 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 				------------------------------------------------------- ENVELOPE STYLE -->
 
 
-				<h4 class="smaller">Choose your envelope style</h4>
+				<h4 class="font_smaller">Choose your envelope style</h4>
 
 
-				<div class="choice choice_envelopestyle control-group" id="envelopestyle_plain">
+				<div class="choice choice_envelopestyle no_border" id="envelopestyle_plain">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_plain.svg" style="width:80px;" />
@@ -446,7 +456,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_envelopestyle control-group" id="envelopestyle_boxplain">
+				<div class="choice choice_envelopestyle " id="envelopestyle_boxplain">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_box_plain.svg" style="width:100px;" />
@@ -472,7 +482,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_envelopestyle control-group" id="envelopestyle_matching">
+				<div class="choice choice_envelopestyle " id="envelopestyle_matching">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_matching.png" style="width:80px;" />
@@ -501,7 +511,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="choice choice_envelopestyle control-group" id="envelopestyle_boxmatching">
+				<div class="choice choice_envelopestyle " id="envelopestyle_boxmatching">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_box_matching.png" style="width:100px;" />
@@ -546,9 +556,9 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<h4 class="smaller">Guest personalisation</h4>
+				<h4 class="font_smaller">Guest personalisation</h4>
 
-				<div class="checkbox_choice choice_addressing control-group" id="addressing">
+				<div class="checkbox_choice choice_addressing no_border" id="addressing">
 
 					<div class="choice_image">
 						<img src="/images/product/envelope_yes.svg" style="width:80px;" />
@@ -578,7 +588,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="checkbox_choice control-group" id="guests">
+				<div class="checkbox_choice " id="guests">
 
 					<div class="choice_image">
 						<img src="/images/product/guest_yes.svg" style="width:80px;" />
@@ -628,10 +638,10 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 				------------------------------------------------------- EXTRAS -->
 
 
-				<h4 class="smaller">Choose your extras</h4>
+				<h4 class="font_smaller">Choose your extras</h4>
 
 
-				<div class="checkbox_choice control-group" id="rsvps">
+				<div class="checkbox_choice no_border" id="rsvps">
 
 					<div class="choice_image">
 						<img src="/images/product/rsvp.svg" style="width:100px;" />
@@ -661,7 +671,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="checkbox_choice control-group" id="info">
+				<div class="checkbox_choice " id="info">
 
 					<div class="choice_image">
 						<img src="/images/product/info.svg" style="width:80px;" />
@@ -694,7 +704,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-				<div class="checkbox_choice control-group" id="map">
+				<div class="checkbox_choice " id="map">
 
 					<div class="choice_image">
 						<img src="/images/product/map.svg" style="width:90px;" />
@@ -762,15 +772,15 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 					<form class="pure-form form-aligned">
 
-					<div class="pure-control-group">
+					<div class="pure-">
 							<input type="email" name="email" placeholder="Email address"></input>
 						</div>
 
-						<div class="pure-control-group">
+						<div class="pure-">
 							<input type="text" name="address" placeholder="House number or name"></input>
 						</div>
 
-						<div class="pure-control-group">
+						<div class="pure-">
 							<input type="text" name="postcode" placeholder="Your postcode"></input>
 						</div>
 
