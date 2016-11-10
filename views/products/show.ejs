@@ -11,7 +11,7 @@
 	<meta property="og:type"               content="product" />
 	<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
 	<meta property="og:description"        content="How much does culture influence creative thinking?" />
-	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
+	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" /><link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
@@ -122,7 +122,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 					<div class="choice_description">
 						<h6>Ribbon</h6>
-						<h3>To give real impact, our range of buckle ivembellishments will take your guest's breath away.</h3>
+						<h3>To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
 					</div>
 
 										<div class="choice_price">
@@ -736,9 +736,8 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 			</div>
 
-			<div style="text-align:center;">
-				<button type="submit" class="pure-button pure-button-primary">Place order now</button>
-			</div>
+				<button style="clear:both;" type="submit" class="pure-button pure-button-primary">Place order now</button>
+
 
 
 </div>
@@ -763,35 +762,43 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-<div class="form_panel" style="padding-top:5em;">
 	<img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;" />
 <h2 class="small width_large text_center">Get a free sample&hellip;</h2>
-	<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address&hellip;</p>
+	<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address: you'll also get:</p>
 
 					<img src="/images/invitations/<%=product.name%>/sample.jpg" style="width:95%;max-width:235px;" />
 
+
+								<ul>
+									<li><span style="font-weight:500">swatches of our card textures</span> for you to see and touch</li>
+									<li><span style="font-weight:500">sample embellishments</span> (bows, buckles and ribbons) for you to compare and contrast</li>
+									<li><span style="font-weight:500">printed colour chart</span> so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
+									<li><span style="font-weight:500">our luxury catalogue</span> for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</li>
+									<li><span style="font-weight:500">a little surprise:</span> we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!
+								</ul>
+
+								<p>
+									Just enter your name and address now to get this parcel of perfection posted to you today&hellip;
+								</p>
 										<form class="pure-form  pure-form-stacked">
 
 																						<fieldset>
-											<label>Email</label>
+
 												<input type="email" name="email" placeholder="Email address"></input>
 
 
-												<label>House number/name</label>
 												<input type="text" name="address" placeholder="House number or name"></input>
 
 
-													<label>Postcode</label>
 												<input type="text" name="postcode" placeholder="Your postcode"></input>
 
 
 											</fieldset>
 
-												<button type="submit" style="font-family:Playfair;font-size:18pt;font-style:italic;font-weight:400;"class="pure-button pure-button-primary">Post my sample now!</button>
+												<button type="submit" class="pure-button pure-button-primary">Post my sample now!</button>
 
 										</form>
 
-				</div>
 
 
 

@@ -140,7 +140,7 @@
 form { text-align:left}
 
 label {
-  
+
     font-family: "Julius Sans One";
     letter-spacing:0.1em;
   padding-top:2em;
@@ -149,14 +149,19 @@ label {
 }
 .pure-button {
     background-color: grey;
-    font-family: 'Raleway';
-    font-weight: 300;
+    box-shadow:10px 10px 0 #DDD;
     border-top-left-radius: 1em;
+    margin:0 auto;
     margin-top: 1em;
+    margin-bottom:2em;
+    padding-top:2em;
+    padding-bottom:2em;
+    padding-left:0.75em;
+    padding-right:0.75em;
     border-bottom-right-radius: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    font-size: 16pt;
+    font-family:'Julius Sans One';
+    font-size:18pt;font-weight:400;
+    display:block;
 }
 
 .pure-button:hover {

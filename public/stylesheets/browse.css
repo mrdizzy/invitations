@@ -25,19 +25,31 @@
     letter-spacing: 0.1em;
     line-height: 1.2em;
 }
-.form_panel {
-  width:50%;
-  margin:0 auto;
-  text-align:center;
 
+.form_panel {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3em;
 }
+
+#sample_icon {
+    width: 40px;
+    padding: 1em;
+}
+
+#sample_box {
+  width:60%;
+  max-width:245px;
+}
+
 a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+  a:hover {
+      text-decoration: underline;
+  }
 
 .blurb {
     font-style: normal;
@@ -55,6 +67,16 @@ a:hover {
     position: relative;
     top: -3em;
     z-index: 4;
+}
+
+.flourish_line {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+
+.middle_column .flourish_line {
+    width: 75%;
 }
 
 
@@ -78,8 +100,12 @@ a:hover {
     .triangle_up {
         top: -1em;
     }
+    .triangle {
+        width: 60%;
+    }
     .middle_column {
         width: 80%;
+        margin: 0 auto;
     }
     .blurb {
         padding: 0.5em;
@@ -92,6 +118,11 @@ a:hover {
     .middle_column .blurb {
         width: 100%;
     }
+    .form_panel {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 
@@ -99,7 +130,21 @@ a:hover {
 
 @media all and (min-width: 601px) and (max-width: 900px) {
     /* ----------------------------------------------------------------------------- */
-    .left_column, .right_column {
-        margin: 0;
+    .left_column {
+        width: 55%;
+        margin-left: 5%;
+        float: left;
+        margin-top: 3em;
+    }
+    .right_column {
+        width: 35%;
+        margin-right: 5%;
+        float: right;
+        margin-top: 3em;
+    }
+    .middle_column {
+        clear: both;
+        width: 75%;
+        margin: 0 auto;
     }
 }
