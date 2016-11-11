@@ -54,18 +54,18 @@ a {
 .blurb {
     font-style: normal;
     text-align: center;
-    position: relative;
-    top: -0.05em;
-    padding: 1em;
-    width: 75%;
+    padding: 2.5%;
+    width: 80%;
     margin: 0 auto;
+    margin-top:-0.1em;
     border-radius: 0.5em;
+    margin-bottom:1em;
     background-color: #F1EFF0;
 }
 
 .triangle_up {
-    position: relative;
-    top: -3em;
+  position:relative;
+  margin-top:-3em;
     z-index: 4;
 }
 
@@ -91,33 +91,31 @@ a {
         padding: 0;
     }
     .left_column {
-        width: 58%;
+        width:60%;
         clear: both;
-    }
+      }
+      .left_column .blurb {
+        padding:0.25em;
+        width:95%
+      }
     .right_column {
         width: 40%;
     }
-    .triangle_up {
-        top: -1em;
-    }
-    .triangle {
-        width: 60%;
-    }
+
+      .right_column .blurb {
+          width: 90%;
+      }
     .middle_column {
-        width: 80%;
+        width: 98%;
         margin: 0 auto;
     }
-    .blurb {
-        padding: 0.5em;
-        line-height: 1.6em;
-        width: 86%;
-    }
-    .middle_column .triangle_up {
-        top: -2em;
-    }
     .middle_column .blurb {
-        width: 100%;
+      width:90%;
     }
+    .blurb {
+        line-height: 1.5em;
+    }
+    .middle_column .flourish_line {margin-bottom:1em;}
     .form_panel {
         width: 100%;
         margin: 0 auto;
