@@ -45,7 +45,6 @@ var Product = Backbone.Model.extend({
 
                   price = price + 0.20
             }
-
       //  total = total.toFixed(2);
       //split_total = total.toString().split(".")
 
@@ -77,7 +76,18 @@ var StepView = Backbone.View.extend({
     },
     events: {
         "click .choice": "chosen",
-        "click .checkbox_choice": "checkboxChosen"
+        "click .checkbox_choice": "checkboxChosen",
+        "click .quantity_box": "chooseQuantity"
+    },
+    chooseQuantity: function(e) {
+
+      var $element = $(e.currentTarget);
+      var id = $(e.currentTarget).attr('id')
+      var ary = id.split("_");
+      var quantity = ary[1];
+      $('.quantity_box').removeClass("selected_choice")
+        $element.addClass("selected_choice")
+        this.model.set("quantity", quantity)
     },
     chosen: function(e) {
         var $element = $(e.currentTarget);

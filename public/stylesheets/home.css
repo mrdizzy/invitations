@@ -34,10 +34,13 @@ article {
     margin-bottom: 3em;
 }
 
-#form_sample_spinner, #form_download_spinner {
+#form_sample_spinner {
     display: none;
 }
-
+#sample_box {
+ width:60%;display:block;margin:0 auto;
+ max-width:225px;
+}
 .icon {
     display: block;
     margin: 0 auto;
@@ -67,6 +70,22 @@ article {
     display: block;
 }
 
+#caption_envelope_1 {
+    padding-top: 2em;
+    margin-bottom: -10em;
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+#caption_envelope_2 {
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin-top: -6em;
+    padding-bottom: 2em;
+}
+
 
 /* Smartphone */
 
@@ -87,6 +106,37 @@ article {
     }
     .david_photo {
         margin-top: 1em;
+    }
+    .font_smaller {
+      font-size:18pt;
+    }
+    .width_small {
+      width:80%;
+    }
+
+    .width_medium {
+      width:90%;
+    }
+    #caption_envelope_1 {
+
+      margin-bottom: -5em;
+    }
+    #caption_envelope_2 {
+        width:75%;
+        margin-top:-5em;
+    }
+
+    #caption_vellum_cover {
+      margin-top:-3em;position:relative;z-index:10;margin-bottom:2em;
+    }
+
+    .pure-button {
+      font-size:16pt;
+    }
+   .image_100 {
+      width:110%;
+      position:relative;
+      left:-5%;
     }
 }
 

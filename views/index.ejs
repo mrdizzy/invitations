@@ -4,7 +4,7 @@
 
 	<head>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,400" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
@@ -31,9 +31,8 @@
 
 	<div id="slides">
 		<% products.forEach(function(invitation) { %>
-			<a href="/products/<%= invitation.name %>"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite">
+			<a href="/products/<%= invitation.name %>"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite"></a>
 
-</a>
 			<a href="/products/<%= invitation.name %>">
 				<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="(max-width: 1100px) 100vw, 95vw"
 	    srcset="/images/invitations/<%= invitation.name %>/four_700.jpg 700w, /images/invitations/<%= invitation.name %>/four.jpg 1300w"></a>
@@ -61,9 +60,9 @@
 		<p>Most people are used to seeing boring, plain envelopes.<p>
 			<p>So our tailor-made envelopes, printed both inside and out with matching intricate designs that co-ordinate beautifully with the invitations they contain, are an unexpected surprise. </p>
 
-		<h2 class="smaller width_large text_center">They lend a	exclusivity to your wedding invitations that will have your guests wondering how you made them.</h2>
+		<h2 class="font_smaller width_large text_center">They lend a	exclusivity to your wedding invitations that will have your guests wondering how you made them.</h2>
 
-<div class="caption width_small text_center" style="padding-top:2em;margin-bottom:-10em;float:right;position:relative;z-index:10">Your envelopes are printed with guest addresses for the ultimate in perfection: don't let badly handwritten addresses spoil your beautiful envelopes. It also saves you hours of time&hellip;<br/>
+<div id="caption_envelope_1" class="caption width_small text_center">Your envelopes are printed with guest addresses for the ultimate in perfection: don't let badly handwritten addresses spoil your beautiful envelopes. It also saves you hours of time&hellip;<br/>
 
 				<img src="/images/homepage/pointer_down.svg" />
 
@@ -74,19 +73,19 @@
 
 
 
-				<div class="width_smaller text_center caption" style="float:left;position:relative;z-index:10;margin-top:-6em;padding-bottom:2em;">
+				<div class="width_smaller text_center caption" id="caption_envelope_2">
 								<img src="/images/homepage/pointer_up.svg" /><br/>
 					Our envelopes are tailor-made with matching designs personalised with you own unique monogram: there's nothing quite like them!
 				</div>
 
 
-		<h2 class="smaller text_center width_small" style="clear:both;">But the envelopes are just the beginning&hellip;.</h2>
+		<h2 class="font_smaller text_center width_small" style="clear:both;">But the envelopes are just the beginning&hellip;.</h2>
 
 		<p>Inside, your invitation is dressed in one of a range of embellishments to add that wow factor:</p>
 
 		<p>&hellip;whether it's uwrapping the paper sleeve adorned with your monogram unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel like they're engaging with something really special.</p>
 
-		<h2 class="smaller text_center width_medium">The delicate, frosted-vellum cover, watermarked with your monogram in a matching design, evokes a magical feeling of quality that card alone cannot match.</h2>
+		<h2 class="font_smaller text_center width_medium">The frosted vellum cover, watermarked with your monogram in a matching design, evokes a magical feeling of quality that card alone cannot match.</h2>
 
 		<p>And the delicately printed tissue paper, light as a feather, used to protect your invitation in transit, makes your guests feel more like they are opening a box of expensive designer shoes.</p>
 
@@ -145,18 +144,18 @@
 			your hand...
 		</p>
 
-		<h2 class="text_center smaller width_medium">&hellip;so for a limited time I'm giving away free sample boxes containing:</h2>
+		<h2 class="text_center font_smaller width_medium">&hellip;so for a limited time I'm giving away free sample boxes containing:</h2>
 
-		<img src="/images/homepage/sample_box.png" style="width:40%;display:block;margin:0 auto" />
+		<img src="/images/homepage/sample_box.png" id="sample_box" />
 
 
 			<ul>
-				<li><span style="font-weight:500">three beautiful invitation suites</span> (card, envelope, rsvp, info sheet and embellishments) from our exclusive collections </li>
-				<li><span style="font-weight:500">swatches of our card textures</span> for you to see and touch</li>
-				<li><span style="font-weight:500">sample embellishments</span> (bows, buckles and ribbons) for you to compare and contrast</li>
-				<li><span style="font-weight:500">printed colour chart</span> so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
-				<li><span style="font-weight:500">our luxury catalogue</span> for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</li>
-				<li><span style="font-weight:500">a little surprise:</span> we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!
+				<li><span style="font-weight:400">three beautiful invitation suites</span> (card, envelope, rsvp, info sheet and embellishments) from our exclusive collections </li>
+				<li><span style="font-weight:400">swatches of our card textures</span> for you to see and touch</li>
+				<li><span style="font-weight:400">sample embellishments</span> (bows, buckles and ribbons) for you to compare and contrast</li>
+				<li><span style="font-weight:400">printed colour chart</span> so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
+				<li><span style="font-weight:400">our luxury catalogue</span> for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</li>
+				<li><span style="font-weight:400">a little surprise:</span> we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!
 			</ul>
 
 			<p>
@@ -193,7 +192,7 @@
 
 				<div style="text-align:center;">
 					<img src="/images/furniture/360.gif" style="width:80px;" id="form_sample_spinner" />
-					<button type="submit" id="get_sample" style="" class="pure-button pure-button-primary">
+					<button type="submit" id="get_sample" class="pure-button pure-button-primary">
 								Post my sample box now!
 							</button>
 
@@ -242,7 +241,7 @@
 		<div class="testimonial_container">
 			<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo" />
 			<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" />
-			<p class="testimonial_quote">It&rsquo;s all the little touches, the beauty of the printed envelopes, and the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and bespoke: my guests were all really impressed as my stationery really did
+			<p class="testimonial_quote">It&rsquo;s all the little touches, the envelopes look so special! And the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and classy: my guests were all really impressed as my stationery really did
 				stand out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
 
 				<p class="testimonial_name">&mdash;Chloé Campbell</p>
@@ -283,7 +282,7 @@
 
 		<p>That's why companies spend millions of pounds wrapping boring things like rice in elegant, carefully-designed foil (and shoving an extra £1 on the price in the process!).</p>
 
-<h2 class="width_medium text_center smaller">
+<h2 class="width_medium text_center font_smaller">
 				Needless to say, boring, plain envelopes with smudged, hand-scribbled addresses will not do justice to what is inside.</h2>
 
 
@@ -295,12 +294,12 @@
 		</p>
 
 
-		<img src="/images/homepage/big_illustrations/invite_vellum.png" style="margin:0 auto;display:block;" class="width_large text_center" />
+		<img src="/images/homepage/big_illustrations/invite_vellum.png" width="95%" class=" text_center" />
 		<div class="width_smaller text_center">
 
 
 
-		<div class="caption text_center" style="margin-top:-3em;position:relative;z-index:10;margin-bottom:2em;">
+		<div class="caption text_center" id="caption_vellum_cover">
 					<img src="/images/homepage/pointer_up.svg" /><br/>
 			Vellum covers are delicately watermarked with your design and monogram, giving your invitations an unrivalled air of sophistication</div>
 		</div>
@@ -534,7 +533,7 @@
 									<p>
 										And how deflated will you be when you've bought the card, ribbon, envelopes and created your design...</p>
 
-										<p style="font-weight:500">and then you realise it turns out nothing like you imagined?</p>
+										<p style="font-weight:400">and then you realise it turns out nothing like you imagined?</p>
 									<p>
 										It's so much better seeing a photo of the finished product. </p>
 									<p>
@@ -573,7 +572,7 @@
 
 		<p>The road from placing an order to receiving your finished invitations can be bumpy if you're not working with people who communicate well and know all the issues that can, and will, arise. </p>
 
-		<h2 class="width_medium text_center smaller">In a world where so much is automated, potential problems can fall through the cracks as there is no human being involved to stop and intervene:</h2>
+		<h2 class="width_medium text_center font_smaller">In a world where so much is automated, potential problems can fall through the cracks as there is no human being involved to stop and intervene:</h2>
 
 		<p>
 			For example, one bride had uploaded her list of addresses to a stationery company but there was a limit to 5 lines per address: therefore some of the addresses had the last two lines cut off!</p>
@@ -695,7 +694,7 @@
 			One little thing can let the whole team down!</p>
 
 
-			<h2 class="width_small text_center smaller">
+			<h2 class="width_small text_center font_smaller">
 					It's like the fly in the Chardonnay and it spoils everything.</h2>
 		<p>
 			To make a striking impression, every item of your stationery should match perfectly, just like an outfit.</p>
@@ -881,7 +880,7 @@
 
 		<p>Stuff from Lidl looks and feels cheaper than the premium products at Waitrose. </p>
 
-		<h2 class="width_small text_center smaller">The Sun newspaper looks tackier and less classy than The Times. </h2>
+		<h2 class="width_small text_center font_smaller">The Sun newspaper looks tackier and less classy than The Times. </h2>
 
 		<p>But whilst you can see the difference, it takes a professional to understand what goes into making the difference. </p>
 

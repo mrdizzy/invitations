@@ -174,7 +174,14 @@ h6.deselected {
 form {
   text-align:left;
 }
-
+.quantity_box {
+  height:4em;text-align:center;width:4em;line-height:4em;display:inline-block;border:1px solid #CCC;border-radius:10px;font-family:Raleway;font-size:25pt;font-weight:300;margin:0.25em;
+}
+.quantity_box:hover {
+cursor:pointer;
+border:1px solid grey;
+background-color:#EEE;
+}
 /* Smartphone */
 
 
