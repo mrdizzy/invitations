@@ -111,11 +111,16 @@ body {
     font-family: 'Playfair Display SC';
     font-size: 28px;
     letter-spacing: 0.02em;
+    padding-bottom:0;
+    margin-bottom:0;
 }
 
 .testimonial_date {
     font-size: 14pt;
-    font-family: 'Junge'
+    font-family: 'Junge';
+    margin-top:0;
+    padding-top:0;
+
 }
 
 footer {

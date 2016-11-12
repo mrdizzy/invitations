@@ -9,6 +9,7 @@
     width: 100%;
 }
 
+
 #headline {
     background-color: white;
     border-radius: 20px;
@@ -125,10 +126,19 @@ article {
         width:75%;
         margin-top:-5em;
     }
+#caption_vellum_cover {
+    margin-top: -3em;
+    z-index: 10;
+    margin-bottom: 2em;
+    margin: 0 auto;
+}
+#caption_box_envelope {
 
-    #caption_vellum_cover {
-      margin-top:-3em;position:relative;z-index:10;margin-bottom:2em;
-    }
+  margin: 0 auto;
+margin-top: -2em;
+z-index: 10;
+margin-bottom: 2em;
+}
 
     .pure-button {
       font-size:16pt;
@@ -137,6 +147,11 @@ article {
       width:110%;
       position:relative;
       left:-5%;
+    }
+
+    ul {
+
+      text-align:center;
     }
 }
 
