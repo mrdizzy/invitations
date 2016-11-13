@@ -15,22 +15,11 @@
 .middle_column {
     clear: both;
     width: 65%;
-    margin: 0 auto;
 }
 
 .product_name {
-    margin: 0;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
     letter-spacing: 0.1em;
     line-height: 1.2em;
-}
-
-.form_panel {
-    width: 40%;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 3em;
 }
 
 #sample_icon {
@@ -53,10 +42,8 @@ a {
 
 .blurb {
     font-style: normal;
-    text-align: center;
     padding: 2.5%;
     width: 80%;
-    margin: 0 auto;
     margin-top:-0.1em;
     border-radius: 0.5em;
     margin-bottom:1em;
@@ -67,16 +54,6 @@ a {
   position:relative;
   margin-top:-3em;
     z-index: 4;
-}
-
-.flourish_line {
-    width: 85%;
-    display: block;
-    margin: 0 auto;
-}
-
-.middle_column .flourish_line {
-    width: 75%;
 }
 
 
@@ -107,19 +84,12 @@ a {
       }
     .middle_column {
         width: 98%;
-        margin: 0 auto;
     }
     .middle_column .blurb {
       width:90%;
     }
     .blurb {
         line-height: 1.5em;
-    }
-    .middle_column .flourish_line {margin-bottom:1em;}
-    .form_panel {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
     }
 }
 
@@ -143,6 +113,5 @@ a {
     .middle_column {
         clear: both;
         width: 80%;
-        margin: 0 auto;
     }
 }

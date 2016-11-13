@@ -19,22 +19,19 @@
 	-->
 
 
-	<img src="/images/logo/casamiento_black.svg" id="casamiento_logo" />
-	<div id="browse">
-		<div id="browse_container">
+	<img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" />
+		<div id="browse_container" class="bring_to_front">
 			<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
-			<a href="/products"><span id="browse_link">BROWSE DESIGNS</span></a>
-		</div>
+			<a href="/products">BROWSE DESIGNS</a>
 	</div>
 
-	<img src="/images/logo/drms.svg" id="dreams_slogan" />
+	<img src="/images/logo/drms.svg" class="bring_to_front" id="dreams_slogan" />
 
 	<div id="slides">
 		<% products.forEach(function(invitation) { %>
-			<a href="/products/<%= invitation.name %>"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w" alt="Wedding stationery suite"></a>
 
-			<a href="/products/<%= invitation.name %>">
-				<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="(max-width: 1100px) 100vw, 95vw"
+			<a href="/products/<%= invitation.name %>"><img class="blocked_and_centred full_width" sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w, /images/invitations/<%= invitation.name %>/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a>
+			<a href="/products/<%= invitation.name %>"><img src="/images/invitations/<%= invitation.name %>/four.jpg"  class="blocked_and_centred full_width" sizes="(max-width: 1100px) 100vw, 95vw"
 	    srcset="/images/invitations/<%= invitation.name %>/four_700.jpg 700w, /images/invitations/<%= invitation.name %>/four.jpg 1300w"></a>
 			<%}) %>
 	</div>
@@ -51,14 +48,14 @@
 
 	<article id="homepage_copywriting">
 
-				<div class="shell_line"></div>
+				<div class="shell_line" class="top_dotted full_width blocked_and_centred"></div>
 
-				<img src="/images/furniture/shell.svg" class="shell" />
+				<img src="/images/furniture/shell.svg" class="shell blocked_and_centred" />
 
 		<h2> When people see our invitations for the first time, it's usually the envelope that instantly delights and impresses them:</h2>
 
-		<p>Most people are used to seeing boring, plain envelopes.<p>
-			<p>So our tailor-made envelopes, printed both inside and out with matching intricate designs that co-ordinate beautifully with the invitations they contain, are an unexpected surprise. </p>
+		<p class="quarter_padding_vertical">Most people are used to seeing boring, plain envelopes.</p>
+			<p class="quarter_padding_vertical">So our tailor-made envelopes, printed both inside and out with matching intricate designs that co-ordinate beautifully with the invitations they contain, are an unexpected surprise. </p>
 
 		<h2 class="font_smaller width_large text_center">They lend a	exclusivity to your wedding invitations that will have your guests wondering how you made them.</h2>
 
@@ -81,19 +78,17 @@
 
 		<h2 class="font_smaller text_center width_small" style="clear:both;">But the envelopes are just the beginning&hellip;.</h2>
 
-		<p>Inside, your invitation is dressed in one of a range of embellishments to add that wow factor:</p>
+		<p class="quarter_padding_vertical">Inside, your invitation is dressed in one of a range of embellishments to add that wow factor:</p>
 
-		<p>&hellip;whether it's uwrapping the paper sleeve adorned with your monogram unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel like they're engaging with something really special.</p>
+		<p class="quarter_padding_vertical">&hellip;whether it's uwrapping the paper sleeve adorned with your monogram unbuckling the gently glinting diamante ribbon or untying the bow, your guests will feel like they're engaging with something really special.</p>
 
 		<h2 class="font_smaller text_center width_medium">The frosted vellum cover, watermarked with your monogram in a matching design, evokes a magical feeling of quality that card alone cannot match.</h2>
 
-		<p>And the delicately printed tissue paper, light as a feather, used to protect your invitation in transit, makes your guests feel more like they are opening a box of expensive designer shoes.</p>
+		<p class="quarter_padding_vertical">And the delicately printed tissue paper, light as a feather, used to protect your invitation in transit, makes your guests feel more like they are opening a box of expensive designer shoes.</p>
 
+		<p class="quarter_padding_vertical">These are just some of the little things that make our invitations&mdash;<span style="font-style:italic;font-weight:normal;">your invitations</span>&mdash;special.</p>
 
-		<p>These are just some of the little things that make our invitations&mdash;<span style="font-style:italic;font-weight:normal;">your invitations</span>&mdash;special.</p>
-
-
-		<p>And it's in the little details that big impressions get made.</p>
+		<p class="quarter_padding_vertical">And it's in the little details that big impressions get made.</p>
 
 
 
@@ -119,7 +114,7 @@
 									-----------------------------------------------------------------------
 
 									-->
-		<img src="/images/homepage/davidphoto2.png" class="david_photo">
+		<img src="/images/homepage/davidphoto2.png" class="david_photo blocked_and_centred">
 
 		<h2 class="text_center width_small" style="font-family:TP;width:90%;padding-top:0.5em;font-size:26pt;padding-bottom:1em;">
 
@@ -136,17 +131,18 @@
 							<h2 class="width_medium text_center font_smaller" style="text-align:left;width:100%;padding-top:1em;">When I'm not <a style="text-decoration:none;background-color:#EEE;border-radius:5px;padding:5px;padding-bottom:7px;" target="_blank" href="https://www.facebook.com/davidos.80/videos/1051770804901748">singing and playing the piano <img src="/images/furniture/openwindow.svg" style="opacity:0.7;width:15px;" /></a>,
 			I'm busy working on my other passion: making beautiful invitations for you.</h2>
 
-		<p> I love the fact that when you buy your stationery from me, I'm not only contributing to your dream, but you're helping me with mine.</p>
+		<p class="quarter_padding_vertical"> I love the fact that when you buy your stationery from me, I'm not only contributing to your dream, but you're helping me with mine.</p>
 
-		<p> In a second, I'm going to take you on a journey through all the little things that make our invitations great.</p>
-		<p>(things you probably haven't considered but are important for you to know before you purchase any stationery)</p>
+		<p class="quarter_padding_vertical"> In a second, I'm going to take you on a journey through all the little things that make our invitations great.</p>
+		<p class="quarter_padding_vertical">(things you probably haven't considered but are important for you to know before you purchase any stationery)</p>
 
-		<p>But first, I think the best way for you to judge them is to hold them in
+		<p class="quarter_padding_vertical">But first, I think the best way for you to judge them is to hold them in
 			your hand...
 		</p>
 
 
-		<img src="/images/homepage/sample_box.png" id="sample_box" />
+		<img src="/images/homepage/sample_box.png" class="blocked_and_centred" id="sample_box" />
+
 		<h2 class="text_center font_smaller width_medium" style="padding-top:1em;">&hellip;so for a limited time I'm giving away free sample boxes containing:</h2>
 
 
@@ -157,20 +153,20 @@
 				<li id="texture"><span style="font-weight:400">swatches of our card textures</span> for you to see and touch</li>
 
 					<img src="/images/homepage/bullets/diamond.svg" style="padding-top:1em;width:30px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:-1em;">
-				<li id="embellishment"><span style="font-weight:400">sample embellishments</span> (bows, buckles and ribbons) for you to compare and contrast</li>
+				<li id="embellishment"><span style="font-weight:400">Sample embellishments</span> (bows, buckles and ribbons) for you to compare and contrast</li>
 									<img src="/images/homepage/bullets/colours.svg" style="padding-top:1em;width:32px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:-1em;">
-				<li id="colour"><span style="font-weight:400">printed colour chart</span> so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
+				<li id="colour"><span style="font-weight:400">Printed colour chart</span> so you can see what colours look like accurately, helping you find your exact colour match; <span style="font-style:italic;">and</span></li>
 
 
 									<img src="/images/homepage/bullets/book.svg" style="padding-top:1em;width:30px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0;margin-bottom:-1em;">
-				<li id="catalog"><span style="font-weight:400">our luxury catalogue</span> for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</li>
+				<li id="catalog"><span style="font-weight:400">Luxury catalogue</span> for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</li>
 
 
 									<img src="/images/homepage/bullets/question.svg" style="padding-top:1em;width:28px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:-0.5em;">
-				<li id="surprise"><span style="font-weight:400">a little surprise:</span> we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!
+				<li id="surprise"><span style="font-weight:400">A little surprise:</span> we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!
 			</ul>
 
-			<p>
+			<p class="quarter_padding_vertical">
 				Just enter your name and address now to get this parcel of perfection posted to you today&hellip;
 			</p>
 
@@ -204,7 +200,7 @@
 
 				<div style="text-align:center;">
 					<img src="/images/furniture/bar-loader.gif" style="width:175px;padding-top:2em;" id="form_sample_spinner" />
-					<button type="submit" id="get_sample" class="pure-button pure-button-primary">
+					<button type="submit" id="get_sample" style="background-color:#B20808" class="pure-button pure-button-primary">
 								Post my sample box now!
 							</button>
 
@@ -229,7 +225,6 @@
 
 
 
-		<div class="divider"></div>
 
 
 
@@ -240,9 +235,7 @@
 
 
 
-
-
-
+W
 
 
 		<!-- TESTIMONIAL--------------------------------------------------------------------
@@ -251,8 +244,10 @@
 					          -->
 
 		<div class="testimonial_container">
+
 			<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo" />
 			<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" />
+
 			<p class="testimonial_quote">It&rsquo;s all the little touches, the envelopes look so special! And the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and classy: my guests were all really impressed as my stationery really did
 				stand out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
 
@@ -280,33 +275,34 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 		<h2 class="text_center width_medium">
-				 <img src="/images/homepage/icons/present-box.svg" class="icon" /><br/>
+				 <img src="/images/homepage/icons/present-box.svg" class="icon blocked_and_centred" /><br/>
 				Nothing lets a good invitation down like a bad envelope&hellip;
 			</h2>
 
-		<p>Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag</p>
+		<p class="quarter_padding_vertical">Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag</p>
 
-		<p>How something is packaged is as important as the gift inside&hellip;</p>
+		<p class="quarter_padding_vertical">How something is packaged is as important as the gift inside&hellip;</p>
 
-		<p>That's why companies spend millions of pounds wrapping boring things like rice in elegant, carefully-designed foil (and shoving an extra £1 on the price in the process!).</p>
+		<p class="quarter_padding_vertical">That's why companies spend millions of pounds wrapping boring things like rice in elegant, carefully-designed foil (and shoving an extra £1 on the price in the process!).</p>
 
 <h2 class="width_medium text_center font_smaller">
 				Needless to say, boring, plain envelopes with smudged, hand-scribbled addresses will not do justice to what is inside.</h2>
 
 
-		<p>
+		<p class="quarter_padding_vertical">
 			The envelope is the first thing your guests will see and when it arrives through the letterbox you want them to be impressed and excited to find out what's inside...</p>
 
-			<p>...not think it's another badly-written birthday card from Aunty Emily or a bill from British
+			<p class="quarter_padding_vertical">...not think it's another badly-written birthday card from Aunty Emily or a bill from British
 			Gas!
 		</p>
 
 
 		<img src="/images/homepage/big_illustrations/vellum2.png" width="95%" class=" text_center" />
+
 		<div class="width_small caption text_center" id="caption_vellum_cover">
 
 
@@ -315,12 +311,12 @@
 			Vellum covers are delicately watermarked with your design and monogram, giving your invitations an unrivalled air of sophistication
 		</div>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			It's precisely because envelopes are (wrongly) the least thought-about element of a wedding invitation that our high level of customisation really does make your invitation stand out from the crowd: </p>
 
-			<p>everyone is so used to seeing boring envelopes, so to see something so unique and beautiful comes as a real surprise&mdash;your invitations will be the talk of your guests who will be asking "Where did you get these made?" </p>
+			<p class="quarter_padding_vertical">everyone is so used to seeing boring envelopes, so to see something so unique and beautiful comes as a real surprise&mdash;your invitations will be the talk of your guests who will be asking "Where did you get these made?" </p>
 
-		<p>
+		<p class="last">
 			If you want to go one step further, our box envelopes really do make your guests feel as though they are receiving an expensive present (they're just like little presentation box), a gift they simply won't be able to throw away.
 
 
@@ -331,7 +327,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -383,7 +379,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -402,32 +398,32 @@
 
 
 						<h2 class="text_center width_medium font_small">
-						 <img src="/images/homepage/icons/crocodile-shape.svg" class="icon" /><br/>
+						 <img src="/images/homepage/icons/crocodile-shape.svg" class="icon blocked_and_centred" /><br/>
 																					The journey from postbox to letterbox is fraught with dangers</h2>
-				<p>
+				<p class="quarter_padding_vertical">
 					Ever wondered what happens to your invitations when they go in the post box?
 				</p>
 
-				<p>
+				<p class="quarter_padding_vertical">
 					Does a magic fairy with clean hands magically fly them to their destination?</p>
 
 
-				<p>No.</p>
+				<p class="quarter_padding_vertical">No.</p>
 
 
-				<p>They are handled by at least a dozen different people, pressed between rollers, rained-upon and X-rayed&mdash;just for starters. </p>
+				<p class="quarter_padding_vertical">They are handled by at least a dozen different people, pressed between rollers, rained-upon and X-rayed&mdash;just for starters. </p>
 
 
-				<p>All of this means that there without careful consideration, your invitation may well not arrive in the same state you posted it in. </p>
+				<p class="quarter_padding_vertical">All of this means that there without careful consideration, your invitation may well not arrive in the same state you posted it in. </p>
 
 
-				<p>One bride was devastated to find that when her guests received her invitation, the ink had transferred to the other side of the card, causing a horrible, smudged, ghosting effect. </p>
+				<p class="quarter_padding_vertical">One bride was devastated to find that when her guests received her invitation, the ink had transferred to the other side of the card, causing a horrible, smudged, ghosting effect. </p>
 
 
 				<h2 class="width_small text_center font_smaller">Another common issue is Fat Envelope Syndrome&hellip;</h2>
 
 
-				<p>&hellip;standard envelopes aren't designed to take invitations with a ribbon or an embellishment such as a diamante. They are meant for flat cards only.</p>
+				<p class="quarter_padding_vertical">&hellip;standard envelopes aren't designed to take invitations with a ribbon or an embellishment such as a diamante. They are meant for flat cards only.</p>
 
 
 				<ul>
@@ -438,7 +434,7 @@
 				</ul>
 
 
-				<p>Gems and buckles can press against other enclosures as well as the envelope causing unsightly scars and indents. </p>
+				<p class="quarter_padding_vertical">Gems and buckles can press against other enclosures as well as the envelope causing unsightly scars and indents. </p>
 
 
 						<img src="/images/homepage/big_illustrations/tissue.png" style="float:right;width:60%;margin:0 auto;display:block;padding-bottom:2em;" class="text_center" />
@@ -457,7 +453,7 @@
 				<h2 class="width_small text_center font_smaller">This isn't how you want your invitation to arrive. </h2>
 
 
-				<p>We know all the nasty things that can happen to an invitation in transit and so we design our invitations to make that journey as safe as it can be.</p>
+				<p class="quarter_padding_vertical">We know all the nasty things that can happen to an invitation in transit and so we design our invitations to make that journey as safe as it can be.</p>
 				<ul>
 
 					<li>Our box-envelopes, made from sturdy matching card, are created especially to hold invitations with added extras and keep them in pristine condition.</li>
@@ -471,7 +467,7 @@
 					<li>And our wax ink will never run or smudge because water can't damage it. </li>
 				</ul>
 
-				<p>Take that, postman!</p>
+				<p class="quarter_padding_vertical">Take that, postman!</p>
 
 
 
@@ -488,23 +484,23 @@
 
 
 
-				<div class="divider"></div>
+
 
 
 
 
 										<h2 class="text_center width_medium font_small">
-										 <img src="/images/homepage/icons/drill-outline.svg" class="icon" /><br/>
+										 <img src="/images/homepage/icons/drill-outline.svg" class="icon blocked_and_centred" /><br/>
 									Think doing it yourself will save you time and money? Think again&hellip;
 
 								</h2>
-								<p>
+								<p class="quarter_padding_vertical">
 									Have you ever done a simple DIY job around the house that's turned into a large DIY job that's ended up costing you more in time, money and frustration than if you'd just paid a professional to do it?</p>
-								<p>
+								<p class="quarter_padding_vertical">
 									If so, then you'll know that often "doing it yourself" can be a false economy.</p>
-								<p>
+								<p class="quarter_padding_vertical">
 									Have you thought about what you're going to need if you decide to create your own invitations properly?</p>
-								<p>
+								<p class="quarter_padding_vertical">
 									You'll need at least some of the following:</p>
 								<ul>
 									<li>a guillotine</li>
@@ -515,20 +511,20 @@
 									<li>a decent printer and ink</li>
 									<li>lots and lots of time... and patience</li>
 								</ul>
-								<p>
+								<p class="quarter_padding_vertical">
 									How irritable will you become when the card is too thick to go through your printer?
 								</p>
-								<p>
+								<p class="quarter_padding_vertical">
 									How disappointed will you feel when the ink doesn't print properly on the textured card you bought?
 								</p>
 
 
 
 
-								<p>
+								<p class="quarter_padding_vertical">
 									How frustrated will you be trying to get the colour of the ink to match the colour of the ribbon you bought?
 								</p>
-								<p>
+								<p class="quarter_padding_vertical">
 									How will you feel when you realise you've spent more on ink alone than the cost of getting invitations professional printed?
 								</p>
 
@@ -540,28 +536,28 @@
 											Vellum covers are delicately watermarked with your design and monogram, giving your invitations an unrivalled air of sophistication</div>
 
 
-								<p>
+								<p class="quarter_padding_vertical">
 									How annoyed will you be when you realise those scissors in the bottom of the drawer don't do the trick when it comes to cutting ribbon cleanly and you need to buy expensive specialist scissors?
-									<p>
+									<p class="quarter_padding_vertical">
 										The list goes on...</p>
 
-									<p>
+									<p class="quarter_padding_vertical">
 									...and as one bride  said: </p>
 
 									<h2 class="width_medium text_center font_smaller">
 										"What cost me money is not so much doing the actual invites, it was what I bought to try it out before I decided what I wanted it to look like!"</h2>
-									<p>
+									<p class="quarter_padding_vertical">
 										And how deflated will you be when you've bought the card, ribbon, envelopes and created your design...</p>
 
 										<p style="font-weight:400">and then you realise it turns out nothing like you imagined?</p>
-									<p>
+									<p class="quarter_padding_vertical">
 										It's so much better seeing a photo of the finished product. </p>
-									<p>
+									<p class="quarter_padding_vertical">
 										And as a professional, I've made years of mistakes, I know the problems, and I have the solutions.</p>
-									<p>
+									<p class="last">
 										Weddings are stressful enough as it is: don't add to your stress unless you carefully consider the true overall cost of doing-it-yourself: not just financially but emotionally in terms of bitten nails and forehead lines!</p>
 
-										<div class="divider"></div>
+
 
 
 
@@ -577,50 +573,50 @@
 
 
 				<h2 class="text_center width_medium">
- <img src="/images/homepage/icons/car-falling.svg" class="icon" /><br/>
+ <img src="/images/homepage/icons/car-falling.svg" class="icon blocked_and_centred" /><br/>
 
 
 											Murphy's Law: Anything that can go wrong, will go wrong&hellip;
 </h2>
-		<p>Spelling errors.</p>
+		<p class="quarter_padding_vertical">Spelling errors.</p>
 
-		<p>Delays in delivery.</p>
+		<p class="quarter_padding_vertical">Delays in delivery.</p>
 
-		<p>Colours not matching.</p>
+		<p class="quarter_padding_vertical">Colours not matching.</p>
 
-		<p>Things not looking how you thought they would, after everything's been printed&hellip; </p>
+		<p class="quarter_padding_vertical">Things not looking how you thought they would, after everything's been printed&hellip; </p>
 
-		<p>The road from placing an order to receiving your finished invitations can be bumpy if you're not working with people who communicate well and know all the issues that can, and will, arise. </p>
+		<p class="quarter_padding_vertical">The road from placing an order to receiving your finished invitations can be bumpy if you're not working with people who communicate well and know all the issues that can, and will, arise. </p>
 
 		<h2 class="width_medium text_center font_smaller">In a world where so much is automated, potential problems can fall through the cracks as there is no human being involved to stop and intervene:</h2>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			For example, one bride had uploaded her list of addresses to a stationery company but there was a limit to 5 lines per address: therefore some of the addresses had the last two lines cut off!</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			But she only found out when she received her invitations&mdash;if the company had bothered to do a few checks, they could easily have flagged this up and sorted out the problem before it was too late.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			We do checks every step of the way to avoid these sort of issues, and if we notice something that doesn't seem right, we won't just blindly go ahead with your order&mdash;we'll contact you to check it out.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Honestly, the number of times I see Michael spelled Micheal&mdash;it'd be easy to just go ahead without questioning it, but I always contact the bride to double-check and usually I get "Yes, it should be Michael! THANK YOU for noticing!". </p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			A lot of stationery companies allow you to customise designs yourself online&mdash;this is great fun but in practice we've learned that for items as complex and important as wedding stationery it only leads to misery: there are too many opportunities
 			for errors and mistakes.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Until technology gets really intelligent, it's still really important that a human being is involved in each step.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			I know how important it is for you to be kept informed as to what's going on. I won't hide problems from you&mdash;I'll tell you straight away so you can make informed decisions.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			If you (or I!) have the slightest concerns about how your invitation is going to look in the flesh (colours on screen never look the same as on card, for example), I'll send you a print of every item in your suite in the post before printing goes ahead
 			so you can be 100% confident. </p>
 
-		<p>
+		<p class="last">
 			If the paper you want isn't in stock, we'll tell you as soon as you place your order and I'll be honest about how long it will take to get it back in stock so you can make an informed decision rather than taking your money and then apologising for "unexpected
 			delays" later down the line.
 		</p>
@@ -638,7 +634,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -674,7 +670,7 @@
 
 
 
-						<div class="divider"></div>
+
 
 
 
@@ -687,45 +683,45 @@
 
 				<h2 class="text_center width_small">
 
- 				<img src="/images/homepage/icons/wedding-suit.svg" class="icon" /><br/>
+ 				<img src="/images/homepage/icons/wedding-suit.svg" class="icon blocked_and_centred" /><br/>
 											Those shoes don't go with that dress&hellip;
 
 										</h2>
-		<p>
+		<p class="quarter_padding_vertical">
 			Coordination.
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			It's a long word, and it's the Holy Grail of design. </p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			You hold a beautiful invitation in your hand: the colours compliment one another, the typefaces are perfectly in tune with the tone of the wedding, and then you see it&hellip;</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			&hellip; a fuzzy map that's been cut and pasted from Google Maps. </p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			a ribbon which is slightly off colour to everything else&hellip;</p>
 
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Or an envelope made from a different textured paper to the invitations. </p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			One little thing can let the whole team down!</p>
 
 
 			<h2 class="width_small text_center font_smaller">
 					It's like the fly in the Chardonnay and it spoils everything.</h2>
-		<p>
+		<p class="quarter_padding_vertical">
 			To make a striking impression, every item of your stationery should match perfectly, just like an outfit.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Co-ordination is important because it shows care and attention to detail precisely because it takes more work and effort to make things compliment one another.
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Poor co-ordination shows thoughtlessness and neglect. </p>
 
-		<p>
+		<p class="last">
 			That's why every item in our stationery suite works in careful harmony with its siblings, from the ribbon, to the professionally tailored maps, to the tissue paper. Everything is beautifull co-ordinated to match, from the Save The Date cards to the Order
 			of Service. </p>
 
@@ -754,7 +750,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -785,46 +781,46 @@
 															Personalisation will save you many hours of valuable time and stress&hellip;
 
 														</h2>
-		<p>
+		<p class="quarter_padding_vertical">
 			Have you any idea how long it takes to individually address each invitation and envelope?
 		</p>
 
-		<p>It's probably something you haven't thought too hard about, but handwriting guest names on each invitation is a messy, time consuming , physically demanding and error prone business&hellip;</p>
+		<p class="quarter_padding_vertical">It's probably something you haven't thought too hard about, but handwriting guest names on each invitation is a messy, time consuming , physically demanding and error prone business&hellip;</p>
 
-		<p>Your hand will ache after a while and the beautiful handwriting you inscribed on the first invitation will start looking like a Doctor's signature by invitation number 32.</p>
+		<p class="quarter_padding_vertical">Your hand will ache after a while and the beautiful handwriting you inscribed on the first invitation will start looking like a Doctor's signature by invitation number 32.</p>
 
-		<p>And there's no delete button when you mess up the spelling, and oh dear, now your invitation is ruined as the name won't fit in the space!</p>
+		<p class="quarter_padding_vertical">And there's no delete button when you mess up the spelling, and oh dear, now your invitation is ruined as the name won't fit in the space!</p>
 
-		<p>If you're going to personalise your invitations by hand, then you need to be prepared to order a good few extra envelopes and invitations as you're going to screw up some of them. It's a fact. </p>
+		<p class="quarter_padding_vertical">If you're going to personalise your invitations by hand, then you need to be prepared to order a good few extra envelopes and invitations as you're going to screw up some of them. It's a fact. </p>
 
 		<img src="/images/homepage/big_illustrations/guestname.png" style="margin:0 auto;width:250px;display:block;" />
 
-		<p>Plus, ink smudges easily, and in the words of one of our brides, "I just don't like the look of a perfect printed invitation and then hand written names".</p>
+		<p class="quarter_padding_vertical">Plus, ink smudges easily, and in the words of one of our brides, "I just don't like the look of a perfect printed invitation and then hand written names".</p>
 
-		<p>But there's a simple solution:</p>
+		<p class="quarter_padding_vertical">But there's a simple solution:</p>
 
-		<p>We can print your guest names on each invitation individually, as well as addressing your envelopes (more info below):</p>
+		<p class="quarter_padding_vertical">We can print your guest names on each invitation individually, as well as addressing your envelopes (more info below):</p>
 
 		<img src="/images/homepage/big_illustrations/guestaddress.png" class="image_100" style="margin:0 auto;padding-top:1em;padding-bottom:1em;display:block;" />
-		<p>not only does it look much nicer to have an invitation co-ordinated with pre-printed names in a matching font, but creating a list you can edit and update on a computer first is much more sensible:</p>
+		<p class="quarter_padding_vertical">not only does it look much nicer to have an invitation co-ordinated with pre-printed names in a matching font, but creating a list you can edit and update on a computer first is much more sensible:</p>
 
-		<p>You can thorougly check for mistakes, and, if you intend to handwrite your envelopes you're going to have to create a list of names and addresses anyway&hellip;
+		<p class="quarter_padding_vertical">You can thorougly check for mistakes, and, if you intend to handwrite your envelopes you're going to have to create a list of names and addresses anyway&hellip;
 
 		</p>
 
-		<p>&hellip;so why, when you've already created the list, double the amount of time and effort by rewriting these all out when they can just be emailed to us for printing?</p>
+		<p class="quarter_padding_vertical">&hellip;so why, when you've already created the list, double the amount of time and effort by rewriting these all out when they can just be emailed to us for printing?</p>
 
-		<p>But it's about more than just saving time&hellip;</p>
+		<p class="quarter_padding_vertical">But it's about more than just saving time&hellip;</p>
 
-		<p>Personalisation is extremely important because by explicitly addressing your invitations to "Sarah, Jane & Jenny", it takes the guesswork away from your guests:</p>
+		<p class="quarter_padding_vertical">Personalisation is extremely important because by explicitly addressing your invitations to "Sarah, Jane & Jenny", it takes the guesswork away from your guests:</p>
 
-		<p>Sarah knows straight away that she can bring her flatmate and daughter. If it just says "Sarah & Guest", she knows she is invited and can bring any guest.</p>
+		<p class="quarter_padding_vertical">Sarah knows straight away that she can bring her flatmate and daughter. If it just says "Sarah & Guest", she knows she is invited and can bring any guest.</p>
 
 		<img src="/images/homepage/big_illustrations/monograms.png" class="image_100" style="display:block;margin:0 auto;" />
-		<p>An invitation that isn't personalised makes it awkward for your guests to know who they can and can't bring along (and awkward for you to know who they are bringing along too), but if you address your guests individually, you'll make things easier for
+		<p class="quarter_padding_vertical">An invitation that isn't personalised makes it awkward for your guests to know who they can and can't bring along (and awkward for you to know who they are bringing along too), but if you address your guests individually, you'll make things easier for
 			yourself and your guests from the start: it avoids that difficult conversation when they ask you, "Can I bring the kids/boyfriend I met last week?".</p>
 
-		<p>If you don't personalise your wedding invitations with individual names, it's not clear who exactly is invited--and that means more hassle for you.</p>
+		<p class="last">If you don't personalise your wedding invitations with individual names, it's not clear who exactly is invited--and that means more hassle for you.</p>
 
 
 
@@ -842,7 +838,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -873,47 +869,47 @@
 
 
 				<h2 class="text_center width_medium">
-								 <img src="/images/homepage/icons/pig-with-round-tail.svg" class="icon" /><br/>
+								 <img src="/images/homepage/icons/pig-with-round-tail.svg" class="icon blocked_and_centred" /><br/>
 																			Don't let your invitation look like a card from Moonpig&hellip;
 
 																		</h2>
-		<p>
+		<p class="quarter_padding_vertical">
 
 			Whatever you do, please, please don't let your invitation look like it was created in Microsoft Word.
 		</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Nothing shouts cheap and amateur louder and looks uglier than an invitation that's been laid out by someone with no typography skills. </p>
-		<p>
+		<p class="quarter_padding_vertical">
 			There's a reason people hire graphic designers…</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			…sometimes when you look at something, it just looks professional, chic and expensive but if anyone was to ask you, you wouldn't be able to explain why--it's just a feeling.</p>
 
 
-		<p>
+		<p class="quarter_padding_vertical">
 			But a lot of work goes into making you have that feeling: it's all in the detail-- care and attention to the little nuances that, on their own don't seem very significant but combined make a massive difference to the way people see and perceive your invitations--either
 			as cheap and tacky or expensive and elegant.</p>
 
-		<p>Subtle touches such as careful alignment and spacing, the use of bullet points and ornamental separations between paragraphs are just some of the things that individually may not sound like much but together add up to create a stunning layout that you
+		<p class="quarter_padding_vertical">Subtle touches such as careful alignment and spacing, the use of bullet points and ornamental separations between paragraphs are just some of the things that individually may not sound like much but together add up to create a stunning layout that you
 			would expect from a Royal wedding.</p>
 
 
-		<p>Stuff from Lidl looks and feels cheaper than the premium products at Waitrose. </p>
+		<p class="quarter_padding_vertical">Stuff from Lidl looks and feels cheaper than the premium products at Waitrose. </p>
 
 		<h2 class="width_small text_center font_smaller">The Sun newspaper looks tackier and less classy than The Times. </h2>
 
-		<p>But whilst you can see the difference, it takes a professional to understand what goes into making the difference. </p>
+		<p class="quarter_padding_vertical">But whilst you can see the difference, it takes a professional to understand what goes into making the difference. </p>
 
-		<p> Free fonts and clipart that have been downloaded from the internet are free for a reason: they don't have the same refinements that will give your invitations a polished, superior look.</p>
+		<p class="quarter_padding_vertical"> Free fonts and clipart that have been downloaded from the internet are free for a reason: they don't have the same refinements that will give your invitations a polished, superior look.</p>
 
 		<img src="/images/homepage/big_illustrations/invitetext.png" class="image_100" style="display:block;margin:0 auto;" />
 
 
-		<p>
+		<p class="quarter_padding_vertical">
 			Some of the fonts we use have cost hundreds of pounds, and we pay that because we know the time and effort went into creating them and the value they give in making your invitations look exquisite. </p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Too many stationery suppliers are often brides with no design background who've created their own stationery and decided to make a bit of money on the side creating stationery for others. </p>
-		<p>
+		<p class="last">
 			Which leads me nicely onto...</p>
 
 
@@ -945,7 +941,7 @@
 
 
 
-		<div class="divider"></div>
+
 
 
 
@@ -986,90 +982,90 @@
 											</h2>
 
 
-		<p>
+		<p class="quarter_padding_vertical">
 			It's important for your invitations to look good: there's no doubt about that.</p>
 
-		<p>
+		<p class="quarter_padding_vertical">
 			But it's only half the battle: caught up in the delight of making sure everything looks perfect, it's very easy to forget that invitations serve a practical function too: to inform and educate your guests as much as possible about the event, and in turn,
 			to make planning your wedding easier and therefore less stressful for you.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 
 			To do that, you need to think of all the possible questions your guests are going to have and try to answer them in the content of your invitation.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			You're also going to need to figure out what information you're going to need back from them to help you plan your wedding, such as simple RSVPs for guest numbers and things like menu choices.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Your guests are human, and like most humans, they're more likely to do something if it's easy and pain-free, so you also need to make it as easy as possible for them to reply.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			That's why those little extras, such as information enclosures and reply cards are important.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			A pre-addressed reply card increases your chances of getting responses quickly as it is very easy for your guests to just tick a box or two and post the card.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			We even print your guest names on the reply cards to make it even easier for them (and more accurate for you&mdash;leave it to your guests and believe me they won't even remember to write their own name so you won't know who the reply card is from!).
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			No reply cards means no replies: and no replies means, among the other 101 things you need to do, you're going to have the hassle of chasing your guests to find out who is, or isn't, coming.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			In our experience, invitations with reply cards get around three times as many responses as invitations without!
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			You'll find the number of details you provide about your wedding day is inversely proportional to the stress you'll experience (the more details you give, less stress for you!).
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			That's why providing an additional instruction leaflet for all the extra stuff can really make your life easierso guests don't have to hassle you with questions at the last minute:
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Where exactly is the venue?
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			A simple map can save you and your bridesmaids dealing with the exasperation of answering twenty phone calls on the morning of your wedding as lost guests phone you when they've gone up the wrong country lane.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			What do they wear?
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Explaining the dress code is important if you don't want Auntie Edna turning up in that bright puce dress with the ostentatious hat.
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Can children come?
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			Can they give vouchers or money instead of buying you another garlic press?
 
 		</p>
-		<p>
+		<p class="quarter_padding_vertical">
 			It's monotonous and rage-inducing to keep hearing the same questions again and again: avoid the bitterness by answering questions in advance with a comprehensive information enclosure.
 
 		</p>
 
 	</article>
 
-	<footer>
+	<footer class="top_dotted">
 		<img src="/images/logo/casamiento_black.svg" style="width:100px;float:left;display:block;" />
 		<div style="float:right;">
-			<a style="font-size:9pt;font-family:Avenir" href="/privacy.html">Privacy Policy</a></div>
+			<a style="font-size:9pt;font-family:Raleway" href="/privacy.html">Privacy Policy</a></div>
 	</footer>
 
 

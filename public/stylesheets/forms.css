@@ -137,31 +137,15 @@
     background: #ccc;
 }
 
-form { text-align:left}
-
-label {
-
-    font-family: "Julius Sans One";
-    letter-spacing:0.1em;
-  padding-top:2em;
-  text-align:left;
-
-}
 .pure-button {
-    background-color: grey;
-    box-shadow:10px 10px 0 #DDD;
-    border-top-left-radius: 1em;
-    margin:0 auto;
-    margin-top: 1em;
-    margin-bottom:2em;
-    padding-top:2em;
-    padding-bottom:2em;
-    padding-left:0.75em;
-    padding-right:0.75em;
+    background-color:#B20808;
     border-bottom-right-radius: 1em;
-    font-family:'Julius Sans One';
-    font-size:18pt;font-weight:400;
-    display:block;
+    border-top-left-radius: 1em;
+    box-shadow:10px 10px 0 #DDD;
+    display:inline-block;
+    font:  400 18pt 'Julius Sans One';
+    margin-top: 1em 0 2em 0;
+    padding:2em 0.75em 2em 0.75em;
 }
 
 .pure-button:hover {
@@ -169,15 +153,6 @@ label {
 }
 
 input {
-    border: 1px solid black;
-    font-family: "Raleway";
-    font-size: 16pt;
-    padding: 0;
-    width:90%;
-    margin: 0;
-    font-weight: 300;
-}
-
-input:hover {
-    background-color: white;
+    font: 300 16pt "Raleway";
+    width:95%;
 }

@@ -14,9 +14,9 @@
 	-->
 
 
-	<a href="/"><img src="/images/logo/casamiento_black.svg" id="casamiento_logo" /></a>
+	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
 
-	<img src="/images/logo/drms.svg" id="dreams_slogan" />
+	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front"/>
 
 
 
@@ -25,7 +25,7 @@
 
 			<% if (counter == 1) { %>
 
-				<div class="form_panel">
+				<div class="middle_column blocked_and_centred text_center">
 					<img src="/images/homepage/icons/sample.svg" id="sample_icon" />
 					<h2 class="small width_small text_center">Get a free sample&hellip;</h2>
 					<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address&hellip;</p>
@@ -51,7 +51,7 @@
 
 					</form>
 
-					<img src="/images/furniture/flourish_line.svg" class="flourish_line" />
+					<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
 
 				</div>
 
@@ -68,7 +68,7 @@
 
 					<div class="left_column">
 
-						<a href="/products/<%= group[0].name %>"><h1 class="font_medium text_center product_name"><%= group[0].clean_name %></h1></a>
+						<a href="/products/<%= group[0].name %>"><h1 class="font_medium text_center quarter_padding_vertical product_name"><%= group[0].clean_name %></h1></a>
 
 						<a href="/products/<%= group[0].name %>">
 
@@ -78,11 +78,11 @@
 
 					<div class="triangle_up">
 						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-						<div class="blurb font_smaller">
+						<div class="blurb text_center blocked_and_centred font_smaller">
 							<%= group[0].description %>
 						</div>
 					</div>
-					<img src="/images/furniture/flourish_line.svg" class="flourish_line" />
+					<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
 				</div>
 
 
@@ -96,17 +96,17 @@
 
 				<% if (group[1]) { %>
 					<div class="right_column">
-						<a href="/products/<%= group[1].name %>"><h1 class="font_smaller text_center product_name"><%= group[1].clean_name %></h1></a>
+						<a href="/products/<%= group[1].name %>"><h1 class="font_smaller text_center quarter_padding_vertical product_name"><%= group[1].clean_name %></h1></a>
 
 						<a href="/products/<%= group[1].name %>">
 								<img src="/images/invitations/<%= group[1].name %>/browse.jpg" sizes="(max-width: 900px) 40vw, 30vw" srcset="/images/invitations/<%= group[1].name %>/browse_700.jpg 700w, /images/invitations/<%= group[1].name %>/browse.jpg 1000w, /images/invitations/<%= group[1].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/browse_300.jpg 300w" style="width:100%;"></a>
 						<div class="triangle_up">
 							<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-							<div class="blurb font_tiny">
+							<div class="blurb text_center blocked_and_centred font_tiny">
 								<%= group[1].description %>
 							</div>
 						</div>
-						<img src="/images/furniture/flourish_line.svg" class="flourish_line" />
+						<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
 					</div>
 					<% } %>
 
@@ -120,18 +120,18 @@
 
 
 						<% if (group[2]) { %>
-							<div class="middle_column">
-								<a href="/products/<%= group[2].name %>"><h1 class="font_large text_center product_name"><%= group[2].clean_name %></h1><a>
+							<div class="middle_column blocked_and_centred">
+								<a href="/products/<%= group[2].name %>"><h1 class="font_large text_center quarter_padding_vertical product_name"><%= group[2].clean_name %></h1><a>
 
 <a href="/products/<%= group[2].name %>">
 		<img src="/images/invitations/<%= group[2].name %>/browse.jpg" sizes="(max-width: 900px) 80vw, 65vw" srcset="/images/invitations/<%= group[2].name %>/browse_700.jpg 700w, /images/invitations/<%= group[2].name %>/browse.jpg 1000w, /images/invitations/<%= group[2].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/browse_300.jpg 300w" style="width:100%;"></a>
 								<div class="triangle_up">
 									<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-									<div class="blurb font_small">
+									<div class="blurb blocked_and_centred text_center font_small">
 										<%= group[2].description %>
 									</div>
 								</div>
-								<img src="/images/furniture/flourish_line.svg" class="flourish_line" />
+								<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
 							</div>
 							<% } %>
 								<% counter = counter + 1 %>
@@ -143,7 +143,7 @@
 										<footer style="clear:both;">
 											<img src="/images/logo/casamiento_black.svg" style="width:100px;float:left;display:block;" />
 											<div style="float:right;">
-												<a style="font-size:9pt;font-family:Avenir" href="/privacy.html">Privacy Policy</a></div>
+												<a style="font-size:9pt;font-family:Raleway" href="/privacy.html">Privacy Policy</a></div>
 										</footer>
 
 

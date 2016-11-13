@@ -4,14 +4,8 @@
     margin: 0 auto;
 }
 
-#slides img {
-    display: block;
-    width: 100%;
-}
-
-
 #headline {
-    background-color: white;
+    background-color: #fff;
     border-radius: 20px;
     font-family: 'TP';
     line-height: 1.3em;
@@ -39,12 +33,11 @@ article {
     display: none;
 }
 #sample_box {
- width:60%;display:block;margin:0 auto;
+ width:60%;
  max-width:225px;
 }
+
 .icon {
-    display: block;
-    margin: 0 auto;
     padding-top: 1em;
     padding-bottom: 0;
     width: 50px;
