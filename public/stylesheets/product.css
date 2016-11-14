@@ -58,6 +58,7 @@
 .selected_choice {
     background-color: #EEE;
   }
+
   .choice_image {
       text-align: center;
       width: 20.6%;
@@ -74,7 +75,7 @@
   .choice_description {
       text-align: left;
       width:54.10%;
-      padding-top:1.25em;
+      padding-top:1.425em;
       float:left;
       padding-bottom:1em;
   }
@@ -88,9 +89,12 @@
       width: 19.1%;
       text-align: center;
   }
-
+.small_icon {
+  width:30px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0.15em;margin-top:1em;
+}
   .grand_total {
-  padding-top:0.5em;margin:0;
+  padding-top:0.5em;
+  margin:0;
 }
 
 .radio_button, .control--checkbox {
@@ -101,7 +105,6 @@
 .testimonial_container {
     margin-top: 10em;
 }
-
 
 .testimonial_quote_icon {
     padding: 1em;

@@ -12,6 +12,7 @@ font-size:17px;
 h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
 
 .padding_top_medium { padding-top:1em;}
+.padding_top_small { padding-top:0.5em;}
 .padding_top_large { padding-top: 2em;}
 .padding_bottom_medium { padding-bottom:1em;}
 .padding_bottom_large { padding-bottom:2em;}
@@ -29,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
 .font_e { font-size: 1.414em; }
 .font_ee { font-size:1.15em; }
 .font_f { font-size: 1em; }
-.font_ff { font-size: 0.85em; }
+.font_ff { font-size: 0.9em; }
 .font_g { font-size:0.707em; }
 .font_h { font-size: 0.5em; }
 
