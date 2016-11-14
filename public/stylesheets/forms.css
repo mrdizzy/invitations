@@ -138,18 +138,17 @@
 }
 
 .pure-button {
-    background-color:#B20808;
+    background-color:grey;
     border-bottom-right-radius: 1em;
     border-top-left-radius: 1em;
     box-shadow:10px 10px 0 #DDD;
-    display:inline-block;
     font:  400 18pt 'Julius Sans One';
-    margin-top: 1em 0 2em 0;
+    margin-top: 2em 0 2em 0;
     padding:2em 0.75em 2em 0.75em;
 }
 
 .pure-button:hover {
-    background-color: black;
+    background-color: #B20808;
 }
 
 input {

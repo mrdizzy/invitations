@@ -1,132 +1,63 @@
+/* 1.414 Augmented and golden ratio 1.68*/
+
+html {
+font-size:17px;
+}
+
 @font-face {
     font-family: "TP";
     src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff');
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-}
 
+h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
 
-.serif_headline {
-  font-family:"TP"
-}
+.padding_top_medium { padding-top:1em;}
+.padding_top_large { padding-top: 2em;}
+.padding_bottom_medium { padding-bottom:1em;}
+.padding_bottom_large { padding-bottom:2em;}
 
-.sans_caps {
-font-family: "Julius Sans One"}
+.quote { font-family: 'Playfair Display';}
+.serif_headline { font-family:"TP" }
+.sans { font-weight:300; font-family: "Raleway", sans-serif}
+.sans_caps { font-family: "Julius Sans One"; }
+.sans_subhead { font-family:'Junge' }
 
-h1 {
-    font-family: 'TP'
-}
+.font_a { font-size:3.998em }
+.font_b { font-size:2.827em; }
+.font_c { font-size: 1.9999em; }
+.font_d { font-size:1.618em; }
+.font_e { font-size: 1.414em; }
+.font_ee { font-size:1.15em; }
+.font_f { font-size: 1em; }
+.font_g { font-size:0.707em; }
+.font_h { font-size: 0.5em; }
 
-h2, .blurb {
-    font-family: 'Junge';
-    font-size: 22pt;
-    line-height: 1.5em;
-    margin: 0 auto;
-}
+.slant { font-style:italic; }
+.emphasised { font-weight:500; }
 
-h3, h6, p, ul, .caption {
-    font-family: 'Raleway';
-    font-weight:300;
-}
+.letter-spaced { letter-spacing:0.1em; }
+.wide_letter_spacing { letter-spacing:0.2em; }
 
-h4 {
-    font-family: 'Julius Sans One', sans-serif;
-}
+.small_line_spacing { line-height:1.25em; }
+.average_line_spacing { line-height:1.5em;}
+.large_line_spacing { line-height:1.75em; }
+.double_line_spacing { line-height:2em; }
 
-h6 {
-    font-size: 22pt;
-    font-weight: 300;
-    line-height: 1.4em;
-    margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 0.75em;
-    text-align: center;
-    width: 50%;
-}
+.no_underline { text-decoration:none;}
 
-ul {
-    font-size: 14pt;
-    text-align: left;
-    list-style-type: none;
-}
+.text_center { text-align: center; }
+.text_left {text-align:left;}
 
-li {
-    padding-left: 18px;
-    margin-top: 1em;
-    line-height: 1.6em;
-    padding-top: 0;
-    background-size: 12px;
-    background-position: 0 9px;
-}
+.width_33 { width:33%; }
+.width_66 { width:66%; }
+.width_50 { width:50%; }
+.width_80 { width:80%; }
+.width_90 { width:90%; }
+.width_full { width: 100%; }
 
-.font_large {
-    font-size: 44pt;
-}
+a { color: black; }
 
-.font_medium {
-    font-size: 36pt;
-}
-
-.font_small {
-    font-size: 24pt;
-}
-
-.font_smaller {
-    font-size: 20pt;
-}
-
-.font_smallest {
-    font-size: 16pt;
-}
-
-.font_tiny {
-    font-size: 14pt;
-}
-
-.width_tiny {
-    width: 30%;
-}
-
-.width_smaller {
-    width: 40%;
-}
-
-.width_small {
-    width: 50%;
-}
-
-.width_medium {
-    width: 75%;
-}
-
-.width_large {
-    width: 80%;
-}
-
-.width_full {
-    width: 100%;
-}
-
-.text_center {
-    text-align: center;
-}
-
-.caption {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 12pt;
-    font-style: italic;
-}
-
-p {
-    line-height: 1.6em;
-    font-size: 14pt;
-}
-
-a {
-    color: black;
-}
+ul { list-style-type: none; }
 
 .error {
     text-align: left;
@@ -137,41 +68,10 @@ a {
     font-size: 12pt;
 }
 
-
 /* Smartphone */
-
-
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-    ul {
-        font-size: 14pt;
-        padding-left: 0;
-    }
-    .image_100 {
-        width: 115%;
-    }
-    .font_large {
-        font-size: 32pt;
-    }
-    .font_medium {
-        font-size: 24pt;
-    }
-    .font_small {
-        font-size: 16pt;
-    }
-    .font_smaller {
-        font-size: 14pt;
-    }
-    .font_smallest {
-        font-size: 12pt;
-    }
-    .font_tiny {
-        font-size: 12pt;
-    }
-    .caption {
-      font-size:11.5pt;
-    }
 }
 
 
@@ -179,8 +79,4 @@ a {
 
 @media all and (min-width: 601px) and (max-width: 900px) {
     /* ----------------------------------------------------------------------------- */
-    ul {
-        font-size: 14pt;
-        padding-left: 0;
-    }
 }

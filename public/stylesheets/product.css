@@ -4,19 +4,12 @@
 }
 
 #left_column {
-    width: 73%;
+    width: 61.8%;
     float: left;
 }
 
-#right_column {
-  text-align: center;
-  margin-left: 74%;
-  padding:0;
-
-}
-#slides {
-    display: none;
-}
+#right_column { margin-left: 62.8%; }
+#slides { display: none; }
 
 #slides img {
     border-radius: 20px;
@@ -43,64 +36,17 @@
     width: 100%;
     opacity: 0.35;
 }
+
 #pinterest_button:hover, #facebook_button:hover {
     opacity: 1;
     cursor: pointer;
 }
 
-#product_name {
-    clear: both;
-    letter-spacing: 0.2em;
-    padding-top: 0.25em;
-}
-
-#description {
-    line-height: 1.9em;
-    width: 65%;
-    margin-bottom: 2em;
-}
-
-#steps {
-    width: 80%;
-    margin: 0 auto;
-}
-
-ul {
-padding-left:0;
-padding-right:0.5em;
-}
-
-h3 {
-    font-size: 12pt;
-    font-style: italic;
-    line-height: 1.6em;
-}
-
-h4 {clear:both;
-    padding-top: 2em;
-    padding-bottom:1em;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid black;
-}
-
-h6 {
-    padding: 0;
-    margin: 0;
-    padding-bottom: 0.5em;
-    font-weight: 100;
-    font-size: 16pt;
-    text-align: left;
-}
-
-h6.deselected {
-    color: #999;
-}
 
 .choice, .checkbox_choice {
     margin: 0 auto;
     clear:both;
     border-top: 1px dotted black;
-    padding-top:1em;
     float:none;
 }
 
@@ -114,20 +60,20 @@ h6.deselected {
   }
   .choice_image {
       text-align: center;
-      width: 16%;
-      padding:4%;
+      width: 20.6%;
+      padding-top:2em;
       float: left;
   }
 
   .radio_button_container {
       float: left;
       width: 4%;
-      padding:2%;
+      padding:1%;
       padding-top:2.4em;
   }
   .choice_description {
       text-align: left;
-      width: 36%;
+      width:54.10%;
       padding-top:2.25em;
       float:left;
       padding-bottom:2em;
@@ -135,52 +81,38 @@ h6.deselected {
 
   .choice_price {
       float: right;
-      font-family: 'Julius Sans One';
-      font-size: 22pt;
+      font-family: 'Raleway';
+      font-size: 22pt;]
+      font-style:italic;
+      font-weight:300;
       padding-top: 2em;
-      width: 16%;
+      width: 19.1%;
       text-align: center;
   }
 
+  .grand_total_100 {
+  padding-top:1em;margin:0;
+}
 
 .radio_button, .control--checkbox {
     display: block;
     float: right;
 }
 
-  .no_border {
-    border:0;
-  }
-
 .testimonial_container {
     margin-top: 10em;
 }
 
-.testimonial_photo {
-    float: none;
-    margin: 0 auto;
-}
 
 .testimonial_quote_icon {
     padding: 1em;
     width: 60px;
 }
 
-.testimonial_quote {
-    padding-left: 0.5em;
-    padding-right:0.5em;
-}
-
-form {
-  text-align:left;
-}
-.quantity_box {
-  height:4em;text-align:center;width:4em;line-height:4em;display:inline-block;border:1px solid #CCC;border-radius:10px;font-family:Raleway;font-size:25pt;font-weight:300;margin:0.25em;
-}
 .quantity_box:hover {
 cursor:pointer;
+color:#000;
 border:1px solid grey;
-background-color:#EEE;
 }
 /* Smartphone */
 
@@ -188,13 +120,10 @@ background-color:#EEE;
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-    #slides {
+
+    #slides, #steps {
         width: 100%;
         float: none;
-    }
-    .form_panel {
-      padding-left:0.5em;
-      text-align:center;
     }
     #slides img {
         border-radius: 0;
@@ -205,20 +134,7 @@ background-color:#EEE;
         margin: 0;
         width: 100%;
     }
-    #steps {
-        width: 100%;
-    }
-    #description {
-        width: 80%;
-    }
-    h4 { padding-left:0.5em;}
-    .testimonial_photo {
-        float: none;
-        margin: 0 auto;
-    }
-    .testimonial_quote {
-        margin: 0 auto;
-    }
+
     .checkbox_choice, .choice {
         width: 100%;
         margin: 0 auto;
@@ -230,11 +146,14 @@ background-color:#EEE;
       width:100%;
     margin:0 auto;
     }
+
     .radio_button_container {
       padding:0;
-      width: 15%; float:left;text-align:right;
-
+      width: 15%;
+      float:left;
+      text-align:right;
     }
+
     .choice_description {
       padding:0;
       float:left;
@@ -246,19 +165,26 @@ background-color:#EEE;
       float:none;
       margin:0 auto;
       padding:0;
+      padding-bottom:1em;
     }
+.font_a {
+  font-size:2.827em;
+}
+    .width_80, .width_66 { width:95%;}
+    .choice_image img { padding-top:1.5em; padding-bottom:1em;}
+
 }
 
 
 /* Phablet */
 
-@media all and (min-width: 601px) and (max-width: 900px) {
+@media all and (min-width: 601px) and (max-width: 1000px) {
     /* ----------------------------------------------------------------------------- */
     #slides {
         width: 100%;
     }
     #steps {
-      width:95%;
+      width:85%;
     }
     #description {
       width:80%;
@@ -272,12 +198,7 @@ background-color:#EEE;
     .choice, .checkbox_choice {
         width: 80%;
     }
-    .form_panel {
-      width:70%;
-      margin:0 auto;
-    }
     .testimonial_container {
-
         margin: 0 auto;
         margin-top: 10em;
         text-align:left;

@@ -2,30 +2,6 @@ body {
     margin: 0;
     padding: 0;
 }
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-.quarter_padding_vertical {
-  padding-top:0.25em;
-padding-bottom:0.25em;
-}
-.bring_to_front {
-  z-index:500;
-  background-color:#fff;
-}
-
-.top_dotted {
-border-top:1px dotted black;
-}
-
-.bottom_solid { border-bottom:1px solid black;}
-.last { border-bottom:1px dotted black; padding-bottom:3em;}
-
-.full_width {
-  width:100%;
-}
-.blocked_and_centred {
-  display:block;
-  margin:0 auto;
-}
 
 #casamiento_logo {
     display: block;
@@ -38,8 +14,8 @@ border-top:1px dotted black;
 #browse_container {
     width: 225px;
     position:fixed;
-    right:0; left:0;
-    font: 300  14pt "Raleway";
+    right:0;
+    left:0;
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -47,9 +23,7 @@ border-top:1px dotted black;
     padding: 0 5px 5px 5px;
 }
 
-#book {
-    vertical-align: middle;
-}
+#book { vertical-align: middle; }
 
 #browse_container a {
     text-decoration: none;
@@ -68,6 +42,45 @@ border-top:1px dotted black;
     width: 180px;
 }
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+}
+
+.quarter_padding_vertical {
+  padding-top:0.25em;
+  padding-bottom:0.25em;
+}
+
+.half_padding_vertical {
+padding-top:0.75em;
+padding-bottom:0.75em;}
+
+.bring_to_front {
+  z-index:500;
+  background-color:#fff;
+}
+
+.deselected {
+    color: #999;
+}
+
+.top_dotted { border-top:1px dotted black; }
+.top_solid { border-top:1px solid black;}
+.bottom_solid { border-bottom:1px solid black;}
+.bottom_dotted { border-bottom: 1px dotted black;}
+.last { border-bottom:1px dotted black; padding-bottom:3em;margin-bottom:3em;}
+.full_width { width:100%; }
+
+.blocked_and_centred {
+  display:block;
+  margin:0 auto;
+}
+
 .shell {
     background-color: white;
     padding: 0.25em;
@@ -77,44 +90,23 @@ border-top:1px dotted black;
 }
 
 .testimonial_container {
-    margin: 0 auto;
-    padding: 1em;
+  margin-top:2em;
+  margin-bottom:2em;
 }
 
 .testimonial_photo {
-    display: block;
-    position: relative;
-    float: left;
-    width: 175px;
-    margin-right: 2em;
+    width: 30%;
+    float:right;
+    margin-left:5%;
 }
 
-.testimonia_quote_icon {
-    width: 50px;
-    float: left;
-    margin-bottom: 8em;
-    margin-right: 0.5em;
+.testimonial_quote_icon {
+    width: 40px;
 }
 
-.testimonial_quote {
-  font: italic "Playfair Display";
-    line-height: 160%;
-    padding-right: 4em;
-    margin-top: 1em;
-}
 
 .testimonial_name {
     font-family: 'Playfair Display SC';
-    font-size: 28px;
-    letter-spacing: 0.02em;
-    padding-bottom:0;
-    margin-bottom:0;
-}
-
-.testimonial_date {
-    font: 14pt 'Junge';
-    margin-top:0;
-    padding-top:0;
 }
 
 footer {
@@ -140,11 +132,6 @@ footer {
 
 
 /* Smartphone */
-
-
-/* ----------------------------------------------------------------------------- */
-
-
 /* ----------------------------------------------------------------------------- */
 
 
@@ -158,9 +145,7 @@ footer {
     #browse_container {
         width: 140px;
     }
-    #browse {
-        font-size: 10pt;
-    }
+
     #book {
         width: 25px;
         display: block;
@@ -188,7 +173,10 @@ footer {
     .testimonial_photo {
         float: none;
         margin: 0 auto;
+        width:50%;
+        max-width:180px;
         padding:0;
+        display:block;
     }
     .testimonial_quote {
         margin: 0 auto;

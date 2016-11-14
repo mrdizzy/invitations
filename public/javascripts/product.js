@@ -8,9 +8,10 @@ var Product = Backbone.Model.extend({
       "texture": "plain",
       "envelopestyle": "plain",
       "personalisation": [],
+      "prices": {},
       "extras": [],
       "quantity": 20,
-      "price": 1.29
+      "price": 1.49
     },
     initialize: function() {
         this.on("change", this.calculatePrice)
@@ -25,7 +26,13 @@ var Product = Backbone.Model.extend({
             total;
 
 
-          if(format == "foldout") {
+            var quantities =  [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170];
+
+ var prices = {};
+ for (var i = 0, len = quantities.length; i < len; i++) {
+   var price= 0;
+ var qty = quantities[i]
+           if(format == "foldout") {
             price = price + 0.30
           }
             if(envelopestyle == "boxplain") {
@@ -45,10 +52,15 @@ var Product = Backbone.Model.extend({
 
                   price = price + 0.20
             }
-      //  total = total.toFixed(2);
-      //split_total = total.toString().split(".")
+            var total = (price * qty)
+             total =  total.toFixed(2);
+        //split_total = total.toString().split(".")
 
-      //  this.set("pounds", split_total[0]).set("pence", split_total[1]).set("total", total)
+        //  this.set("pounds", split_total[0]).set("pence", split_total[1]).set("total", total)
+          prices[qty] = total;
+          }
+          this.set("prices", prices)
+          console.log(prices)
 
     },
     makePurchase: function() {
@@ -72,6 +84,7 @@ var StepView = Backbone.View.extend({
     el: '#steps',
     initialize: function() {
       //  this.listenTo(this.guests, 'change', this._renderQuickGuests)
+      this.listenTo(this.model, "change:prices", this.renderPrices)
         this.render();
     },
     events: {
@@ -79,6 +92,14 @@ var StepView = Backbone.View.extend({
         "click .checkbox_choice": "checkboxChosen",
         "click .quantity_box": "chooseQuantity"
     },
+    renderPrices: function() {
+      var current_prices = this.model.get("prices")
+
+
+var quantities =  [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170];
+      for (var i = 0, len = quantities.length; i < len; i++) {
+        $('#grand_total_' + quantities[i]).text("£" + current_prices[quantities[i]])
+      }},
     chooseQuantity: function(e) {
 
       var $element = $(e.currentTarget);
@@ -102,7 +123,6 @@ var StepView = Backbone.View.extend({
             $(":radio[value='" + choice + "']").prop("checked", true)
         });
         this.model.set(option, choice)
-        this.model.trigger("change")
     },
     checkboxChosen: function(e) {
         var $element = $(e.currentTarget);

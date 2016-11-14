@@ -2,7 +2,7 @@
 
 <body>
 	<head>
-	<meta name="viewport" content="initial-scale=1,user-scalable=no"><link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,700" rel="stylesheet">
+	<meta name="viewport" content="initial-scale=1,user-scalable=no"><link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
@@ -26,32 +26,40 @@
 			<% if (counter == 1) { %>
 
 				<div class="middle_column blocked_and_centred text_center">
-					<img src="/images/homepage/icons/sample.svg" id="sample_icon" />
-					<h2 class="small width_small text_center">Get a free sample&hellip;</h2>
-					<p>&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address&hellip;</p>
+<img src="/images/horror_icons/car-collision.svg" class="blocked_and_centred padding_top_medium" style="width:50px;"/>
+					  <p class="font_d text_center width_50 sans_subhead blocked_and_centred double_line_spacing">Avoid expensive mistakes&hellip;</p>
 
-					<img src="/images/homepage/sample_box.png" id="sample_box" />
+					  <p class="sans font_ee width_66 blocked_and_centred quarter_padding_vertical average_line_spacing">
+					    ...empower yourself with knowledge by learning from the devastating mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
 
-					<form class="pure-form form-aligned">
+
+						  <img src="/images/homepage/ebook_horror.png" style="width:80%;max-width:425px;" class="quarter_padding_vertical" />
+
+					  <ul class="sans font_ee average_line_spacing width_50 blocked_and_centred">
+								<img src="/images/horror_icons/black-evil-cat.svg" class="blocked_and_centred padding_top_medium" style="width:35px; opacity:0.5" />
+					    <li><span class="emphasised">Three important reasons</span> why you must never order your stationery without asking for this first</li>
+		<img src="/images/horror_icons/creepy-ghost.svg" class="blocked_and_centred padding_top_medium" style="width:35px; opacity:0.5" />
+					    <li>In our online age, <span class="emphasised">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it</li>
+		<img src="/images/horror_icons/ghost.svg" class="blocked_and_centred padding_top_medium" style="width:35px; opacity:0.5" />
+					    <li>The one thing no one thinks to ask their stationery company: <span class="emphasised">this can spoil the most beautiful invitations</span> if you don't check first</li>
+		<img src="/images/horror_icons/halloween.svg" class="blocked_and_centred padding_top_medium" style="width:35px; opacity:0.5" />
+					    <li>What you won't know about until your guests tell you:  <span class="emphasised">don't hear it from your guests first,</span> avoid this happening to you </li>
+
+					  </ul>
+
+					<form class="pure-form pure-form-stacked width_66 blocked_and_centred">
 						<fieldset>
-							<div class="pure-control-group">
-								<input type="email" name="email" placeholder="Email address"></input>
-							</div>
 
-							<div class="pure-control-group">
-								<input type="text" name="address" placeholder="House number or name"></input>
-							</div>
-							<div class="pure-control-group">
-								<input type="text" name="postcode" placeholder="Your postcode"></input>
-							</div>
+									<input type="text" name="name" placeholder="Name"></input>
+								<input type="email" name="email" placeholder="Email address"></input>
 
 						</fieldset>
 
-						<button type="submit" class="pure-button pure-button-primary">Post my sample now!</button>
+						<button type="submit" class="blocked_and_centred pure-button pure-button-primary">Download My Book!</button>
 
 					</form>
 
-					<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
+					<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred width_80" />
 
 				</div>
 
@@ -66,9 +74,9 @@
 
 
 
-					<div class="left_column">
+					<div class="left_column" class="text_center">
 
-						<a href="/products/<%= group[0].name %>"><h1 class="font_medium text_center quarter_padding_vertical product_name"><%= group[0].clean_name %></h1></a>
+						<a href="/products/<%= group[0].name %>"><h1 class="font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name"><%= group[0].clean_name %></h1></a>
 
 						<a href="/products/<%= group[0].name %>">
 
@@ -78,7 +86,7 @@
 
 					<div class="triangle_up">
 						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-						<div class="blurb text_center blocked_and_centred font_smaller">
+						<div class="blurb blocked_and_centred sans_subhead medium_line_spacing text_center no_underline average_line_spacing font_e">
 							<%= group[0].description %>
 						</div>
 					</div>
@@ -95,14 +103,14 @@
 
 
 				<% if (group[1]) { %>
-					<div class="right_column">
-						<a href="/products/<%= group[1].name %>"><h1 class="font_smaller text_center quarter_padding_vertical product_name"><%= group[1].clean_name %></h1></a>
+					<div class="right_column" class="text_center">
+						<a href="/products/<%= group[1].name %>"><h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name"><%= group[1].clean_name %></h1></a>
 
 						<a href="/products/<%= group[1].name %>">
 								<img src="/images/invitations/<%= group[1].name %>/browse.jpg" sizes="(max-width: 900px) 40vw, 30vw" srcset="/images/invitations/<%= group[1].name %>/browse_700.jpg 700w, /images/invitations/<%= group[1].name %>/browse.jpg 1000w, /images/invitations/<%= group[1].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/browse_300.jpg 300w" style="width:100%;"></a>
 						<div class="triangle_up">
 							<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-							<div class="blurb text_center blocked_and_centred font_tiny">
+							<div class="blurb text_center blocked_and_centred average_line_spacing sans_subhead font_f">
 								<%= group[1].description %>
 							</div>
 						</div>
@@ -118,20 +126,20 @@
 
 
 
-
 						<% if (group[2]) { %>
-							<div class="middle_column blocked_and_centred">
-								<a href="/products/<%= group[2].name %>"><h1 class="font_large text_center quarter_padding_vertical product_name"><%= group[2].clean_name %></h1><a>
+							<div class="middle_column blocked_and_centred text_center">
+								<a href="/products/<%= group[2].name %>"><h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name"><%= group[2].clean_name %></h1><a>
 
 <a href="/products/<%= group[2].name %>">
 		<img src="/images/invitations/<%= group[2].name %>/browse.jpg" sizes="(max-width: 900px) 80vw, 65vw" srcset="/images/invitations/<%= group[2].name %>/browse_700.jpg 700w, /images/invitations/<%= group[2].name %>/browse.jpg 1000w, /images/invitations/<%= group[2].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/browse_300.jpg 300w" style="width:100%;"></a>
 								<div class="triangle_up">
 									<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-									<div class="blurb blocked_and_centred text_center font_small">
+									<div class="blurb blocked_and_centred sans_subhead average_line_spacing font_d">
 										<%= group[2].description %>
+
 									</div>
 								</div>
-								<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred full_width" />
+								<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred width_66" />
 							</div>
 							<% } %>
 								<% counter = counter + 1 %>

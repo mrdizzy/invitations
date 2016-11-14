@@ -5,33 +5,15 @@
 }
 
 #headline {
-    background-color: #fff;
     border-radius: 20px;
-    font-family: 'TP';
-    line-height: 1.3em;
-    margin: 0 auto;
-    padding: 0.25em;
     position: relative;
-    text-align: center;
     top: -0.5em;
-    width: 50%;
-    z-index: 99999999999999;
-}
-
-article {
-    margin: 0 auto;
-    width: 50%;
-}
-
-.divider {
-    border-top: 1px dotted black;
-    margin-top: 4em;
-    margin-bottom: 3em;
 }
 
 #form_sample_spinner {
     display: none;
 }
+
 #sample_box {
  width:60%;
  max-width:225px;
@@ -45,17 +27,7 @@ article {
 
 .david_photo {
     width: 150px;
-    display: block;
-    margin: 0 auto;
     margin-top: 4em;
-}
-
-#david_quote_icon {
-    padding-bottom: 0.5em;
-    display: block;
-    margin: 0 auto;
-    width: 40px;
-    padding-top: 0.5em
 }
 
 .image_100 {
@@ -80,10 +52,7 @@ article {
     padding-bottom: 2em;
 }
 
-
 /* Smartphone */
-
-
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
@@ -92,32 +61,18 @@ article {
     }
     #headline {
         width: 95%;
-        line-height: 1.6em;
+        font-size:1.9999em;
     }
-    article {
+    #homepage_copywriting {
         width: 90%;
-        margin: 0 auto;
-    }
-    .david_photo {
-        margin-top: 1em;
-    }
-    .font_smaller {
-      font-size:18pt;
-    }
-    .width_small {
-      width:80%;
-    }
-
-    .width_medium {
-      width:90%;
     }
     #caption_envelope_1 {
-
       margin-bottom: -5em;
+      width:80%;
     }
     #caption_envelope_2 {
-        width:75%;
-        margin-top:-5em;
+        width:70%;
+        margin-top:-4em;
     }
 #caption_vellum_cover {
     margin-top: -3em;
@@ -126,26 +81,17 @@ article {
     margin: 0 auto;
 }
 #caption_box_envelope {
-
   margin: 0 auto;
-margin-top: -2em;
-z-index: 10;
-margin-bottom: 2em;
+  margin-top: -2em;
+  z-index: 10;
+  margin-bottom: 2em;
 }
 
-    .pure-button {
-      font-size:16pt;
-    }
-   .image_100 {
-      width:110%;
-      position:relative;
-      left:-5%;
-    }
-
-    ul {
-
-      text-align:center;
-    }
+.width_50 {
+  width:70%;
+}
+.width_66 {
+width:85%;}
 }
 
 
@@ -156,32 +102,32 @@ margin-bottom: 2em;
     #slides {
         width: 100%;
     }
-    .image_100 {
-        width: 95%;
+
+    #homepage_copywriting {
+        width: 70%;
     }
-    #headline {
-        width: 85%;
-        margin: 0 auto;
-        font-size: 28pt;
-        line-height: 1.5em;
+
+    #caption_envelope_1 {
+      margin-bottom: -8em;
+      width:60%;
     }
-    article {
-        width: 80%;
+    #caption_envelope_2 {
+        width:50%;
+        margin-top:-5em;
     }
+    .width_50 {
+    width:70%;}
+    .width_66 {
+    width:80%;}
 }
 
 
 /* Tablet */
-
-
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 901px) and (max-width: 1100px) {
     #slides {
         width: 100%;
-    }
-    .image_100 {
-        width: 95%;
     }
     #headline {
         width: 70%;
