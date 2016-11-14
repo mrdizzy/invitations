@@ -61,7 +61,7 @@
   .choice_image {
       text-align: center;
       width: 20.6%;
-      padding-top:2em;
+      padding-top:1em;
       float: left;
   }
 
@@ -69,29 +69,28 @@
       float: left;
       width: 4%;
       padding:1%;
-      padding-top:2.4em;
+      padding-top:1.4em;
   }
   .choice_description {
       text-align: left;
       width:54.10%;
-      padding-top:2.25em;
+      padding-top:1.25em;
       float:left;
-      padding-bottom:2em;
+      padding-bottom:1em;
   }
 
   .choice_price {
       float: right;
       font-family: 'Raleway';
-      font-size: 22pt;]
-      font-style:italic;
+      font-size: 1.15em;
       font-weight:300;
-      padding-top: 2em;
+      padding-top: 1.25em;
       width: 19.1%;
       text-align: center;
   }
 
-  .grand_total_100 {
-  padding-top:1em;margin:0;
+  .grand_total {
+  padding-top:0.5em;margin:0;
 }
 
 .radio_button, .control--checkbox {

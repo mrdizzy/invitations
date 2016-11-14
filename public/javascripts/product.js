@@ -17,41 +17,53 @@ var Product = Backbone.Model.extend({
         this.on("change", this.calculatePrice)
     },
     calculatePrice: function() {
-        var price = this.get("price"),
-            quantity = this.get("quantity"),
-            texture = this.get("texture"),
-            embellishment = this.get("embellishment"),
-            format = this.get("format"),
-            envelopestyle = this.get("envelopestyle"),
-            total;
+      var price = this.get("price"),
+          quantity = this.get("quantity"),
+          texture = this.get("texture"),
+          embellishment = this.get("embellishment"),
+          format = this.get("format"),
+          envelopestyle = this.get("envelopestyle"),
+          total;
 
-
-            var quantities =  [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170];
+      var quantities =  [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170];
 
  var prices = {};
- for (var i = 0, len = quantities.length; i < len; i++) {
-   var price= 0;
- var qty = quantities[i]
            if(format == "foldout") {
-            price = price + 0.30
+            price = price + 0.49
           }
             if(envelopestyle == "boxplain") {
-              price = price + 0.30
+              price = price + 0.50
             } else if(envelopestyle == "matching") {
-              price = price + 0.25
+              price = price + 0.35
             } else if (envelopestyle =="boxmatching") {
-                price = price + 0.55
+                price = price + 0.85
             }
 
             if(texture == "linen") {
-                price = price + 0.10
+                price = price + 0.15
             } else if (texture == "hammered") {
 
-                  price = price + 0.10
+                  price = price + 0.15
             } else if (texture == "pearlescent") {
 
-                  price = price + 0.20
+                  price = price + 0.35
             }
+
+
+
+            if(embellishment == "ribbon") {
+                price = price + 0.35
+            } else if (texture == "pearl") {
+
+                  price = price + 1.11
+            } else if (texture == "wrap") {
+
+                  price = price + 0.25
+            }
+
+            for (var i = 0, len = quantities.length; i < len; i++) {
+
+            var qty = quantities[i]
             var total = (price * qty)
              total =  total.toFixed(2);
         //split_total = total.toString().split(".")
