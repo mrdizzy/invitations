@@ -9,7 +9,41 @@ font-size:17px;
     src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff');
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  font-weight: 300;
+  padding:0;
+  margin:0;
+}
+
+.inline { display:inline;}
+.caption {
+  font: 300 italic  1em /1.4em 'Raleway';
+  text-align:center;
+  padding-bottom:1em;
+}
+
+
+.grey_background_link {
+  text-decoration:none;
+  background-color:#EEE;
+  border-radius:5px;
+  padding:5px;
+  padding-bottom:7px;
+}
+
+.subhead {
+  line-height:1.5em;
+  font-family:"Junge";
+  padding-top:0.75em;
+  padding-bottom:0.75em;
+}
+
+.body {
+font:300 1.15em/1.5em "Raleway";
+text-align:left;
+padding-top:0.75em;
+padding-bottom:0.75em;
+}
 
 .padding_top_medium { padding-top:1em;}
 .padding_top_small { padding-top:0.5em;}
@@ -17,7 +51,17 @@ h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
 .padding_bottom_medium { padding-bottom:1em;}
 .padding_bottom_large { padding-bottom:2em;}
 
-.quote { font-family: 'Playfair Display';}
+ul {
+  font: 300 1.15em/1.5em Raleway;
+  padding-top:1.25em;
+  padding-bottom:1.25em;
+}
+
+.no_text_decoration { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+.quote { font-family: 'Playfair Display';
+line-height:1.75em; text-align:center;font-style:italic; font-size:1.15em;}
 .serif_headline { font-family:"TP" }
 .sans { font-weight:300; font-family: "Raleway", sans-serif}
 .sans_caps { font-family: "Julius Sans One"; }
@@ -55,6 +99,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li { font-weight: 300; padding:0; margin:0;}
 .width_50 { width:50%; }
 .width_80 { width:80%; }
 .width_90 { width:90%; }
+.width_95 { width:95%; }
 .width_full { width: 100%; }
 
 a { color: black; }
@@ -63,11 +108,8 @@ ul { list-style-type: none; }
 
 .error {
     text-align: left;
-    font-family: 'Raleway';
-    font-weight: 500;
-    font-style:italic;
+    font: italic 500 12pt/1em 'Raleway';
     margin-bottom: 0;
-    font-size: 12pt;
 }
 
 /* Smartphone */

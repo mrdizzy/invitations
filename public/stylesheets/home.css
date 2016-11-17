@@ -1,9 +1,3 @@
-#slides {
-    width: 95%;
-    display: none;
-    margin: 0 auto;
-}
-
 #headline {
     border-radius: 20px;
     position: relative;
@@ -25,6 +19,9 @@
     width: 50px;
 }
 
+.small_icon {
+   width:32px;opacity:0.5;
+}
 .david_photo {
     width: 150px;
     margin-top: 4em;

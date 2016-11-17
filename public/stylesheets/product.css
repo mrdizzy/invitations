@@ -93,7 +93,7 @@
   width:30px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0.15em;margin-top:1em;
 }
   .grand_total {
-  padding-top:0.5em;
+  padding-top:1em;
   margin:0;
 }
 
@@ -167,6 +167,7 @@ border:1px solid grey;
       float:none;
       margin:0 auto;
       padding:0;
+      padding-top:1em;
       padding-bottom:1em;
     }
 .font_a {
