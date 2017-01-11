@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="114" height="80" viewBox="-0.69 -0.55 114 80" enable-background="new -0.69 -0.55 114 80" xml:space="preserve">
+<defs>
+</defs>
+<rect x="20.37" y="0.5" fill="#FFFFFF" stroke="#3F3F3F" width="91.93" height="60.53"/>
+<rect x="0.5" y="17.5" fill="#FFFFFF" stroke="#3F3F3F" width="91.93" height="60.53"/>
+<rect x="55" y="49.38" fill="#666666" stroke="#666666" stroke-width="0.3287" width="19.61" height="2.47"/>
+<rect x="55" y="53.93" fill="#666666" stroke="#666666" stroke-width="0.4113" width="30.71" height="2.47"/>
+<rect x="55" y="58.48" fill="#666666" stroke="#666666" stroke-width="0.3777" width="25.9" height="2.47"/>
+<rect x="55" y="63.03" fill="#666666" stroke="#666666" stroke-width="0.2914" width="14.76" height="2.58"/>
+<rect x="55" y="67.69" fill="#666666" stroke="#666666" stroke-width="0.215" width="8.03" height="2.58"/>
+<line fill="none" stroke="#666666" x1="49.11" y1="23" x2="49.11" y2="74"/>
+<g>
+	<path fill="none" stroke="#3F3F3F" stroke-width="0.6414" d="M45.53,43.75c0,3.28-2.72,5.97-6.04,5.97H10.48
+		c-3.32,0-6.04-2.69-6.04-5.97c0-3.28,2.72-5.97,6.04-5.97h29.01C42.82,37.78,45.53,40.47,45.53,43.75z"/>
+</g>
+<rect x="21.11" y="33.03" fill="#666666" stroke="#666666" stroke-width="0.2063" width="7.71" height="2.47"/>
+<rect x="15.5" y="60.95" fill="#666666" stroke="#666666" stroke-width="0.3777" width="25.9" height="2.47"/>
+<rect x="15.5" y="65.45" fill="#666666" stroke="#666666" stroke-width="0.3777" width="25.9" height="2.47"/>
+<rect x="11.44" y="60.88" fill="#666666" stroke="#666666" stroke-width="0.1216" width="2.68" height="2.47"/>
+<rect x="11.44" y="65.6" fill="#666666" stroke="#666666" stroke-width="0.1216" width="2.68" height="2.47"/>
+</svg>

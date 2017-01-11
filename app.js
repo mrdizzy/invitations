@@ -22,12 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-<<<<<<< HEAD
-app.use('/users', users);
-console.log("Hoorah")
-=======
-
->>>>>>> 5dc0d305f6dda76b4d0c3377c404db061fa3477a
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
