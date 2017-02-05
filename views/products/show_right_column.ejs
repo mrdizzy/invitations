@@ -4,9 +4,9 @@
 
 <img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
 
-<h2 class="sans_subhead width_66 blocked_and_centred font_c average_line_spacing centred text_center">Get a free sample&hellip;</h2>
+<h2 class="sans_subhead width_66 font_c average_line_spacing centred text_center">Get a free sample&hellip;</h2>
 
-<p class="width_66 blocked_and_centred centred font_ee small_line_spacing sans">&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address: you'll also get:</p>
+<p class="width_66 centred font_ee small_line_spacing sans">&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address: you'll also get:</p>
 
 <img src="/images/invitations/<%=product.name%>/sample.jpg" style="width:95%;padding-top:2em;max-width:235px;" />
 
@@ -20,6 +20,7 @@
 		</li>
 	</ul>
 </div>
+
 <div style="width:50%;float:right;">
 	<ul class="centred width_90"><img src="/images/homepage/bullets/texture.svg" class="small_icon centred">
 		<li>
@@ -27,9 +28,6 @@
 		</li>
 	</ul>
 </div>
-
-
-
 
 
 <div style="width:50%;float:left;clear:both;">
@@ -42,6 +40,7 @@
 		</li>
 	</ul>
 </div>
+
 <div style="width:50%;float:right;">
 	<ul class="centred width_90">
 		<img src="/images/homepage/bullets/colours.svg" class="small_icon centred">
@@ -51,12 +50,6 @@
 		</li>
 	</ul>
 </div>
-
-
-
-
-
-	
 <div style="width:50%;float:left;clear:both">
 	<ul class="centred width_80">
 			
@@ -77,16 +70,25 @@
 	</ul>	
 </div>	
 
-<p style="clear:both;"class="font_e width_80 half_padding_vertical text_center blocked_and_centred average_line_spacing sans_subhead">
-					Just enter your name and address now to get this parcel of perfection posted to you today&hellip;
+<p style="clear:both;"class="font_e width_80 half_padding_vertical text_center centred average_line_spacing sans_subhead">
+	Just enter your name and address now to get this parcel of perfection posted to you today&hellip;
 </p>
 				
-<form class="pure-form  pure-form-stacked width_80 blocked_and_centred">
+
+<form class="pure-form form-aligned width_90 centred">
 
 	<fieldset>
-		<input type="email" name="email" placeholder="Email address"></input>
-		<input type="text" name="address" placeholder="House number or name"></input>
-		<input type="text" name="postcode" placeholder="Your postcode"></input>
+		<div class="pure-control-group">
+			<input type="email" name="email" placeholder="Email address" autocomplete="email"></input>
+		</div>
+		
+		<div class="pure-control-group">
+			<input type="text" name="address" autocomplete="shipping street-address" placeholder="House number or name" autocomplete="name"></input>
+		</div>
+		
+		<div class="pure-control-group">
+			<input type="text" name="postcode" placeholder="Your postcode" autocomplete="shipping postal-code"></input>
+		</div>
 	</fieldset>
 
 	<button type="submit" class="pure-button pure-button-primary">Post my sample now!</button>

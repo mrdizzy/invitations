@@ -75,6 +75,7 @@ padding-bottom:0.75em;}
 
 .deselected { color: #999; }
 
+.no_border { border:0; }
 .top_dotted { border-top:1px dotted black; }
 .top_solid { border-top:1px solid black;}
 .bottom_solid { border-bottom:1px solid black;}
