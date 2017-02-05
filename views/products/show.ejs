@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Casamiento: Personalised wedding invitations: <%= product.clean_name %></title>
+	<title>Casamiento: personalised wedding invitations with beautifully customised envelopes: <%= product.clean_name %></title>
 
 	<meta name="description" content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
 
@@ -31,32 +31,31 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 
-		<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
+	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
 
-			<div id="browse_container" class="bring_to_front">
-				<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
-				<a href="/products" class="sans">BROWSE DESIGNS</a>
-			</div>
+		<div id="browse_container" class="bring_to_front">
+			<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
+			<a href="/products" class="sans">BROWSE DESIGNS</a>
+		</div>
 
-		<img src="/images/logo/drms.svg" class="bring_to_front" id="dreams_slogan" />
-
-
+	<img src="/images/logo/drms.svg" class="bring_to_front" id="dreams_slogan" />
 
 
 
 
 
-		<div id="left_column">
 
-			<div id="slides">
-				<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage.jpg 1300w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/vellum.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/pocketfold.jpg 1300w, /images/invitations/<%= product.name %>/pocketfold_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/envelope.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/closeup.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/rsvp.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
-				<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/info.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
-			</div>
+	<div id="left_column">
+
+		<div id="slides">
+			<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage.jpg 1300w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/vellum.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/pocketfold.jpg 1300w, /images/invitations/<%= product.name %>/pocketfold_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/envelope.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/closeup.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/rsvp.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/info.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
+		</div>
 
 
 
@@ -65,20 +64,19 @@
 
 <!-- Share icons -->
 
-			<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>"
-data-layout="button_count" class="fb-share-button" id="facebook">
-				<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=ChStuff&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
-					<img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button"  />
-				</a>
-			</div>
+		<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>" data-layout="button_count" class="fb-share-button" id="facebook">
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=ChStuff&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
+				<img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button"  />
+			</a>
+		</div>
 
-			<div id="pinit">
-					<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
-					    <img src="/images/social_media_buttons/pinterest-2.svg" id="pinterest_button" />
-					</a>
-			</div>
+		<div id="pinit">
+			<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
+		    <img src="/images/social_media_buttons/pinterest-2.svg" id="pinterest_button" />
+			</a>
+		</div>
 
-			<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" />
+		<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" />
 
 
 
@@ -93,11 +91,11 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 <!-- headline and description -->
 
 
-						<h1 style="clear:both;" class="letter-spaced serif_headline blocked_and_centred font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
+		<h1 style="clear:both;" class="letter-spaced serif_headline blocked_and_centred font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
 
-						<h2 class="sans_subhead padding_bottom_medium large_line_spacing blocked_and_centred text_center width_80 font_e"><%= product.description %></h2>
+		<h2 class="sans_subhead padding_bottom_medium large_line_spacing blocked_and_centred text_center width_80 font_e"><%= product.description %></h2>
 
-						<img src="/images/furniture/shell.svg" class="padding_top_large shell blocked_and_centred" />
+		<img src="/images/furniture/shell.svg" class="padding_top_large shell blocked_and_centred" />
 
 
 
@@ -111,7 +109,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 <!-- STEPS -->
 
 
-<div id="steps" class="width_90 blocked_and_centred">
+		<div id="steps" class="width_90 blocked_and_centred">
 
 
 
@@ -119,771 +117,15 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-
-
-
-
-				<!---------------------------------------------------------
-				-------------------------------------------------------
-				------------------------------------------------------- EMBELLISHMENTS -->
-
-
-				<h4 class="font_e sans_caps bottom_solid padding_bottom_medium padding_top_large">Choose your embellishment</h4>
-
-
-				<div class="choice choice_embellishment no_border clearfix" id="embellishment_ribbon">
-
-					<div class="choice_image"><img src="/images/product/ribbon.png" style="width:80px;" /></div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-								<input type="radio" name="embellishment" value="ribbon" checked="checked"/>
-								<div class="control__indicator"></div>
-							</label>
-					</div>
-
-					<div class="choice_description">
-						<h6 class="sans font_ee">Ribbon</h6>
-						<h3 class="sans font_ff slant padding_top_small average_line_spacing">To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
-					</div>
-
-										<div class="choice_price deselected">
-										+£0.35
-										</div>
-
-				</div>
-
-
-												<div class="choice choice_embellishment clearfix" id="embellishment_pearl">
-
-													<div class="choice_image">
-														<img src="/images/product/pearl.png" style="width:80px;" />
-													</div>
-
-
-													<div class="radio_button_container">
-														<label class="radio_button control control--radio">
-
-																												<input type="radio" value="pearl" name="embellishment" />
-																												<div class="control__indicator"></div>
-
-																											</label>
-													</div>
-													<div class="choice_description">
-													<h6 class="deselected sans font_ee">Pearl buckle</h6>
-
-														<h3 class="sans slant deselected font_ff padding_top_small average_line_spacing">To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
-													</div>
-
-																							<div class="choice_price deselected">
-																							+£1.11
-																							</div>
-												</div>
-
-
-
-
-
-
-
-
-				<div class="choice choice_embellishment clearfix" id="embellishment_wrap">
-
-					<div class="choice_image">
-						<img src="/images/product/wrap.png" style="width:80px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																				<input type="radio" value="wrap" name="embellishment" />
-																				<div class="control__indicator"></div>
-
-																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Paper wrap</h6>
-
-						<h3 class="sans slant deselected font_ff average_line_spacing padding_top_small">To give real impact, our range of buckle embellishments will take your guest's breath away.</h3>
-					</div>
-
-															<div class="choice_price deselected">
-															+£0.25
-															</div>
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!---------------------------------------------------------
-				-------------------------------------------------------
-				------------------------------------------------------- CARD STYLE -->
-
-
-				<h4 class="font_e bottom_solid sans_caps padding_bottom_medium padding_top_large">Choose your card format</h4>
-
-
-				<div class="choice choice_format no_border clearfix" id="format_flat">
-
-					<div class="choice_image">
-						<img src="/images/product/flat.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																								<input type="radio" name="format" value="flat" checked="checked"/>
-																								<div class="control__indicator"></div>
-
-																							</label>
-					</div>
-					<div class="choice_description">
-						<h6 class="sans font_ee">Flat A6</h6>
-
-						<h3 class="sans slant padding_top_small font_ff average_line_spacing">Printed front and back on A6 card</h3>
-					</div>
-
-				</div>
-
-
-
-
-
-
-
-
-				<div class="choice choice_format clearfix"  id="format_foldout">
-
-					<div class="choice_image">
-						<img src="/images/product/foldout.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																												<input type="radio" name="format" value="foldout" />
-																												<div class="control__indicator"></div>
-
-																											</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Foldout A6</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Printed inside and outside, with a matching printed vellum cover to protect your invitation.</h3>
-					</div>
-
-															<div class="choice_price deselected">
-															+£0.49
-															</div>
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!---------------------------------------------------------
-				-------------------------------------------------------
-				------------------------------------------------------- TEXTURE -->
-
-
-				<h4 class="font_e bottom_solid sans_caps padding_bottom_medium padding_top_large">Choose your card texture</h4>
-
-
-				<div class="choice clearfix choice_texture no_border" id="texture_plain">
-
-					<div class="choice_image">
-						<img src="/images/product/paper_plain.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																				<input type="radio" name="texture" value="plain" checked="checked"/>
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-						<h6 class="sans font_ee">Smooth plain</h6>
-
-						<h3 class="sans slant font_ff average_line_spacing padding_top_small">Smooth, bright, white card: no texture or gloss. It might be the cheapest option, but don't underestimate the beauty of simplicity. </h3>
-					</div>
-
-
-										<div class="choice_price deselected">
-
-										</div>
-				</div>
-
-
-
-
-				<div class="choice clearfix choice_texture" id="texture_hammered">
-
-					<div class="choice_image">
-						<img src="/images/product/paper_hammered.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																				<input type="radio" value="hammered" name="texture" />
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Hammered</h6>
-
-						<h3 class="sans slant average_line_spacing font_ff padding_top_small">This texture has indentations produced or appearing to have been produced by hammering, and is considered traditional by many.</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£0.15
-															</div>
-				</div>
-
-
-
-				<div class="choice clearfix choice_texture" id="texture_linen">
-
-					<div class="choice_image">
-						<img src="/images/product/paper_linen.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																				<input type="radio" value="linen" name="texture"/>
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Linen</h6>
-
-						<h3 class="sans slant average_line_spacing padding_top_small font_ff">Linen paper looks and feels like the fine linen fabric for which it is named. It has a subtle embossed texture with a crosshatch pattern that is reminiscent of a fine linen table cloth.</h3>
-					</div>
-
-
-
-															<div class="choice_price deselected">
-															+£0.15
-															</div>
-				</div>
-
-
-
-
-
-				<div class="choice clearfix choice_texture" id="texture_pearlescent">
-
-					<div class="choice_image">
-						<img src="/images/product/paper_pearlescent.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																				<input type="radio" value="pearlescent" name="texture"/>
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Pearlescent</h6>
-
-						<h3 class="sans slant padding_top_small font_ff average_line_spacing">This card has a luxurious sheen on both sides that glistens in the light and gives the ink an almost metallic feel&mdash;greys look like silver, yellows can look gold.</h3>
-					</div>
-
-
-
-															<div class="choice_price deselected">
-															+£0.35
-															</div>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!---------------------------------------------------------
-				-------------------------------------------------------
-				------------------------------------------------------- ENVELOPE STYLE -->
-
-
-				<h4 class="font_e bottom_solid sans_caps padding_top_large padding_bottom_medium">Choose your envelope style</h4>
-
-
-				<div class="choice clearfix choice_envelopestyle no_border" id="envelopestyle_plain">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_plain.svg" style="width:60px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-	<input type="radio" name="envelopestyle" value="plain" checked="checked"/>
-				<div class="control__indicator"></div>
-
-																																																			</label>
-					</div>
-					<div class="choice_description">
-						<h6 class="sans font_ee">Plain</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Unprinted envelopes in the same texture as your chosen card texture above.</h3>
-					</div>
-
-				</div>
-
-
-
-				<div class="choice clearfix choice_envelopestyle " id="envelopestyle_boxplain">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_box_plain.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																																				<input type="radio" value="boxplain" name="envelopestyle"/>
-																																																				<div class="control__indicator"></div>
-
-																																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Plain envelope box</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Envelope boxes make opening your invitation feel like opening a gift. Not only do they keep your invitations safer, but they are essential for invitations with embellishments such as ribbons and for invitations containing a lot of enclosures (reply cards, direction cards).</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£0.50
-															</div>
-
-				</div>
-
-
-
-
-				<div class="choice clearfix choice_envelopestyle " id="envelopestyle_matching">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_matching.png" style="width:60px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-
-																																																				<input type="radio" value="matching" name="envelopestyle"/>
-																																																				<div class="control__indicator"></div>
-
-																																																			</label>
-					</div>
-
-
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Matching</h6>
-
-						<h3 class="sans slant font_ff  padding_top_small average_line_spacing">Printed inside and outside with a beautiful matching intricate design, this is the ultimate choice for stunning invitations.</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£0.25
-															</div>
-
-				</div>
-
-
-
-
-
-				<div class="choice clearfix choice_envelopestyle " id="envelopestyle_boxmatching">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_box_matching.png" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--radio">
-	<input type="radio"	value="boxmatching" name="envelopestyle"/>
-													<div class="control__indicator"></div>
-							</label>
-					</div>
-
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Matching envelope box</h6>
-
-						<h3 class="sans slant font_ff  padding_top_small average_line_spacing">The absolute pinnacle of invitation envelopes.</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£0.85
-															</div>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---------------------------------------------------------
--------------------------------------------------------
-------------------------------------------------------- GUEST ADDRESSING -->
-
-
-
-				<h4 class="font_e bottom_solid sans_caps padding_top_large padding_bottom_medium">Guest personalisation</h4>
-
-				<div class="checkbox_choice clearfix choice_addressing no_border" id="addressing">
-
-					<div class="choice_image">
-						<img src="/images/product/envelope_yes.svg" style="width:80px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--checkbox">
-
-																																				<input type="checkbox" value="addressing" name="addressing" />
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Individual addresses printed</h6>
-
-						<h3 class="sans slant padding_top_small font_ff average_line_spacing">Send us a list of your guest names and addresses and we will individually print each one on the envelope.</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£2.95
-															</div>
-				</div>
-
-
-
-
-
-
-
-
-				<div class="checkbox_choice clearfix" id="guests">
-
-					<div class="choice_image">
-						<img src="/images/product/guest_yes.svg" style="width:60px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="radio_button control control--checkbox">
-
-																																																								<input type="checkbox" value="guests" name="guests" />
-																																																								<div class="control__indicator"></div>
-
-																																																							</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Guest names printed</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Your guest names will be printed on each invitation and any accompanying RSVP cards, just send us a list.</h3>
-					</div>
-
-
-															<div class="choice_price deselected">
-															+£2.95
-															</div>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!---------------------------------------------------------
-				-------------------------------------------------------
-				------------------------------------------------------- EXTRAS -->
-
-
-				<h4 class="font_e bottom_solid padding_top_large padding_bottom_medium sans_caps">Choose your extras</h4>
-
-
-				<div class="checkbox_choice clearfix no_border" id="rsvps">
-
-					<div class="choice_image">
-						<img src="/images/product/rsvp.svg" style="width:80px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="control control--checkbox">
-
-																																				<input type="checkbox" name="rsvps" value="rsvps"/>
-																																				<div class="control__indicator"></div>
-
-																																			</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">RSVP Cards</h6>
-
-						<h3 class="sans slant font_ff  padding_top_small average_line_spacing">Make it easy for guests to reply to your invitation.</h3>
-					</div>
-
-
-
-															<div class="choice_price deselected">
-															+£2.95
-															</div>
-
-				</div>
-
-
-
-
-
-
-
-
-				<div class="checkbox_choice clearfix" id="info">
-
-					<div class="choice_image">
-						<img src="/images/product/info.svg" style="width:60px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="control control--checkbox">
-
-																																								<input type="checkbox" name="info" value="info" />
-																																								<div class="control__indicator"></div>
-
-																																							</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Information cards</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Provide essential information for guests about your wedding.</h3>
-					</div>
-
-															<div class="choice_price deselected">
-															+£2.95
-															</div>
-				</div>
-
-
-
-
-
-
-
-
-				<div class="checkbox_choice clearfix " id="map">
-
-					<div class="choice_image">
-						<img src="/images/product/map.svg" style="width:70px;" />
-					</div>
-
-
-					<div class="radio_button_container">
-						<label class="control control--checkbox">
-
-																																								<input type="checkbox" name="map" value="map"/>
-																																								<div class="control__indicator"></div>
-
-																																							</label>
-					</div>
-					<div class="choice_description">
-					<h6 class="deselected sans font_ee">Direction map</h6>
-
-						<h3 class="sans slant font_ff padding_top_small average_line_spacing">Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests.</h3>
-					</div>
-
-															<div class="choice_price deselected">
-															+£2.95
-															</div>
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							<!---------------------------------------------------------
-							-------------------------------------------------------
-							------------------------------------------------------- QUANTITY -->
-
-
-							<h4 class="font_e bottom_solid sans_caps padding_top_large padding_bottom_medium">Choose your quantity</h4>
-
-
-<% [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170].forEach(function(qty) { %>
-
-																																				<div class="choice choice_quantity clearfix" id="quantity_<%= qty %>">
-																																					<div class="radio_button_container">
-																																						<label class="radio_button control control--radio">
-
-																																							<input type="radio" value="<%= qty %>" name="quantity" />
-																																							<div class="control__indicator"></div>
-																																						</label>
-																																					</div>
-
-																																					<div class="choice_description">
-																																						<h6 class="deselected sans font_ee"><%= qty %></h6>
-																																				</div>
-
-																																				<div id="grand_total_<%= qty%>" class="choice_price grand_total">
-																																					£132.32
-																																				</div>
-																																			</div>
-
-<% }) %>
-
-
-
+<%- include("show_embellishments") %>
+<%- include("show_card_style") %>
+<%- include("show_card_texture") %>
+<%- include("show_envelope_style") %>)
+<%- include("show_guest_addressing") %>
+<%- include("show_extras")%>
+<%- include("show_quantities")%>
 
 				<button style="clear:both;" type="submit" class="blocked_and_centred pure-button pure-button-primary">Place order now</button>
-
 
 				</div>
 
@@ -899,103 +141,9 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 
 
 
-		<div id="right_column" class="text_center">
-
-
-									<img src="/images/logo/genesis_product.svg" id="genesis" style="padding-bottom:2em;" />
-
-									<img src="/images/furniture/flourish_line.svg" class="blocked_and_centred width_90" />
-
-
-
-	<img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
-
-<h2 class="sans_subhead width_66 blocked_and_centred font_c average_line_spacing text_center">Get a free sample&hellip;</h2>
-
-	<p class="width_66 blocked_and_centred font_ee small_line_spacing sans">&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address: you'll also get:</p>
-
-					<img src="/images/invitations/<%=product.name%>/sample.jpg" style="width:95%;padding-top:2em;max-width:235px;" />
-
-
-
-									<img src="/images/homepage/bullets/playing-cards.svg" style="width:32px;opacity:0.5;display:block;margin:0 auto;margin-top:1em;">
-									<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans  large_line_spacing emphasised">Each item in this suite</p>
-									<p class="sans width_80 blocked_and_centred  average_line_spacing ">(card, envelope, rsvp, info sheet and embellishments) from our exclusive collections </p>
-
-									<img src="/images/homepage/bullets/texture.svg" class="small_icon">
-								<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans  large_line_spacing emphasised">Swatches of our card textures</p>
-								 <p class="sans width_80  average_line_spacing blocked_and_centred">for you to see and touch</p>
-
-										<img src="/images/homepage/bullets/diamond.svg" class="small_icon">
-						<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans  large_line_spacing emphasised">Sample embellishments</p>
-
-										<p class="sans width_80  average_line_spacing blocked_and_centred">(bows, buckles and ribbons) for you to compare and contrast</p>
-
-									<img src="/images/homepage/bullets/colours.svg" class="small_icon">
-								<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans  large_line_spacing emphasised">Printed colour chart</p>
-								<p class="sans width_80  average_line_spacing blocked_and_centred">so you can see what colours look like accurately, helping you find your_exact colour match; <span class="slant">and</span></p>
-
-									<img src="/images/homepage/bullets/book.svg" class="small_icon">
-									<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans   average_line_spacing  emphasised">Luxury catalogue</p>
-									<p class="sans width_80  average_line_spacing  blocked_and_centred">for you to browse (nothing quite beats relaxing and flicking through a paper catalogue, plus it'll look good on your coffee table!)</p>
-
-									<img src="/images/homepage/bullets/question.svg" class="padding_top_small small_icon">
-									<p class="padding_bottom_small text_center font_f width_80 blocked_and_centred sans  large_line_spacing emphasised">A little surprise:</p>
-									<p class="sans width_80  average_line_spacing blocked_and_centred padding_bottom_large">we also put a little surprise in every sample box&mdash; you'll have to get one to find out what it is!</p>
-
-												<div class="top_dotted full_width blocked_and_centred"></div>
-
-												<img src="/images/furniture/shell.svg" class="shell blocked_and_centred" />
-								<p class="font_e width_80 half_padding_vertical text_center blocked_and_centred average_line_spacing sans_subhead">
-									Just enter your name and address now to get this parcel of perfection posted to you today&hellip;
-								</p>
-										<form class="pure-form  pure-form-stacked width_80 blocked_and_centred">
-
-																						<fieldset>
-
-												<input type="email" name="email" placeholder="Email address"></input>
-												<input type="text" name="address" placeholder="House number or name"></input>
-												<input type="text" name="postcode" placeholder="Your postcode"></input>
-
-
-											</fieldset>
-
-												<button type="submit" class="pure-button pure-button-primary">Post my sample now!</button>
-
-										</form>
-
-
-
-
-
-
-
-
-
-				<!-- TESTIMONIAL
-							-----------------------------------------------------------------------
-							-----------------------------------------------------------------------
-							-----------------------------------------------------------------------
-							-----------------------------------------------------------------------
-
-							-->
-
-									<div class="testimonial_container">
-										<img src="/images/homepage/testimonial_chloe.png" class="testimonial_photo blocked_and_centred" />
-										<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" />
-
-										<p class="testimonial_quote quote text_left slant large_line_spacing font_ee width_80 blocked_and_centred">It&rsquo;s all the little touches, the beauty of the printed envelopes, and the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and bespoke: my guests were all really impressed as my stationery really did
-											stand out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
-
-											<p class="testimonial_name font_e padding_top_medium">&mdash;Chloé Campbell</p>
-											<p class="testimonial_date font_ff sans_subhead">married January 2016</p>
-
-									</div>
-
-
-</div>
-
-
+<div id="right_column" style="overflow:auto" class="text_center">
+	
+<%- include("show_right_column") %>
 	</div>
 
 
@@ -1057,7 +205,7 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 					fade: {
 						speed: 2000,
 						// [number] Speed in milliseconds of the fade animation.
-						crossfade: true
+						crossfade: false
 							// [boolean] Cross-fade the transition.
 					}
 				},
@@ -1065,7 +213,6 @@ data-layout="button_count" class="fb-share-button" id="facebook">
 					active: false,
 					auto: true,
 					interval: 2500,
-					effect: 'fade'
 				},
 				navigation: {
 					active: false
