@@ -4,19 +4,16 @@
 
 	<head>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,400,500i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/home.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 	</head>
-
-	<!--
-	Header ----------------------------------------------------------------------------------
-	-->
-
-
+<style type="text/css">
+	
+</style>
 	<img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" />
 
 	<div id="browse_container" class="bring_to_front">
@@ -26,33 +23,18 @@
 
 	<img src="/images/logo/drms.svg" class="bring_to_front" id="dreams_slogan" />
 
-	<div id="slides" class="centred width_95">
-
-		<% products.forEach(function(invitation) { %>
-			<a href="/products/<%= invitation.name %>">
-			<img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/<%= invitation.name %>/collage_700.jpg 700w, /images/invitations/<%= invitation.name %>/collage.jpg 1300w, /images/invitations/<%= invitation.name %>/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a>
-
-			<a href="/products/<%= invitation.name %>">
-			<img src="/images/invitations/<%= invitation.name %>/four.jpg" sizes="(max-width: 1100px) 100vw, 95vw"
-	    srcset="/images/invitations/<%= invitation.name %>/four_700.jpg 700w, /images/invitations/<%= invitation.name %>/four.jpg 1300w"></a>
-		<%}) %>
-
-	</div>
-
-
-
+	<div id="slides" class="centred width_95"></div>
 
 	<div id="headline" class="centred half_padding_vertical bring_to_front serif_headline font_b width_66 medium_line_spacing ">&ldquo;From the moment they see the envelope, your guests will know it&rsquo;s something special&hellip;&rdquo;</div>
-
 
 
 	<article id="homepage_copywriting" class="centred width_50">
 
 		<div class="top_dotted full_width"></div>
 
-		<img src="/images/furniture/shell.svg" class="shell " />
+		<img src="/images/furniture/shell.svg" class="shell" />
 
-		<h2 class="subhead text_left font_c"> When people see our invitations for the first time, it's usually the envelope that instantly delights and impresses them:</h2>
+		<h2 class="subhead text_left font_c">When people see our invitations for the first time, it's usually the envelope that instantly delights and impresses them:</h2>
 
 		<p class="body">Most people are used to seeing boring, plain envelopes.</p>
 
@@ -60,12 +42,12 @@
 
 		<h2 class="width_80 font_d subhead">They lend a	exclusivity to your wedding invitations that will have your guests wondering how you made them.</h2>
 
-		<div>
-			<video style="width:110%;border-radius:50px;margin-left:-5%" preload-"auto" autoplay muted>
-				<source src="/images/movies/casamiento4.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-		</div>
+
+		<video id="first_video" style="width:100%;border-radius:50px;" preload="auto" autoplay muted>
+			<source id="first_video_source" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+
 
 		<div class="width_66 centred caption" style="clear:both;"id="caption_vellum_cover">
 
@@ -118,7 +100,7 @@
 
 
 		<h2 class="font_c width_80 subhead ">
-			<img src="/images/homepage/icons/present-box.svg" class="icon " /><br/>
+			<img src="/images/homepage/icons/present-box.svg" class="icon" /><br/>
 				Nothing lets a good invitation down like a bad envelope&hellip;
 		</h2>
 
@@ -136,14 +118,7 @@
 
 		<p class="body">...not think it's another badly-written birthday card from Aunty Emily or a bill from British Gas!
 		</p>
-		
-		<div>
-
-			<video style="width:110%;border-radius:50px;margin-left:-5%;" preload="auto" autoplay muted>
-				<source src="/images/movies/deco.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-		</div>
+	
 	
 		<div class="width_66 centred caption" style="clear:both;"id="caption_vellum_cover">
 
@@ -901,40 +876,33 @@
 
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/javascripts/isInViewport.min.js"></script>
-	<script src="/javascripts/jquery.slides.min.js"></script>
-	<!-- Facebook Pixel Code -->
-	<script>
-		! function(f, b, e, v, n, t, s) {
-			if (f.fbq) return;
-			n = f.fbq = function() {
-				n.callMethod ?
-					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-			};
-			if (!f._fbq) f._fbq = n;
-			n.push = n;
-			n.loaded = !0;
-			n.version = '2.0';
-			n.queue = [];
-			t = b.createElement(e);
-			t.async = !0;
-			t.src = v;
-			s = b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t, s)
-		}(window,
-			document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+<script src="/javascripts/jquery.slides.min.js"></script>
 
-		fbq('init', '1165096770179288');
-		fbq('track', "PageView");
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=1165096770179288&ev=PageView&noscript=1"
-	/></noscript>
+
+	
 	<script>
 		$(function() {
-			$(window).scroll(function() {
-    $('video').each(function(){
+			// Javascript for playing responsive video
+		
+	var calculate_width = $('body').width() - $('#homepage_copywriting').width()
+
+	if (calculate_width < 60) { 
+	    $('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/low.mp4")
+	       $('video').load()
+	 } else { 
+	    $('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/high.mp4")
+	    $('video').load()
+	}
+		$('#slides').html('<a href="/products/art-deco"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/art-deco/collage_700.jpg 700w, /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/art-deco"><img  sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/art-deco/four_700.jpg 700w, /images/invitations/art-deco/four.jpg 1300w,  /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/four_2000.jpg 2000w></a><a href="/products/a-love-story"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/a-love-story/collage_700.jpg 700w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/a-love-story"><img  sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/a-love-story/four_700.jpg 700w, /images/invitations/a-love-story/four.jpg 1300w,  /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/four_2000.jpg 2000w"></a>')
+if(calculate_width > 60) {
+	$('#slides').append('<a href="/products/ace-of-hearts"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/ace-of-hearts"><img  sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w,  /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
+}
+
+
+$(window).scroll(function() {
+	$('video').each(function(){
         if ($(this).is(":in-viewport")) {
             $(this)[0].play();
         } else {
@@ -942,30 +910,6 @@
         }
     })
 });
-
-						$(".picture_slideshow").slidesjs({
-							width: 1200,
-							height: 1200,
-
-							pagination: {
-								active: false
-							},
-							effect: {
-								fade: {
-									speed: 1500,
-										// [boolean] Cross-fade the transition.
-								}
-							},
-							play: {
-								active: false,
-								auto: true,
-								interval: 1000,
-								effect: 'fade'
-							},
-							navigation: {
-								active: false
-							}
-						})
 			$("#slides").slidesjs({
 				width: 2000,
 				height: 1409,
@@ -977,18 +921,11 @@
 					slide: {
 						speed: 1000,
 					},
-					fade: {
-						speed: 1000,
-						// [number] Speed in milliseconds of the fade animation.
-					//	crossfade: true
-							// [boolean] Cross-fade the transition.
-					}
 				},
 				play: {
 					active: false,
 					auto: true,
 					interval: 2500,
-				//	effect: 'fade'
 				},
 				navigation: {
 					active: false
@@ -999,12 +936,9 @@
 					}
 				}
 			})
-
-
 			// Sample form
 			$('#form_sample').submit(function(e) {
 				e.preventDefault();
-alert("clicked")
 $('error_address').text("")
 
 $('error_postcode').text("")
@@ -1045,14 +979,13 @@ $('error_email').text("")
 					$('#email').css("border-width", "2px")
 				}
 				if (message.address && postcode && message.name && message.email) {
-					$('#get_sample').hide();
+				
 					$('#form_sample_spinner').show();
 					$.ajax({
 						type: "POST",
 						url: "/emails",
 						data: message,
 						success: function(data) {
-							$('#get_sample').hide();
 							$('#form_sample_spinner').hide();
 						}
 					});
@@ -1060,12 +993,11 @@ $('error_email').text("")
 			})
 
 
-
-
-
-
 		})
 	</script>
+	
+<%- include("index_facebook_code") %>
+
 </body>
 
 </html>

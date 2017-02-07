@@ -4,13 +4,16 @@
     top: -0.5em;
 }
 
-#form_sample_spinner {
-    display: none;
-}
-
 #sample_box {
  width:60%;
  max-width:225px;
+}
+
+video {
+   background:transparent url('/images/furniture/360.gif') no-repeat 0 0; 
+background-position:center;
+   background-size:40px 40px; 
+
 }
 
 .icon {
@@ -33,6 +36,8 @@
     width: 95%;
     display: block;
 }
+
+#slides { display:none; }
 
 
 /* Smartphone */

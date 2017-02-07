@@ -1,3 +1,9 @@
+
+	input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 9999px white !important;
+}
+textarea, input, *:focus { outline: none !important; } /* Remove chrome blue outline */
+
 .control-group {
     display: inline-block;
     width: 200px;
@@ -111,6 +117,13 @@
 }
 
 
+#form_sample_spinner {
+    display: none;
+    width:100px;
+    margin-top:-20px;
+    margin-bottom:-40px;
+}
+
 /* Checkbox tick */
 
 .control--checkbox .control__indicator:after {
@@ -139,7 +152,8 @@
 
 .pure-button {
     background-color:#81BF08;
-    border-radius: 0.4em;
+    border-bottom-right-radius:1.5em;
+    border-top-left-radius:1.5em;
     font:  300 18pt 'Junge';
     margin-top: 2em 0 2em 0;
     padding:1.25em 0.75em 1.25em 0.75em;
