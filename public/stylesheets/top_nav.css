@@ -15,6 +15,7 @@ body {
     position: fixed;
     right: 0;
     left: 0;
+    text-decoration:none;
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -22,7 +23,9 @@ body {
     padding: 0 5px 5px 5px;
 }
 
-
+#browse_container a:hover {
+    border-bottom:1px solid;
+}
 #book {
     vertical-align: middle;
     width: 50px;
@@ -50,10 +53,6 @@ img {
 
 .clear {
     clear: both;
-}
-
-.hidden {
-    display: none;
 }
 
 .pointer {
@@ -135,7 +134,6 @@ img {
 
 .green {
     color: #81BF08;
-    ;
 }
 
 .green_background {
@@ -150,6 +148,7 @@ img {
     top: -0.75em;
 }
 
+    .flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
 .testimonial_container {
     margin-top: 2em;
     padding-top: 2em;
@@ -160,7 +159,7 @@ img {
 }
 
 .testimonial_photo {
-    width: 30%;
+    width: 25%;
     float: right;
     margin-left: 5%;
     padding-bottom: 2em;
@@ -230,6 +229,7 @@ footer {
     .shell {
         width: 20px;
     }
+    
     #left_column,
     #right_column {
         clear: both;
