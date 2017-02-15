@@ -8,8 +8,13 @@
     float: left;
 }
 
-#right_column { margin-left: 62.8%; }
-#slides { display: none; }
+#right_column {
+    margin-left: 62.8%;
+}
+
+#slides {
+    display: none;
+}
 
 #slides img {
     border-radius: 20px;
@@ -26,78 +31,91 @@
     padding: 6px;
 }
 
-#pinit, #facebook {
+#pinit,
+#facebook {
     float: right;
     padding: 4px;
     width: 30px;
 }
 
-#pinterest_button, #facebook_button {
+#pinterest_button,
+#facebook_button {
     width: 100%;
     opacity: 0.35;
 }
 
-#pinterest_button:hover, #facebook_button:hover {
+#pinterest_button:hover,
+#facebook_button:hover {
     opacity: 1;
     cursor: pointer;
 }
 
-
-.choice, .checkbox_choice {
+.choice,
+.checkbox_choice {
     margin: 0 auto;
-    clear:both;
-    border-top: 1px dotted black;
-    float:none;
+    clear: both;
+    float: none;
 }
 
-.choice:hover, .checkbox_choice:hover {
+.choice:hover,
+.checkbox_choice:hover {
     background-color: #EEE;
     cursor: pointer;
 }
 
 .selected_choice {
     background-color: #EEE;
-  }
+}
 
-  .choice_image {
-      text-align: center;
-      width: 20.6%;
-      padding-top:1em;
-      float: left;
-  }
+.choice_image {
+    text-align: center;
+    width: 20.6%;
+    padding-top: 1em;
+    float: left;
+}
 
-  .radio_button_container {
-      float: left;
-      width: 4%;
-      padding:1%;
-      padding-top:1.4em;
-  }
-  .choice_description {
-      text-align: left;
-      width:54.10%;
-      padding-top:1.425em;
-      float:left;
-      padding-bottom:1em;
-  }
+.radio_button_container {
+    float: left;
+    width: 4%;
+    padding: 1%;
+    padding-top: 1.4em;
+}
 
-  .choice_price {
-      float: right;
-      font-family: 'Raleway';
-      font-size: 1.15em;
-      font-weight:300;
-      padding-top: 1.25em;
-      width: 19.1%;
-      text-align: center;
-  }
+.choice_description {
+    text-align: left;
+    width: 54.10%;
+    padding-top: 1.425em;
+    float: left;
+    padding-bottom: 1em;
+}
+
+.choice_price {
+    float: right;
+    font-family: 'Raleway';
+    font-size: 1.15em;
+    font-weight: 300;
+    padding-top: 1.25em;
+    width: 19.1%;
+    text-align: center;
+}
+
 .small_icon {
-  width:30px;opacity:0.5;display:block;margin:0 auto;padding-bottom:0;margin-bottom:0.15em;margin-top:1em;
-}
-  .grand_total {
-  padding-top:1em;
-  margin:0;
+    width: 30px;
+    opacity: 0.5;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 0;
+    margin-bottom: 0.15em;
+    margin-top: 1em;
 }
 
-.radio_button, .control--checkbox {
+.grand_total {
+    padding-top: 1em;
+    margin: 0;
+}
+
+.radio_button,
+.control--checkbox {
     display: block;
     float: right;
 }
@@ -112,70 +130,75 @@
 }
 
 .quantity_box:hover {
-cursor:pointer;
-color:#000;
-border:1px solid grey;
+    cursor: pointer;
+    color: #000;
+    border: 1px solid grey;
 }
+
+
 /* Smartphone */
 
 
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-
-    #slides, #steps {
+    #slides,
+    #steps {
         width: 100%;
         float: none;
     }
     #slides img {
         border-radius: 0;
     }
-    #left_column, #right_column {
+    #left_column,
+    #right_column {
         float: none;
         clear: both;
         margin: 0;
         width: 100%;
     }
-
-    .checkbox_choice, .choice {
+    .checkbox_choice,
+    .choice {
         width: 100%;
         margin: 0 auto;
     }
-
     .choice_image {
-      float:none;
-      padding:0;
-      width:100%;
-    margin:0 auto;
+        float: none;
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
     }
-
     .radio_button_container {
-      padding:0;
-      width: 15%;
-      float:left;
-      text-align:right;
+        padding: 0;
+        width: 15%;
+        float: left;
+        text-align: right;
     }
-
     .choice_description {
-      padding:0;
-      float:left;
-      width:75%;
+        padding: 0;
+        float: left;
+        width: 75%;
     }
     .choice_price {
-      width:40%;
-      clear:both;
-      float:none;
-      margin:0 auto;
-      padding:0;
-      padding-top:1em;
-      padding-bottom:1em;
+        width: 40%;
+        clear: both;
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
-.font_a {
-  font-size:2.827em;
-}
-    .width_80, .width_66 { width:95%;}
-    .choice_image img { padding-top:1.5em; padding-bottom:1em;}
-
+    .font_a {
+        font-size: 2.827em;
+    }
+    .width_80,
+    .width_66 {
+        width: 95%;
+    }
+    .choice_image img {
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    }
 }
 
 
@@ -187,26 +210,26 @@ border:1px solid grey;
         width: 100%;
     }
     #steps {
-      width:85%;
+        width: 85%;
     }
     #description {
-      width:80%;
+        width: 80%;
     }
-    #left_column, #right_column {
+    #left_column,
+    #right_column {
         width: 100%;
         clear: both;
         float: none;
         margin: 0;
     }
-    .choice, .checkbox_choice {
+    .choice,
+    .checkbox_choice {
         width: 80%;
     }
     .testimonial_container {
         margin: 0 auto;
         margin-top: 10em;
-        text-align:left;
-        width:70%;
+        text-align: left;
+        width: 70%;
     }
-
-
 }

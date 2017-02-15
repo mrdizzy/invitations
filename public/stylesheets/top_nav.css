@@ -12,19 +12,24 @@ body {
 
 #browse_container {
     width: 225px;
-    position:fixed;
-    right:0;
-    left:0;
-    margin:0 auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    text-decoration:none;
+    margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    text-align:center;
+    text-align: center;
     padding: 0 5px 5px 5px;
 }
 
+#browse_container a:hover {
+    border-bottom:1px solid;
+}
 #book {
-  vertical-align: middle;
-  width:50px;}
+    vertical-align: middle;
+    width: 50px;
+}
 
 #dreams_slogan {
     right: 0;
@@ -34,53 +39,106 @@ body {
     width: 180px;
 }
 
-
 img,
 .centred,
 .subhead {
-  display:block;
-  margin:0 auto;
-  text-align:center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
-img { width:100%;}
+img {
+    width: 100%;
+}
 
-.clear { clear:both; }
-.hidden { display:none; }
-.pointer { width:12px;}
-.centred { text-align:center; }
+.clear {
+    clear: both;
+}
+
+.pointer {
+    width: 12px;
+}
+
+.centred {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+.hidden { 
+    display:none;
+}
 
 .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-   content: " ";
-   clear: both;
-   height: 0;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
 
 .quarter_padding_vertical {
-  padding-top:0.25em;
-  padding-bottom:0.25em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 }
 
 .half_padding_vertical {
-padding-top:0.75em;
-padding-bottom:0.75em;}
-
-.bring_to_front {
-  z-index:500;
-  background-color:#fff;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
 }
 
-.deselected { color: #999; }
+.bring_to_front {
+    z-index: 500;
+    background-color: #fff;
+}
 
-.top_dotted { border-top:1px dotted black; }
-.top_solid { border-top:1px solid black;}
-.bottom_solid { border-bottom:1px solid black;}
-.bottom_dotted { border-bottom: 1px dotted black;}
-.last { border-bottom:1px dotted black; padding-bottom:3em;margin-bottom:3em;}
-.full_width { width:100%; }
+.deselected {
+    color: #999;
+}
+
+.no_border {
+    border: 0;
+}
+
+.top_dotted {
+    border-top: 1px dotted black;
+}
+
+.top_solid {
+    border-top: 1px solid black;
+}
+
+.bottom_solid {
+    border-bottom: 1px solid black;
+}
+
+.bottom_dotted {
+    border-bottom: 1px dotted black;
+}
+
+.last {
+    border-bottom: 1px dotted black;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.green {
+    color: #81BF08;
+}
+
+.green_background {
+    background-color: #81BF08;
+}
 
 .shell {
     background-color: #fff;
@@ -90,20 +148,21 @@ padding-bottom:0.75em;}
     top: -0.75em;
 }
 
+    .flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
 .testimonial_container {
-  margin-top:2em;
-  padding-top:2em;
-  border-bottom:1px solid black;
-  border-top:1px solid black;
-  padding-bottom:2em;
-  margin-bottom:2em;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .testimonial_photo {
-    width: 30%;
-    float:right;
-    margin-left:5%;
-    padding-bottom:2em;
+    width: 25%;
+    float: right;
+    margin-left: 5%;
+    padding-bottom: 2em;
 }
 
 .testimonial_quote_icon {
@@ -116,7 +175,7 @@ padding-bottom:0.75em;}
 
 footer {
     padding: 3em;
-    margin:2em 0 2em;
+    margin: 2em 0 2em;
 }
 
 
@@ -131,15 +190,20 @@ footer {
         width: 160px;
         padding-top: 10px;
     }
-
 }
 
 
 /* Smartphone */
+
+
 /* ----------------------------------------------------------------------------- */
 
-
 @media all and (min-width: 260px) and (max-width: 600px) {
+    .mobile_full_width {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
     #casamiento_logo {
         position: static;
         width: 120px;
@@ -147,15 +211,13 @@ footer {
         border-bottom-right-radius: 5px;
     }
     #browse_container {
-        width: 140px;
+        width: 85px;
     }
-
     #book {
         width: 25px;
         margin: 0 auto;
         padding-top: 2px;
     }
-
     #dreams_slogan {
         padding-top: 5px;
         float: right;
@@ -167,8 +229,9 @@ footer {
     .shell {
         width: 20px;
     }
-
-    #left_column, #right_column {
+    
+    #left_column,
+    #right_column {
         clear: both;
         float: none;
         width: 100%;
@@ -176,15 +239,15 @@ footer {
     .testimonial_photo {
         float: none;
         margin: 0 auto;
-        width:50%;
-        max-width:180px;
-        padding:0;
+        width: 50%;
+        max-width: 180px;
+        padding: 0;
     }
     .testimonial_quote {
         margin: 0 auto;
-        padding:0;
+        padding: 0;
     }
     .testimonal_quote_icon {
-    margin:0 auto;
+        margin: 0 auto;
     }
 }

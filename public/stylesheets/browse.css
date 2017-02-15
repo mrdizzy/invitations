@@ -15,6 +15,7 @@
 .middle_column {
     clear: both;
     width: 65%;
+    margin:0 auto;
 }
 
 #sample_icon {
@@ -38,15 +39,18 @@ a {
 .blurb {
     padding: 2.5%;
     width: 80%;
-    margin-top:-0.1em;
     border-radius: 0.5em;
+    margin:0 auto;
+    margin-top:-0.3em;
     margin-bottom:1em;
     background-color: #F1EFF0;
 }
 
 .triangle_up {
   position:relative;
+  margin:0 auto;
   margin-top:-3em;
+  width:55%;
     z-index: 4;
 }
 
@@ -57,41 +61,35 @@ a {
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-    .left_column, .right_column {
-        margin: 0;
+    .left_column, .right_column, .middle_column {
+        margin: 0 auto;
         padding: 0;
+        clear:both;
+        float:none;
+        width:95%;
     }
-    .left_column {
-        width:60%;
-        clear: both;
-      }
-      .left_column .blurb {
+    .blurb {
         padding:0.25em;
-        width:95%
+        width:95%;
+        margin:0 auto;
+        margin-top:-0.5em;
+    margin-bottom:1em;
       }
-    .right_column {
-        width: 40%;
+    .font_e, .font_f, .font_d {
+  font-size: 1.211em;
     }
 
-      .right_column .blurb {
-          width: 90%;
-      }
-    .middle_column {
-        width: 98%;
-    }
-    .middle_column .blurb {
-      width:90%;
-    }
-    .font_a {
-      font-size:2.827em;
-    }
-.font_b {
-  font-size: 1.9999em;
-}
-.font_d {
-font-size:1.414em;}
-}
 
+.triangle_up {
+  position:relative;
+  margin:0 auto;
+  margin-top:-2em;
+  width:75%;
+    z-index: 4;
+}
+.product_name {
+    font-size:2em;
+}
 
 /* Phablet */
 
