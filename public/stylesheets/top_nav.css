@@ -174,9 +174,11 @@ img {
 }
 
 footer {
-    padding: 3em;
-    margin: 2em 0 2em;
+    padding:2em;
+    display:flex;flex-direction:row;justify-content:space-between;
 }
+
+
 
 
 /* Phablet */
@@ -211,7 +213,7 @@ footer {
         border-bottom-right-radius: 5px;
     }
     #browse_container {
-        width: 85px;
+        width: 82px;
     }
     #book {
         width: 25px;
@@ -219,12 +221,13 @@ footer {
         padding-top: 2px;
     }
     #dreams_slogan {
-        padding-top: 5px;
+        padding-top: 8px;
         float: right;
         position: static;
         padding-left: 2px;
         border-bottom-left-radius: 5px;
-        width: 140px;
+        width: 135px;
+        z-index:500000000000000000000000;
     }
     .shell {
         width: 20px;
@@ -249,5 +252,10 @@ footer {
     }
     .testimonal_quote_icon {
         margin: 0 auto;
+    }
+    footer {
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
     }
 }

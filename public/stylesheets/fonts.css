@@ -200,17 +200,14 @@ a:hover {
 .text_left {
   text-align: left;
 }
-
-.width_33 {
-  width: 33%;
-}
+.width_20 { width:20%;}
+.width_33 { width: 33%; }
 .width_40 {
 width:40%;
 }
 .width_66 {
   width: 66%;
 }
-
 .width_50 {
   width: 50%;
 }
