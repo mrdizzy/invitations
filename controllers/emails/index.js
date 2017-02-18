@@ -1,9 +1,9 @@
 
 exports.create = function(req, res, next) {
-    
+
 var helper = require('sendgrid').mail;
 var mail = new helper.Mail(from_email, subject, to_email, content);
-   res.send(200)
+
 var from_email = new helper.Email('david@dreamsonpaper.co.uk');
 var to_email = new helper.Email(req.body.email);
 var subject = 'Thank you for ordering your sample box...';
@@ -20,5 +20,8 @@ sg.API(request, function(error, response) {
   console.log(response.statusCode);
   console.log(response.body);
   console.log(response.headers);
+  unless(error) {
+       res.send(200)
+  }
 });
 };
