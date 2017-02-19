@@ -9,6 +9,17 @@
 	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/browse.css" type="text/css">
 </head>
+
+<% function CasamientoTruncatetitle(title) {
+	
+	if (title) {
+	 var newtitle =  title.split(" ").slice(0,15);
+
+		return newtitle.join(" ") +"..." 
+	}
+}
+    %>
+
 	<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	-->
@@ -110,7 +121,7 @@
 						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
 						</div>
 						<div class="blurb blocked_and_centred sans_subhead medium_line_spacing text_center no_underline average_line_spacing font_e">
-							<%= group[0].description %>
+							<%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %>
 						</div>
 	<div class="padding_top_large width_90 centred mobile_full_width">
 		<div class="top_solid full_width"></div>
@@ -141,7 +152,7 @@
 						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
 						</div>
 							<div class="blurb text_center blocked_and_centred average_line_spacing sans_subhead font_f">
-								<%= group[1].description %>
+								<%= group[1].description %> <%= CasamientoTruncatetitle(group[1].description2) %>
 							</div>
 						<div class="padding_top_large width_90 centred mobile_full_width">
 		<div class="top_solid full_width"></div>
@@ -170,7 +181,7 @@
 						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
 						</div>
 									<div class="blurb blocked_and_centred sans_subhead average_line_spacing font_d">
-										<%= group[2].description %>
+										<%= group[2].description %> <%= CasamientoTruncatetitle(group[2].description2) %>
 
 									</div>
 								<div class="padding_top_large width_90 mobile_full_width centred">
