@@ -69,11 +69,11 @@ video {
     margin-left:-5%;
 }
 
-
+}
 /* Phablet *
 /* ----------------------------------------------------------------------------- */
 
-@media all and (min-width: 601px) and (max-width: 900px) {
+@media all and (min-width: 601px) and (max-width: 1200px) {
     #slides {
         width: 100%;
     }
@@ -99,10 +99,11 @@ video {
 }
 
 
+
 /* Tablet */
 /* ----------------------------------------------------------------------------- */
 
-@media all and (min-width: 901px) and (max-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1024px) {
     #slides {
         width: 100%;
     }

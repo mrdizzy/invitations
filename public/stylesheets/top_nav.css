@@ -59,10 +59,6 @@ img {
     width: 12px;
 }
 
-.centred {
-    text-align: center;
-}
-
 .left {
     float: left;
 }
@@ -148,7 +144,8 @@ img {
     top: -0.75em;
 }
 
-    .flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
+.flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
+
 .testimonial_container {
     margin-top: 2em;
     padding-top: 2em;
@@ -175,15 +172,16 @@ img {
 
 footer {
     padding:2em;
-    display:flex;flex-direction:row;justify-content:space-between;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
 }
 
 
 
 
 /* Phablet */
-
-@media all and (min-width: 601px) and (max-width: 900px) {
+@media all and (min-width: 601px) and (max-width: 1024px) {
     /* ----------------------------------------------------------------------------- */
     #casamiento_logo {
         width: 170px;
@@ -196,11 +194,8 @@ footer {
 
 
 /* Smartphone */
-
-
-/* ----------------------------------------------------------------------------- */
-
 @media all and (min-width: 260px) and (max-width: 600px) {
+/* ----------------------------------------------------------------------------- */
     .mobile_full_width {
         width: 100%;
         float: none;
