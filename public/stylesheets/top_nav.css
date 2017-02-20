@@ -26,6 +26,7 @@ body {
 #browse_container a:hover {
     border-bottom:1px solid;
 }
+
 #book {
     vertical-align: middle;
     width: 50px;
@@ -47,29 +48,30 @@ img,
     text-align: center;
 }
 
-img {
+img,
+.full_width {
     width: 100%;
 }
 
-.clear {
-    clear: both;
+.left { float: left; }
+.right { float: right; }
+.hidden { display:none; }
+.clear { clear: both; }
+.margin_left_70 {
+     margin-left: 70%;
 }
 
-.pointer {
-    width: 12px;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-.hidden { 
-    display:none;
-}
-
+.width_20 { width:20%; }
+.width_30 { width:30%; }
+.width_33 { width: 33%; }
+.width_40 { width:40%; }
+.width_66 { width: 66%; }
+.width_50 { width: 50%; }
+.width_70 { width:70%; }
+.width_80 { width: 80%; } 
+.width_90 { width: 90%; }
+.width_95 { width: 95%; }
+.width_full { width: 100%; }
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -78,6 +80,7 @@ img {
     clear: both;
     height: 0;
 }
+.pointer { width: 12px; }
 
 .quarter_padding_vertical {
     padding-top: 0.25em;
@@ -98,25 +101,11 @@ img {
     color: #999;
 }
 
-.no_border {
-    border: 0;
-}
-
-.top_dotted {
-    border-top: 1px dotted black;
-}
-
-.top_solid {
-    border-top: 1px solid black;
-}
-
-.bottom_solid {
-    border-bottom: 1px solid black;
-}
-
-.bottom_dotted {
-    border-bottom: 1px dotted black;
-}
+.no_border { border: 0; }
+.top_dotted { border-top: 1px dotted black; }
+.top_solid { border-top: 1px solid black; }
+.bottom_solid { border-bottom: 1px solid black; }
+.bottom_dotted { border-bottom: 1px dotted black; }
 
 .last {
     border-bottom: 1px dotted black;
@@ -124,17 +113,9 @@ img {
     margin-bottom: 3em;
 }
 
-.full_width {
-    width: 100%;
-}
 
-.green {
-    color: #81BF08;
-}
-
-.green_background {
-    background-color: #81BF08;
-}
+.green { color: #81BF08; }
+.green_background { background-color: #81BF08; }
 
 .shell {
     background-color: #fff;
@@ -178,8 +159,6 @@ footer {
 }
 
 
-
-
 /* Phablet */
 @media all and (min-width: 601px) and (max-width: 1024px) {
     /* ----------------------------------------------------------------------------- */
@@ -190,8 +169,13 @@ footer {
         width: 160px;
         padding-top: 10px;
     }
+    .tablet_full_width {
+        width:100%;
+        float:none;
+        clear:both;
+        margin:0;
+    }
 }
-
 
 /* Smartphone */
 @media all and (min-width: 260px) and (max-width: 600px) {
@@ -200,6 +184,7 @@ footer {
         width: 100%;
         float: none;
         clear: both;
+        margin:0;
     }
     #casamiento_logo {
         position: static;
@@ -207,9 +192,8 @@ footer {
         float: left;
         border-bottom-right-radius: 5px;
     }
-    #browse_container {
-        width: 82px;
-    }
+    #browse_container { width: 82px; }
+    
     #book {
         width: 25px;
         margin: 0 auto;

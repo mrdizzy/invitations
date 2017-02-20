@@ -1,46 +1,20 @@
 .left_column {
-    width: 50%;
     margin-left: 10%;
-    float: left;
     margin-top: 3em;
 }
 
 .right_column {
-    width: 30%;
     margin-right: 10%;
-    float: right;
     margin-top: 3em;
 }
 
-.middle_column {
-    clear: both;
-    width: 65%;
-    margin:0 auto;
-}
+a { border-bottom:0; }
 
-#sample_icon {
-    width: 40px;
-    padding: 1em;
-}
-
-#sample_box {
-  width:60%;
-  max-width:245px;
-}
-
-a {
-    text-decoration: none;
-}
-
-  a:hover {
-      text-decoration: underline;
-  }
+a:hover { border-bottom: 1px dashed black; }
 
 .blurb {
     padding: 2.5%;
-    width: 80%;
     border-radius: 0.5em;
-    margin:0 auto;
     margin-top:-0.3em;
     margin-bottom:1em;
     background-color: #F1EFF0;
@@ -56,18 +30,9 @@ a {
 
 
 /* Smartphone */
-
-
 /* ----------------------------------------------------------------------------- */
-
 @media all and (min-width: 260px) and (max-width: 600px) {
-    .left_column, .right_column, .middle_column {
-        margin: 0 auto;
-        padding: 0;
-        clear:both;
-        float:none;
-        width:95%;
-    }
+
     .blurb {
         padding:0.25em;
         width:95%;
@@ -91,6 +56,7 @@ a {
     font-size:2em;
 }
 }
+
 /* Phablet */
 
 @media all and (min-width: 601px) and (max-width: 1024px) {

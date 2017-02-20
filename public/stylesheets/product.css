@@ -3,14 +3,6 @@
     width: 140px;
 }
 
-#left_column {
-    width: 61.8%;
-    float: left;
-}
-
-#right_column {
-    margin-left: 62.8%;
-}
 
 #slides {
     display: none;
@@ -18,34 +10,25 @@
 
 #slides img {
     border-radius: 20px;
-    display: block;
-    width: 100%;
     border-bottom-left-radius: 0;
 }
 
 #share_icon {
-    width: 30px;
-    opacity: 0.35;
-    display: block;
-    float: right;
     padding: 6px;
 }
 
 #pinit,
-#facebook {
-    float: right;
+#facebook,
+#share_icon {
     padding: 4px;
     width: 30px;
+    opacity:0.35;
 }
 
-#pinterest_button,
-#facebook_button {
-    width: 100%;
-    opacity: 0.35;
-}
-
-#pinterest_button:hover,
-#facebook_button:hover {
+#pinit:hover,
+#facebook:hover,
+#share_icon:hover
+{
     opacity: 1;
     cursor: pointer;
 }
@@ -119,16 +102,6 @@
     display: block;
     float: right;
 }
-
-.testimonial_container {
-    margin-top: 10em;
-}
-
-.testimonial_quote_icon {
-    padding: 1em;
-    width: 60px;
-}
-
 .quantity_box:hover {
     cursor: pointer;
     color: #000;
@@ -137,25 +110,12 @@
 
 
 /* Smartphone */
-
-
 /* ----------------------------------------------------------------------------- */
 
 @media all and (min-width: 260px) and (max-width: 600px) {
-    #slides,
-    #steps {
-        width: 100%;
-        float: none;
-    }
+
     #slides img {
         border-radius: 0;
-    }
-    #left_column,
-    #right_column {
-        float: none;
-        clear: both;
-        margin: 0;
-        width: 100%;
     }
     .checkbox_choice,
     .choice {
@@ -201,35 +161,3 @@
     }
 }
 
-
-/* Phablet */
-
-@media all and (min-width: 601px) and (max-width: 1000px) {
-    /* ----------------------------------------------------------------------------- */
-    #slides {
-        width: 100%;
-    }
-    #steps {
-        width: 85%;
-    }
-    #description {
-        width: 80%;
-    }
-    #left_column,
-    #right_column {
-        width: 100%;
-        clear: both;
-        float: none;
-        margin: 0;
-    }
-    .choice,
-    .checkbox_choice {
-        width: 80%;
-    }
-    .testimonial_container {
-        margin: 0 auto;
-        margin-top: 10em;
-        text-align: left;
-        width: 70%;
-    }
-}

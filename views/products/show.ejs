@@ -37,16 +37,24 @@
 
 
 
-	<div id="left_column">
+	<div id="left_column" class="left width_70 tablet_full_width mobile_full_width">
 
-		<div id="slides">
+		<div id="slides" class="mobile_full_width">
+			
 			<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage.jpg 1300w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/vellum.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/pocketfold.jpg 1300w, /images/invitations/<%= product.name %>/pocketfold_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/envelope.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/closeup.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/rsvp.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
+			
 			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 900px) 100vw, 73vw" srcset="/images/invitations/<%= product.name %>/info.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
+			
 		</div>
 
 
@@ -56,19 +64,19 @@
 
 <!-- Share icons -->
 
-		<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>" data-layout="button_count" class="fb-share-button" id="facebook">
+		<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>" data-layout="button_count" class="fb-share-button right" id="facebook">
 			<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=ChStuff&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
 				<img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button"  />
 			</a>
 		</div>
 
-		<div id="pinit">
+		<div id="pinit" class="right">
 			<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
 		    <img src="/images/social_media_buttons/pinterest-2.svg" id="pinterest_button" />
 			</a>
 		</div>
 
-		<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" />
+		<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" class="right" />
 
 
 
@@ -83,12 +91,12 @@
 <!-- headline and description -->
 
 
-		<h1 style="clear:both;" class="letter-spaced serif_headline centred font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
+		<h1 class="clear letter-spaced serif_headline centred font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
 
-		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred text_center width_80 font_e"><%= product.description %></h2>
-		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred text_center width_80 font_ee"><%= product["description2"] %></h2>
+		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 font_e"><%= product.description %></h2>
+		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 font_ee"><%= product["description2"] %></h2>
 
-		<img src="/images/furniture/shell.svg" class="padding_top_large shell centred" />
+		<img src="/images/furniture/shell.svg" class="padding_top_large shell" />
 
 
 
@@ -118,7 +126,7 @@
 <%- include("show_extras")%>
 <%- include("show_quantities")%>
 
-				<button style="clear:both;" type="submit" class="blocked_and_centred pure-button pure-button-primary">Place order now</button>
+				<button type="submit" class="clear pure-button pure-button-primary">Place order now</button>
 
 				</div>
 
@@ -134,10 +142,12 @@
 
 
 
-<div id="right_column" style="overflow:auto" class="text_center">
+<div id="right_column" style="overflow:auto" class="margin_left_70 text_center mobile_full_width tablet_full_width">
 	
 <%- include("show_right_column") %>
-	</div>
+	
+</div>
+
 <%- include(".././partials/footer") %>
 
 
