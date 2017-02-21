@@ -38,6 +38,7 @@ $('#form_sample').submit(function(e) {
 	}
 
 	if (message.address && postcode && message.name && message.email) {
+
 		$('#form_sample_spinner').show();
 		$.ajax({
 			type: "POST",

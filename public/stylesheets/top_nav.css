@@ -1,7 +1,143 @@
+/* 1.414 Augmented and golden ratio 1.68*/
+
+html {
+  font-size: 17px;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
+
+@font-face {
+  font-family: "TP";
+  src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+
+.inline {  display: inline; }
+
+.caption {
+  font: 300 italic 1em /1.4em 'Raleway';
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.grey_background_link {
+  text-decoration: none;
+  background-color: #EEE;
+  border-radius: 5px;
+  padding: 5px;
+  padding-bottom: 7px;
+}
+
+.subhead {
+  line-height: 1.5em;
+  font-family: "Junge";
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+.body {
+  font: 300 1.15em/1.5em "Raleway";
+  text-align: left;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+.padding_top_medium { padding-top: 1em; }
+.padding_bottom_none { padding-bottom:0; }
+.padding_top_small { padding-top: 0.5em; }
+.padding_top_large { padding-top: 2em; }
+.padding_bottom_medium { padding-bottom: 1em; }
+.padding_bottom_large { padding-bottom: 2em; }
+
+ul {
+  font: 300 1.15em/1.5em Raleway;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.no_text_decoration {  text-decoration: none;}
+
+a:hover {  text-decoration: underline;}
+
+.quote {
+  font-family: 'Playfair Display';
+  line-height: 1.75em;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.15em;
+}
+
+.serif { font-family:'Playfair Display SC'; }
+.serif_headline {  font-family: "TP"}
+
+.sans {
+  font-weight: 300;
+  font-family: "Raleway", sans-serif
+}
+
+.sans_caps {
+  font-family: "Julius Sans One";
+}
+
+.sans_subhead {
+  font-family: 'Junge'
+}
+
+.font_a { font-size: 3.998em; }
+.font_b { font-size: 2.827em; }
+.font_c { font-size: 1.9999em; }
+.font_d { font-size: 1.618em; }
+.font_e { font-size: 1.414em; }
+.font_ee { font-size: 1.15em; }
+.font_f { font-size: 1em; }
+.font_ff { font-size: 0.9em; }
+.font_g { font-size: 0.707em; }
+.font_h { font-size: 0.5em; }
+
+
+.slant {  font-style: italic; }
+.emphasised {  font-weight: 500;}
+.no_underline { text-decoration: none; }
+
+.letter-spaced {  letter-spacing: 0.1em;}
+.wide_letter_spacing {  letter-spacing: 0.2em;}
+.small_line_spacing {  line-height: 1.25em;}
+.average_line_spacing {  line-height: 1.5em;}
+.large_line_spacing {  line-height: 1.75em;}
+.double_line_spacing {  line-height: 2em;}
+
+.text_center {  text-align: center; }
+.text_left { text-align: left; }
+
+
+a {
+  text-decoration:none;
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+a:hover {
+  text-decoration:none;
+  border-bottom:2px solid black;
+}
+
+ul {  list-style-type: none;}
 
 #casamiento_logo {
     position: fixed;
@@ -69,6 +205,7 @@ img,
 .width_60 { width:60%; }
 .width_50 { width: 50%; }
 .width_70 { width:70%; }
+.width_75 { width:75%; }
 .width_80 { width: 80%; } 
 .width_90 { width: 90%; }
 .width_95 { width: 95%; }
@@ -195,6 +332,15 @@ footer {
 /* Smartphone */
 @media all and (min-width: 260px) and (max-width: 600px) {
 /* ----------------------------------------------------------------------------- */
+
+
+
+.mob_font_a { font-size: 2.827em; }
+.mob_font_b { font-size:1.999em; }
+.mob_font_c { font-size:1.618em; }
+.mob_font_d { font-size: 1.414em; }
+.mob_font_e { font-size: 1.15em; }
+.mob_font_ee { font-size: 1em; }
     .mobile_full_width {
         width: 100%;
         float: none;
