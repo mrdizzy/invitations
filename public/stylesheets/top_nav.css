@@ -57,31 +57,32 @@ img,
 .right { float: right; }
 .hidden { display:none; }
 .clear { clear: both; }
-.margin_left_70 {
-     margin-left: 70%;
-}
+
+.margin_left_70 { margin-left: 70%; }
+.negative_top_margin { margin-top:-4vw; }
 
 .width_20 { width:20%; }
 .width_30 { width:30%; }
 .width_33 { width: 33%; }
 .width_40 { width:40%; }
 .width_66 { width: 66%; }
+.width_60 { width:60%; }
 .width_50 { width: 50%; }
 .width_70 { width:70%; }
 .width_80 { width: 80%; } 
 .width_90 { width: 90%; }
 .width_95 { width: 95%; }
 .width_full { width: 100%; }
-.clearfix:after {
+/*.clearfix:after {
     visibility: hidden;
     display: block;
     font-size: 0;
     content: " ";
     clear: both;
     height: 0;
-}
-.pointer { width: 12px; }
+}*/
 
+.small_padding { padding:1em; }
 .quarter_padding_vertical {
     padding-top: 0.25em;
     padding-bottom: 0.25em;
@@ -92,6 +93,16 @@ img,
     padding-bottom: 0.75em;
 }
 
+
+.no_border { border: 0; }
+.top_dotted { border-top: 1px dotted black; }
+.top_solid { border-top: 1px solid black; }
+.bottom_solid { border-bottom: 1px solid black; }
+.bottom_dotted { border-bottom: 1px dotted black; }
+
+#slides { display:none; }
+.pointer { width: 12px; }
+
 .bring_to_front {
     z-index: 500;
     background-color: #fff;
@@ -100,13 +111,6 @@ img,
 .deselected {
     color: #999;
 }
-
-.no_border { border: 0; }
-.top_dotted { border-top: 1px dotted black; }
-.top_solid { border-top: 1px solid black; }
-.bottom_solid { border-bottom: 1px solid black; }
-.bottom_dotted { border-bottom: 1px dotted black; }
-
 .last {
     border-bottom: 1px dotted black;
     padding-bottom: 3em;
@@ -114,6 +118,7 @@ img,
 }
 
 
+.light_grey_background { background-color: #F1EFF0; }
 .green { color: #81BF08; }
 .green_background { background-color: #81BF08; }
 
@@ -151,6 +156,11 @@ img,
     font-family: 'Playfair Display SC';
 }
 
+.small_rounded_border {
+    border-radius:0.5em;
+}
+
+
 footer {
     padding:2em;
     display:flex;
@@ -175,6 +185,11 @@ footer {
         clear:both;
         margin:0;
     }
+    .tablet_width_50 { width:50%; }
+    .tablet_width_60 { width:60%; }
+    .tablet_width_70 { width:70%; }
+    .tablet_width_80 { width:80%; }
+    .tablet_width_40 { width:40%; }
 }
 
 /* Smartphone */
@@ -185,6 +200,9 @@ footer {
         float: none;
         clear: both;
         margin:0;
+    }
+    .mobile_width_95 {
+        width:97%;
     }
     #casamiento_logo {
         position: static;
@@ -212,12 +230,6 @@ footer {
         width: 20px;
     }
     
-    #left_column,
-    #right_column {
-        clear: both;
-        float: none;
-        width: 100%;
-    }
     .testimonial_photo {
         float: none;
         margin: 0 auto;

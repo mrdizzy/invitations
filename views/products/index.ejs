@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/browse.css" type="text/css">
 	</head>
 
 	<% function CasamientoTruncatetitle(title) {
@@ -20,13 +19,11 @@
 	}
     %>
 
+	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
 
+	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
 
-		<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
-
-		<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
-
-
+	<div class="width_80 centred tablet_width_80 clear mobile_full_width">
 
 		<% var counter = 0; %>
 			<% products.forEach(function(group) { %>
@@ -72,10 +69,10 @@
 							<ul class="sans font_ee average_line_spacing width_80 centred">
 								<img src="/images/horror_icons/halloween.svg" class="_centred padding_top_medium" style="width:35px; opacity:0.7" />
 								<li>What you won't know about until your guests tell you: <span class="emphasised">don't hear it from your guests first,</span> avoid this happening to you </li>
-
 							</ul>
 						</div>
 					</div>
+
 					<form class="pure-form pure-form-stacked width_33 mobile_full_width centred">
 						<fieldset>
 
@@ -87,12 +84,8 @@
 						<button type="submit" class="width_90 mobile_full_width centred pure-button pure-button-primary">Download Free Now!</button>
 
 					</form>
-					</div>
-
-					</div>
 					<div class="padding_top_large">
 						<div class="top_solid full_width"></div>
-
 						<img src="/images/furniture/flourish.svg" class="flourish" />
 					</div>
 					<% } %>
@@ -105,32 +98,27 @@
 
 
 
-						<div class="left_column width_50 mobile_full_width left text_center">
+				<div class="left_column width_60 mobile_full_width left text_center">
 
-							<h1 class="font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name">
-								<a href="/products/<%= group[0].name %>">
-									<%= group[0].clean_name %>
-								</a>
-							</h1>
+					<h1 class="font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name">
+						<a href="/products/<%= group[0].name %>">
+							<%= group[0].clean_name %>
+						</a>
+					</h1>
 
-							<a href="/products/<%= group[0].name %>">
+					<a href="/products/<%= group[0].name %>">
 
-		<img src="/images/invitations/<%= group[0].name %>/browse.jpg" sizes="(max-width: 900px) 58vw, 50vw" srcset="/images/invitations/<%= group[0].name %>/browse_700.jpg 700w, /images/invitations/<%= group[0].name %>/browse.jpg 1000w, /images/invitations/<%= group[0].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[0].name %>/browse_300.jpg 300w" style="width:100%;">
+					<img src="/images/invitations/<%= group[0].name %>/browse.jpg" sizes="(max-width: 900px) 58vw, 50vw" srcset="/images/invitations/<%= group[0].name %>/browse_700.jpg 700w, /images/invitations/<%= group[0].name %>/browse.jpg 1000w, /images/invitations/<%= group[0].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[0].name %>/browse_300.jpg 300w">
 
+					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin  width_50 centred" />
+					
+					<div class="light_grey_background small_rounded_border small_padding centred sans_subhead medium_line_spacing average_line_spacing font_e">
+						<a href="/products/<%= group[0].name %>"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></a>
+					</div>
+					
+					<div class="top_solid full_width"></div>
+					<img src="/images/furniture/flourish.svg" class="flourish" />
 
-
-					<div class="triangle_up">
-						<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-						</div>
-						<div class="blurb centred sans_subhead medium_line_spacing text_center average_line_spacing font_e">
-							<a href="/products/<%= group[0].name %>"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></a>
-						</div>
-	<div class="padding_top_large width_90 centred mobile_full_width">
-		<div class="top_solid full_width"></div>
-		<img src="/images/furniture/flourish.svg" class="flourish" />
-	</div>
-			
-			
 				</div>
 
 
@@ -142,64 +130,69 @@
 
 
 
-				<% if (group[1]) { %>
-					<div class="right_column width_30 mobile_full_width  right text_center">
-						<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name"><a href="/products/<%= group[1].name %>"><%= group[1].clean_name %></a></h1>
+	<% if (group[1]) { %>
+		<div class="right_column width_40 mobile_full_width right text_center">
+			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name">
+				<a href="/products/<%= group[1].name %>">
+					<%= group[1].clean_name %>
+				</a>
+			</h1>
 
-							<a href="/products/<%= group[1].name %>">
-								<img src="/images/invitations/<%= group[1].name %>/browse.jpg" sizes="(max-width: 900px) 40vw, 30vw" srcset="/images/invitations/<%= group[1].name %>/browse_700.jpg 700w, /images/invitations/<%= group[1].name %>/browse.jpg 1000w, /images/invitations/<%= group[1].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/browse_300.jpg 300w" style="width:100%;"></a>
+			<a href="/products/<%= group[1].name %>">
+				<img src="/images/invitations/<%= group[1].name %>/browse.jpg" sizes="(max-width: 900px) 40vw, 30vw" srcset="/images/invitations/<%= group[1].name %>/browse_700.jpg 700w, /images/invitations/<%= group[1].name %>/browse.jpg 1000w, /images/invitations/<%= group[1].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/browse_300.jpg 300w">
+			</a>
+
+			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
+
+			<div class="light_grey_background small_padding small_rounded_border centred average_line_spacing width_80 sans_subhead font_f">
+				<a href="/products/<%= group[1].name %>">
+					<%= group[1].description %>
+					<%= CasamientoTruncatetitle(group[1].description2) %>
+				</a>
+			</div>
+			
+			<div class="top_solid width_80 centred"></div>
+			<img src="/images/furniture/flourish.svg" class="flourish" />
+		
+		</div>
+		<% } %>
 
 
-							<div class="triangle_up">
-								<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
+
+
+
+
+
+
+
+			<% if (group[2]) { %>
+				<div class="middle_column centred clear width_70 mobile_full_width">
+					<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name">
+						<a href="/products/<%= group[2].name %>">
+							<%= group[2].clean_name %>
+						<a>
+					</h1>
+
+					<a href="/products/<%= group[2].name %>">
+						<img src="/images/invitations/<%= group[2].name %>/browse.jpg" sizes="(max-width: 900px) 80vw, 65vw" srcset="/images/invitations/<%= group[2].name %>/browse_700.jpg 700w, /images/invitations/<%= group[2].name %>/browse.jpg 1000w, /images/invitations/<%= group[2].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/browse_300.jpg 300w">
+					</a>
+
+
+					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
+
+					<div class="light_grey_background small_padding small_rounded_border centred sans_subhead average_line_spacing font_d">
+						<%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %>
+					</div>
+
+						<div class="top_solid full_width"></div>
+						<img src="/images/furniture/flourish.svg" class="flourish" />
+				
+				</div>
+				<% } %>
+					<% counter = counter + 1 %>
+						<% }) %>
 							</div>
-							<div class="blurb text_center centred average_line_spacing width_80 sans_subhead font_f">
-									<a href="/products/<%= group[1].name %>"><%= group[1].description %>
-									<%= CasamientoTruncatetitle(group[1].description2) %></a>
-							</div>
-							<div class="padding_top_large width_90 centred mobile_full_width">
-								<div class="top_solid full_width"></div>
-								<img src="/images/furniture/flourish.svg" class="flourish" />
-							</div>
-						</div>
-						<% } %>
 
-
-
-
-
-
-
-
-
-							<% if (group[2]) { %>
-								<div class="middle_column centred clear width_66 mobile_full_width">
-									<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name">
-										<a href="/products/<%= group[2].name %>">
-											<%= group[2].clean_name %>
-												<a></h1>
-
-									<a href="/products/<%= group[2].name %>">
-		<img src="/images/invitations/<%= group[2].name %>/browse.jpg" sizes="(max-width: 900px) 80vw, 65vw" srcset="/images/invitations/<%= group[2].name %>/browse_700.jpg 700w, /images/invitations/<%= group[2].name %>/browse.jpg 1000w, /images/invitations/<%= group[2].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/browse_300.jpg 300w" style="width:100%;"></a>
-
-
-									<div class="triangle_up">
-										<img src="/images/furniture/triangle_up.svg" class="triangle" style="margin:0 auto;padding:0;display:block;" />
-									</div>
-									<div class="blurb centred sans_subhead average_line_spacing font_d">
-										<%= group[2].description %>
-											<%= CasamientoTruncatetitle(group[2].description2) %>
-
-									</div>
-									<div class="padding_top_large width_90 mobile_full_width centred">
-										<div class="top_solid full_width"></div>
-										<img src="/images/furniture/flourish.svg" class="flourish" />
-									</div>
-								</div>
-								<% } %>
-									<% counter = counter + 1 %>
-										<% }) %>
-
-											<%- include("../partials/footer") -%>
+<%- include("../partials/footer") -%>
 
 </body>
