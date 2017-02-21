@@ -112,6 +112,7 @@ a:hover {
 .font_g { font-size: 0.707em; }
 .font_h { font-size: 0.5em; }
 
+
 .slant {
   font-style: italic;
 }
@@ -163,4 +164,20 @@ a:hover {
 
 ul {
   list-style-type: none;
+}
+
+
+
+/* Smartphone */
+@media all and (min-width: 260px) and (max-width: 600px) {
+/* ----------------------------------------------------------------------------- */
+
+
+.mob_font_a { font-size: 2.827em; }
+.mob_font_b { font-size:1.999em; }
+.mob_font_c { font-size:1.618em; }
+.mob_font_d { font-size: 1.414em; }
+.mob_font_e { font-size: 1.15em; }
+.mob_font_ee { font-size: 1em; }
+
 }

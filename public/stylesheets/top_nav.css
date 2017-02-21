@@ -204,6 +204,12 @@ footer {
     .mobile_width_95 {
         width:97%;
     }
+    .mobile_width_80 {
+        width:80%;
+    }
+    .mobile_width_90 {
+        width:90%;
+    }
     #casamiento_logo {
         position: static;
         width: 120px;
