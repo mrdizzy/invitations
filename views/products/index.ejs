@@ -30,18 +30,18 @@
 				<% if (counter == 1) { %>
 
 					<div class="width_75 centred mobile_full_width">
-						<img src="/images/horror_icons/car-collision.svg" class="centred padding_top_medium" style="width:50px;" />
-						<p class="font_c text_center width_50 sans_subhead centred half_padding_vertical">Avoid expensive mistakes&hellip;</p>
+						<img src="/images/horror_icons/car-collision.svg" class="padding_top_medium" style="width:50px;" />
+						<p class="font_c text_center width_50 sans_subhead centred half_padding_vertical mob_font_c mobile_width_90">Avoid expensive mistakes&hellip;</p>
 
-						<p class="sans font_ee width_66 centred half_padding_vertical average_line_spacing">
+						<p class="sans font_ee width_66 centred half_padding_vertical average_line_spacing mobile_width_90">
 							...empower yourself with knowledge by learning from the devastating mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
 
 
-						<img src="/images/homepage/ebook_horror.png" style="width:80%;max-width:425px;" class="centred quarter_padding_vertical" />
+						<img src="/images/homepage/ebook_horror.png" style="max-width:425px;" class="mobile_width_95 centred quarter_padding_vertical" />
 
 						<div class="width_50 centred mobile_full_width">
 							<ul class="sans font_ee average_line_spacing width_90 centred">
-								<img src="/images/horror_icons/black-evil-cat.svg" class="_centred padding_top_medium" style="width:35px; opacity:0.7" />
+								<img src="/images/horror_icons/black-evil-cat.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 								<li><span class="slant bottom_dotted">Three important reasons</span> why you must never order your stationery without asking for this first</li>
 							</ul>
 						</div>
@@ -50,7 +50,7 @@
 						<div class="centred width_50 mobile_full_width">
 
 							<ul class="sans font_ee average_line_spacing width_90 centred">
-								<img src="/images/horror_icons/creepy-ghost.svg" class="_centred padding_top_medium" style="width:35px; opacity:0.7" />
+								<img src="/images/horror_icons/creepy-ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 								<li>In our online age, <span class="slant bottom_dotted">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it</li>
 
 							</ul>
@@ -58,15 +58,15 @@
 
 						<div class="width_50 centred mobile_full_width">
 							<ul class="sans font_ee average_line_spacing width_90 centred">
-								<img src="/images/horror_icons/ghost.svg" class="centred padding_top_medium" style="width:35px; opacity:0.7" />
+								<img src="/images/horror_icons/ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 								<li>The one thing no one thinks to ask their stationery company: <span class="slant bottom_dotted">this can spoil the most beautiful invitations</span> if you don't check first</li>
 							</ul>
 						</div>
 
 
 						<div class="centred width_50 mobile_full_width">
-							<ul class="sans font_ee average_line_spacing width_80 centred">
-								<img src="/images/horror_icons/halloween.svg" class="_centred padding_top_medium" style="width:35px; opacity:0.7" />
+							<ul class="sans font_ee average_line_spacing width_90 centred">
+								<img src="/images/horror_icons/halloween.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 								<li>What you won't know about until your guests tell you: <span class="slant bottom_dotted">don't hear it from your guests first,</span> avoid this happening to you </li>
 							</ul>
 						</div>
@@ -99,8 +99,8 @@
 
 				<div class="left_column width_60 mobile_full_width left text_center">
 
-					<h1 class="font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name">
-						<a href="/products/<%= group[0].name %>">
+					<h1 class="font_b mob_font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name">
+						<a href="/products/<%= group[0].name %>" class="hover_2_underline_dotted">
 							<%= group[0].clean_name %>
 						</a>
 					</h1>
@@ -111,11 +111,11 @@
 
 					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin  width_50 centred" />
 					
-					<div class="light_grey_background small_rounded_border small_padding centred sans_subhead medium_line_spacing average_line_spacing font_e">
-						<a href="/products/<%= group[0].name %>"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></a>
+					<div class="light_grey_background small_rounded_border small_padding centred sans_subhead medium_line_spacing average_line_spacing font_e mob_font_e">
+						<a href="/products/<%= group[0].name %>" class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></a>
 					</div>
 					
-					<div class="top_solid full_width"></div>
+					<div class="top_solid full_width margin_top_2em"></div>
 					<img src="/images/furniture/flourish.svg" class="flourish" />
 
 				</div>
@@ -131,8 +131,8 @@
 
 	<% if (group[1]) { %>
 		<div class="right_column width_40 mobile_full_width right text_center">
-			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name">
-				<a href="/products/<%= group[1].name %>">
+			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name mob_font_b">
+				<a href="/products/<%= group[1].name %>" class="hover_2_underline_dotted">
 					<%= group[1].clean_name %>
 				</a>
 			</h1>
@@ -143,14 +143,14 @@
 
 			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
 
-			<div class="light_grey_background small_padding small_rounded_border centred average_line_spacing width_80 sans_subhead font_f">
-				<a href="/products/<%= group[1].name %>">
+			<div class="light_grey_background small_padding small_rounded_border centred average_line_spacing width_80 sans_subhead font_f mob_font_e">
+				<a href="/products/<%= group[1].name %>" class="hover_1_underline_dotted">
 					<%= group[1].description %>
 					<%= CasamientoTruncatetitle(group[1].description2) %>
 				</a>
 			</div>
 			
-			<div class="top_solid width_80 centred"></div>
+			<div class="top_solid full_width margin_top_2em"></div>
 			<img src="/images/furniture/flourish.svg" class="flourish" />
 		
 		</div>
@@ -166,8 +166,8 @@
 
 			<% if (group[2]) { %>
 				<div class="middle_column centred clear width_70 mobile_full_width">
-					<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name">
-						<a href="/products/<%= group[2].name %>">
+					<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name mob_font_b">
+						<a href="/products/<%= group[2].name %>" class="hover_2_underline_dotted">
 							<%= group[2].clean_name %>
 						<a>
 					</h1>
@@ -179,11 +179,11 @@
 
 					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
 
-					<div class="light_grey_background small_padding small_rounded_border centred sans_subhead average_line_spacing font_d">
-						<%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %>
+					<div class="light_grey_background small_padding small_rounded_border centred sans_subhead average_line_spacing font_d mob_font_e">
+						<a href-"/products/<%= group[2].name %>" class="hover_2_underline_dotted"><%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %></a>
 					</div>
 
-						<div class="top_solid full_width"></div>
+						<div class="top_solid full_width margin_top_2em"></div>
 						<img src="/images/furniture/flourish.svg" class="flourish" />
 				
 				</div>

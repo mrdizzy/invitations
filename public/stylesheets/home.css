@@ -16,6 +16,7 @@ video {
     background: transparent url('/images/furniture/360.gif') no-repeat 0 0;
     background-position: center;
     background-size: 40px 40px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .icon {
