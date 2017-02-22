@@ -300,6 +300,18 @@ img,
 }
 
 
+
+.flexbox {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.flexbox_item {
+    width:275px;
+}
+
 footer {
     padding:2em;
     display:flex;
@@ -309,7 +321,7 @@ footer {
 
 
 /* Phablet */
-@media all and (min-width: 601px) and (max-width: 1024px) {
+@media all and (min-width: 601px) and (max-width: 1300px) {
     /* ----------------------------------------------------------------------------- */
     #casamiento_logo {
         width: 170px;

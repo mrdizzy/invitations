@@ -81,11 +81,6 @@
 .small_icon {
     width: 30px;
     opacity: 0.5;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 0;
-    margin-bottom: 0.15em;
-    margin-top: 1em;
 }
 
 .grand_total {
