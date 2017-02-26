@@ -1,13 +1,17 @@
 /* 1.414 Augmented and golden ratio 1.68*/
 
-html {
-  font-size: 17px;
-}
+html { font-size: 17px; }
 
 body {
     margin: 0;
     padding: 0;
 }
+
+/*FONTS *
+=============================================================================================================
+=============================================================================================================
+=============================================================================================================
+=============================================================================================================*/
 
 @font-face {
   font-family: "TP";
@@ -28,20 +32,18 @@ li {
   margin: 0;
 }
 
-.inline {  display: inline; }
+.body {
+  font: 300 1.15em/1.5em "Raleway";
+  text-align: left;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
 
 .caption {
   font: 300 italic 1em /1.4em 'Raleway';
   text-align: center;
   padding-bottom: 1em;
 }
-
-
-/*FONTS *
-=============================================================================================================*/
-
-
-
 
 .subhead {
   line-height: 1.5em;
@@ -50,39 +52,12 @@ li {
   padding-bottom: 0.75em;
 }
 
-.body {
-  font: 300 1.15em/1.5em "Raleway";
-  text-align: left;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-}
-
-.padding_top_medium { padding-top: 1em; }
-.padding_bottom_none { padding-bottom:0; }
-.padding_top_small { padding-top: 0.5em; }
-.padding_top_large { padding-top: 2em; }
-.padding_bottom_medium { padding-bottom: 1em; }
-.padding_bottom_large { padding-bottom: 2em; }
-
-ul {
-  font: 300 1.15em/1.5em Raleway;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
-}
-
 .no_text_decoration {  text-decoration: none;}
 
 a:hover {  text-decoration: underline;}
 
-.quote {
-  font-family: 'Playfair Display';
-  line-height: 1.75em;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.15em;
-}
-
 .serif { font-family:'Playfair Display SC'; }
+.serif_body { font-family:'Playfair Display'; }
 .serif_headline {  font-family: "TP"}
 
 .sans {
@@ -90,13 +65,8 @@ a:hover {  text-decoration: underline;}
   font-family: "Raleway", sans-serif
 }
 
-.sans_caps {
-  font-family: "Julius Sans One";
-}
-
-.sans_subhead {
-  font-family: 'Junge'
-}
+.sans_caps { font-family: "Julius Sans One";}
+.sans_subhead { font-family: 'Junge'}
 
 .font_a { font-size: 3.998em; }
 .font_b { font-size: 2.827em; }
@@ -109,13 +79,13 @@ a:hover {  text-decoration: underline;}
 .font_g { font-size: 0.707em; }
 .font_h { font-size: 0.5em; }
 
-
 .slant {  font-style: italic; }
 .emphasised {  font-weight: 500;}
 .no_underline { text-decoration: none; }
 
 .letter-spaced {  letter-spacing: 0.1em;}
 .wide_letter_spacing {  letter-spacing: 0.2em;}
+
 .small_line_spacing {  line-height: 1.25em;}
 .average_line_spacing {  line-height: 1.5em;}
 .large_line_spacing {  line-height: 1.75em;}
@@ -124,11 +94,11 @@ a:hover {  text-decoration: underline;}
 .text_center {  text-align: center; }
 .text_left { text-align: left; }
 
-
 a {
   text-decoration:none;
   color:black;
 }
+
 a:hover { text-decoration:none; }
 
 .underline { border-bottom:1px solid black; }
@@ -137,7 +107,22 @@ a:hover { text-decoration:none; }
 .hover_2_underline:hover {  border-bottom:2px solid black;}
 .hover_2_underline_dotted:hover { border-bottom:2px dotted black;}
 
-ul {  list-style-type: none;}
+.grand_total {
+    padding-top: 1em;
+    margin: 0;
+}
+
+.quantity_box:hover {
+    cursor: pointer;
+    color: #000;
+    border: 1px solid grey;
+}
+
+
+/* ELEMENTS 
+=============================================================================
+================================================================================
+=================================================================================*/
 
 #casamiento_logo {
     position: fixed;
@@ -159,6 +144,42 @@ ul {  list-style-type: none;}
     padding: 0 5px 5px 5px;
 }
 
+#headline {
+    border-radius: 20px;
+    position: relative;
+    top: -0.5em;
+}
+
+#sample_box {
+    width:60%;
+    max-width:225px;
+}
+
+video {
+    width: 120%;
+    margin-left: -10%;
+    border-radius: 50px;
+    background: transparent url('/images/furniture/360.gif') no-repeat 0 0;
+    background-position: center;
+    background-size: 40px 40px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.icon {
+    padding-top: 1em;
+    padding-bottom: 0;
+    width: 50px;
+}
+
+.small_icon {
+   width:32px;
+   opacity:0.66;
+}
+
+.david_photo {
+    width: 150px;
+    margin-top: 4em;
+}
 
 #book {
     vertical-align: middle;
@@ -171,6 +192,45 @@ ul {  list-style-type: none;}
     position: fixed;
     border-bottom-left-radius: 10px;
     width: 180px;
+}
+
+footer {
+    padding:2em;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+#share_icon { padding: 6px; }
+
+#pinit,
+#facebook,
+#share_icon {
+    padding: 4px;
+    width: 30px;
+    opacity:0.35;
+}
+
+#pinit:hover,
+#facebook:hover,
+#share_icon:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.shell {
+    background-color: #fff;
+    padding: 0.25em;
+    width: 25px;
+    position: relative;
+    top: -0.75em;
+}
+
+#slides { display:none; }
+
+#slides img {
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
 }
 
 img,
@@ -191,35 +251,14 @@ img,
 .hidden { display:none; }
 .clear { clear: both; }
 
-.margin_left_70 { margin-left: 70%; }
-.negative_top_margin { margin-top:-4vw; }
-.margin_top_2em { margin-top:1em; }
+.inline {  display: inline; }
 
-.width_20 { width:20%; }
-.width_30 { width:30%; }
-.width_33 { width: 33%; }
-.width_40 { width:40%; }
-.width_66 { width: 66%; }
-.width_60 { width:60%; }
-.width_50 { width: 50%; }
-.width_70 { width:70%; }
-.width_75 { width:75%; }
-.width_80 { width: 80%; } 
-.width_90 { width: 90%; }
-.width_95 { width: 95%; }
-.width_full { width: 100%; }
-
-.no_rounding {
-    border-radius:0;
-}
-/*.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}*/
+.padding_top_small { padding-top: 0.5em; }
+.padding_top_medium { padding-top: 1em; }
+.padding_top_large { padding-top: 2em; }
+.padding_bottom_none { padding-bottom:0; }
+.padding_bottom_medium { padding-bottom: 1em; }
+.padding_bottom_large { padding-bottom: 2em; }
 
 .small_padding { padding:1em; }
 .quarter_padding_vertical {
@@ -232,6 +271,25 @@ img,
     padding-bottom: 0.75em;
 }
 
+.margin_left_70 { margin-left: 70%; }
+.negative_top_margin { margin-top:-4vw; }
+.margin_top_2em { margin-top:1em; }
+
+.width_20 { width:20%; }
+.width_30 { width:30%; }
+.width_33 { width:33%; }
+.width_40 { width:40%; }
+.width_50 { width:50%; }
+.width_60 { width:60%; }
+.width_66 { width:66%; }
+.width_70 { width:70%; }
+.width_75 { width:75%; }
+.width_80 { width: 80%; } 
+.width_90 { width: 90%; }
+.width_95 { width: 95%; }
+.width_full { width: 100%; }
+
+.no_rounding { border-radius:0;}
 
 .no_border { border: 0; }
 .top_dotted { border-top: 1px dotted black; }
@@ -239,7 +297,6 @@ img,
 .bottom_solid { border-bottom: 1px solid black; }
 .bottom_dotted { border-bottom: 1px dotted black; }
 
-#slides { display:none; }
 .pointer { width: 12px; }
 
 .bring_to_front {
@@ -247,60 +304,21 @@ img,
     background-color: #fff;
 }
 
-.deselected {
-    color: #999;
+#genesis {
+    padding-top: 75px;
+    width: 140px;
 }
-.last {
-    border-bottom: 1px dotted black;
-    padding-bottom: 3em;
-    margin-bottom: 3em;
-}
-
-
+.choice, .checkbox_choice { color:#666; }
+.selected_choice { background-color: #EEE;  color:black; }
 .light_grey_background { background-color: #F1EFF0; }
 .green { color: #81BF08; }
 .green_background { background-color: #81BF08; }
 
-.shell {
-    background-color: #fff;
-    padding: 0.25em;
-    width: 25px;
-    position: relative;
-    top: -0.75em;
-}
-
 .flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
 
-.testimonial_container {
-    margin-top: 2em;
-    padding-top: 2em;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-}
-
-.testimonial_photo {
-    width: 25%;
-    float: right;
-    margin-left: 5%;
-    padding-bottom: 2em;
-}
-
-.testimonial_quote_icon {
-    width: 40px;
-}
-
-.testimonial_name {
-    font-family: 'Playfair Display SC';
-}
-
-.small_rounded_border {
-    border-radius:0.5em;
-}
-
-
-
+.testimonial_quote_icon {  width: 40px; }
+.small_rounded_border {    border-radius:0.5em;}
+.max_width_250 { max-width:250px; }
 .flexbox {
     display:flex;
     flex-direction:row;
@@ -308,20 +326,21 @@ img,
     justify-content:space-between;
 }
 
-.flexbox_item {
-    width:275px;
-}
-
-footer {
-    padding:2em;
+.options_flex {
     display:flex;
     flex-direction:row;
+    flex-wrap:wrap;
     justify-content:space-between;
 }
 
+.flexbox_item { width:275px; }
 
-/* Phablet */
-@media all and (min-width: 601px) and (max-width: 1300px) {
+/* Tablet */
+@media all and (min-width: 801px) and (max-width: 1200px) {
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
     /* ----------------------------------------------------------------------------- */
     #casamiento_logo {
         width: 170px;
@@ -336,20 +355,63 @@ footer {
         clear:both;
         margin:0;
     }
+    .tablet_width_40 { width:40%; }
     .tablet_width_50 { width:50%; }
     .tablet_width_60 { width:60%; }
     .tablet_width_70 { width:70%; }
     .tablet_width_80 { width:80%; }
-    .tablet_width_40 { width:40%; }
+    .tablet_width_90 { width:90%; }
 }
+
+
+
+
+/* Phablet */
+@media all and (min-width: 601px) and (max-width: 800px) {
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    #casamiento_logo {
+        width: 170px;
+    }
+    #dreams_slogan {
+        width: 160px;
+        padding-top: 10px;
+    }
+    .phablet_full_width {
+        width:100%;
+        float:none;
+        clear:both;
+        margin:0;
+    }
+    .phablet_width_40 { width:40%; }
+    .phablet_width_50 { width:50%; }
+    .phablet_width_60 { width:60%; }
+    .phablet_width_70 { width:70%; }
+    .phablet_width_80 { width:80%; }
+    .phablet_width_90 { width:90%; }
+    .phablet_width_95 { width:95%; }
+}
+
+
+
 
 /* Smartphone */
 @media all and (min-width: 260px) and (max-width: 600px) {
 /* ----------------------------------------------------------------------------- */
-
-.mobile_no_rounded {
-    border-radius:0;
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+.clear_mobile {
+    float:none;
+    clear:both;
 }
+
+.mobile_no_rounded {    border-radius:0; }
+
 .mob_font_a { font-size: 2.827em; }
 .mob_font_b { font-size:1.999em; }
 .mob_font_c { font-size:1.618em; }
@@ -357,64 +419,65 @@ footer {
 .mob_font_e { font-size: 1.15em; }
 .mob_font_ee { font-size: 1em; }
 
-    .mobile_full_width {
-        width: 100%;
-        float: none;
-        clear: both;
-        margin:0;
-    }
-    .mobile_width_95 {
-        width:97%;
-    }
-    .mobile_width_80 {
-        width:80%;
-    }
-    .mobile_width_90 {
-        width:90%;
-    }
-    #casamiento_logo {
-        position: static;
-        width: 120px;
-        float: left;
-        border-bottom-right-radius: 5px;
-    }
-    #browse_container { width: 82px; }
-    
-    #book {
-        width: 25px;
-        margin: 0 auto;
-        padding-top: 2px;
-    }
-    #dreams_slogan {
-        padding-top: 8px;
-        float: right;
-        position: static;
-        padding-left: 2px;
-        border-bottom-left-radius: 5px;
-        width: 135px;
-        z-index:500000000000000000000000;
-    }
-    .shell {
-        width: 20px;
-    }
-    
-    .testimonial_photo {
-        float: none;
-        margin: 0 auto;
-        width: 50%;
-        max-width: 180px;
-        padding: 0;
-    }
-    .testimonial_quote {
-        margin: 0 auto;
-        padding: 0;
-    }
-    .testimonal_quote_icon {
-        margin: 0 auto;
-    }
-    footer {
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-    }
+.mobile_full_width {
+    width: 100%;
+    float: none;
+    clear: both;
+    margin:0;
+}
+.mobile_width_10 {  width:10%;  }
+.mobile_width_20 {  width:20%;  }
+.mobile_width_40 {  width:40%;  }
+.mobile_width_50 {  width:50%;  }
+.mobile_width_60 {  width:60%;  }
+.mobile_width_95 {  width:97%;  }
+.mobile_width_80 {  width:80%;  }
+.mobile_width_90 {  width:90%;  }
+
+#casamiento_logo {
+    position: static;
+    width: 120px;
+    float: left;
+    border-bottom-right-radius: 5px;
+}
+
+#browse_container { width: 82px; }
+
+#book {
+    width: 25px;
+    margin: 0 auto;
+    padding-top: 2px;
+}
+
+#dreams_slogan {
+    padding-top: 8px;
+    float: right;
+    position: static;
+    padding-left: 2px;
+    border-bottom-left-radius: 5px;
+    width: 135px;
+    z-index:500000000000000000000000;
+}
+
+.shell { width: 20px; }
+
+.testimonial_photo {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 180px;
+    padding: 0;
+}
+.testimonial_quote {
+    margin: 0 auto;
+    padding: 0;
+}
+.testimonal_quote_icon {
+    margin: 0 auto;
+}
+footer {
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
 }

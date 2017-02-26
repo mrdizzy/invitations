@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
-	<link rel="stylesheet" href="/stylesheets/product.css" type="text/css" />
 
 </head>
 
@@ -32,7 +31,7 @@
 
 <%- include("../partials/header") %>
 
-	<div id="left_column" class="left width_70 tablet_full_width mobile_full_width">
+	<div id="left_column" class="left width_70 tablet_full_width phablet_full_width mobile_full_width">
 
 		<div id="slides" class="mobile_full_width">
 			
@@ -86,7 +85,7 @@
 <!-- headline and description -->
 
 
-		<h1 class="clear letter-spaced serif_headline centred font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
+		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 text_center quarter_padding_vertical"><%= product.clean_name %></h1>
 
 		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 font_e"><%= product.description %></h2>
 		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 font_ee"><%= product["description2"] %></h2>
@@ -113,10 +112,11 @@
 
 
 
-<%- include("show_embellishments") %>
 <%- include("show_card_style") %>
 <%- include("show_card_texture") %>
 <%- include("show_envelope_style") %>)
+
+<%- include("show_embellishments") %>
 <%- include("show_guest_addressing") %>
 <%- include("show_extras")%>
 <%- include("show_quantities")%>
@@ -137,7 +137,7 @@
 
 
 
-<div id="right_column" style="overflow:auto" class="margin_left_70 text_center mobile_full_width tablet_full_width">
+<div id="right_column" class="margin_left_70 text_center mobile_full_width tablet_full_width">
 	
 <%- include("show_right_column") %>
 	

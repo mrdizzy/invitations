@@ -3,24 +3,22 @@
 
 <% [20,25,30,35,40,45,50,55,60,65,70,75, 80,90,100,110,120,130,140,150,160,170].forEach(function(qty) { %>
 
-	<div class="choice choice_quantity clearfix bottom_dotted" id="quantity_<%= qty %>">
+	<div style="align-items: center" class="mobile_width_95 centred padding_bottom_medium padding_top_medium options_flex choice choice_quantity bottom_dotted" id="quantity_<%= qty %>">
 		<div class="radio_button_container">
 			<label class="radio_button control control--radio">
-
-																																							<input type="radio" value="<%= qty %>" name="quantity" />
-																																							<div class="control__indicator"></div>
-																																						</label>
+				<input type="radio" value="<%= qty %>" name="quantity" />
+				<div class="control__indicator"></div>
+			</label>
 		</div>
 
 		<div class="choice_description">
-			<h6 class="deselected sans font_ee">
+			<h6 class="deselected sans font_e">
 				<%= qty %>
 			</h6>
 		</div>
 
-		<div id="grand_total_<%= qty%>" class="choice_price grand_total">
-			£132.32
-		</div>
+			<div  id="grand_total_<%= qty%>" class="grand_total deselected sans font_e">£132.32	</div>
+	
 	</div>
 
 	<% }) %>
