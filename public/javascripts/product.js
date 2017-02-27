@@ -33,7 +33,7 @@ var Product = Backbone.Model.extend({
         
         var prices = {};
         if (format == "foldout") {
-            price = price + 0.69
+            price = price + 0.49
         }
 
         //ENVELOPE STYLE
@@ -50,10 +50,10 @@ var map;
 
         // CARD TEXTURE
         if (texture == "linen") {
-            price = price + 0.19
+            price = price + 0.24
         }
         else if (texture == "hammered") {
-            price = price + 0.19
+            price = price + 0.24
         }
         else if (texture == "pearlescent") {
             price = price + 0.45
@@ -130,7 +130,8 @@ var StepView = Backbone.View.extend({
     initialize: function() {
         //  this.listenTo(this.guests, 'change', this._renderQuickGuests)
         this.listenTo(this.model, "change:prices", this.renderPrices)
-        this.render();
+        this.model.calculatePrice();
+        this.renderPrices();
     },
     events: {
         "click .choice": "chosen",

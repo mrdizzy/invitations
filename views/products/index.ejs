@@ -29,52 +29,59 @@
 
 				<% if (counter == 1) { %>
 
-					<div class="width_75 phablet_width_90 tablet_width_80 centred mobile_width_90">
+					<div class="width_75 phablet_width_90 tablet_width_80 centred mobile_width_95">
 						<img src="/images/horror_icons/car-collision.svg" class="padding_top_medium" style="width:50px;" />
-						<p class="font_c text_center width_50 sans_subhead centred half_padding_vertical mob_font_c mobile_width_90">Avoid expensive mistakes&hellip;</p>
+						<p class="font_c text_center width_50 sans_subhead centred half_padding_vertical mob_font_c mobile_width_90">Avoid expensive mistakes! Don't buy your invitations until you've read this&hellip;</p>
 
 						<p class="sans font_ee width_66 phablet_width_80 table_width_80 centred half_padding_vertical average_line_spacing mobile_width_90">
-							...empower yourself with knowledge by learning from the devastating mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span>, completely free now and discover:</p>
+							...empower yourself with knowledge by learning from the embarassing mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span> completely free now and discover:</p>
 
 
 						<img src="/images/homepage/ebook_horror.png" style="max-width:425px;" class="mobile_width_95 centred quarter_padding_vertical" />
 
-						<div class="width_50 tablet_width_70 centred mobile_full_width sans font_ee average_line_spacing centred">
+						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
 						
 								<img src="/images/horror_icons/black-evil-cat.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
-								<span class="slant bottom_dotted">Three important reasons</span> why you must never order your stationery without asking for this first
+								<span class="slant">Three important reasons</span> why you must never order your stationery without asking for this first
 						
 						</div>
 
 
-						<div class="width_50 tablet_width_70  centred mobile_full_width sans font_ee average_line_spacing centred">
+						<div class="width_50 tablet_width_70  centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/creepy-ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
-							In our online age, <span class="slant bottom_dotted">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it
+							In our online age, <span class="slant">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it
 
 						</div>
 
-						<div class="width_50 tablet_width_70 centred mobile_full_width sans font_ee average_line_spacing centred">
+						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
-							The one thing no one thinks to ask their stationery company: <span class="slant bottom_dotted">this can spoil the most beautiful invitations</span> if you don't check first
+							The one thing no one thinks to ask their stationery company: <span class="slant">this can spoil the most beautiful invitations</span> if you don't check first
 						
 						</div>
 
 
-						<div class="width_50 tablet_width_70 centred mobile_full_width sans font_ee average_line_spacing centred">
+						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/halloween.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
-							What you won't know about until your guests tell you: <span class="slant bottom_dotted">don't hear it from your guests first,</span> avoid this happening to you 
+							What you won't know about until your guests tell you: <span class="slant">don't hear it from your guests first,</span> avoid this happening to you 
 					</div>
 
 					</div>
-					<form class="pure-form pure-form-stacked tablet_width_70  width_33 phablet_width_70 mobile_full_width centred">
+					<form id="download_form" class="pure-form pure-form-stacked tablet_width_70  width_33 phablet_width_70 mobile_width_95 centred">
 						<fieldset>
+								<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_name"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your name</p>
+		
 
-							<input type="text" name="name" placeholder="Name" autocomplete></input>
-							<input type="email" name="email" placeholder="Email address" autocomplete></input>
+							<input type="text" id="download_name" name="download_name" placeholder="Name" autocomplete></input>
+								<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
+		
+							<input id="download_email" type="email" name="download_email" placeholder="Email address" autocomplete></input>
 
 						</fieldset>
 
-						<button type="submit" class="width_90 mobile_full_width centred pure-button pure-button-primary">Download Free Now!<br/><img src="/images/furniture/download.svg" class="padding_top_small" style="width:45px"></button>
+						<button type="submit" class="width_90 mobile_full_width centred pure-button pure-button-primary">Download Free Now!<br/>
+						
+	<img src="/images/furniture/check.svg" id="download_form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
+	<img src="/images/furniture/download.svg" id="download_icon" class="padding_top_small" style="width:45px">	<img src="/images/furniture/ellipsis.svg" style="display:none;" id="form_download_spinner"/></button>
 
 					</form>
 					<div class="padding_top_large">
@@ -91,12 +98,10 @@
 
 
 
-				<div class="left_column width_60 mobile_full_width left text_center">
+				<div class="left_column left width_60 clear_mobile phablet_clear mobile_width_95 phablet_width_80 phablet_centred mobile_centred ">
 
-					<h1 class="font_b mob_font_b letter-spaced text_center serif_headline quarter_padding_vertical product_name">
-						<a href="/products/<%= group[0].name %>" class="hover_2_underline_dotted">
-							<%= group[0].clean_name %>
-						</a>
+					<h1 class="font_b mob_font_b phablet_font_a letter-spaced text_center serif_headline quarter_padding_vertical product_name">
+						<a href="/products/<%= group[0].name %>" class="hover_2_underline_dotted"><%= group[0].clean_name %></a>
 					</h1>
 
 					<a href="/products/<%= group[0].name %>">
@@ -105,8 +110,8 @@
 
 					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin  width_50 centred" />
 					
-					<div class="light_grey_background small_rounded_border small_padding centred sans_subhead medium_line_spacing average_line_spacing font_e mob_font_e">
-						<a href="/products/<%= group[0].name %>" class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></a>
+					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_e mob_font_e phablet_font_d mobile_full_width phablet_full_width">
+						<a href="/products/<%= group[0].name %>" class="block small_padding"><span class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></span></a>
 					</div>
 					
 					<div class="top_solid full_width margin_top_2em"></div>
@@ -120,12 +125,9 @@
 
 
 
-
-
-
 	<% if (group[1]) { %>
-		<div class="right_column width_40 mobile_full_width right text_center">
-			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name mob_font_b">
+		<div class="right_column right width_40 clear_mobile mobile_width_95 phablet_clear phablet_centred phablet_width_80 mobile_centred">
+			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name phablet_font_a mob_font_b">
 				<a href="/products/<%= group[1].name %>" class="hover_2_underline_dotted">
 					<%= group[1].clean_name %>
 				</a>
@@ -137,10 +139,10 @@
 
 			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
 
-			<div class="light_grey_background small_padding small_rounded_border centred average_line_spacing width_80 sans_subhead font_f mob_font_e">
-				<a href="/products/<%= group[1].name %>" class="hover_1_underline_dotted">
+			<div class="light_grey_background small_rounded_border centred average_line_spacing width_80 mobile_full_width phablet_full_width sans_subhead font_f mob_font_e phablet_font_d">
+				<a href="/products/<%= group[1].name %>" class="block small_padding"><span class=" hover_1_underline_dotted">
 					<%= group[1].description %>
-					<%= CasamientoTruncatetitle(group[1].description2) %>
+					<%= CasamientoTruncatetitle(group[1].description2) %></span>
 				</a>
 			</div>
 			
@@ -159,8 +161,8 @@
 
 
 			<% if (group[2]) { %>
-				<div class="middle_column centred clear width_70 mobile_full_width">
-					<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name mob_font_b">
+				<div class="middle_column centred clear width_70 phablet_width_80 mobile_width_95">
+					<h1 class="font_a serif_headline quarter_padding_vertical letter-spaced product_name mob_font_b  phablet_font_a ">
 						<a href="/products/<%= group[2].name %>" class="hover_2_underline_dotted">
 							<%= group[2].clean_name %>
 						<a>
@@ -173,8 +175,8 @@
 
 					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
 
-					<div class="light_grey_background small_padding small_rounded_border centred sans_subhead average_line_spacing font_d mob_font_e">
-						<a href-"/products/<%= group[2].name %>" class="hover_2_underline_dotted"><%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %></a>
+					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_d mob_font_e phablet_font_d phablet_full_width">
+						<a href-"/products/<%= group[2].name %>" class="block small_padding"><span class="hover_2_underline_dotted"><%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %></span></a>
 					</div>
 
 						<div class="top_solid full_width margin_top_2em"></div>
@@ -188,4 +190,46 @@
 
 <%- include("../partials/footer") -%>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$('#download_form').submit(function(e) {
+	e.preventDefault();
+	console.log("Sumibttedf")
+	$('#error_download_name').addClass("hidden");
+	$('#error_download_email').addClass("hidden");
+
+	var message = {
+		name: $('#download_name').val(),
+		email: $('#download_email').val(),
+		template: 'download'
+	}
+
+	if (!message.name) {
+		$('#error_download_name').removeClass("hidden")
+		$('#download_name').css("border-color", "#81BF08").css("border-width", "2px")
+	}
+
+	if (!message.email) {
+		$('#error_download_email').removeClass("hidden")
+		$('#download_email').css("border-color", "#81BF08").css("border-width", "2px")
+	}
+
+	if (message.name && message.email) {
+
+		$('#form_download_spinner').show();
+		$.ajax({
+			type: "POST",
+			url: "/emails",
+			data: message,
+			success: function(data) {
+				$('#form_download_spinner').hide();
+				$('#post_text').hide();
+				
+				$('#download_icon').hide();
+				$('#download_form_check').show();
+			}
+		});
+	}
+})
+</script>
 </body>
