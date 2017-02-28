@@ -447,6 +447,10 @@ img,
 
     #slides img { border-radius:0; }
     
+    .mobile_padding_left_and_right {
+    padding-left:1em;
+    padding-right:1em;
+}
 .clear_mobile {
     float:none;
     clear:both;
