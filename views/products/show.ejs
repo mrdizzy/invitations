@@ -10,7 +10,7 @@
 	<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
 	<meta property="og:type"               content="product" />
 	<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
-	<meta property="og:description"        content="How much does culture influence creative thinking?" />
+	<meta property="og:description"        content="<%= product.description %>" />
 	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" /><link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
@@ -59,7 +59,7 @@
 <!-- Share icons -->
 
 		<div data-href="http://www.casamiento.co.uk/products/<%= product.name %>" data-layout="button_count" class="fb-share-button right" id="facebook">
-			<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=ChStuff&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=<%= product.clean_name %>&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage.jpg">
 				<img src="/images/social_media_buttons/facebook-logo-1.svg"  id="facebook_button"  />
 			</a>
 		</div>
@@ -115,8 +115,8 @@
 
 
 
-<%- include("show_card_style") %>
 <%- include("show_card_texture") %>
+<%- include("show_card_style") %>
 <%- include("show_envelope_style") %>)
 <%- include("show_embellishments") %>
 <%- include("show_guest_addressing") %>
