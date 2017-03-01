@@ -31,7 +31,7 @@
 
 <%- include("../partials/header") %>
 
-	<div id="left_column" class="left width_70 tablet_full_width phablet_full_width mobile_full_width">
+	<div class="left width_70 tablet_full_width phablet_full_width mobile_full_width">
 
 		<div id="slides" class="mobile_full_width">
 			
@@ -118,7 +118,6 @@
 <%- include("show_card_style") %>
 <%- include("show_card_texture") %>
 <%- include("show_envelope_style") %>)
-
 <%- include("show_embellishments") %>
 <%- include("show_guest_addressing") %>
 <%- include("show_extras")%>
@@ -141,9 +140,9 @@
 
 
 
-<div id="right_column" class="margin_left_70 text_center mobile_full_width tablet_full_width">
+<div class="margin_left_70 text_center mobile_full_width phablet_full_width tablet_full_width">
 	
-<%- include("show_right_column") %>
+	<%- include("show_right_column") %>
 	
 </div>
 
@@ -211,8 +210,18 @@
 					}
 				}
 			})
-
+			reformat();
+			$(window).resize(function() {
+		reformat();
+})
 		})
+		function reformat() {
+				if($('body').width() < 1201) {
+				jQuery("#sample_container").detach().insertBefore('#steps')
+			} else {
+				jQuery("#sample_container").detach().insertBefore("#testimonial_1")
+			}
+		}
 	</script>
 	<script src="/javascripts/send_sample_form.js"></script>
 </body>
