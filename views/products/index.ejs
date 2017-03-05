@@ -3,14 +3,14 @@
 <body>
 
 	<head>
-<%- include("partials/index_facebook_code") %>
+<%- include(".././partials/index_facebook_code") %>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 	</head>
-
+<script>
 	<% function CasamientoTruncatetitle(title) {
 		if (title) {
 			 var newtitle =  title.split(" ").slice(0,15);
@@ -18,7 +18,7 @@
 		}
 	}
     %>
-
+</script>
 	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
 
 	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
