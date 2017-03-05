@@ -1,5 +1,5 @@
 exports.create = function(req, res, next) {
-
+console.log(process.env.SENDGRID_API_KEY)
     var helper = require('sendgrid').mail;
     var from_email = new helper.Email('david@dreamsonpaper.co.uk');
     var to_email = new helper.Email(req.body.email);
