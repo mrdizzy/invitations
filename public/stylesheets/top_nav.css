@@ -96,18 +96,12 @@ a {
   text-decoration:none;
   color:black;
 }
-
-a:hover { text-decoration:none; }
-
-.underline { border-bottom:1px solid black; }
-.hover_1_underline:hover { border-bottom:1px solid black;}
-.hover_1_underline_dotted:hover { border-bottom:1px dotted black;}
-.hover_2_underline:hover {  border-bottom:2px solid black;}
-.hover_2_underline_dotted:hover { border-bottom:2px dotted black;}
-
-.hover_opacity { opacity:0.3; }
-.hover_opacity:hover { opacity:1; cursor:pointer;}
-
+.boxed_link {
+    padding:2px;border:1px dashed grey;
+}
+.boxed_link:hover {
+    border: 1px solid black;
+}
 .grand_total {
     padding-top: 1em;
     margin: 0;
@@ -259,6 +253,7 @@ img,
 .bottom_dotted { border-bottom: 1px dotted black; }
 
 .small_rounded_border {    border-radius:0.5em;}
+
 .padding_top_small { padding-top: 0.5em; }
 .padding_top_medium { padding-top: 1em; }
 .padding_top_large { padding-top: 2em; }
@@ -316,7 +311,25 @@ img,
 .width_95 { width: 95%; }
 .width_full { width: 100%; }
 
-/* COLOURS
+
+/* HOVER
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------*/
+
+a:hover { text-decoration:none; }
+
+.hover_1_underline:hover { border-bottom:1px solid black;}
+.hover_1_underline_dotted:hover { border-bottom:1px dotted black;}
+.hover_2_underline:hover {  border-bottom:2px solid black;}
+.hover_2_underline_dotted:hover { border-bottom:2px dotted black;}
+
+.hover_opacity { opacity:0.3; }
+.hover_opacity:hover { opacity:1; cursor:pointer;}
+
+
+
+/*COLOURS
 ----------------------------------------------------
 -------------------------------------------------------
 --------------------------------------------------------*/
@@ -325,6 +338,7 @@ img,
 .light_grey_background { background-color: #F1EFF0; }
 .green { color: #81BF08; }
 .green_background { background-color: #81BF08; }
+.hover_grey:hover { background-color:#EEE; cursor:pointer; }
 
 .max_width_200 { max-width:200px; }
 .flexbox {
@@ -364,6 +378,9 @@ img,
     /* ----------------------------------------------------------------------------- */
     #casamiento_logo {
         width: 170px;
+    }
+    #headline {
+        
     }
     #dreams_slogan {
         width: 160px;
@@ -456,7 +473,7 @@ img,
         margin: 0 auto;
         padding-top: 2px;
     }
-    
+    #headline { position:static; padding-top:0.5em;}
     #dreams_slogan {
         padding-top: 8px;
         float: right;

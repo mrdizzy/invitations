@@ -4,6 +4,7 @@
 <head>
 	<title>Casamiento: personalised wedding invitations with beautifully customised envelopes: <%= product.clean_name %></title>
 
+<%- include("partials/index_facebook_code") %>
 	<meta name="description" content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
 
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
@@ -19,14 +20,6 @@
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
 
 
 <%- include("../partials/header") %>
@@ -156,26 +149,8 @@
 <script src="/javascripts/jquery.slides.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="/javascripts/product.js"></script>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : 'your-app-id',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-<script
-    type="text/javascript"
+<script type="text/javascript"
     async defer
     src="//assets.pinterest.com/js/pinit.js"
 ></script>

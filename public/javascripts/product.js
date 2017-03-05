@@ -18,7 +18,6 @@ var Product = Backbone.Model.extend({
         this.on("change", this.calculatePrice)
     },
     calculatePrice: function() {
-        console.log("calculating price")
         var price = this.get("price"),
             quantity = this.get("quantity"),
             texture = this.get("texture"),
@@ -79,6 +78,9 @@ var map;
           }
           if(extra == "map") {
               map = true;
+          }
+          if(extra == "rounded") {
+              price = price + 0.25
           }
             
         })
