@@ -32,7 +32,7 @@ exports.create = function(req, res, next) {
             var from_email = new helper.Email('david@dizzy.co.uk');
             var to_email = new helper.Email(req.body.email);
             var subject = 'A sample box request';
-            var content = new helper.Content('text/plain', "A samplehas been requested!");
+            var content = new helper.Content('text/plain', "A samplehas been requested!" + req.body.name + " " + req.body.address  + " " + req.body.email + " " +  req.body.postcode);
 
             var mail = new helper.Mail(from_email, subject, to_email, content);
 
