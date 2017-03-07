@@ -1,0 +1,34 @@
+
+<form class="pure-form form-aligned" name="sample" id="form_sample" >
+<div class="width_80 centred">
+	<fieldset>
+		<div class="pure-control-group">
+			<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_name"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your name</p>
+			<input type="text" autocomplete="name" id="name" name="name" placeholder="Your name"></input>
+		</div>
+
+		<div class="pure-control-group">
+			<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
+			<input type="email" id="email" autocomplete="email" name="email" placeholder="Email"></input>
+		</div>
+
+		<div class="pure-control-group">
+			<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_address"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your house number or name</p>
+			<input type="text" autocomplete="shipping street-address" id="address" name="address"  placeholder="House number or name">
+			</input>
+		</div>
+
+		<div class="pure-control-group">
+			<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_postcode"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your postcode</p>
+			<input type="text" id="postcode" name="postcode" autocomplete="shipping postal-code" placeholder="Your postcode"></input>
+		</div>
+	</fieldset>
+</div><input type="hidden" name="origin" value="<%- page %>"></input>
+	<button type="submit" id="get_sample" class=" margin_top_2em centred pure-button pure-button-primary">
+	<span id="post_text">Post my sample box now!</span>
+	<img src="/images/furniture/check.svg" id="form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
+	<img src="/images/furniture/PayPal.svg" id="paypal_logo" style="display:none;width:140px;padding-top:12px;opacity:0.9" />
+	<img src="/images/furniture/ellipsis.svg" id="form_sample_spinner"/>
+	</button>
+
+</form>

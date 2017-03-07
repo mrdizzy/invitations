@@ -30,14 +30,13 @@ console.log(process.env.SENDGRID_API_KEY)
 
         function sendAdminEmail() {
             var from_email = new helper.Email('david@dizzy.co.uk');
-            var to_email = new helper.Email(req.body.email);
+            var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
             var subject = 'A sample box request';
-            var content = new helper.Content('text/plain', "A samplehas been requested!" + req.body.name + " " + req.body.address  + " " + req.body.email + " " +  req.body.postcode);
+            var content = new helper.Content('text/plain', "A samplehas been requested!" + req.body.origin + " " + req.body.name + " " + req.body.address  + " " + req.body.email + " " +  req.body.postcode);
 
             var mail = new helper.Mail(from_email, subject, to_email, content);
 
             var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-            console.log(process.env.SENDGRID_API_KEY)
             var request = sg.emptyRequest({
                 method: 'POST',
                 path: '/v3/mail/send',

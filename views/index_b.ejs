@@ -3,8 +3,7 @@
 <body>
 
 	<head>
-<%- include("partials/index_facebook_code") %>
-		
+<%- include("partials/facebook_pixel") %>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
@@ -12,28 +11,19 @@
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 	</head>
 	
-	<%- include("partials/header") %>
+	<%- include("partials/navigation/header") %>
 	
-	<div id="slides" class="centred width_70 tablet_full_width phablet_full_width mobile_full_width"></div>
-	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
-		Get our beautiful sample box and luxury catalog, usually worth £9.99, posted completely free to you today:
+	<div id="slides" class="centred width_95 tablet_full_width phablet_full_width mobile_full_width"></div>
+		<div id="headline" class="centred half_padding_vertical phablet_width_90 bring_to_front serif_headline font_b phablet_font_aa mob_font_b width_66 tablet_full_width mobile_width_90 medium_line_spacing ">&ldquo;From the moment they see the envelope, your guests will know it&rsquo;s something special&hellip;&rdquo;
 	</div>
-		<div class="top_dotted full_width"></div>
-
-		<img src="/images/furniture/shell.svg" class="shell" />
-
-		<h2 class="width_66 font_d mob_font_d  subhead mobile_width_90">
-		Just enter your name and address:
-		</h2>
 
 
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70  mobile_width_97">
 
+		<div class="top_dotted full_width"></div>
 
-		<%- include("partials/form") %>
+		<img src="/images/furniture/shell.svg" class="shell" />
 
-		<div class="top_dotted full_width margin_top_2em"></div>
-		<img src="/images/furniture/shell.svg" class="shell padding_bottom_large" />
 		<h2 class="subhead text_left font_c mob_font_c">
 			Your wedding invitation is the first representation of you and your partner as a married couple&hellip;
 		</h2>
@@ -186,6 +176,13 @@
 		<img src="/images/furniture/shell.svg" class="shell padding_bottom_large" />
 	
 
+		<%- include("partials/david") %>
+<%- include("partials/flexbox_benefits") %>
+<%- include("partials/sample_form") %>
+
+        <h2 class="subhead center width_80 font_e">
+        	And while you're waiting for it to arrive, why not <a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline " style="opacity:0.7;width:15px; " /></a> to see what takes your fancy&hellip;
+        </h2>
 
 		<p class="body">P.S. If you have any questions at all, please just drop me an email at <a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>, or feel free to <a href="http://www.facebook.com/davidos.80
 				" class="bottom_dotted hover_1_underline">add me on Facebook</a>  <a href="http://www.facebook.com/davidos.80"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline; "></a> and send me a message!</p>
@@ -194,7 +191,7 @@
 
 
 
-<%- include("partials/footer") %>
+	<%- include("partials/navigation/footer") %>
 
 
 
@@ -210,7 +207,7 @@
 
 		var calculate_width = $('body').width() 
 
-		if (calculate_width < 1200) {
+		if (calculate_width < 60) {
     		$('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/low.mp4")
     		$('#second_video_source').attr("src", "/images/invitations/art-deco/art_deco_low.mp4")
        		$('video').load()
@@ -222,7 +219,7 @@
 
 		$('#slides').html('<a href="/products/art-deco"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/collage_700.jpg 700w, /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/art-deco "><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/four_700.jpg 700w, /images/invitations/art-deco/four.jpg 1300w, /images/invitations/art-deco/four_2000.jpg 2000w"></a><a href="/products/a-love-story "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/collage_700.jpg 700w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/a-love-story "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/four_700.jpg 700w, /images/invitations/a-love-story/four.jpg 1300w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/four_2000.jpg 2000w "></a><a href="/products/chess "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/collage_700.jpg 700w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/chess "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/four_700.jpg 700w, /images/invitations/chess/four.jpg 1300w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/four_2000.jpg 2000w "></a>')
 		if(calculate_width > 60) {
-			$('#slides').append('<a href="/products/birds-of-paradise-diamante-spirals "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/collage_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/birds-of-paradise-diamante-spirals "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/four_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 1300w,  /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 2000w "></a><a href="/products/ace-of-hearts "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/ace-of-hearts "><img  sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w, /images/invitations/ace-of-hearts/collage.jpg	1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
+			$('#slides').append('<a href="/products/birds-of-paradise-diamante-spirals "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/collage_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/birds-of-paradise-diamante-spirals "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/four_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/four_2000.jpg 2000w "></a><a href="/products/ace-of-hearts "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/ace-of-hearts "><img  sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w, /images/invitations/ace-of-hearts/collage.jpg	1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
 		}
 		
 		var user_paused = { "first_video": false, "second_video": false }
@@ -323,7 +320,6 @@
 </script>
 
 <script src="/javascripts/send_sample_form.js"></script>
-
 
 </body>
 
