@@ -32,7 +32,7 @@ console.log(process.env.SENDGRID_API_KEY)
             var from_email = new helper.Email('david@dizzy.co.uk');
             var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
             var subject = 'A sample box request';
-            var content = new helper.Content('text/plain', "A samplehas been requested!" + req.body.origin + " " + req.body.name + " " + req.body.address  + " " + req.body.email + " " +  req.body.postcode);
+            var content = new helper.Content('text/plain', "A samplehas been requested!" + req.body.page + " " + req.headers.referer +" " + req.body.name + " " + req.body.address  + " " + req.body.email + " " +  req.body.postcode);
 
             var mail = new helper.Mail(from_email, subject, to_email, content);
 

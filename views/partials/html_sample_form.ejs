@@ -23,7 +23,7 @@
 			<input type="text" id="postcode" name="postcode" autocomplete="shipping postal-code" placeholder="Your postcode"></input>
 		</div>
 	</fieldset>
-</div><input type="hidden" name="origin" value="<%- page %>"></input>
+</div><input type="hidden" name="page" id="page" value="<%- page %>"></input>
 	<button type="submit" id="get_sample" class=" margin_top_2em centred pure-button pure-button-primary">
 	<span id="post_text">Post my sample box now!</span>
 	<img src="/images/furniture/check.svg" id="form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
@@ -32,36 +32,3 @@
 	</button>
 
 </form>
-
-<!-- Google Code for Free sample box request Conversion Page
-In your html page, add the snippet and call
-goog_report_conversion when someone clicks on the
-chosen link or button. -->
-<script type="text/javascript">
-  /* <![CDATA[ */
-  goog_snippet_vars = function() {
-    var w = window;
-    w.google_conversion_id = 955776693;
-    w.google_conversion_label = "Pn9oCPXQ9G4Qtf3fxwM";
-    w.google_remarketing_only = false;
-  }
-  // DO NOT CHANGE THE CODE BELOW.
-  goog_report_conversion = function(url) {
-    goog_snippet_vars();
-    window.google_conversion_format = "3";
-    var opt = new Object();
-    opt.onload_callback = function() {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  }
-  var conv_handler = window['google_trackConversion'];
-  if (typeof(conv_handler) == 'function') {
-    conv_handler(opt);
-  }
-}
-/* ]]> */
-</script>
-<script type="text/javascript"
-  src="//www.googleadservices.com/pagead/conversion_async.js">
-</script>

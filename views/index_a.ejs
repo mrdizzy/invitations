@@ -3,7 +3,15 @@
 <body>
 
 	<head>
-<%- include("partials/facebook_pixel") %>
+		
+		<%- include("partials/script_facebook_google") %>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/javascripts/isInViewport.min.js"></script>
+		<script src="/javascripts/jquery.slides.min.js"></script>
+		
+		<%- include("partials/scripts") %>
+		<%- include('partials/script_send_sample') %>
 		
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
@@ -18,20 +26,21 @@
 	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
 		Get our beautiful sample box and luxury catalog, usually worth £9.99, posted completely free to you today:
 	</div>
-		<div class="top_dotted full_width"></div>
+	
+	<div class="top_dotted full_width"></div>
 
-		<img src="/images/furniture/shell.svg" class="shell" />
+	<img src="/images/furniture/shell.svg" class="shell" />
 
-		<h2 class="width_66 font_d mob_font_d  subhead mobile_width_90">
-		Just enter your name and address:
-		</h2>
+	<h2 class="width_66 font_d mob_font_d  subhead mobile_width_90">
+	Just enter your name and address:
+	</h2>
 
 
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70  mobile_width_97">
 
 
-		<%- include("partials/sample_form") %>
-		<%- include("partials/flexbox_benefits") %>
+		<%- include("partials/html_sample_form") %>
+		<%- include("partials/html_flexbox_benefits") %>
 		
         <h2 class="subhead center width_90 padding_top_large font_e">
         	And while you're waiting for it to arrive, why not <a class="boxed_link" href="/products">browse all our designs <img src="/images/exit-top-right.svg " class="inline " style="opacity:0.7;width:15px; " /></a> to see what takes your fancy&hellip;
@@ -187,147 +196,15 @@
 
 
 		<div class="top_dotted full_width"></div>
+		
 		<img src="/images/furniture/shell.svg" class="shell padding_bottom_large" />
-	
-
 
 		<p class="body">P.S. If you have any questions at all, please just drop me an email at <a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>, or feel free to <a href="http://www.facebook.com/davidos.80
 				" class="bottom_dotted hover_1_underline">add me on Facebook</a>  <a href="http://www.facebook.com/davidos.80"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline; "></a> and send me a message!</p>
 	
 	</article>
 
-
-
-<%- include("partials/navigation/footer") %>
-
-
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/javascripts/isInViewport.min.js"></script>
-<script src="/javascripts/jquery.slides.min.js"></script>
-
-
-<script>
-	$(function() {
-		// Javascript for playing responsive video
-
-		var calculate_width = $('body').width() 
-
-		if (calculate_width < 1200) {
-    		$('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/low.mp4")
-    		$('#second_video_source').attr("src", "/images/invitations/art-deco/art_deco_low.mp4")
-       		$('video').load()
- 		} else {
-    		$('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/high.mp4")
-    		$('#second_video_source').attr("src", "/images/invitations/art-deco/art_deco_high.mp4")
-    		$('video').load()
-		}
-
-		$('#slides').html('<a href="/products/art-deco"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/collage_700.jpg 700w, /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/art-deco "><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/four_700.jpg 700w, /images/invitations/art-deco/four.jpg 1300w, /images/invitations/art-deco/four_2000.jpg 2000w"></a><a href="/products/a-love-story "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/collage_700.jpg 700w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/a-love-story "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/four_700.jpg 700w, /images/invitations/a-love-story/four.jpg 1300w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/four_2000.jpg 2000w "></a><a href="/products/chess "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/collage_700.jpg 700w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/chess "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/four_700.jpg 700w, /images/invitations/chess/four.jpg 1300w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/four_2000.jpg 2000w "></a>')
-		if(calculate_width > 60) {
-			$('#slides').append('<a href="/products/birds-of-paradise-diamante-spirals "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/collage_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/birds-of-paradise-diamante-spirals "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/four_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 1300w,  /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 2000w "></a><a href="/products/ace-of-hearts "><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w " alt="Wedding stationery suite "></a><a href="/products/ace-of-hearts "><img  sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w, /images/invitations/ace-of-hearts/collage.jpg	1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
-		}
-		
-		var user_paused = { "first_video": false, "second_video": false }
-
-		$(window).scroll(function() {
-			$('video').each(function(){
-				var video = $(this)[0];
-			    var id = video.id;
-			    
-			    if ($(this).is(":in-viewport")) {
-			        if(video.paused && !user_paused[id]) { 
-			        	video.play();
-				        $('#' + id + '_play').hide();
-				        $('#' + id + '_pause').show();
-				        user_paused[id] = false;
-			        }
-			    } else {
-			       video.pause();
-					$('#' + id + '_play').show();
-					$('#' + id + '_pause').hide();
-				}
-				video.muted = true;
-			})
-		});
-			
-		
-		$('#second_video_play').click(function() {
-			$('#second_video')[0].play();
-			$('#second_video_play').hide();
-			$('#second_video_pause').show();
-			user_paused["second_video"] = false;
-		})
-		
-		$('#second_video_pause').click(function() {
-			$('#second_video')[0].pause();
-			$('#second_video_pause').hide();
-			$('#second_video_play').show();
-			user_paused["second_video"] = true;
-		})
-			
-		$('#first_video_play').click(function() {
-			$('#first_video')[0].play();
-			$('#first_video_play').hide();
-			$('#first_video_pause').show();
-			user_paused["first_video"] = false;
-		})
-		
-		$('#first_video_pause').click(function() {
-			$('#first_video')[0].pause();
-			$('#first_video_pause').hide();
-			$('#first_video_play').show();
-			user_paused["first_video"] = true;
-			
-		})
-		
-		
-		$('video').each(function() {
-			var video = $(this)[0];
-			var id = $(this)[0].id;
-			
-		 	video.addEventListener('loadeddata', function() {
-		
-	   			if(!video.paused) {
-			        $('#' + id + "_play").hide();
-			        $('#' + id + '_pause').show();
-				}
-			}, false);
-		})
-	
-		$("#slides").slidesjs({
-			width: 2000,
-			height: 1409,
-
-			pagination: {
-				active: false
-			},
-			effect: {
-				slide: {
-					speed: 1000,
-				},
-			},
-			play: {
-				active: false,
-				auto: true,
-				interval: 2500,
-			},
-			navigation: {
-				active: false
-			},
-			callback: {
-				loaded: function(n) {
-					$('#slides_spinner').hide();
-				}
-			}
-		})
-
-	})
-</script>
-
-<script src="/javascripts/send_sample_form.js"></script>
-
+	<%- include("partials/navigation/footer") %>
 
 </body>
 

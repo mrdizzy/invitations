@@ -1,3 +1,4 @@
+<script>
 $(function() {
 	$('#form_sample').submit(function(e) {
 		e.preventDefault();
@@ -11,7 +12,8 @@ $(function() {
 			postcode: $('#postcode').val(),
 			name: $('#name').val(),
 			email: $('#email').val(),
-			template: 'sample'
+			template: 'sample',
+			page: $('#page').val()
 		}
 
 		var postcode_regex = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/gi;
@@ -47,9 +49,12 @@ $(function() {
 				success: function(data) {
 					$('#form_sample_spinner').hide();
 					$('#post_text').hide();
-					$('#form_check').show();
+					$('#form_check').show();	
+					goog_report_conversion();
+				    fbq('track', 'Lead');
 				}
 			});
 		}
 	})
 })
+</script>
