@@ -12,10 +12,10 @@ MongoClient.connect(url, function(err, db) {
    //   if(counter == 0) {
 //		res.render('index_a', { products: results, page: "sample_form_top"})
 //		counter = 1;
-   //   } else {
+ //     } else {
 		res.render('index_b', { products: results, page: "sample_form_bottom"})
 		counter = 0;
-    //  }
+  //    }
   	db.close();
   })
 });

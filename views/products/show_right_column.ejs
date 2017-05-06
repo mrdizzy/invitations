@@ -6,18 +6,33 @@
 <div id="sample_container">
 <img src="/images/homepage/icons/sample.svg" style="width:40px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
 
-<h2 class="sans_subhead width_66 font_c average_line_spacing centred text_center">Get a free sample&hellip;</h2>
+<h2 class="sans_subhead width_66 font_c average_line_spacing centred text_center">Get a sample&hellip;</h2>
 
-<p class="width_66 centred font_ee small_line_spacing sans">&hellip;of this stunning invitation suite, posted to you in 24 hours, just enter your email and address:</p>
+<p class="width_66 centred font_ee small_line_spacing sans">&hellip;of this stunning invitation suite, posted to you today, for just <span style="text-decoration: line-through;">£1.99</span> 99p:</p>
 
 <img src="/images/invitations/birds-of-paradise-diamante-spirals/sample.jpg" style="width:95%;padding-top:2em;max-width:235px;" />
 <%- include('.././partials/html_flexbox_benefits') %>
 
-<p  class="font_e subhead width_80">
-	Just enter your name and address now to get this parcel of perfection flying through your letterbox within 24 hours&hellip;
+<p  class="font_e subhead width_80">Get your sample suite containing all this for just 99p: just click the PayPal button now&hellip;
 </p>
 
-<%- include('.././partials/html_sample_form.ejs') %>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pure-form form-aligned">
+	
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="paypal@dizzy.co.uk">
+   <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="<%- page %>">
+  <input type="hidden" name="amount" value="0.99">
+  <input type="hidden" name="currency_code" value="GBP">
+  
+<!--	<input type="hidden" name="page" id="page" value="<%- page %>"></input> -->
+	<button type="submit"  class="width_70 margin_top_2em centred pure-button pure-button-primary">
+	<img src="/images/ppcom-white.svg" id="paypal_logo" style="width:140px;" />
+	</button>
+
+</form>
+
 
 </div>
 
