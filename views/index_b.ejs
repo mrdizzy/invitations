@@ -185,6 +185,7 @@
 
 		<%- include("partials/html_david") %>
 		<%- include("partials/html_flexbox_benefits") %>
+		
 		<%- include("partials/html_sample_form") %>
 
         <h2 class="subhead center width_80 font_e">
@@ -197,6 +198,41 @@
 	</article>
 
 
+<script>
+	
+		$("#sample_slides").slidesjs({
+			width: 1500,
+			height: 1512,
+			navigation: {
+				active:false,
+				effect:"fade",
+				crossfade:true
+			},
+			pagination: {
+				active: false
+			},
+			effect: {
+				slide: {
+					speed: 1000,
+				},
+				fade: {
+					crossfade: true,
+					speed: 750,
+				}
+			},
+		
+			play: {
+				active: false,
+				auto: false,
+				interval: 2500,
+			},
+			callback: {
+				loaded: function(n) {
+					$('#slides_spinner').hide();
+				}
+			}
+		})
+</script>
 
 	<%- include("partials/navigation/footer") %>
 
