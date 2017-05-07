@@ -18,7 +18,7 @@
 
 		$('#slides').html('<a href="/products/art-deco"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/collage_700.jpg 700w, /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/art-deco "><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/four_700.jpg 700w, /images/invitations/art-deco/four.jpg 1300w, /images/invitations/art-deco/four_2000.jpg 2000w"></a><a href="/products/a-love-story"><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/collage_700.jpg 700w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/a-love-story "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/four_700.jpg 700w, /images/invitations/a-love-story/four.jpg 1300w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/four_2000.jpg 2000w"></a><a href="/products/chess"><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/collage_700.jpg 700w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/chess "><img  sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/chess/four_700.jpg 700w, /images/invitations/chess/four.jpg 1300w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/four_2000.jpg 2000w"></a>')
 		if(calculate_width > 60) {
-			console.log("bigger")
+			
 			$('#slides').append('<a href="/products/birds-of-paradise-diamante-spirals"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/birds-of-paradise-diamante-spirals/collage_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/birds-of-paradise-diamante-spirals"><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/four_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 2000w"></a><a href="/products/ace-of-hearts"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/ace-of-hearts"><img  sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w, /images/invitations/ace-of-hearts/collage.jpg	1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
 		}
 		
@@ -115,6 +115,43 @@
 			callback: {
 				loaded: function(n) {
 					$('#slides_spinner').hide();
+				}
+			}
+		})
+		
+		
+		///////////////////////////////////////////////////////////////////////////////////////////////
+		//
+		// SAMPLE SELECTIOn
+		//
+		////////////////////////////////////////////////////////////////////////////////////////////////
+
+		var products = <%- JSON.stringify(products)  %>
+	
+		$("#sample_slides").slidesjs({
+			width: 1500,
+			height: 1512,
+			navigation: {
+				active:false,
+				effect: "fade"
+			},
+			pagination: {
+				active: false
+			},
+			effect: {
+				fade: {
+					speed: 1,
+				}
+			},
+			play: {
+				active: false,
+				auto: false
+			},
+			callback: {
+				complete: function(number) {
+					var current_product = products[number - 1];
+					$('#sample_name').html(current_product.clean_name)
+					$('#which_sample').val(current_product.clean_name)
 				}
 			}
 		})

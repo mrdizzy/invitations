@@ -221,6 +221,9 @@ footer {
 #slides img { border-radius: 20px; }
 
 
+.slidesjs-navigation img { opacity: 0.5; }
+.slidesjs-navigation img:hover { opacity: 1;} 
+
 #genesis {
     padding-top: 75px;
     width: 140px;

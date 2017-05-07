@@ -10,7 +10,6 @@
 		<script src="/javascripts/isInViewport.min.js"></script>
 		<script src="/javascripts/jquery.slides.min.js"></script>
 		
-		
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
@@ -21,7 +20,7 @@
 	<%- include("partials/navigation/header") %>
 	
 	<div id="slides" class="centred width_95 tablet_full_width phablet_full_width mobile_full_width"></div>
-		<div id="headline" class="centred half_padding_vertical phablet_width_90 bring_to_front serif_headline font_b phablet_font_aa mob_font_b width_66 tablet_full_width mobile_width_90 medium_line_spacing ">&ldquo;From the moment they see the envelope, your guests will know it&rsquo;s something special&hellip;&rdquo;
+	<div id="headline" class="centred half_padding_vertical phablet_width_90 bring_to_front serif_headline font_b phablet_font_aa mob_font_b width_66 tablet_full_width mobile_width_90 medium_line_spacing ">&ldquo;From the moment they see the envelope, your guests will know it&rsquo;s something special&hellip;&rdquo;
 	</div>
 
 
@@ -84,13 +83,13 @@
 			opening an invitation should be an experience that delights your guests and makes them excited about your big day. That's why opening our invitations feels like opening a specially tailored gift rather than an average greeting card.
 		</div>
 
-		<p class="body">That's why that our envelopes come as something of an unexpected surprise.Tailor made by hand, and imprinted with your own monogram, each envelope is also printed both inside and out with matching intricate designs that co-ordinate beautifully in the
-			same colour as the invitations they contain.</p>
+		<p class="body">That's why that our envelopes come as something of an unexpected surprise. Tailor-made by hand, and imprinted with your own monogram, each envelope is also printed both inside and out with a matching intricate design that co-ordinates beautifully in the
+			same colour as the invitation it contains.</p>
 
-		<p class="body">They even come individually addressed to each guest. And if you opt for our a box-envelopes, your guests really will feel like they opening an invitation to an important event. </p>
+		<p class="body">They even come individually addressed to each guest: and if you opt for our box-envelopes, your guests really will feel like they are opening an invitation to an important event. </p>
 
 		<h2 class="width_66 font_d mob_font_d  subhead mobile_width_90">
-			They lend an exclusivity to your wedding invitations that will have your guests wondering how you made them.
+			The intricacy of our envelopes lend an exclusivity to your wedding invitations that will have your guests wondering how you made them.
 		</h2>
 
 		<h2 class="width_90 font_d mob_font_d  text_center subhead">
@@ -167,10 +166,10 @@
 
 		<h2 class="subhead width_66 text_center font_d mob_font_d mobile_width_90">Whether it's uwrapping the paper sleeve adorned with your monogram, unbuckling the gently glinting diamante ribbon or untying the bow, it all adds to the excitement.</h2>
 
-		<p class="body">A delicate vellum cover, semi-transparent like a pane of frosted glass, softly mutes your card like a halo: as it fall away, your chosen colours&mdash;printed in solid wax that feels slightly raised as you run your finger over it&mdash;will seem even
+		<p class="body">A delicate vellum cover, semi-transparent like a pane of frosted glass, softly mutes your card like a halo: as it falls away, your chosen colours&mdash;printed in solid wax that feels slightly raised as you run your finger over it&mdash;will seem even
 			deeper and bolder.</p>
 
-		<p class="body">And the thick 400gsm card, available in a variety of textures, creates a tactile satisfaction as it reveals the details of your important ceremony. </p>
+		<p class="body">And the card itself, available in a variety of textures, creates a tactile satisfaction as it reveals the details of your important ceremony. </p>
 
 
 		<h2 class="text_center subhead width_66 font_d mob_font_d mobile_width_90">
@@ -185,12 +184,11 @@
 
 		<%- include("partials/html_david") %>
 		<%- include("partials/html_flexbox_benefits") %>
-		
-		<%- include("partials/html_sample_form") %>
+		<%- include("partials/html_sample_form_free") %>
 
-        <h2 class="subhead center width_80 font_e">
-        	And while you're waiting for it to arrive, why not <a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline " style="opacity:0.7;width:15px; " /></a> to see what takes your fancy&hellip;
-        </h2>
+    <h2 class="subhead center width_80 font_e">
+    	And while you're waiting for it to arrive, why not <a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline " style="opacity:0.7;width:15px; " /></a> to see what takes your fancy&hellip;
+    </h2>
 
 		<p class="body">P.S. If you have any questions at all, please just drop me an email at <a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>, or feel free to <a href="http://www.facebook.com/davidos.80
 				" class="bottom_dotted hover_1_underline">add me on Facebook</a>  <a href="http://www.facebook.com/davidos.80"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline; "></a> and send me a message!</p>
@@ -198,46 +196,7 @@
 	</article>
 
 
-<script>
-	
-		$("#sample_slides").slidesjs({
-			width: 1500,
-			height: 1512,
-			navigation: {
-				active:false,
-				effect:"fade",
-				crossfade:true
-			},
-			pagination: {
-				active: false
-			},
-			effect: {
-				slide: {
-					speed: 1000,
-				},
-				fade: {
-					crossfade: true,
-					speed: 750,
-				}
-			},
-		
-			play: {
-				active: false,
-				auto: false,
-				interval: 2500,
-			},
-			callback: {
-				loaded: function(n) {
-					$('#slides_spinner').hide();
-				}
-			}
-		})
-</script>
-
-	<%- include("partials/navigation/footer") %>
-
-
-
+		<%- include("partials/navigation/footer") %>
 		<%- include("partials/scripts") %>
 		<%- include('partials/script_send_sample') %>
 
