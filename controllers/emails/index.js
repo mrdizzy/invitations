@@ -3,7 +3,7 @@ console.log(process.env.SENDGRID_API_KEY)
     var helper = require('sendgrid').mail;
     var from_email = new helper.Email('david@dreamsonpaper.co.uk');
     var to_email = new helper.Email(req.body.email);
-
+console.log(req.body)
     if (req.body.template == "sample") {
         var subject = 'Your wedding invitation sample box...';
         
@@ -22,6 +22,7 @@ console.log(process.env.SENDGRID_API_KEY)
         });
 
         sg.API(request, function(error, response) {
+            console.log(error, response)
             if (!error) {
                 sendAdminEmail();
             }
@@ -44,6 +45,7 @@ console.log(process.env.SENDGRID_API_KEY)
             });
 
             sg.API(request, function(error, response) {
+                console.log(error, response)
                 if (!error) {
                     res.sendStatus(200)
                 }
