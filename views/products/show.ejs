@@ -5,6 +5,7 @@
 	<title>Casamiento: personalised wedding invitations with beautifully customised envelopes: <%= product.clean_name %></title>
 
 
+<%- include(".././partials/script_google_tag_manager") %>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/javascripts/jquery.slides.min.js"></script>
@@ -28,25 +29,26 @@
 <body>
 
 
+<%- include(".././partials/script_noscript_gtm") %>
 <%- include("../partials/navigation/header") %>
 
 	<div class="left width_70 tablet_full_width phablet_full_width mobile_full_width">
 
 		<div id="slides" class="mobile_full_width">
 			
-			<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage.jpg 1300w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/collage.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset=" /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/vellum.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/vellum_1300.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/pocketfold.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw"srcset="/images/invitations/<%= product.name %>/pocketfold.jpg 1300w, /images/invitations/<%= product.name %>/pocketfold_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/boxenvelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw"srcset="/images/invitations/<%= product.name %>/boxenvelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/boxenvelope_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/envelope.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/envelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/closeup.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/closeup_1300.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/rsvp.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/rsvp_1300.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
 			
-			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/info.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
+			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%= product.name %>/info_1300.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
 			
 		</div>
 
@@ -196,8 +198,6 @@
 		}
 	</script>
 	
-<%- include(".././partials/script_facebook_google") %>
-<%- include(".././partials/script_send_sample") %>
 </body>
 
 </html>

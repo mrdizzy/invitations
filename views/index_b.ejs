@@ -1,25 +1,29 @@
 <!doctype html>
 
-<body>
-
 	<head>
 
-		<%- include("partials/script_facebook_google") %>
+		<%- include("partials/script_google_tag_manager") %>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="/javascripts/isInViewport.min.js"></script>
 		<script src="/javascripts/jquery.slides.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 		
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-		<link href="https://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 	</head>
 	
+<body>
+
+	<%- include("partials/script_noscript_gtm") %>
 	<%- include("partials/navigation/header") %>
 	
 	<div id="slides" class="centred width_95 tablet_full_width phablet_full_width mobile_full_width"></div>
+	
 	<div id="headline" class="centred half_padding_vertical phablet_width_90 bring_to_front serif_headline font_b phablet_font_aa mob_font_b width_66 tablet_full_width mobile_width_90 medium_line_spacing ">&ldquo;From the moment they see the envelope, your guests will know it&rsquo;s something special&hellip;&rdquo;
 	</div>
 
@@ -53,11 +57,13 @@
 
 
 
+<div class="video">
 
-	<video muted preload loop autoplay playsinline id="first_video" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
+	<video muted preload loop autoplay playsinline src="/images/invitations/birds-of-paradise-diamante-spirals/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
 		<source id="first_video_source" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
+	</div>
 	
 	
 			
@@ -74,8 +80,6 @@
 
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70  mobile_width_97">
 
-		<img src="/images/furniture/play.svg" id="first_video_play" style="width:50px;padding-right:2em;" class="hover_opacity padding_top_small right" />
-		<img src="/images/furniture/pause.svg" id="first_video_pause" style="width:50px;padding-right:2em;display:none;" class="hover_opacity right padding_top_small"/>
 		
 		<div class="width_66  phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
 			<img src="/images/homepage/pointer_up.svg" class="pointer" /><br/> 
@@ -103,15 +107,15 @@
 
 
 
+<div class="video">
 
-
-	<video preload muted loop autoplay playsinline id="second_video" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
+	<video preload muted loop autoplay playsinline id="second_video" src="/images/invitations/art-deco/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
 		<source id="second_video_source" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
 	
 			
-			
+			</div>
 			
 			
 			
@@ -120,8 +124,6 @@
 		
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70  mobile_width_97">
 		
-		<img src="/images/furniture/play.svg" id="second_video_play" style="width:50px;padding-right:2em;" class="hover_opacity padding_top_small right" />
-		<img src="/images/furniture/pause.svg" id="second_video_pause" style="width:50px;padding-right:2em;display:none;" class="hover_opacity right padding_top_small"/>
 		
 		<div class="width_66  phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
 
@@ -198,7 +200,6 @@
 
 		<%- include("partials/navigation/footer") %>
 		<%- include("partials/scripts") %>
-		<%- include('partials/script_send_sample') %>
 
 </body>
 

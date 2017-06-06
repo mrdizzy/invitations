@@ -1,97 +1,164 @@
 <script>
 	$(function() {
-	    ///////////////////////////////////////////////////////////////////////////////////////////////////
 		// Javascript for playing responsive video
-        //////////////////////////////////////////////////////////////////////////////////////////////////
-        
-		var calculate_width = $('body').width() 
-
-		if (calculate_width < 1200) {
-    		$('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/low.mp4")
-    		$('#second_video_source').attr("src", "/images/invitations/art-deco/art_deco_low.mp4")
-       		$('video').load()
- 		} else {
-    		$('#first_video_source').attr("src", "/images/invitations/birds-of-paradise-diamante-spirals/high.mp4")
-    		$('#second_video_source').attr("src", "/images/invitations/art-deco/art_deco_high.mp4")
-    		$('video').load()
-		}
-
-		$('#slides').html('<a href="/products/art-deco"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/collage_700.jpg 700w, /images/invitations/art-deco/collage.jpg 1300w, /images/invitations/art-deco/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/art-deco "><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/art-deco/four_700.jpg 700w, /images/invitations/art-deco/four.jpg 1300w, /images/invitations/art-deco/four_2000.jpg 2000w"></a><a href="/products/a-love-story"><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/collage_700.jpg 700w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/a-love-story "><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/a-love-story/four_700.jpg 700w, /images/invitations/a-love-story/four.jpg 1300w, /images/invitations/a-love-story/collage.jpg 1300w, /images/invitations/a-love-story/four_2000.jpg 2000w"></a><a href="/products/chess"><img sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/chess/collage_700.jpg 700w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/chess "><img  sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/chess/four_700.jpg 700w, /images/invitations/chess/four.jpg 1300w, /images/invitations/chess/collage.jpg 1300w, /images/invitations/chess/four_2000.jpg 2000w"></a>')
-		if(calculate_width > 60) {
-			
-			$('#slides').append('<a href="/products/birds-of-paradise-diamante-spirals"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/birds-of-paradise-diamante-spirals/collage_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/collage.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/birds-of-paradise-diamante-spirals"><img  sizes="(max-width: 1100px) 100vw, 95vw " srcset="/images/invitations/birds-of-paradise-diamante-spirals/four_700.jpg 700w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 1300w, /images/invitations/birds-of-paradise-diamante-spirals/four.jpg 2000w"></a><a href="/products/ace-of-hearts"><img sizes="(max-width: 1100px) 100vw, 95vw" srcset="/images/invitations/ace-of-hearts/collage_700.jpg 700w, /images/invitations/ace-of-hearts/collage.jpg 1300w, /images/invitations/ace-of-hearts/collage_2000.jpg 2000w" alt="Wedding stationery suite "></a><a href="/products/ace-of-hearts"><img  sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/ace-of-hearts/four_700.jpg 700w, /images/invitations/ace-of-hearts/four.jpg 1300w, /images/invitations/ace-of-hearts/collage.jpg	1300w, /images/invitations/ace-of-hearts/four_2000.jpg 2000w"></a>')
-		}
-		
-		var user_paused = { "first_video": false, "second_video": false }
-
-		$(window).scroll(function() {
-			$('video').each(function(){
-				var video = $(this)[0];
-			    var id = video.id;
-			    
-			    if ($(this).is(":in-viewport")) {
-			        if(video.paused && !user_paused[id]) { 
-			        	video.play();
-				        $('#' + id + '_play').hide();
-				        $('#' + id + '_pause').show();
-				        user_paused[id] = false;
-			        }
-			    } else {
-			       video.pause();
-					$('#' + id + '_play').show();
-					$('#' + id + '_pause').hide();
-				}
-				video.muted = true;
+		var videoView = Backbone.View.extend({
+			isMobile: function() {
+				if($('body').width() < 1200) {
+					return "mobile"
+				} 
+			},
+			initialize: function() {
+					
+				var that = this;
+				
+				this.render();
+				this.$video = this.$('video');
+				this.dom_video = this.$('video')[0];
+				
+				this.$video.on("playing", function(e) {
+        			 that.$el.trigger('playing');
+				})
+				this.$video.on("pause", function(e) {
+        			 that.$el.trigger('pause');
+				})
+				
+				$(window).scroll(function() {
+			    	if (that.$video.is(":in-viewport") && that.dom_video.paused) {
+						that.dom_video.play();
+			    } else if (!that.$video.is(":in-viewport") && !that.dom_video.paused) {
+			    	that.dom_video.pause();
+			    }
 			})
-		});
-			
 		
-		$('#second_video_play').click(function() {
-			$('#second_video')[0].play();
-			$('#second_video_play').hide();
-			$('#second_video_pause').show();
-			user_paused["second_video"] = false;
+			},
+			events: {
+				"click .video_play": "playVideo",
+				"click .video_pause": "pauseVideo",
+				"playing": "hidePlay",
+				"pause": "hidePause"
+			},
+			playVideo: function() {
+				this.dom_video.play();
+			},
+			pauseVideo: function() {
+				this.dom_video.pause();	
+			},
+			hidePlay: function() {
+				this.$('.video_play').hide();
+				this.$('.video_pause').show();
+			},
+			hidePause: function() {
+				this.$('.video_pause').hide();
+				this.$('.video_play').show();
+			},
+			render: function() {	
+				var resolution = "high"
+				if(this.isMobile()) {
+					var resolution = "low"
+				} 
+				var video = this.$('video')
+				video.attr("src", video.attr("src") + resolution + ".mp4")
+					
+				video.after('<img src="/images/furniture/play.svg" style="width:50px;padding-right:2em;" class="video_play hover_opacity padding_top_small right" /><img src="/images/furniture/pause.svg" style="width:50px;padding-right:2em;display:none;" class="video_pause hover_opacity right padding_top_small"/>')
+				return this
+			}
 		})
 		
-		$('#second_video_pause').click(function() {
-			$('#second_video')[0].pause();
-			$('#second_video_pause').hide();
-			$('#second_video_play').show();
-			user_paused["second_video"] = true;
-		})
-			
-		$('#first_video_play').click(function() {
-			$('#first_video')[0].play();
-			$('#first_video_play').hide();
-			$('#first_video_pause').show();
-			user_paused["first_video"] = false;
-		})
-		
-		$('#first_video_pause').click(function() {
-			$('#first_video')[0].pause();
-			$('#first_video_pause').hide();
-			$('#first_video_play').show();
-			user_paused["first_video"] = true;
-		})
-		
-		$('video').each(function() {
-			var video = $(this)[0];
-			var id = $(this)[0].id;
-			
-		 	video.addEventListener('loadeddata', function() {
-		
-	   			if(!video.paused) {
-			        $('#' + id + "_play").hide();
-			        $('#' + id + '_pause').show();
+		var sendSampleView = Backbone.View.extend({
+			el: $('#form_sample'),
+			events: {
+				"submit": "sendForm"
+			},
+			sendForm: function(e) {
+				e.preventDefault();
+				$('.error').addClass("hidden");
+				
+				var message = {
+					address: $('#address').val(),
+					postcode: $('#postcode').val(),
+					name: $('#name').val(),
+					email: $('#email').val(),
+					template: 'sample',
+					page: $('#page').val(),
+					sample: $('#which_sample').val()
 				}
-			}, false);
+
+				var postcode_regex = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/gi;
+				var postcode = message.postcode.match(postcode_regex);
+		
+				if (!message.address) {
+					$('#error_address').removeClass("hidden")
+					$('#address').css("border-color", "#81BF08").css("border-width", "2px")
+				}
+		
+				if (!message.postcode) {
+					$('#error_postcode').removeClass("hidden")
+					$('#postcode').css("border-color", "#81BF08").css("border-width", "2px")
+				}
+		
+				if (!message.name) {
+					$('#error_name').removeClass("hidden")
+					$('#name').css("border-color", "#81BF08").css("border-width", "2px")
+				}
+		
+				if (!message.email) {
+					$('#error_email').removeClass("hidden")
+					$('#email').css("border-color", "#81BF08").css("border-width", "2px")
+				}
+		
+				if (message.address && postcode && message.name && message.email) {
+							dataLayer.push({"event": "FreeSampleRequest"})
+					$('#form_sample_spinner').show();
+					$.ajax({
+						type: "POST",
+						url: "/emails",
+						data: message,
+						success: function(data) {
+							$('#form_sample_spinner').hide();
+							$('#post_text').hide();
+							$('#form_check').show();
+						}
+					});
+				}
+			}
 		})
 		
+		var MainView = Backbone.View.extend({
+			el: $('body'),
+			initialize: function() {
+				this.render();
+			},
+			render: function() {
+				$('.video').each(function() {
+				 var	vv = new videoView({el:this})
+			    })
+			}
+		})
+		
+		new MainView();
+			new sendSampleView();
 		
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
 		// SLIDESHOW
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
+	var default_slides = ["art-deco", "a-love-story","chess"];
+	var additional_slides = ["birds-of-paradise-diamante-spirals", "ace-of-hearts"];
 	
+	var slides_html = "";
+	default_slides.forEach(function(product) {
+		slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/four_700.jpg 700w, /images/invitations/' + product + '/four.jpg 1300w, /images/invitations/' + product + '/four_2000.jpg 2000w"></a>'
+	})
+	
+	$('#slides').html(slides_html)
+		
+	if($('body').width() > 60) {
+		var slides_html = "";
+		additional_slides.forEach(function(product) {
+			slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/four_700.jpg 700w, /images/invitations/' + product + '/four.jpg 1300w, /images/invitations/' + product + '/four_2000.jpg 2000w"></a>'
+		})
+		$('#slides').append(slides_html)
+	}
+		
 		$("#slides").slidesjs({
 			width: 2000,
 			height: 1409,
