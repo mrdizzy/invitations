@@ -1,4 +1,4 @@
-var Product = Backbone.Model.extend({
+$(function() { var Product = Backbone.Model.extend({
     ////////////////////////////////////////////////////////////////
     urlRoot: '/products',
     idAttribute: "_id",
@@ -16,7 +16,52 @@ var Product = Backbone.Model.extend({
     },
     initialize: function() {
         this.on("change", this.calculatePrice)
+        this.on("change", this.calculateCost)
     },
+    calculateCost: function() {
+       var quantity = this.get("quantity"),
+            texture = this.get("texture"),
+            embellishment = this.get("embellishment"),
+            format = this.get("format"),
+            envelopestyle = this.get("envelopestyle"),
+            extras = this.get("extras"),
+            total;
+            
+        if (format == "foldout") {
+            var invitation_size = 0.5
+        } else { 
+            var invitation_size = 0.25
+        }
+        
+        if(texture == "plain") {
+        
+        var invitation_card = "plain_400"
+        }
+        else {
+            var invitation_card = texture + "_" + 300;
+        }
+        if (format == "foldout") {
+            var cost_per_invitation = CazCalculate([[invitation_card, invitation_size], ["vellum", 0.5]])
+        } else {
+        var cost_per_invitation = CazCalculate([[invitation_card, invitation_size]])
+        }
+        
+        // Envelope
+        if((envelopestyle == "plain") || (envelopestyle == "matching")) {
+            var envelope_texture = texture + "_" + "paper"
+        } else if ((envelopestyle == "boxplain") || (envelopestyle == "boxmatching")) {
+            if(texture == "plain") {
+                var envelope_texture = "plain_400"
+            } else { 
+            var envelope_texture = texture + "_" + "300"
+            }
+        }
+            var cost_per_envelope = CazCalculate([[envelope_texture, 1]])
+      
+      var cost_of_invitation_and_envelope = cost_per_envelope + cost_per_invitation;
+      console.log(cost_of_invitation_and_envelope * quantity, extras, embellishment)
+    },
+    
     calculatePrice: function() {
         var price = this.get("price"),
             quantity = this.get("quantity"),
@@ -55,6 +100,14 @@ var map;
             price = price + 0.24
         }
         else if (texture == "pearlescent") {
+            price = price + 0.45
+        }
+        
+        else if (texture == "kraft") {
+            price = price + 0.45
+        }
+        
+        else if (texture == "laid") {
             price = price + 0.45
         }
 
@@ -130,7 +183,6 @@ var product = new Product();
 var StepView = Backbone.View.extend({
     el: '#steps',
     initialize: function() {
-        //  this.listenTo(this.guests, 'change', this._renderQuickGuests)
         this.listenTo(this.model, "change:prices", this.renderPrices)
         this.model.calculatePrice();
         this.renderPrices();
@@ -191,4 +243,5 @@ var StepView = Backbone.View.extend({
 
 var sv = new StepView({
     model: product
+})
 })
