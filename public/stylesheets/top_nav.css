@@ -240,8 +240,15 @@ img,
 .full_width {
     width: 100%;
 }
+.embel {
+    /* better - will help on webkit */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 
-
+    /* best - images are very crisp */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+}
 /* BORDERS and PADDING
 ---------------------------------------------------------
 ---------------------------------------------------------
