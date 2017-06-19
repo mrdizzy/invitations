@@ -48,7 +48,7 @@ var caz_items = {
         },
         "diamante-heart": {
           "quantity": 50,
-          "price": 12.98
+          "price": 8.99
         },
         "diamante-circle": {
           "quantity": 50,
@@ -58,7 +58,7 @@ var caz_items = {
           "quantity": 50,
           "price": 16.60
         },
-        "acrylic-circle": {
+        "acrylic-rectangle": {
           "quantity": 100,
           "price": 1.95
         },
@@ -104,8 +104,11 @@ var caz_items = {
   
       function CazCalculate(ary) {
         var cost = 0;
+        
         ary.forEach(function(subary) {
+          if(caz_items[subary[0]]) {
           cost = cost + ((caz_items[subary[0]].price / caz_items[subary[0]].quantity) * subary[1])
+          }
         })
         return cost;
       }
