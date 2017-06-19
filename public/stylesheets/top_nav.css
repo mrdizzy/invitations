@@ -267,12 +267,15 @@ img,
 .padding_top_small { padding-top: 0.5em; }
 .padding_top_medium { padding-top: 1em; }
 .padding_top_large { padding-top: 2em; }
+
+.padding_top_xlarge { padding-top: 4em; }
 .padding_top_larger { padding-top: 3.5em; }
 
 .padding_bottom_none { padding-bottom:0; }
 .padding_bottom_medium { padding-bottom: 1em; }
 .padding_bottom_large { padding-bottom: 2em; }
 
+.padding_bottom_xlarge { padding-bottom: 4em; }
 .small_padding { padding:1em; }
 .quarter_padding_vertical {
     padding-top: 0.25em;
