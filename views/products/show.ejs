@@ -92,7 +92,7 @@
 <!-- headline and description -->
 
 
-		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 text_center mobile_width_95 quarter_padding_vertical"><%= product.clean_name %></h1>
+		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 text_center mobile_width_95"><%= product.clean_name %></h1>
 
 		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
 		
@@ -106,6 +106,15 @@
 
 
 
+
+
+
+
+
+
+
+
+<!-- SAMPLE ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
 <div id="sample_container">
@@ -148,42 +157,29 @@
 
 
 
+<div class="width_80 margin_top_xlarge margin_bottom_xlarge centred">
 
 
-
-
-			<!-- TESTIMONIAL--------------------------------------------------------------------------------------------------------------------------------------------->
-			
-			
-			
-			
-			
-			
-			
-
-<div id="testimonial_1" class="testimonial_container phablet_width_70 tablet_width_70 centred">
-
-	<img src="/images/homepage/davina.jpg" class="width_40 max_width_200  margin_top_2em padding_bottom_medium" />
-
-	<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon padding_bottom_large" />
-	
-	<div class="top_solid width_90 centred" style="max-width:400px;"></div>
-		
-	<p class="triple_line_spacing font_f centred padding_top_medium sans width_80 text_left" style="max-width:400px;text-align:left">It&rsquo;s all the little touches, the envelopes look so special! And the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and classy: my guests were all really impressed as my stationery really did stand
-		out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
-
-		<p class="font_d mob_font_d  average_line_spacing padding_top_medium serif">&mdash;	<a href="http://www.facebook.com/davina.cloke" class="bottom_dotted hover_1_underline">Davina Cloke</a>
-		<a href="http://www.facebook.com/davina.cloke"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline;"></a>
-	</p>
-
-	<p class="sans_subhead font_f padding_top_small">married August 2015</p>
+<%- include("./../partials/html_chloe_testimonial") %>
 
 </div>
 
 
 
 
-<div id="order_container" class="top_solid margin_top_2em">
+
+
+
+
+		
+		
+<!-- STEPS -->
+
+
+		
+		
+
+<div id="order_container" class="margin_top_2em">
 	
 	<img src="/images/furniture/007-commerce.svg" style="width:50px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
 
@@ -192,9 +188,6 @@
 	<p class="width_66 centred font_ee small_line_spacing sans">&hellip;we require only a 10% deposit to start working on your stationery</p>
 </div>
 
-
-
-<!-- STEPS -->
 
 
 		<div id="steps" class="width_90 mobile_full_width phablet_full_width tablet_full_width centred" style="margin-top:6em;">
