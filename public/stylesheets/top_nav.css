@@ -88,6 +88,7 @@ li {
 .average_line_spacing {  line-height: 1.5em;}
 .large_line_spacing {  line-height: 1.75em;}
 .double_line_spacing {  line-height: 2em;}
+.triple_line_spacing {  line-height: 2.5em;}
 
 .text_center {  text-align: center; }
 .text_left { text-align: left; }
@@ -101,10 +102,6 @@ a {
 }
 .boxed_link:hover {
     border: 1px solid black;
-}
-.grand_total {
-    padding-top: 1em;
-    margin: 0;
 }
 
 .quantity_box:hover {
@@ -353,14 +350,7 @@ a:hover { text-decoration:none; }
 .hover_grey:hover { background-color:#EEE; cursor:pointer; }
 
 .max_width_200 { max-width:200px; }
-.flexbox {
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-}
-
-.options_flex {
+.flexbox, .options_flex {
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -368,6 +358,7 @@ a:hover { text-decoration:none; }
 }
 
 .flexbox_item { width:275px; }
+.flexbox_large_item {width:70%; min-width:500px; }
 
 
 

@@ -4,25 +4,28 @@
 <head>
 	<title>Casamiento: personalised wedding invitations with beautifully customised envelopes: <%= product.clean_name %></title>
 
+	
+	<%- include(".././partials/script_google_tag_manager") %>
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/javascripts/jquery.slides.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+	
+	<script src="/javascripts/items_cost.js"></script>
+	<script src="/javascripts/product.js"></script>
+	
+	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
-<%- include(".././partials/script_google_tag_manager") %>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/javascripts/jquery.slides.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
-
-<script src="/javascripts/items_cost.js"></script>
-<script src="/javascripts/product.js"></script>
-
-<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
-
-	<meta name="description" content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
-	<meta name="viewport" content="initial-scale=1,user-scalable=no">
+	<meta name="description"							content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
+	<meta name="viewport" 								content="initial-scale=1,user-scalable=no">
 	<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
 	<meta property="og:type"               content="product" />
 	<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
 	<meta property="og:description"        content="<%= product.description %>" />
-	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" /><link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
+	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
 	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
@@ -92,13 +95,13 @@
 		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 text_center mobile_width_95 quarter_padding_vertical"><%= product.clean_name %></h1>
 
 		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
+		
 		<h2 class="sans_subhead padding_bottom_medium large_line_spacing centred width_80 mobile_width_95 font_ee"><%= product["description2"] %></h2>
 		
-		
-		<h2 class="sans_subhead padding_bottom_small large_line_spacing centred width_80 mobile_width_95 font_e">Starting from £1.49 per invitation</h2>
+		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_e margin_bottom_2em">Starting from £1.49 per invitation</h2>
 
-		<img src="/images/furniture/shell.svg" class="padding_top_large shell" />
-
+		<div class="top_dotted width_80 margin_top_2em centred"></div>
+		<img src="/images/furniture/shell.svg" class="shell" />
 
 
 
@@ -128,17 +131,52 @@
 		
 		<input type="hidden" name="cmd" value="_xclick">
 		<input type="hidden" name="business" value="paypal@dizzy.co.uk">
+		
 		<!-- Specify details about the item that buyers will purchase. -->
 		<input type="hidden" name="item_name" value="<%- page %>">
 		<input type="hidden" name="amount" value="0.99">
 		<input type="hidden" name="currency_code" value="GBP">
 	  
-	<!--	<input type="hidden" name="page" id="page" value="<%- page %>"></input> -->
+		<!--	<input type="hidden" name="page" id="page" value="<%- page %>"></input> -->
 		<button type="submit" style="max-width:300px" class="width_70 margin_top_2em centred pure-button pure-button-primary">
 			<img src="/images/furniture/PayPal.svg" id="paypal_logo" style="width:140px;" />
 		</button>
 	
 	</form>
+
+</div>
+
+
+
+
+
+
+
+			<!-- TESTIMONIAL--------------------------------------------------------------------------------------------------------------------------------------------->
+			
+			
+			
+			
+			
+			
+			
+
+<div id="testimonial_1" class="testimonial_container phablet_width_70 tablet_width_70 centred">
+
+	<img src="/images/homepage/davina.jpg" class="width_40 max_width_200  margin_top_2em padding_bottom_medium" />
+
+	<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon padding_bottom_large" />
+	
+	<div class="top_solid width_90 centred" style="max-width:400px;"></div>
+		
+	<p class="triple_line_spacing font_f centred padding_top_medium sans width_80 text_left" style="max-width:400px;text-align:left">It&rsquo;s all the little touches, the envelopes look so special! And the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and classy: my guests were all really impressed as my stationery really did stand
+		out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
+
+		<p class="font_d mob_font_d  average_line_spacing padding_top_medium serif">&mdash;	<a href="http://www.facebook.com/davina.cloke" class="bottom_dotted hover_1_underline">Davina Cloke</a>
+		<a href="http://www.facebook.com/davina.cloke"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline;"></a>
+	</p>
+
+	<p class="sans_subhead font_f padding_top_small">married August 2015</p>
 
 </div>
 
@@ -159,7 +197,7 @@
 <!-- STEPS -->
 
 
-		<div id="steps" class="width_90 mobile_full_width phablet_full_width tablet_full_width centred">
+		<div id="steps" class="width_90 mobile_full_width phablet_full_width tablet_full_width centred" style="margin-top:6em;">
 
 
 
@@ -183,27 +221,6 @@
 </div>
 
 
-
-			<!-- TESTIMONIAL--------------------------------------------------------------------------------------------------------------------------------------------->
-
-<div id="testimonial_1" class="testimonial_container phablet_width_70 tablet_width_70 centred">
-
-	<img src="/images/homepage/davina.jpg" class="width_40 max_width_200  margin_top_2em padding_bottom_medium" />
-
-	<img src="/images/homepage/leftquote.svg" class="testimonial_quote_icon" />
-
-	<p class="double_line_spacing font_ee centred padding_top_medium serif_body slant width_80">It&rsquo;s all the little touches, the envelopes look so special! And the way the vellum is imprinted with your own design&hellip; it just feels and looks so luxurious and classy: my guests were all really impressed as my stationery really did stand
-		out from the crowd. Plus they didn&rsquo;t break the bank like I thought they would!”</p>
-
-	<p class="font_d mob_font_d  average_line_spacing padding_top_medium serif">&mdash;	<a href="http://www.facebook.com/davina.cloke" class="bottom_dotted hover_1_underline">Davina Cloke</a>
-		<a href="http://www.facebook.com/davina.cloke"><img src="/images/social_media_buttons/facebook-logo-1.svg" style="width:20px;opacity:0.7;display:inline;"></a>
-	</p>
-
-	<p class="sans_subhead font_f padding_top_small">married August 2015</p>
-
-</div>
-
-		</div>
 
 
 
