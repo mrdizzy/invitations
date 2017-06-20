@@ -1,6 +1,22 @@
 <%
 var options = [
   {
+    "card_format": [
+      {
+        "a6_flat": {
+          "description": "Printed front and back on A6 card",
+          "type": "radio",
+          "cost": "Standard"
+        },
+        "a6_foldout": {
+          "description": "Printed inside and outside, with a matching printed vellum cover to protect your invitation",
+          "type": "radio",
+          "cost": "Standard"
+        }
+      }
+    ]
+  },
+  {
     "card_texture": [
       {
         "plain_lightweight": {
@@ -47,17 +63,49 @@ var options = [
     ]
   },
   {
-    "card_format": [
+    "embellishment": [
       {
-        "a6_flat": {
-          "description": "Printed front and back on A6 card",
+        "paper_wrap": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
-          "cost": "Standard"
+          "cost": "",
+          "extension": "png"
         },
-        "a6_foldout": {
-          "description": "Printed inside and outside, with a matching printed vellum cover to protect your invitation",
+        "acrylic_heart": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
-          "cost": "Standard"
+          "cost": "",
+          "extension": "png"
+        },
+        "acrylic_oval": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "",
+          "extension": "png"
+        },
+        "diamante_square": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "",
+          "extension": "png"
+        },
+        "diamante_circle": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "",
+          "extension": "png"
+        },
+        "diamante_heart": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "",
+          "extension": "png"
+        },
+        "ribbon": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "",
+          "extension": "png"
         }
       }
     ]
@@ -134,47 +182,6 @@ var options = [
         }
       }
     ]
-  },
-  {
-    "embellishment": [
-      {
-        "paper_wrap": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "acrylic_heart": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "acrylic_oval": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "diamante_square": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "diamante_circle": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "diamante_heart": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "ribbon": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        }
-      }
-    ]
   }
 ]
 var counter = 0;
@@ -191,21 +198,24 @@ counter= counter + 1;
 	choice_groups.forEach(function(choice_group) { 
 		Object.keys(choice_group).forEach(function(choice_key) {
 		
+		var choice_name = choice_key
+		var choice_obj = choice_group[choice_key];
 		
-	var choice_name = choice_key
-	var choice_obj = choice_group[choice_key];
-	
-	var input_type = "radio"
-	if(choice_obj["type"] == "checkbox") {
-	input_type = "checkbox"
+		var input_type = "radio"
+		if(choice_obj["type"] == "checkbox") {
+		input_type = "checkbox"
 	}
+		var extension = "svg"
+		if(choice_obj["extension"]) {
+			extension  = choice_obj["extension"] 
+			}
 %>
  
  
-	 <div class="options_flex choice choice_format bottom_dotted padding_top_xlarge padding_bottom_xlarge hover_grey mobile_padding_left_and_right" id="<%= option_name %>-<%= choice_name %>">
+	 <div class="width_70 centred options_flex choice choice_format  padding_top_xlarge padding_bottom_xlarge hover_grey mobile_padding_left_and_right" id="<%= option_name %>-<%= choice_name %>">
 	
 		<div class="choice_image full_width mobile_full_width padding_bottom_medium">
-			<img src="/images/product/<%= choice_name %>.svg" style="width:70px;" />
+			<img src="/images/product/<%= choice_name %>.<%= extension %>" style="width:70px;" />
 		</div>
 	
 		<div class="<%= input_type %>_button_container width_10 mobile_width_10">
@@ -216,7 +226,7 @@ counter= counter + 1;
 		</div>
 	
 		<div class="choice_description width_50 mobile mobile_width_90 text_left">
-			<h6 class="sans font_ee"><%= choice_name %></h6>
+			<h6 class="sans font_ee"><%= choice_name.split("_").join(" ") %></h6>
 			<h3 class="sans slant padding_top_small font_ff average_line_spacing"><%= choice_obj.description %></h3>
 		</div>
 	
@@ -224,7 +234,7 @@ counter= counter + 1;
 			Standard
 		</div>
 	</div>
- 
+ <div class="bottom_dotted"></div>
  
 <% }) %>
 <% }) %>
