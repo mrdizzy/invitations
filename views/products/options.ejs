@@ -3,17 +3,17 @@ var options = [
   {
     "card_texture": [
       {
-        "smooth_lightweight": {
+        "plain_lightweight": {
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
           "cost": "Standard"
         },
-        "smooth_mediumweight": {
+        "plain_middleweight": {
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
           "cost": "Standard"
         },
-        "smooth_heavyweight": {
+        "plain_heavyweight": {
           "description": "Smooth, matt, white card: no texture or gloss. It might be the lowest-cost option, but don't underestimate the beauty of simplicity: this thick, 400gsm card feels gorgeous in your hands. Works brilliantly with our more contemporary designs.",
           "type": "radio",
           "cost": "Standard"
@@ -173,32 +173,40 @@ var options = [
   }
 ]
 
+var counter = 0;
+
 options.forEach(function(option) { 
+counter= counter + 1;
 	var option_name = Object.keys(option)[0]; %>
 	
 	<h4 class="font_e sans_caps bottom_solid padding_bottom_medium padding_top_large">
-	<img src="/images/2.svg" style="margin-top:-2px;width:20px;centred;" /> <br/>Choose your <%= option_name.split("_").join(" ")  %></h4>
+	<img src="/images/<%= counter %>.svg" style="margin-top:-2px;width:20px;centred;" /> <br/>Choose your <%= option_name.split("_").join(" ")  %></h4>
  
 <%
- 	var choices = option[option_name] 
-	choices.forEach(function(choice) { 
-	var choice_name = Object.keys(choice)[0]
-	var choice_obj = choice[choice_name];
-
+ 	var choice_groups = option[option_name] 
+	choice_groups.forEach(function(choice_group) { 
+		Object.keys(choice_group).forEach(function(choice_key) {
+		
+		
+	var choice_name = choice_key
+	var choice_obj = choice_group[choice_key];
+	
+	var input_type = "radio"
+	if(choice_obj["type"] == "checkbox") {
+	input_type = "checkbox"
+	}
 %>
  
  
- 
- 
-	 <div class="options_flex choice choice_format bottom_dotted padding_top_xlarge padding_bottom_xlarge selected_choice hover_grey mobile_padding_left_and_right" id="format_flat">
+	 <div class="options_flex choice choice_format bottom_dotted padding_top_xlarge padding_bottom_xlarge selected_choice hover_grey mobile_padding_left_and_right" id="<%= option_name %>-<%= choice_name %>">
 	
 		<div class="choice_image full_width mobile_full_width padding_bottom_medium">
-			<img src="/images/product/flat.svg" style="width:70px;" />
+			<img src="/images/product/<%= choice_name %>.svg" style="width:70px;" />
 		</div>
 	
-		<div class="radio_button_container width_10 mobile_width_10">
-			<label class="radio_button control control--radio">
-				<input type="radio" name="format" value="flat" checked="checked"/>
+		<div class="<%= input_type %>_button_container width_10 mobile_width_10">
+			<label class="<%= input_type %>_button control control--<%= input_type %>">
+				<input type="<%= input_type %>" name="format" value="flat" checked="checked"/>
 				<div class="control__indicator"></div>
 			</label>
 		</div>
@@ -214,6 +222,7 @@ options.forEach(function(option) {
 	</div>
  
  
+<% }) %>
 <% }) %>
 <% }) %>
 
