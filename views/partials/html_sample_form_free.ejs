@@ -1,6 +1,33 @@
+<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
+	<img src="/images/1.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose your sample invitation suite
+</div>
+
+<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
+	
+	
+	<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
+		
+		<% products.forEach(function(product) { %>
+		<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
+		
+		<% }) %>
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a> 
+        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small w50px inline"></a>
+	</div>
+	
+	
+	<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
+		<%= products[0].clean_name %>
+	</div>
+</div>
+
+
+
+
+
 
 <div class="sans_subhead font_ee text_left italic padding_bottom_medium padding_top_large">
-	<img src="/images/1.svg" style="margin-top:-2px;width:20px;display:inline-block;vertical-align:middle;opacity:0.4S;" /> 
+	<img src="/images/2.svg" style="margin-top:-2px;width:20px;display:inline-block;vertical-align:middle;opacity:0.4S;" /> 
 	Enter your name and address&hellip;
 </div>
 
@@ -40,31 +67,6 @@
 
 
 
-
-
-
-
-
-
-<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
-	<img src="/images/2.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose your sample invitation suite
-</div>
-
-<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
-	
-	<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
-		
-		<% products.forEach(function(product) { %>
-		<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
-		
-		<% }) %>
-        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium" style="width:50px;display:inline-block;"></a> 
-        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small" style="width:50px;display:inline-block;"></a>
-	</div>
-	<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
-		<%= products[0].clean_name %>
-	</div>
-</div>
 
 
 

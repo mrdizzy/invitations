@@ -7,6 +7,144 @@ body {
     padding: 0;
 }
 
+
+/* ELEMENTS 
+=============================================================================
+================================================================================
+=================================================================================*/
+
+#casamiento_logo {
+    position: fixed;
+    width: 182px;
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+}
+
+#browse_container {
+    width: 225px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 5px 5px 5px;
+}
+
+#headline {
+    border-radius: 20px;
+    position: relative;
+    top: -0.5em;
+}
+
+#sample_box {
+    width:60%;
+    max-width:225px;
+}
+
+video {
+    border-radius: 50px;
+    background: transparent url('/images/furniture/360.gif') no-repeat 0 0;
+    background-position: center;
+    background-size: 40px 40px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.icon {
+    padding-top: 1em;
+    padding-bottom: 0;
+    width: 50px;
+}
+
+.small_icon {
+   width:32px;
+   opacity:0.33;
+}
+
+.david_photo {
+    width: 150px;
+    margin-top: 4em;
+}
+
+#book { width: 50px; }
+
+#dreams_slogan {
+    right: 0;
+    padding-left: 5px;
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    width: 180px;
+}
+
+footer {
+    padding:2em;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+#share_icon { 
+    padding: 6px; 
+    padding: 4px;
+    width: 30px;
+}
+
+#pinit,
+#facebook {
+    padding: 4px;
+    width: 30px;
+    opacity:0.35;
+}
+
+#pinit:hover,
+#facebook:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.shell {
+    background-color: #fff;
+    padding: 0.25em;
+    width: 25px;
+    position: relative;
+    top: -0.75em;
+}
+
+.flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
+
+#slides { display:none; }
+#slides img { border-radius: 20px; }
+
+
+.slidesjs-navigation img { opacity: 0.5; }
+.slidesjs-navigation img:hover { opacity: 1;} 
+
+#genesis {
+    padding-top: 75px;
+    width: 140px;
+}
+img,
+.centred,
+.subhead {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img,
+.full_width {
+    width: 100%;
+}
+.embel {
+    /* better - will help on webkit */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+    /* best - images are very crisp */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+}
+
+
 /*FONTS *
 =============================================================================================================
 =============================================================================================================
@@ -112,146 +250,6 @@ a {
 }
 
 
-/* ELEMENTS 
-=============================================================================
-================================================================================
-=================================================================================*/
-
-#casamiento_logo {
-    position: fixed;
-    width: 182px;
-    padding: 5px;
-    border-bottom-right-radius: 10px;
-}
-
-#browse_container {
-    width: 225px;
-    position: fixed;
-    right: 0;
-    left: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 0 5px 5px 5px;
-}
-
-#headline {
-    border-radius: 20px;
-    position: relative;
-    top: -0.5em;
-}
-
-#sample_box {
-    width:60%;
-    max-width:225px;
-}
-
-video {
-    border-radius: 50px;
-    background: transparent url('/images/furniture/360.gif') no-repeat 0 0;
-    background-position: center;
-    background-size: 40px 40px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.icon {
-    padding-top: 1em;
-    padding-bottom: 0;
-    width: 50px;
-}
-
-.small_icon {
-   width:32px;
-   opacity:0.33;
-}
-
-.david_photo {
-    width: 150px;
-    margin-top: 4em;
-}
-
-#book { width: 50px; }
-
-#dreams_slogan {
-    right: 0;
-    padding-left: 5px;
-    position: fixed;
-    border-bottom-left-radius: 10px;
-    width: 180px;
-}
-
-footer {
-    padding:2em;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-}
-#share_icon { 
-    padding: 6px; 
-    padding: 4px;
-    width: 30px;
-}
-
-.testimonial_quote_icon {  width: 40px; }
-
-#pinit,
-#facebook {
-    padding: 4px;
-    width: 30px;
-    opacity:0.35;
-}
-
-#pinit:hover,
-#facebook:hover
-{
-    opacity: 1;
-    cursor: pointer;
-}
-
-.shell {
-    background-color: #fff;
-    padding: 0.25em;
-    width: 25px;
-    position: relative;
-    top: -0.75em;
-}
-
-.flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
-
-#slides { display:none; }
-#slides img { border-radius: 20px; }
-
-
-.slidesjs-navigation img { opacity: 0.5; }
-.slidesjs-navigation img:hover { opacity: 1;} 
-
-#genesis {
-    padding-top: 75px;
-    width: 140px;
-}
-img,
-.centred,
-.subhead {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-img,
-.full_width {
-    width: 100%;
-}
-.embel {
-    /* better - will help on webkit */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-
-    /* best - images are very crisp */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: optimize-contrast;
-}
-
-
-
 
 /* BORDERS and PADDING
 ---------------------------------------------------------
@@ -293,8 +291,17 @@ img,
 .small_padding { padding:1em; }
 
 
-
-.pointer { width: 12px; }
+/* SIZING
+----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+.w50px { width:50px; }
+.w40px { width: 40px; }
+.w20px { width: 20px; }
+.w10px { width: 10px; }
+.w30px { width: 30px; }
+.w12px { width: 12px; }
+.w15px { width: 15px; }
 
 /* POSITIONING
 --------------------------------------------------------------
@@ -371,6 +378,13 @@ a:hover { text-decoration:none; }
 .flexbox_item { width:275px; }
 .flexbox_large_item {width:70%; min-width:500px; }
 
+.opacity10 { opacity:1; }
+.opacity9 { opacity:0.9; }
+.opacity8 { opacity:0.8; }
+.opacity7 { opacity:0.7; }
+.opacity6 { opacity:0.6; }
+.opacity5 { opacity:0.5; }
+.opacity4 { opacity:0.4; }
 
 
 
@@ -392,9 +406,6 @@ a:hover { text-decoration:none; }
     /* ----------------------------------------------------------------------------- */
     #casamiento_logo {
         width: 170px;
-    }
-    #headline {
-        
     }
     #dreams_slogan {
         width: 160px;

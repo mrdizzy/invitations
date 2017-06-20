@@ -1,7 +1,4 @@
 <!doctype html>
-
-<body>
-
 	<head>
 		
 		<%- include(".././partials/script_google_tag_manager") %>
@@ -11,18 +8,23 @@
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
-	</head>
 	
 		<%- include(".././partials/script_noscript_gtm") %>
-<script>
-	<% function CasamientoTruncatetitle(title) {
-		if (title) {
-			 var newtitle =  title.split(" ").slice(0,15);
-				return newtitle.join(" ") +"..." 
-		}
-	}
-    %>
-</script>
+		
+		<script>
+			<% function CasamientoTruncatetitle(title) {
+				if (title) {
+					 var newtitle =  title.split(" ").slice(0,15);
+						return newtitle.join(" ") + "..." 
+				}
+			}
+		%>
+		</script>
+	</head>
+	
+	<body>
+
+
 	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
 
 	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
@@ -37,64 +39,71 @@
 
 
 					<div class="width_75 phablet_width_90 tablet_width_80 centred mobile_width_95">
-						<img src="/images/horror_icons/car-collision.svg" class="padding_top_medium" style="width:50px;" />
+						<img src="/images/horror_icons/car-collision.svg" class="padding_top_medium w50px" />
 						<p class="font_c text_center width_50 sans_subhead centred half_padding_vertical mob_font_c mobile_width_90">Avoid expensive mistakes! Don't buy your invitations until you've read this&hellip;</p>
 
 						<p class="sans font_ee width_66 phablet_width_80 table_width_80 centred half_padding_vertical average_line_spacing mobile_width_90">
-							...empower yourself with knowledge by learning from the embarassing mistakes made by others! Download <span style="font-style:italic;">The Invitation Horror Story Book</span> completely free now and discover:</p>
+							...empower yourself with knowledge by learning from the embarassing mistakes made by others! Download <span class="slant">The Invitation Horror Story Book</span> completely free now and discover:</p>
 
 
 						<img src="/images/homepage/horror_book.jpg" style="max-width:425px;" class="mobile_width_95 centred quarter_padding_vertical" />
+						
 
 						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
-						
 								<img src="/images/horror_icons/black-evil-cat.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 								<span class="slant">Three important reasons</span> why you must never order your stationery without asking for this first
-						
 						</div>
 
 
 						<div class="width_50 tablet_width_70  centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/creepy-ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 							In our online age, <span class="slant">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it
-
 						</div>
 
 						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/ghost.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 							The one thing no one thinks to ask their stationery company: <span class="slant">this can spoil the most beautiful invitations</span> if you don't check first
-						
 						</div>
 
 
 						<div class="width_50 tablet_width_70 centred mobile_width_80 sans font_ee average_line_spacing centred">
 								<img src="/images/horror_icons/halloween.svg" class="padding_top_small" style="width:35px; opacity:0.7" />
 							What you won't know about until your guests tell you: <span class="slant">don't hear it from your guests first,</span> avoid this happening to you 
-					</div>
+						</div>
 
 					</div>
+					
+					
+					
 					<form id="download_form" class="pure-form pure-form-stacked tablet_width_70  width_33 phablet_width_70 mobile_width_95 centred">
 						<fieldset>
-								<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_name"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your name</p>
+							<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_name">
+								<img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> 
+								Please enter your name
+							</p>
 		
 
 							<input type="text" id="download_name" name="download_name" placeholder="Name" autocomplete></input>
-								<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
+							<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
 		
 							<input id="download_email" type="email" name="download_email" placeholder="Email address" autocomplete></input>
 
 						</fieldset>
 
 						<button type="submit" class="width_90 mobile_full_width centred pure-button pure-button-primary margin_bottom">Download Free Now! 
-						
-	<img src="/images/furniture/check.svg" id="download_form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
-	<img src="/images/furniture/ellipsis.svg" style="display:none;" id="form_download_spinner"/></button>
+											
+						<img src="/images/furniture/check.svg" id="download_form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
+						<img src="/images/furniture/ellipsis.svg" style="display:none;" id="form_download_spinner"/></button>
 
 					</form>
+					
+					
 					<div class="padding_top_large">
 						<div class="top_solid full_width"></div>
 						<img src="/images/furniture/flourish.svg" class="flourish" />
 					</div>
+					
+					
 					<% } %>
 
 
@@ -195,47 +204,47 @@
 						<% }) %>
 							</div>
 
-<%- include("../partials/navigation/footer") -%>
+	<%- include("../partials/navigation/footer") -%>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-$('#download_form').submit(function(e) {
-	e.preventDefault();
-	$('#error_download_name').addClass("hidden");
-	$('#error_download_email').addClass("hidden");
-
-	var message = {
-		name: $('#download_name').val(),
-		email: $('#download_email').val(),
-		template: 'download'
-	}
-
-	if (!message.name) {
-		$('#error_download_name').removeClass("hidden")
-		$('#download_name').css("border-color", "#81BF08").css("border-width", "2px")
-	}
-
-	if (!message.email) {
-		$('#error_download_email').removeClass("hidden")
-		$('#download_email').css("border-color", "#81BF08").css("border-width", "2px")
-	}
-
-	if (message.name && message.email) {
-
-		$('#form_download_spinner').show();
-		$.ajax({
-			type: "POST",
-			url: "/emails",
-			data: message,
-			success: function(data) {
-				$('#form_download_spinner').hide();
-				$('#post_text').hide();
-				
-				$('#download_icon').hide();
-				$('#download_form_check').show();
-			}
-		});
-	}
-})
-</script>
+	<script>
+	$('#download_form').submit(function(e) {
+		e.preventDefault();
+		$('#error_download_name').addClass("hidden");
+		$('#error_download_email').addClass("hidden");
+	
+		var message = {
+			name: $('#download_name').val(),
+			email: $('#download_email').val(),
+			template: 'download'
+		}
+	
+		if (!message.name) {
+			$('#error_download_name').removeClass("hidden")
+			$('#download_name').css("border-color", "#81BF08").css("border-width", "2px")
+		}
+	
+		if (!message.email) {
+			$('#error_download_email').removeClass("hidden")
+			$('#download_email').css("border-color", "#81BF08").css("border-width", "2px")
+		}
+	
+		if (message.name && message.email) {
+	
+			$('#form_download_spinner').show();
+			$.ajax({
+				type: "POST",
+				url: "/emails",
+				data: message,
+				success: function(data) {
+					$('#form_download_spinner').hide();
+					$('#post_text').hide();
+					
+					$('#download_icon').hide();
+					$('#download_form_check').show();
+				}
+			});
+		}
+	})
+	</script>
 </body>
