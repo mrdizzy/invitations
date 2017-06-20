@@ -112,18 +112,23 @@ var options = [
           "type": "checkbox",
           "cost": "Standard"
         },
-        "direction_map": {
-          "description": "Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests. You pay a one-off cost of £25.00 regardless of how many invitations you order",
-          "type": "checkbox",
-          "cost": "Standard"
-        },
         "information_card": {
           "description": "Provide essential information for guests about your wedding.",
           "type": "checkbox",
           "cost": "Standard"
         },
+        "direction_map": {
+          "description": "Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests. You pay a one-off cost of £25.00 regardless of how many invitations you order",
+          "type": "checkbox",
+          "cost": "Standard"
+        },
         "corner_rounding": {
           "description": "Each item of your stationery will have rounded corners, for an even more bespoke look.",
+          "type": "checkbox",
+          "cost": "Standard"
+        },
+        "tissue_paper": {
+          "description": "Make it easy for guests to reply to your invitation.",
           "type": "checkbox",
           "cost": "Standard"
         }
@@ -133,6 +138,11 @@ var options = [
   {
     "embellishment": [
       {
+        "paper_wrap": {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "radio",
+          "cost": "Standard"
+        },
         "acrylic_heart": {
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
@@ -158,11 +168,6 @@ var options = [
           "type": "radio",
           "cost": "Standard"
         },
-        "paper_wrap": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
         "ribbon": {
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "type": "radio",
@@ -172,7 +177,6 @@ var options = [
     ]
   }
 ]
-
 var counter = 0;
 
 options.forEach(function(option) { 
