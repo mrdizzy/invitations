@@ -59,7 +59,7 @@
 				var video = this.$('video')
 				video.attr("src", video.attr("src") + resolution + ".mp4")
 					
-				video.after('<img src="/images/furniture/play.svg" style="width:50px;padding-right:2em;" class="video_play hover_opacity padding_top_small right" /><img src="/images/furniture/pause.svg" style="width:50px;padding-right:2em;display:none;" class="video_pause hover_opacity right padding_top_small"/>')
+				video.after('<div class="width_50 mobile_width_90 centred"><img src="/images/furniture/play.svg" class="video_play hover_opacity padding_top_small right centred w50px" /><img src="/images/furniture/pause.svg" style="display:none;" class="w50px video_pause hover_opacity right padding_top_small"/></div>')
 				return this
 			}
 		})

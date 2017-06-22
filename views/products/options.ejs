@@ -47,15 +47,15 @@ Object.keys(options).forEach(function(option) {
 %>
  
  
-		<div class="width_70 centred options_flex <%=input_type %>_choice choice_<%= option %> mobile_full_width padding_top_xlarge padding_bottom_xlarge mobile <%= selected %> hover_grey " id="<%= option %>-<%= choice_key %>">
+		<div class="width_70 centred options_flex <%=input_type %>_choice choice_<%= option %> mobile_full_width padding_top_xlarge padding_bottom_xlarge mobile <%= selected %> hover_grey " id="<%= option %>-<%= choice_key %>" >
 	
 	
 			<div class="choice_image full_width mobile_full_width padding_bottom_large">
 				<img src="/images/product/<%= choice_key %>.<%= extension %>" style="width:<%= width %>px;" />
 			</div>
 		
-		
-			<div class="width_10 mobile_width_10">
+		<div class="width_2"></div>
+			<div class="">
 				<label class="<%= input_type %>_button control control--<%= input_type %>">
 					<input type="<%= input_type %>" name="<%= option %>" value="<%= choice_key %>" <%= disabled %> <%= checked %>/>
 					<div class="control__indicator"></div>
@@ -70,7 +70,7 @@ Object.keys(options).forEach(function(option) {
 			
 		
 			<div class="choice_price width_20 mobile_full_width sans font_ee padding_top_small padding_bottom_small centred">
-			<%= cost %>
+				<%= cost %>
 			</div>
 		
 		

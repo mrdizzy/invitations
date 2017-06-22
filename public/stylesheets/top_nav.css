@@ -332,6 +332,8 @@ a {
 .inline {  display: inline; }
 .block { display:block; }
 
+.width_2 { width:2%; }
+.width_10 { width:20%; }
 .width_20 { width:20%; }
 .width_30 { width:30%; }
 .width_33 { width:33%; }
