@@ -1,5 +1,16 @@
 <script>
 	$(function() {
+	
+	var sample_value = <%= sample %>
+	
+var existing_sample = localStorage.getItem('sample_value')
+if(existing_sample) {
+	
+} else {
+	
+localStorage.setItem('sample_value', sample_value )
+}
+
 		// Javascript for playing responsive video
 		var videoView = Backbone.View.extend({
 			isMobile: function() {
