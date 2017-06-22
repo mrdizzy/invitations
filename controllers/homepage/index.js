@@ -12,11 +12,11 @@ exports.index = function(req, res) {
     res.cookie('sample_request', req.query.sample/100, { maxAge: 900000 });
     cookie = req.query.sample/100
   } 
+  console.log(cookie)
 MongoClient.connect(url, function(err, db) {
     
   assert.equal(null, err);
   findProducts(db, function(results) {
-      console.log(counter)
    // if(counter == 0) {
 	res.render('index_a', { products: results, page: "sample_form_top", sample: cookie})
 	//	counter = 1;

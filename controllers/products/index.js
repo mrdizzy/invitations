@@ -17,11 +17,22 @@ MongoClient.connect(url, function(err, db) {
 }
 
 exports.show = function(req, res) {
+	 var cookie = req.cookies.sample_request;
+ 
+  if ((cookie === undefined) && req.query.sample)
+  {
+    // no: set a new cookie
+    res.cookie('sample_request', req.query.sample/100, { maxAge: 900000 });
+    cookie = req.query.sample/100
+  } 
+  
+  
+  
 var id = req.params.id;
 MongoClient.connect(url, function(err, db) {
 	assert.equal(null, err);
 	findProduct(db, id, function(results) {
-		res.render('products/show', { product: results[0]})
+		res.render('products/show', { product: results[0],  sample: cookie}) 
 		db.close();
 	})
 });

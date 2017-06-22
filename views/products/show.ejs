@@ -299,7 +299,23 @@ var options = {
 
 	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Get your sample now&hellip;</h2>
 
-	<p class="width_66 centred font_ee average_line_spacing sans">&hellip;Get this stunning invitation suite posted to you today, for just <span style="text-decoration: line-through;">£1.99</span> 99p. The cost of all samples you order are refunded when you place an order:</p>
+	<p class="width_66 centred font_ee average_line_spacing sans">&hellip;Get this stunning invitation suite posted to you today, 
+	
+	<% if (sample == 0.99) { %>
+	
+	for just <span style="text-decoration: line-through;">£7.99</span> 99p. 
+	
+	<% } else if (sample) { %>
+	
+	for just <span style="text-decoration: line-through;">£7.99</span> &pound;<%= sample %>.
+	
+	<% } else { %>
+	
+	normally worth &pound7.99, completely free for a limited time only&hellip;
+	
+	<% } %>
+	
+	The cost of all samples you order are refunded when you place an order. Each carefully crafted box contains the following goodies:</p>
 
 	<img src="/images/product/samplebox.png" class="margin_top_large width_90" style="max-width:350px;" />
 	
@@ -310,26 +326,23 @@ var options = {
 	
 	
 	<p  class="font_e subhead width_66 margin_top_medium margin_bottom_medium">
-		Get your sample suite containing all these beautiful items for just 99p: just click the PayPal button now&hellip;
+		Get your sample suite containing all these beautiful items 
+		
+		<% if (sample == 0.99) { %> 
+		
+		for only 99p: just click the PayPal button now&hellip;
+		
+		<% } else if(sample) { %>
+		
+		for only £<%= sample %>: just click the PayPal button now&hellip;
+		
+		<% } else { %>
+		
+		completely free today:
+		
+		<% } %> 
 	</p>
-
-	
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pure-form form-aligned">
-		
-		<input type="hidden" name="cmd" value="_xclick">
-		<input type="hidden" name="business" value="paypal@dizzy.co.uk">
-		
-		<!-- Specify details about the item that buyers will purchase. -->
-		<input type="hidden" name="item_name" value="<%- page %>">
-		<input type="hidden" name="amount" value="0.99">
-		<input type="hidden" name="currency_code" value="GBP">
-	  
-		<!--	<input type="hidden" name="page" id="page" value="<%- page %>"></input> -->
-		<button type="submit" style="max-width:300px" class="width_70 margin_top_medium centred pure-button pure-button-primary">
-			<img src="/images/furniture/PayPal.svg" id="paypal_logo" style="width:140px;" />
-		</button>
-	
-	</form>
+<%- include("./../partials/html_sample_form") %>
 
 </div>
 

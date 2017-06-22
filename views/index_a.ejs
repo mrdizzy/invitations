@@ -24,18 +24,18 @@
 	<div id="slides" class="centred width_95 tablet_full_width phablet_full_width mobile_full_width"></div>
 	
 	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
-	<% if (sample) { %>
-	Get our beautiful sample box full of goodies, usually worth £9.99,
-	for just <% if (sample == 0.99) { %>
-	99p 
-	<% } else { %>
-	&pound;<%= sample %> 
-	<% } %>today:
-	<% } else { %>
-		Get our beautiful sample box full of goodies, usually worth £9.99,
-	completely free today:
-	
-	<% } %> 
+
+	Get our beautiful sample box full of goodies, usually worth £7.99,
+		<% if (sample) { %>
+			for just 
+			<% if (sample == 0.99) { %>
+				99p 
+			<% } else { %>
+				&pound;<%= sample %> 
+			<% } %>today:
+		<% } else { %>
+			completely free today:
+		<% } %> 
 	</div>
 
 
@@ -43,31 +43,46 @@
 
 	<div class="padding_top_small centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 margin_bottom_large">
 
-	<img src="/images/product/samplebox.png" style="width:95%;max-width:350px;" />
-<%- include("partials/html_flexbox_benefits") %><div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
-	<img src="/images/1.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose the sample invitation suite you'd like to receive:
-</div>
+		<img src="/images/product/samplebox.png" style="width:95%;max-width:350px;" />
+		
+		<%- include("partials/html_flexbox_benefits") %>
+		
+		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
+	
+		<img src="/images/1.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose the sample invitation suite you'd like to receive:
 
-<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
-	
-	
-	<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
-		
-		<% products.forEach(function(product) { %>
-		<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
-		
-		<% }) %>
-        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a> 
-        <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small w50px inline"></a>
 	</div>
+
+	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
+	
+		<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
+		
+			<% products.forEach(function(product) { %>
+				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
+			<% }) %>
+      
+      <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a> 
+      <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small w50px inline"></a>
+		
+		</div>
 	
 	
-	<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
-		<%= products[0].clean_name %>
+		<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
+			<%= products[0].clean_name %>
+		</div>
 	</div>
-</div>
+
+<% if (sample) { %>
+	
+	<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
+		<img src="/images/2.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
+		Press the PayPal button!
+	</div>
+
+<% } %>
 
 <%- include("partials/html_sample_form") %>
+
 </div>
 
 

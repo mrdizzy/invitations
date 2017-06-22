@@ -1,12 +1,6 @@
 <% if (sample) { %>
 
 
-
-
-<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
-	<img src="/images/2.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
-	Press the PayPal button!
-</div>
 	
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pure-form form-aligned">
 		
@@ -70,7 +64,7 @@
 	Press the button!
 </div>
 	
-	<input type="hidden" name="which_sample" id="which_sample" value="<%= products[0].clean_name %>" />
+	<input type="hidden" name="which_sample" id="which_sample" value="" />
 	<button type="submit" id="get_sample" class="centred pure-button pure-button-primary">
 	<span id="post_text">Post my sample box now!</span>
 	<img src="/images/furniture/check.svg" id="form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
@@ -92,3 +86,5 @@
 
 </form>
 <% } %>
+
+<%= page %>
