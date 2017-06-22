@@ -1,7 +1,7 @@
+<% if (homepage) { var bullet = 2, bullet2 = 3 } else { var bullet = 1, bullet2 = 2 } %>
+
 <% if (sample) { %>
 
-
-	
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pure-form form-aligned">
 		
 		<input type="hidden" name="cmd" value="_xclick">
@@ -18,10 +18,11 @@
 		</button>
 	
 	</form>
+	
 <% } else { %>
 
 <div class="sans_subhead font_ee text_left italic padding_bottom_medium padding_top_large">
-	<img src="/images/2.svg" style="margin-top:-2px;width:20px;display:inline-block;vertical-align:middle;opacity:0.4S;" /> 
+	<img src="/images/<%= bullet %>.svg" style="margin-top:-2px;width:20px;display:inline-block;vertical-align:middle;opacity:0.4S;" /> 
 	Enter your name and address&hellip;
 </div>
 
@@ -60,7 +61,7 @@
 
 
 <div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
-	<img src="/images/3.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
+	<img src="/images/<%= bullet2 %>.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
 	Press the button!
 </div>
 	
@@ -86,5 +87,3 @@
 
 </form>
 <% } %>
-
-<%= page %>
