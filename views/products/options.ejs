@@ -1,241 +1,82 @@
 <%
-var options = [
-  {
-    "card_format": [
-      {
-        "a6_flat": {
-          "description": "Printed front and back on A6 card",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "a6_foldout": {
-          "description": "Printed inside and outside, with a matching printed vellum cover to protect your invitation",
-          "type": "radio",
-          "cost": "Standard"
-        }
-      }
-    ]
-  },
-  {
-    "card_texture": [
-      {
-        "plain_lightweight": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "plain_middleweight": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "plain_heavyweight": {
-          "description": "Smooth, matt, white card: no texture or gloss. It might be the lowest-cost option, but don't underestimate the beauty of simplicity: this thick, 400gsm card feels gorgeous in your hands. Works brilliantly with our more contemporary designs.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "pearlescent": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "kraft": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "linen": {
-          "description": "Linen paper looks and feels like the fine linen fabric for which it is named. It has a subtle embossed texture with a crosshatch pattern that is reminiscent of a fine linen table cloth.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "laid": {
-          "description": "Laid paper is a type of paper having a ribbed texture imparted by the manufacturing process",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "hammered": {
-          "description": "HammeredThis texture has indentations produced or appearing to have been produced by hammering, and is considered a traditional choice for wedding invitations: works well with our floral and vintage styles.",
-          "type": "radio",
-          "cost": "Standard"
-        }
-      }
-    ]
-  },
-  {
-    "embellishment": [
-      {
-        "paper_wrap": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "acrylic_heart": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "acrylic_oval": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "diamante_square": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "diamante_circle": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "diamante_heart": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        },
-        "ribbon": {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "radio",
-          "cost": "",
-          "extension": "png"
-        }
-      }
-    ]
-  },
-  {
-    "envelope_style": [
-      {
-        "plain": {
-          "description": "Unprinted envelopes in the same texture as your chosen card texture above.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "matching": {
-          "description": "Printed inside and outside with a beautiful matching intricate design, this is the ultimate choice for stunning invitations.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "matching_box": {
-          "description": "The absolute pinnacle of invitation envelopes: a box envelope printed with your invitation's matching design.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "box_plain": {
-          "description": "Envelope boxes make opening your invitation feel like opening a gift. Not only do they keep your invitations safer, but they are essential for invitations with embellishments such as ribbons and for invitations containing a lot of enclosures (reply cards, direction cards).",
-          "type": "radio",
-          "cost": "Standard"
-        }
-      }
-    ]
-  },
-  {
-    "guest_personalisation": [
-      {
-        "envelope_addressing": {
-          "description": "Send us a list of your guest names and addresses and we will individually print each one on the envelope.",
-          "type": "radio",
-          "cost": "Standard"
-        },
-        "invitation_addressing": {
-          "description": "Your guest names will be printed on each invitation and any accompanying RSVP cards, just send us a list.",
-          "type": "radio",
-          "cost": "Standard"
-        }
-      }
-    ]
-  },
-  {
-    "extras": [
-      {
-        "rsvp": {
-          "description": "Make it easy for guests to reply to your invitation.",
-          "type": "checkbox",
-          "cost": "Standard"
-        },
-        "information_card": {
-          "description": "Provide essential information for guests about your wedding.",
-          "type": "checkbox",
-          "cost": "Standard"
-        },
-        "direction_map": {
-          "description": "Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests. You pay a one-off cost of £25.00 regardless of how many invitations you order",
-          "type": "checkbox",
-          "cost": "Standard"
-        },
-        "corner_rounding": {
-          "description": "Each item of your stationery will have rounded corners, for an even more bespoke look.",
-          "type": "checkbox",
-          "cost": "Standard"
-        },
-        "tissue_paper": {
-          "description": "Make it easy for guests to reply to your invitation.",
-          "type": "checkbox",
-          "cost": "Standard"
-        }
-      }
-    ]
-  }
-]
 var counter = 0;
 
-options.forEach(function(option) { 
-counter= counter + 1;
-	var option_name = Object.keys(option)[0]; %>
+Object.keys(options).forEach(function(option) { 
+	counter= counter + 1;
+%>
 	
 	<h4 class="font_e sans_caps bottom_solid padding_bottom_medium padding_top_large">
-	<img src="/images/<%= counter %>.svg" style="margin-top:-2px;width:20px;centred;" /> <br/>Choose your <%= option_name.split("_").join(" ")  %></h4>
+		
+	<img src="/images/<%= counter %>.svg" class="centred w20px" style="margin-top:-2px" /> <br/>Choose your <%= option.split("_").join(" ")  %></h4>
  
 <%
- 	var choice_groups = option[option_name] 
-	choice_groups.forEach(function(choice_group) { 
-		Object.keys(choice_group).forEach(function(choice_key) {
-		
-		var choice_name = choice_key
-		var choice_obj = choice_group[choice_key];
-		
+
+	Object.keys(options[option]).forEach(function(choice_key) {
+
+   	var choice_obj = options[option][choice_key];
+
 		var input_type = "radio"
 		if(choice_obj["type"] == "checkbox") {
-		input_type = "checkbox"
-	}
+			input_type = "checkbox"
+		}
+	
 		var extension = "svg"
 		if(choice_obj["extension"]) {
 			extension  = choice_obj["extension"] 
-			}
+		}
+		
+		var width = 70;
+		if(choice_obj.width) {
+			width = choice_obj.width
+		}
+		
+		var checked = "",
+		selected=""
+		if(choice_obj.cost == 0) {
+			checked = 'checked="checked"'
+			selected ="selected_choice"
+		}
+		
+		var disabled = "" 
+		if(choice_obj.disabled) {
+			disabled = 'disabled="disabled"'
+			selected = ""
+		}
+		
+		var cost = choice_obj.cost || "Standard"
 %>
  
  
-	 <div class="width_70 centred options_flex choice choice_format  padding_top_xlarge padding_bottom_xlarge hover_grey mobile_padding_left_and_right" id="<%= option_name %>-<%= choice_name %>">
+		<div class="width_70 centred options_flex <%=input_type %>_choice choice_<%= option %> mobile_full_width padding_top_xlarge padding_bottom_xlarge mobile <%= selected %> hover_grey " id="<%= option %>-<%= choice_key %>">
 	
-		<div class="choice_image full_width mobile_full_width padding_bottom_medium">
-			<img src="/images/product/<%= choice_name %>.<%= extension %>" style="width:70px;" />
-		</div>
 	
-		<div class="<%= input_type %>_button_container width_10 mobile_width_10">
-			<label class="<%= input_type %>_button control control--<%= input_type %>">
-				<input type="<%= input_type %>" name="format" value="flat" checked="checked"/>
-				<div class="control__indicator"></div>
-			</label>
-		</div>
+			<div class="choice_image full_width mobile_full_width padding_bottom_large">
+				<img src="/images/product/<%= choice_key %>.<%= extension %>" style="width:<%= width %>px;" />
+			</div>
+		
+		
+			<div class="width_10 mobile_width_10">
+				<label class="<%= input_type %>_button control control--<%= input_type %>">
+					<input type="<%= input_type %>" name="<%= option %>" value="<%= choice_key %>" <%= disabled %> <%= checked %>/>
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+		
+		
+			<div class="choice_description width_50 mobile mobile_width_90 text_left">
+				<h6 class="sans font_ee"><%= choice_key.split("_").join(" ") %></h6>
+				<h3 class="sans slant padding_top_small font_ff average_line_spacing"><%= choice_obj.description %></h3>
+			</div>
+			
+		
+			<div class="choice_price width_20 mobile_full_width sans font_ee padding_top_small padding_bottom_small centred">
+			<%= cost %>
+			</div>
+		
+		
+	</div>	
 	
-		<div class="choice_description width_50 mobile mobile_width_90 text_left">
-			<h6 class="sans font_ee"><%= choice_name.split("_").join(" ") %></h6>
-			<h3 class="sans slant padding_top_small font_ff average_line_spacing"><%= choice_obj.description %></h3>
-		</div>
-	
-		<div class="choice_price deselected width_20 mobile_full_width sans font_ee padding_top_small padding_bottom_small centred">
-			Standard
-		</div>
-	</div>
  <div class="bottom_dotted"></div>
  
-<% }) %>
 <% }) %>
 <% }) %>

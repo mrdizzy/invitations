@@ -279,6 +279,9 @@ a {
 .margin_bottom_larger { margin-bottom:3.5em; }
 .margin_bottom_xlarge { margin-bottom:6em; }
 
+.padding_left_small { padding-left:0.5em; }
+.padding-right_small { padding-right:0.5em; }
+
 .padding_top_small { padding-top: 0.5em; }
 .padding_top_medium { padding-top: 1em; }
 .padding_top_large { padding-top: 2em; }
@@ -365,6 +368,7 @@ a:hover { text-decoration:none; }
 ----------------------------------------------------
 -------------------------------------------------------
 --------------------------------------------------------*/
+
 .choice, .checkbox_choice { color:#666; }
 .selected_choice { background-color: #EEE;  color:black; }
 .light_grey_background { background-color: #F1EFF0; }
@@ -382,14 +386,16 @@ a:hover { text-decoration:none; }
 
 .flexbox_item { width:275px; }
 
-.opacity10 { opacity:1; }
 .opacity9 { opacity:0.9; }
 .opacity8 { opacity:0.8; }
 .opacity7 { opacity:0.7; }
 .opacity6 { opacity:0.6; }
 .opacity5 { opacity:0.5; }
 .opacity4 { opacity:0.4; }
+.opacity3 { opacity:0.3; }
+.full_opacity { opacity:1; }
 
+.opacity1_on_hover:hover { opacity:1 }
 
 
 
@@ -547,6 +553,9 @@ a:hover { text-decoration:none; }
         clear: both;
         margin:0;
     }
+    
+    .padding_top_xlarge { padding-top:3em; }
+    .padding_bottom_xlarge {padding-bottom:4em; }
     .mobile_width_10 {  width:10%;  }
     .mobile_width_20 {  width:20%;  }
     .mobile_width_40 {  width:40%;  }
@@ -584,6 +593,7 @@ a:hover { text-decoration:none; }
     #browse_container {
         width: 80px;
         font-size:0.9em;
+        
         padding: 0 2px 2px 2px;
     }
     
