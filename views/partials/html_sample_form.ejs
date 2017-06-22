@@ -1,0 +1,94 @@
+<% if (sample) { %>
+
+
+
+
+<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
+	<img src="/images/2.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
+	Press the PayPal button!
+</div>
+	
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pure-form form-aligned">
+		
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="paypal@dizzy.co.uk">
+		
+		<!-- Specify details about the item that buyers will purchase. -->
+		<input type="hidden" name="item_name" value="<%- page %>">
+		<input type="hidden" name="amount" value="<%= sample %>">
+		<input type="hidden" name="currency_code" value="GBP">
+	  
+		<!--	<input type="hidden" name="page" id="page" value="<%- page %>"></input> -->
+		<button type="submit" style="max-width:300px" class="width_70 margin_top_medium centred pure-button pure-button-primary">
+			<img src="/images/furniture/PayPal.svg" id="paypal_logo" style="width:140px;" />
+		</button>
+	
+	</form>
+<% } else { %>
+
+<div class="sans_subhead font_ee text_left italic padding_bottom_medium padding_top_large">
+	<img src="/images/2.svg" style="margin-top:-2px;width:20px;display:inline-block;vertical-align:middle;opacity:0.4S;" /> 
+	Enter your name and address&hellip;
+</div>
+
+<form class="pure-form form-aligned padding_top_medium" name="sample" id="form_sample" >
+	<div class="width_80 centred">
+		<fieldset>
+			<div class="pure-control-group">
+				<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden error" style="color:#999" id="error_name"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your name</p>
+				<input type="text" autocomplete="name" id="name" name="name" placeholder="Your name"></input>
+			</div>
+	
+			<div class="pure-control-group">
+				<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden error" style="color:#999" id="error_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
+				<input type="email" id="email" autocomplete="email" name="email" placeholder="Email"></input>
+			</div>
+	
+			<div class="pure-control-group">
+				<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden error" style="color:#999" id="error_address"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your house number or name</p>
+				<input type="text" autocomplete="shipping street-address" id="address" name="address"  placeholder="House number or name">
+				</input>
+			</div>
+	
+			<div class="pure-control-group">
+				<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden error" style="color:#999" id="error_postcode"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your postcode</p>
+				<input type="text" id="postcode" name="postcode" autocomplete="shipping postal-code" placeholder="Your postcode"></input>
+			</div>
+		</fieldset>
+	</div>
+	
+	<input type="hidden" name="page" id="page" value="<%- page %>"></input>
+
+
+
+
+
+
+
+<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
+	<img src="/images/3.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
+	Press the button!
+</div>
+	
+	<input type="hidden" name="which_sample" id="which_sample" value="<%= products[0].clean_name %>" />
+	<button type="submit" id="get_sample" class="centred pure-button pure-button-primary">
+	<span id="post_text">Post my sample box now!</span>
+	<img src="/images/furniture/check.svg" id="form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
+	<img src="/images/furniture/ellipsis.svg" id="form_sample_spinner"/>
+	</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+<% } %>

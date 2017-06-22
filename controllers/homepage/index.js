@@ -5,16 +5,12 @@ var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.co
 
 exports.index = function(req, res) {
  var cookie = req.cookies.sample_request;
+ 
   if ((cookie === undefined) && req.query.sample)
   {
     // no: set a new cookie
-    res.cookie('sample_request', req.query.sample, { maxAge: 900000 });
-    cookie = req.query.sample
-  } 
-  else
-  {
-    // yes, cookie was already present 
-    console.log('cookie exists', cookie);
+    res.cookie('sample_request', req.query.sample/100, { maxAge: 900000 });
+    cookie = req.query.sample/100
   } 
 MongoClient.connect(url, function(err, db) {
     
