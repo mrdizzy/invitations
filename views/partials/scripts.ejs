@@ -1,29 +1,29 @@
 <script>
 	$(function() {
-	
+
 
 		// Javascript for playing responsive video
 		var videoView = Backbone.View.extend({
 			isMobile: function() {
 				if($('body').width() < 1200) {
 					return "mobile"
-				} 
+				}
 			},
 			initialize: function() {
-					
+
 				var that = this;
-				
+
 				this.render();
 				this.$video = this.$('video');
 				this.dom_video = this.$('video')[0];
-				
+
 				this.$video.on("playing", function(e) {
         			 that.$el.trigger('playing');
 				})
 				this.$video.on("pause", function(e) {
         			 that.$el.trigger('pause');
 				})
-				
+
 				$(window).scroll(function() {
 			    	if (that.$video.is(":in-viewport") && that.dom_video.paused) {
 						that.dom_video.play();
@@ -31,7 +31,7 @@
 			    	that.dom_video.pause();
 			    }
 			})
-		
+
 			},
 			events: {
 				"click .video_play": "playVideo",
@@ -43,7 +43,7 @@
 				this.dom_video.play();
 			},
 			pauseVideo: function() {
-				this.dom_video.pause();	
+				this.dom_video.pause();
 			},
 			hidePlay: function() {
 				this.$('.video_play').hide();
@@ -53,14 +53,14 @@
 				this.$('.video_pause').hide();
 				this.$('.video_play').show();
 			},
-			render: function() {	
+			render: function() {
 				var resolution = "high"
 				if(this.isMobile()) {
 					var resolution = "low"
-				} 
+				}
 				var video = this.$('video')
 				video.attr("src", video.attr("src") + resolution + ".mp4")
-					
+
 				video.after('<div class="width_50 mobile_width_90 centred"><img src="/images/furniture/play.svg" class="video_play hover_opacity padding_top_small right centred w50px" /><img src="/images/furniture/pause.svg" style="display:none;" class="w50px video_pause hover_opacity right padding_top_small"/></div>')
 				return this
 			}
@@ -76,22 +76,22 @@
 			    })
 			}
 		})
-		
+
 		new MainView();
-		
+
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
 		// SLIDESHOW
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
 	var default_slides = ["art-deco", "a-love-story","chess"];
 	var additional_slides = ["birds-of-paradise-diamante-spirals", "ace-of-hearts"];
-	
+
 	var slides_html = "";
 	default_slides.forEach(function(product) {
 		slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/four_700.jpg 700w, /images/invitations/' + product + '/four.jpg 1300w, /images/invitations/' + product + '/four_2000.jpg 2000w"></a>'
 	})
-	
+
 	$('#slides').html(slides_html)
-		
+
 	if($('body').width() > 60) {
 		var slides_html = "";
 		additional_slides.forEach(function(product) {
@@ -99,7 +99,7 @@
 		})
 		$('#slides').append(slides_html)
 	}
-		
+
 		$("#slides").slidesjs({
 			width: 2000,
 			height: 1409,
@@ -126,8 +126,8 @@
 				}
 			}
 		})
-		
-		
+
+
 		///////////////////////////////////////////////////////////////////////////////////////////////
 		//
 		// SAMPLE SELECTIOn
@@ -135,7 +135,7 @@
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
 		var products = <%- JSON.stringify(products)  %>
-	
+
 		$("#sample_slides").slidesjs({
 			width: 1500,
 			height: 1512,
@@ -160,6 +160,7 @@
 					var current_product = products[number - 1];
 					$('#sample_name').html(current_product.clean_name)
 					$('#which_sample').val(current_product.clean_name)
+					$('#paypal_item').val(current_product.clean_name)
 				}
 			}
 		})

@@ -7,35 +7,36 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="/javascripts/isInViewport.min.js"></script>
 		<script src="/javascripts/jquery.slides.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
-		
+
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 		<link href="http://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
 	</head>
-	
+
 <body>
+
 	<%- include("partials/script_noscript_gtm") %>
 	<%- include("partials/navigation/header") %>
-	
-	<div id="slides" class="centred width_95 tablet_full_width phablet_full_width mobile_full_width"></div>
-	
+
+	<div id="slides" class="centred width_85 tablet_full_width phablet_full_width mobile_full_width"></div>
+
 	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
 
 	Get our beautiful sample box full of goodies, usually worth £7.99,
 		<% if (sample) { %>
-			for just 
+			for just
 			<% if (sample == 0.99) { %>
-				99p 
+				99p
 			<% } else { %>
-				&pound;<%= sample %> 
+				&pound;<%= sample %>
 			<% } %>today:
 		<% } else { %>
 			completely free today:
-		<% } %> 
+		<% } %>
 	</div>
 
 
@@ -44,44 +45,48 @@
 	<div class="padding_top_small centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 margin_bottom_large">
 
 		<img src="/images/product/samplebox.png" style="width:95%;max-width:350px;" />
-		
+
 		<%- include("partials/html_flexbox_benefits") %>
-		
+
 		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
-	
+
 		<img src="/images/1.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose the sample invitation suite you'd like to receive:
 
 	</div>
 
 	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
-	
+
 		<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
-		
+
 			<% products.forEach(function(product) { %>
 				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
 			<% }) %>
-      
-      <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a> 
+
+      <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a>
       <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small w50px inline"></a>
-		
+
 		</div>
-	
-	
+
+
 		<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
 			<%= products[0].clean_name %>
 		</div>
 	</div>
 
 <% if (sample) { %>
-	
+
 	<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
-		<img src="/images/2.svg" style="width:20px;display:inline-block;vertical-align:middle;opacity:0.75" />
+		<img src="/images/2.svg" class="w20px" style="display:inline-block;vertical-align:middle;" />
 		Press the PayPal button!
 	</div>
 
-<% } %>
+	<%- include("partials/html_paypal_button",{ chosen_sample:products[0].clean_name}) %>
 
-<%- include("partials/html_sample_form", {homepage: true}) %>
+<% } else { %>
+
+	<%- include("partials/html_sample_form", { bullets: [2,3], chosen_sample:products[0].clean_name }) %>
+
+ <% } %>
 
 </div>
 
@@ -107,9 +112,9 @@
 		</h2>
 
 		<p class="body">So why should a beautiful invitation be let down by a dull, plain envelope? Not spending time on the envelope is like badly wrapping a gift.</p>
-		
+
 		<p class="body">The envelope should not be a second-class citizen.</p>
-		
+
 	</article>
 
 
@@ -122,29 +127,29 @@
 <!-- VIDEO--------------------------------------------
 --------------------------------------------------------
 --------------------------------------------------------->
-	
+
 	<div class="video margin_top_large">
 		<video muted preload loop autoplay playsinline src="/images/invitations/birds-of-paradise-diamante-spirals/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
 			<source id="first_video_source" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
-		
+
 	<div class="margin_bottom_large width_30 phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
-		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/> 
+		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
 		Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag? How something is packaged is as important as the gift inside...
 		opening an invitation should be an experience that delights your guests and makes them excited about your big day. That's why opening our invitations feels like opening a specially tailored gift rather than an average greeting card.
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-		
-		
+
+
+
+
+
+
+
+
+
+
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70 mobile_width_97">
 
 		<p class="body">That's why that our envelopes come as something of an unexpected surprise. Tailor-made by hand, and imprinted with your own monogram, each envelope is also printed both inside and out with a matching intricate design that co-ordinates beautifully in the
@@ -159,65 +164,65 @@
 		<h2 class="width_90 font_d mob_font_d  text_center subhead">
 			But the envelopes are just the beginning...
 		</h2>
-		
+
 	</article>
 
 
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 <!-- VIDEO--------------------------------------------
 --------------------------------------------------------
 --------------------------------------------------------->
-	
+
 	<div class="video">
 		<video preload muted loop autoplay playsinline id="second_video" src="/images/invitations/art-deco/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
 			<source id="second_video_source" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
-	
+
 	<div class="width_30  phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
-		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/> 
+		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
 		You won't find anything like our exclusive envelopes: too many beautiful invitations are let down by boring unco-ordinating envelopes that leave them feeling unfinished. Our co-ordinating envelopes are the pièce de résistance that you won't be able to stop looking at.
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70  mobile_width_97">
-		
+
 		<div class="padding_top_medium"></div>
 
 
 		<p class="body">Inside, you'll find your invitation protected by layers of tissue paper, light as a feather and again printed and watermarked with your design. </p>
-		
+
 		<p class="body">As well as adding an angelic beauty, it will make your guests feel like they're opening a box containing an expensive of designer shoes rather than just pulling a card from an envelope.</p>
 
 
 
 		<%- include("partials/html_chloe_testimonial") %>
-		
-		
-		
+
+
+
 		<p class="body">The next step will see your guests removing one of a range of embellishments which add that wow factor:</p>
 
 		<h2 class="subhead width_66 text_center font_d mob_font_d mobile_width_90">
@@ -233,7 +238,7 @@
 		<h2 class="text_center subhead width_66 font_d mob_font_d mobile_width_90">
 			These are just a few of the little details that make our invitations&mdash;	<span class="slant">your invitations</span>&mdash;a cut above the rest.
 			</h2>
-			
+
 
 		<h2 class="text_center subhead width_66 font_d mob_font_d mobile_width_80 padding_bottom_large">
 			And it's in the little details that the big impressions get made.
@@ -242,7 +247,7 @@
 
 		<div class="top_dotted full_width"></div>
 		<img src="/images/furniture/shell.svg" class="shell padding_bottom_large" />
-	
+
 
 
 
@@ -255,32 +260,32 @@
 --------------------------------------------------------->
 
 		<%- include("partials/html_david") %>
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
 
     <h2 class="subhead center width_80 font_e width_70">
-    	And while you're waiting for it to arrive, why not 
-    	<a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline w15px opacity7" /></a> 
+    	And while you're waiting for it to arrive, why not
+    	<a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline w15px opacity7" /></a>
     	to see what takes your fancy&hellip;
     </h2>
 
-		<p class="body">P.S. If you have any questions at all, please just drop me an email at 
-			<a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>, 
-			or feel free to 
-			<a href="http://www.facebook.com/davidos.80" class="bottom_dotted hover_1_underline">add me on Facebook</a>  
+		<p class="body">P.S. If you have any questions at all, please just drop me an email at
+			<a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>,
+			or feel free to
+			<a href="http://www.facebook.com/davidos.80" class="bottom_dotted hover_1_underline">add me on Facebook</a>
 			<a href="http://www.facebook.com/davidos.80">
-			<img src="/images/social_media_buttons/facebook.svg" class="w15px inline opacity7 opacity1onhover" /></a> 
+			<img src="/images/social_media_buttons/facebook.svg" class="w15px inline opacity7 opacity1onhover" /></a>
 			and send me a message!
 		</p>
-	
+
 	</article>
 
 

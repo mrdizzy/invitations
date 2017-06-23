@@ -5,23 +5,22 @@ var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.co
 
 exports.index = function(req, res) {
  var cookie = req.cookies.sample_request;
- 
+
   if ((cookie === undefined) && req.query.sample)
   {
     // no: set a new cookie
     res.cookie('sample_request', req.query.sample/100, { maxAge: 900000 });
     cookie = req.query.sample/100
-  } 
-  console.log(cookie)
+  }
 MongoClient.connect(url, function(err, db) {
-    
+
   assert.equal(null, err);
   findProducts(db, function(results) {
    // if(counter == 0) {
-	res.render('index_a', { products: results, page: "sample_form_top", sample: cookie})
+	res.render('index_a', { products: results, page: "index_a", sample: cookie})
 	//	counter = 1;
     //  } else {
-//	res.render('index_b', { products: results, page: "sample_form_bottom"})
+//	res.render('index_b', { products: results, page: "index_b", sample:cookie})
 //		counter = 0;
    //   }
   	db.close();

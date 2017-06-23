@@ -8,7 +8,7 @@ body {
 }
 
 
-/* ELEMENTS 
+/* ELEMENTS
 =============================================================================
 ================================================================================
 =================================================================================*/
@@ -81,8 +81,8 @@ footer {
     flex-direction:row;
     justify-content:space-between;
 }
-#share_icon { 
-    padding: 6px; 
+#share_icon {
+    padding: 6px;
     padding: 4px;
     width: 30px;
 }
@@ -116,7 +116,7 @@ footer {
 
 
 .slidesjs-navigation img { opacity: 0.5; }
-.slidesjs-navigation img:hover { opacity: 1;} 
+.slidesjs-navigation img:hover { opacity: 1;}
 
 #genesis {
     padding-top: 75px;
@@ -343,7 +343,8 @@ a {
 .width_66 { width:66%; }
 .width_70 { width:70%; }
 .width_75 { width:75%; }
-.width_80 { width: 80%; } 
+.width_80 { width: 80%; }
+.width_85 { width: 85%; } 
 .width_90 { width: 90%; }
 .width_95 { width: 95%; }
 .width_full { width: 100%; }
@@ -454,14 +455,14 @@ a:hover { text-decoration:none; }
         float:none;
         clear:both;
     }
-    
+
     .no_padding_phablet { padding:0; }
-    
+
     .phablet_centred {
         display:block;
         margin:0 auto;
     }
-        
+
     .phablet_font_a { font-size: 2.827em; }
     .phablet_font_aa { font-size: 2.4em; }
     .phablet_font_b { font-size:1.999em; }
@@ -469,9 +470,9 @@ a:hover { text-decoration:none; }
     .phablet_font_d { font-size: 1.414em; }
     .phablet_font_e { font-size: 1.15em; }
     .phablet_font_ee { font-size: 1em; }
-        
+
     #slides img { border-radius:0; }
-    
+
     .phablet_full_width {
         width:100%;
         float:none;
@@ -502,9 +503,9 @@ a:hover { text-decoration:none; }
         float: left;
         border-bottom-right-radius: 5px;
     }
-    
+
     #browse_container { width: 82px; }
-    
+
     #book {
         width: 25px;
         margin: 0 auto;
@@ -520,34 +521,34 @@ a:hover { text-decoration:none; }
         width: 135px;
         z-index:500000000000000000000000;
     }
-    
+
     .shell { width: 20px; }
-    
+
     #slides img {
         border-radius: 0;
     }
-    
+
     .mob_font_a { font-size: 2.827em; }
     .mob_font_b { font-size:1.999em; }
     .mob_font_c { font-size:1.618em; }
     .mob_font_d { font-size: 1.414em; }
     .mob_font_e { font-size: 1.15em; }
     .mob_font_ee { font-size: 1em; }
-    
+
     .mobile_padding_left_and_right {
         padding-left: 1em;
         padding-right: 1em;
     }
-    
+
     .no_padding_mobile { padding:0; }
-    
+
     .clear_mobile {
         float: none;
         clear: both;
     }
-    
+
     .mobile_no_rounded {    border-radius:0; }
-    
+
     .mobile_centred{ margin:0 auto; }
     .mobile_full_width {
         width: 100%;
@@ -555,7 +556,7 @@ a:hover { text-decoration:none; }
         clear: both;
         margin:0;
     }
-    
+
     .padding_top_xlarge { padding-top:3em; }
     .padding_bottom_xlarge {padding-bottom:4em; }
     .mobile_width_10 {  width:10%;  }
@@ -567,7 +568,7 @@ a:hover { text-decoration:none; }
     .mobile_width_90 {  width:90%;  }
     .mobile_width_95 {  width:95%;  }
     .mobile_width_97 {  width:97%;  }
-    
+
     .testimonial_photo {
         float: none;
         margin: 0 auto;
@@ -575,7 +576,7 @@ a:hover { text-decoration:none; }
         max-width: 180px;
         padding: 0;
     }
-    
+
     footer {
         flex-direction:column;
         justify-content:center;
@@ -595,10 +596,10 @@ a:hover { text-decoration:none; }
     #browse_container {
         width: 80px;
         font-size:0.9em;
-        
+
         padding: 0 2px 2px 2px;
     }
-    
+
     #casamiento_logo {
         width: 115px;
         padding: 2px;
