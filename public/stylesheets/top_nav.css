@@ -60,11 +60,6 @@ video {
    opacity:0.33;
 }
 
-.david_photo {
-    width: 150px;
-    margin-top: 4em;
-}
-
 #book { width: 50px; }
 
 #dreams_slogan {
@@ -81,24 +76,13 @@ footer {
     flex-direction:row;
     justify-content:space-between;
 }
-#share_icon {
-    padding: 6px;
-    padding: 4px;
-    width: 30px;
-}
 
-#pinit,
-#facebook {
-    padding: 4px;
-    width: 30px;
-    opacity:0.35;
+.element_hover {
+    opacity:0.5;
 }
-
-#pinit:hover,
-#facebook:hover
-{
-    opacity: 1;
-    cursor: pointer;
+.element_hover:hover {
+    opacity:1;
+    cursor:pointer;
 }
 
 .shell {
@@ -279,6 +263,8 @@ a {
 .margin_bottom_larger { margin-bottom:3.5em; }
 .margin_bottom_xlarge { margin-bottom:6em; }
 
+.padding_3px { padding:3px; }
+
 .padding_left_small { padding-left:0.5em; }
 .padding-right_small { padding-right:0.5em; }
 
@@ -310,6 +296,7 @@ a {
 .w35px { width:35px; }
 .w12px { width: 12px; }
 .w15px { width: 15px; }
+.w150px { width:150px; }
 
 /* POSITIONING
 --------------------------------------------------------------
