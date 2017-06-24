@@ -2,7 +2,9 @@
 <html>
 	<style type="text/css">
 	
-.slidesjs-pagination {
+.slidesjs-navigation {
+	position:absolute;
+	margin-top:-4000px;
     display: none;
 }
 </style>
@@ -227,19 +229,19 @@ var options = {
 <img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
 		<div id="slides" class="mobile_full_width" style="display:none;">
 
-			<img src="/images/invitations/<%= product.name %>/collage_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/collage_2000.jpg 2000w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" class="rounded_corner_20 cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/collage_2000.jpg', zoomPosition: 'inside'" id="slide_1"/>
+			<img src="/images/invitations/<%= product.name %>/collage_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/collage_2000.jpg 2000w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/collage_2000.jpg', zoomPosition: 'inside'" id="slide_1"/>
 
-			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/vellum_2000.jpg 2000w, 2000w/images/invitations/<%= product.name %>/vellum_1300.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" class="rounded_corner_20" />
+			<img src="/images/invitations/<%= product.name %>/vellum.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/vellum_2000.jpg 2000w, 2000w/images/invitations/<%= product.name %>/vellum_1300.jpg 1300w, /images/invitations/<%= product.name %>/vellum_800.jpg 800w" />
 
-			<img src="/images/invitations/<%= product.name %>/boxenvelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw"srcset="/images/invitations/<%=product.name %>/boxenvelope_2000.jpg 2000w, /images/invitations/<%= product.name %>/boxenvelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/boxenvelope_800.jpg 800w" class="rounded_corner_20"/>
+			<img src="/images/invitations/<%= product.name %>/boxenvelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw"srcset="/images/invitations/<%=product.name %>/boxenvelope_2000.jpg 2000w, /images/invitations/<%= product.name %>/boxenvelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/boxenvelope_800.jpg 800w"/>
 
-			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/envelope_2000.jpg 2000w, /images/invitations/<%= product.name %>/envelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" class="rounded_corner_20" />
+			<img src="/images/invitations/<%= product.name %>/envelope.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/envelope_2000.jpg 2000w, /images/invitations/<%= product.name %>/envelope_1300.jpg 1300w, /images/invitations/<%= product.name %>/envelope_800.jpg 800w" />
 
-			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/closeup_2000.jpg 2000w, /images/invitations/<%= product.name %>/closeup_1300.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w" class="rounded_corner_20" />
+			<img src="/images/invitations/<%= product.name %>/closeup.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/closeup_2000.jpg 2000w, /images/invitations/<%= product.name %>/closeup_1300.jpg 1300w, /images/invitations/<%= product.name %>/closeup_800.jpg 800w"  />
 
-			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/rsvp_2000.jpg 2000w, /images/invitations/<%= product.name %>/rsvp_1300.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" class="rounded_corner_20" />
+			<img src="/images/invitations/<%= product.name %>/rsvp.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/rsvp_2000.jpg 2000w, /images/invitations/<%= product.name %>/rsvp_1300.jpg 1300w, /images/invitations/<%= product.name %>/rsvp_800.jpg 800w" />
 
-			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/info_2000.jpg 2000w, /images/invitations/<%= product.name %>/info_1300.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" class="rounded_corner_20" />
+			<img src="/images/invitations/<%= product.name %>/info.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/info_2000.jpg 2000w, /images/invitations/<%= product.name %>/info_1300.jpg 1300w, /images/invitations/<%= product.name %>/info_800.jpg 800w" />
 
 		</div>
 
