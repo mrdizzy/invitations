@@ -231,7 +231,7 @@ var options = {
 <% ["collage", "vellum", "boxenvelope", "envelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
 			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w, /images/invitations/<%= product.name %>/<%= image %>_700.jpg 700w, /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
 
-<% } %>
+<% }) %>
 
 		</div>
 
