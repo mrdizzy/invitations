@@ -95,12 +95,6 @@ footer {
 
 .flourish { width:55px;position:relative;top:-0.75em;padding:0.25em;background-color:#fff }
 
-#slides { display:none; }
-#slides img { border-radius: 20px; }
-
-
-.slidesjs-navigation img { opacity: 0.5; }
-.slidesjs-navigation img:hover { opacity: 1;}
 
 #genesis {
     padding-top: 75px;
@@ -297,6 +291,7 @@ a {
 .w12px { width: 12px; }
 .w15px { width: 15px; }
 .w150px { width:150px; }
+.w80px { width:80px; }
 
 /* POSITIONING
 --------------------------------------------------------------
@@ -306,6 +301,8 @@ a {
     z-index: 500;
     background-color: #fff;
 }
+
+.valign_middle { vertical-align:middle }
 
 .margin_left_70 { margin-left: 70%; }
 .negative_top_margin { margin-top:-4vw; }
@@ -318,6 +315,7 @@ a {
 
 .inline {  display: inline; }
 .block { display:block; }
+.inline_block { display:inline-block; }
 
 .width_2 { width:2%; }
 .width_10 { width:20%; }

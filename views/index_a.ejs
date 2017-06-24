@@ -25,7 +25,7 @@
 	<div id="slides" class="centred width_85 tablet_full_width phablet_full_width mobile_full_width"></div>
 
 	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
-
+ 
 	Get our beautiful sample box full of goodies, usually worth £7.99,
 		<% if (sample) { %>
 			for just
@@ -50,11 +50,11 @@
 
 		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
 
-		<img src="/images/1.svg" style="opacity:0.75;width:20px;display:inline-block;vertical-align:middle;" /> Choose the sample invitation suite you'd like to receive:
+		<img src="/images/1.svg" class="valign_middle opacity7 w20px inline_block" /> Choose the sample invitation suite you'd like to receive:
 
 	</div>
 
-	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium" style="border:1px solid grey; border-radius:20px;">
+	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
 
 		<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
 
@@ -62,8 +62,13 @@
 				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
 			<% }) %>
 
-      <a href="#" class="slidesjs-previous slidesjs-navigation"><img src="/images/left-chevron.svg" class=" padding_top_medium w50px inline"></a>
-      <a href="#" class="slidesjs-next slidesjs-navigation"><img src="/images/right-chevron.svg" class=" padding_top_small w50px inline"></a>
+      <a href="#" class="slidesjs-previous slidesjs-navigation">
+      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
+      </a>
+      
+      <a href="#" class="slidesjs-next slidesjs-navigation">
+      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
+      </a>
 
 		</div>
 
@@ -76,7 +81,7 @@
 <% if (sample) { %>
 
 	<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
-		<img src="/images/2.svg" class="w20px" style="display:inline-block;vertical-align:middle;" />
+		<img src="/images/2.svg" class="w20px inline_block valign_middle" />
 		Press the PayPal button!
 	</div>
 
@@ -137,8 +142,7 @@
 
 	<div class="margin_bottom_large width_30 phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
 		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
-		Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag? How something is packaged is as important as the gift inside...
-		opening an invitation should be an experience that delights your guests and makes them excited about your big day. That's why opening our invitations feels like opening a specially tailored gift rather than an average greeting card.
+		Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag? How something is packaged is as important as the gift inside...	opening an invitation should be an experience that delights your guests and makes them excited about your big day. That's why opening our invitations feels like opening a specially tailored gift rather than an average greeting card.
 	</div>
 
 
@@ -273,7 +277,7 @@
 
     <h2 class="subhead center width_80 font_e width_70">
     	And while you're waiting for it to arrive, why not
-    	<a class="grey_background_link " style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline w15px opacity7" /></a>
+    	<a style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline w15px opacity7" /></a>
     	to see what takes your fancy&hellip;
     </h2>
 
