@@ -226,20 +226,14 @@ var options = {
 <%- include("../partials/navigation/header") %>
 
 	<div class="width_70 centred tablet_full_width phablet_full_width mobile_full_width">
-<img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
+		<img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
 		<div id="slides" class="mobile_full_width" style="display:none;">
-<% ["collage", "vellum", "boxenvelope", "envelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
-			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w, /images/invitations/<%= product.name %>/<%= image %>_700.jpg 700w, /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_1300.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
-
-<% }) %>
-
+		<% ["collage", "vellum", "boxenvelope", "envelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
+			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w,  /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
+		<% }) %>
 		</div>
 
-
-
-
-
-
+		<div class="left sans font_g" style="padding-top:3px;position:relative;padding-right:5px;z-index:99999;margin-top:-18px;padding-bottom:5px;border-top-right-radius:5px;background-color:white;"><img src="/images/furniture/zoom/001-interface.svg" class="inline w12px opacity6" style="padding-left:2px"> Click image to zoom</div>
 <!-- Share icons -->
 
 		

@@ -44,6 +44,7 @@ Object.keys(options).forEach(function(option) {
 		}
 		
 		var cost = choice_obj.cost || "Standard"
+		if(cost != "Standard")  cost ="£"+cost; 
 %>
  
  
@@ -70,7 +71,7 @@ Object.keys(options).forEach(function(option) {
 			
 		
 			<div class="choice_price width_20 mobile_full_width sans font_ee padding_top_small padding_bottom_small centred">
-				<%= cost %>
+			<%= cost %>
 			</div>
 		
 		
