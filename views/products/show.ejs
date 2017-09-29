@@ -1,13 +1,4 @@
 <!doctype html>
-<html>
-	<style type="text/css">
-	
-.slidesjs-navigation {
-	position:absolute;
-	margin-top:-4000px;
-    display: none;
-}
-</style>
 <% page = "products" + "/" + product.clean_name %>
 <%
 var options = {
@@ -193,7 +184,7 @@ var options = {
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="/javascripts/cloudzoom/cloudzoom.css" />
+  <link rel="stylesheet" type="text/css" href="/javascripts/cloudzoom/cloudzoom.css" />
 	<script src="/javascripts/cloudzoom/cloudzoom2.js"></script>
 	<script src="/javascripts/jquery.slides.min.js"></script>
 	
@@ -228,17 +219,24 @@ var options = {
 
 	<div class="width_70 centred tablet_full_width phablet_full_width mobile_full_width">
 		<img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
-		<div id="slides" class="mobile_full_width" style="display:none;">
-		<% ["collage", "vellum", "boxenvelope", "envelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
+		<div id="slides" class="mobile_full_width">
+		<% ["collage", "vellum", "boxenvelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
 			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w,  /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
 		<% }) %>
+      <a href="#" class="slidesjs-previous slidesjs-navigation">
+      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
+      </a>
+      
+      <a href="#" class="slidesjs-next slidesjs-navigation">
+      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
+      </a>
 		</div>
 
-		<div class="left sans font_g" style="padding-top:3px;position:relative;padding-right:5px;z-index:99999;margin-top:-18px;padding-bottom:5px;border-top-right-radius:5px;background-color:white;"><img src="/images/furniture/zoom/001-interface.svg" class="inline w12px opacity6" style="padding-left:2px"> Click image to zoom</div>
+		<div class="left sans font_g" style="padding-top:3px;position:relative;padding-right:5px;z-index:99999;margin-top:-70px;padding-bottom:5px;border-top-right-radius:5px;background-color:white;"><img src="/images/furniture/zoom/001-interface.svg" class="inline w12px opacity6" style="padding-left:2px"> Click image to zoom</div>
+		
 <!-- Share icons -->
 
-		
-			<a class="right element_hover w35px padding_3px block" href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=<%= product.clean_name %>&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg">
+			<a class="right element_hover w35px padding_3px block"  href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=<%= product.clean_name %>&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg">
 				<img src="/images/social_media_buttons/002-facebook.svg"  />
 			</a>
 
@@ -247,6 +245,7 @@ var options = {
 			</a>
 
 		<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" style="margin-top:9px;display:inline-block;vertical-align:middle;" class="w15px right" />
+
 
 
 
@@ -423,52 +422,46 @@ var options = {
 		$(function() {
 			$("#slides").slidesjs({
 				width: 2000,
-				height: 1409,
-				pagination: {
-					active: false
-				},
-				effect: {
+				height: 1409,effect: {
 					fade: {
-						speed: 2000,
-					},
-					fade: {
-						speed: 2000,
-						crossfade: false
+        speed: 600,
+          // [number] Speed in milliseconds of the fade animation.
+        crossfade: true
+          // [boolean] Cross-fade the transition.
 					}
 				},
+				pagination: {
+					active: false
+				},			
+			navigation: {
+				active:false,
+				effect: "fade"
+			},
 				play: {
-					active: true,
+					active: false,
 					auto: true,
 					interval: 2500,
 					restartDelay: 2500
 				},
-				navigation: {
-					active: false
-				},
 				callback: {
 					loaded: function(n) {
-						
 						$('#slides_spinner').hide();
-						
-			
             CloudZoom.quickStart();
 					}
 				}
 			})
-			
-			
 			var slidesTimeout;
-			$('#slides img').bind('cloudzoom_start_zoom',function(){
+			$('#slides img').bind('cloudzoom_start_zoom', function() {
 				clearTimeout(slidesTimeout)
-$('.slidesjs-stop').click();
-})
-			$('#slides img').bind('cloudzoom_end_zoom',function(){
-			slidesTimeout = 	setTimeout(function() {
-				
-			$('.slidesjs-play').click();
-				
-			},2500) 
-});
+				$('.slidesjs-stop').click();
+			})
+			$('#slides img').bind('cloudzoom_end_zoom', function() {
+				slidesTimeout = setTimeout(function() {
+			
+					$('.slidesjs-play').click();
+			
+				}, 2500)
+			});
 	
 })
 
