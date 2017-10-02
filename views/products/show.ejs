@@ -438,10 +438,11 @@ var options = {
 				effect: "fade"
 			},
 				play: {
-					active: false,
+					active: true, // shows the play/pause buttons, we hide these but we need them on the page so that the cloudzoom callback functions can stop and start the slideshow when zooming in/out
 					auto: true,
 					interval: 2500,
-					restartDelay: 2500
+					restartDelay: 2500,
+					pauseOnHover: true
 				},
 				callback: {
 					loaded: function(n) {
@@ -453,6 +454,7 @@ var options = {
 			var slidesTimeout;
 			$('#slides img').bind('cloudzoom_start_zoom', function() {
 				clearTimeout(slidesTimeout)
+				alert("stop")
 				$('.slidesjs-stop').click();
 			})
 			$('#slides img').bind('cloudzoom_end_zoom', function() {
