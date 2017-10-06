@@ -27,7 +27,7 @@
 
 	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
 
-	<div class="width_80 centred tablet_width_80 phablet_width_95 clear mobile_full_width padding_top_larger no_padding_mobile ">
+	<div class="width_85 centred tablet_width_90 phablet_width_95 clear mobile_full_width padding_top_larger no_padding_mobile ">
 
 		<% var counter = 0; %>
 			<% products.forEach(function(group) { %>
@@ -112,7 +112,7 @@
 
 
 
-				<div class="left_column left width_60 clear_mobile phablet_clear mobile_width_95 phablet_width_80 phablet_centred mobile_centred ">
+				<div class="left_column left width_60 clear_mobile phablet_clear mobile_full_width phablet_width_80 phablet_centred mobile_centred ">
 
 					<h1 class="font_b mob_font_b phablet_font_a letter-spaced text_center serif_headline quarter_padding_vertical product_name">
 						<a href="/products/<%= group[0].name %>" class="hover_2_underline_dotted"><%= group[0].clean_name %></a>
@@ -120,15 +120,15 @@
 
 					<a href="/products/<%= group[0].name %>">
 
-					<img src="/images/invitations/<%= group[0].name %>/browse.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[0].name %>/browse_700.jpg 700w, /images/invitations/<%= group[0].name %>/browse_1000.jpg 1000w, /images/invitations/<%= group[0].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[0].name %>/browse_300.jpg 300w">
+					<img src="/images/invitations/<%= group[0].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[0].name %>/collage_800.jpg 700w, /images/invitations/<%= group[0].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[0].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[0].name %>/collage_800.jpg 300w" class="rounded_corner_20 width_90 mobile_width_95">
 
-					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin  width_50 centred" />
+					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small  width_50 centred" />
 					
-					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_e mob_font_e phablet_font_d mobile_full_width phablet_full_width">
+					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_e mob_font_e phablet_font_d width_90 mobile_width_95 phablet_full_width">
 						<a href="/products/<%= group[0].name %>" class="block small_padding"><span class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></span></a>
 					</div>
 					
-					<div class="top_solid full_width margin_top_large"></div>
+					<div class="top_solid width_90 centred margin_top_large"></div>
 					<img src="/images/furniture/flourish.svg" class="flourish" />
 
 				</div>
@@ -148,10 +148,11 @@
 			</h1>
 
 			<a href="/products/<%= group[1].name %>">
-				<img src="/images/invitations/<%= group[1].name %>/browse.jpg" sizes="(max-width: 600px) 95vw, (max-width:800px) 80vw, 40vw" srcset="/images/invitations/<%= group[1].name %>/browse_700.jpg 700w, /images/invitations/<%= group[1].name %>/browse_1000.jpg 1000w, /images/invitations/<%= group[1].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/browse_300.jpg 300w">
+	
+					<img src="/images/invitations/<%= group[1].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[1].name %>/collage_800.jpg 700w, /images/invitations/<%= group[1].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[1].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/collage_800.jpg 300w" class="rounded_corner_20">
 			</a>
 
-			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
+			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small width_50 centred" />
 
 			<div class="light_grey_background small_rounded_border centred average_line_spacing width_80 mobile_full_width phablet_full_width sans_subhead font_f mob_font_e phablet_font_d">
 				<a href="/products/<%= group[1].name %>" class="block small_padding"><span class=" hover_1_underline_dotted">
@@ -160,7 +161,7 @@
 				</a>
 			</div>
 			
-			<div class="top_solid full_width margin_top_large"></div>
+			<div class="top_solid full_width margin_top_large width_80 centred"></div>
 			<img src="/images/furniture/flourish.svg" class="flourish" />
 		
 		</div>
@@ -183,11 +184,12 @@
 					</h1>
 
 					<a href="/products/<%= group[2].name %>">
-						<img src="/images/invitations/<%= group[2].name %>/browse.jpg" sizes="(max-width:600px) 95vw, (max-width:800px) 80vw, 70vw" srcset="/images/invitations/<%= group[2].name %>/browse_700.jpg 700w, /images/invitations/<%= group[2].name %>/browse_1000.jpg 1000w, /images/invitations/<%= group[2].name %>/browse_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/browse_300.jpg 300w">
+					
+					<img src="/images/invitations/<%= group[2].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[2].name %>/collage_800.jpg 700w, /images/invitations/<%= group[2].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[2].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/collage_800.jpg 300w" class="rounded_corner_20">
 					</a>
 
 
-					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin width_50 centred" />
+					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small width_50 centred" />
 
 					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_d mob_font_e phablet_font_d phablet_full_width">
 						<a href-"/products/<%= group[2].name %>" class="block small_padding"><span class="hover_2_underline_dotted"><%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %></span></a>

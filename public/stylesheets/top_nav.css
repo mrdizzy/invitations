@@ -307,6 +307,7 @@ a {
 
 .margin_left_70 { margin-left: 70%; }
 .negative_top_margin { margin-top:-4vw; }
+.negative_top_margin_small { margin-top:-2vw; }
 
 
 .left { float: left; }

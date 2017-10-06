@@ -56,16 +56,19 @@
 
 	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
 
-		<div id="sample_slides" class="centred width_75 phablet_width_70 mobile_width_95">
+		<div id="sample_slides" class="centred width_95 phablet_width_95 mobile_width_95">
 
 			<% products.forEach(function(product) { %>
-				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/browse_700.jpg 700w, /images/invitations/<%= product.name %>/browse.jpg 1300w, /images/invitations/<%= product.name %>/browse_1500.jpg 2000w" alt="Wedding stationery suite">
+				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
 			<% }) %>
 
       <a href="#" class="slidesjs-previous slidesjs-navigation">
       	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
       </a>
       
+      
+       
+       
       <a href="#" class="slidesjs-next slidesjs-navigation">
       	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
       </a>
