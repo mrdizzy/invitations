@@ -6,7 +6,6 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="/javascripts/isInViewport.min.js"></script>
-		<script src="/javascripts/jquery.slides.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 
@@ -22,106 +21,60 @@
 	<%- include("partials/script_noscript_gtm") %>
 	<%- include("partials/navigation/header") %>
 
-	<div id="slides" class="centred width_85 tablet_full_width phablet_full_width mobile_full_width"></div>
-
-	<div class="centred half_padding_vertical phablet_width_90 subhead bring_to_front  font_b phablet_font_aa mob_font_b width_60 tablet_width_80 mobile_width_90 medium_line_spacing ">
+	<div class="centred padding_bottom_medium padding_top_large phablet_width_90 bring_to_front subhead font_c phablet_font_aa mob_font_b width_40 tablet_width_80 mobile_width_90 medium_line_spacing">
  
-	Get our beautiful sample box full of goodies, usually worth £7.99,
-		<% if (sample) { %>
-			for just
-			<% if (sample == 0.99) { %>
-				99p
-			<% } else { %>
-				&pound;<%= sample %>
-			<% } %>today:
-		<% } else { %>
-			completely free today:
-		<% } %>
+With our invitations, your guests aren&rsquo;t just opening a greeting card: they&rsquo;re unboxing a gift&hellip;
+ 
+	</div>
+
+
+<!-- VIDEO--------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------->
+
+	<div class="video">
+		<video muted preload loop autoplay playsinline src="/images/invitations/ace-of-hearts/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_50 centred" >
+			<source id="first_video_source" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	
+	
+
+	<div class="margin_bottom_small width_30 phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
+		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
+		Isn&rsquo;t there something satisfying about opening a beautifully-wrapped present, tied with a bow and adorned with a tag? The packaging is as important as the gift inside: when you open our invitations, it's like opening a gift rather than a greeting card
 	</div>
 
 
 
-
-	<div class="padding_top_small centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 margin_bottom_large">
-
-		<img src="/images/product/samplebox.png" style="width:95%;max-width:350px;" />
-
-		<%- include("partials/html_flexbox_benefits") %>
-
-		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
-
-		<img src="/images/1.svg" class="valign_middle opacity7 w20px inline_block" /> Choose the sample invitation suite you'd like to receive:
-
-	</div>
-
-	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
-
-		<div id="sample_slides" class="centred width_95 phablet_width_95 mobile_width_95">
-
-			<% products.forEach(function(product) { %>
-				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
-			<% }) %>
-
-      <a href="#" class="slidesjs-previous slidesjs-navigation">
-      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
-      </a>
-      
-      
-       
-       
-      <a href="#" class="slidesjs-next slidesjs-navigation">
-      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
-      </a>
-
-		</div>
-
-
-		<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
-			<%= products[0].clean_name %>
-		</div>
-	</div>
-
-<% if (sample) { %>
-
-	<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large margin_bottom_2em">
-		<img src="/images/2.svg" class="w20px inline_block valign_middle" />
-		Press the PayPal button!
-	</div>
-
-	<%- include("partials/html_paypal_button",{ chosen_sample:products[0].clean_name}) %>
-
-<% } else { %>
-
-	<%- include("partials/html_sample_form", { bullets: [2,3], chosen_sample:products[0].clean_name }) %>
-
- <% } %>
-
-</div>
-
-
+<form action="/sample?sample=<%=sample%>" method="get">
+	
+	<input type="hidden"name="sample" value="<%= sample%>">
+  <button type="submit" style="max-width:425px;min-width:400px;border-radius-top-right:20px;border-radius-bottom-right:20px;" class="margin_top_small margin_bottom_large width_70 margin_top_medium centred pure-button pure-button-primary font_f ">
+    <img src="/images/homepage/gifticon.svg" class="inline_block" style="vertical-align:center;width:22px;" /> Get your sample box now <img src="/images/homepage/rightarrow.svg" class="inline_block" style="width:20px;" />
+  </button></form>
+  
 	<article id="homepage_copywriting" class="padding_top_small centred phablet_width_80 width_50 tablet_width_70 mobile_width_97">
 
-		<div class="top_dotted full_width"></div>
-
-		<img src="/images/furniture/shell.svg" class="shell" />
-
 		<h2 class="subhead font_c mob_font_c centred">
-			Your wedding invitation is the first representation of you and your partner as a married couple&hellip;
+			It starts with the envelope.
 		</h2>
 
-		<p class="body">It's also the first impression guests will have of your big day.</p>
-
-		<p class="body">And the envelope containing it is the first thing your guests will see.</p>
-
-		<p class="body">It should feel like a privilege when they pick it up from their letterbox: do you want to fill them with anticipation, excitement and delight, or do you want them to think it's just another greeting card in the post?</p>
-
-		<h2 class="width_66 subhead text_center font_d mob_font_d  mobile_width_80">
-			We're all so used to seeing boring, plain envelopes when we receive cards:
+		<h2 class="subhead font_d mob_font_d centred">
+		Your envelope is the first thing your guests will see, and the first impression they will have of your big day.
 		</h2>
 
-		<p class="body">So why should a beautiful invitation be let down by a dull, plain envelope? Not spending time on the envelope is like badly wrapping a gift.</p>
 
-		<p class="body">The envelope should not be a second-class citizen.</p>
+
+		<p class="body">It should surprise, impress and delight them: make them feel excited to open it and find out what's inside.</p>
+		
+		
+		<p class="body">It shouldn't feel like a birthday card from Aunt Edith.</p>
+
+		<p class="body">And it shouldn't feel like an afterthought:</p>
+		
+		<p class="body">You wouldn't wrap a gift badly, so why settle for a dull, plain envelope?</p>
 
 	</article>
 
@@ -130,23 +83,6 @@
 
 
 
-
-
-<!-- VIDEO--------------------------------------------
---------------------------------------------------------
---------------------------------------------------------->
-
-	<div class="video margin_top_large">
-		<video muted preload loop autoplay playsinline src="/images/invitations/ace-of-hearts/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
-			<source id="first_video_source" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
-
-	<div class="margin_bottom_large width_30 phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
-		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
-		Isn't there something satisfying about opening a perfectly-wrapped present, tied with a bow and adorned with a tag? How something is packaged is as important as the gift inside...	opening an invitation should be an experience that delights your guests and makes them excited about your big day. That's why opening our invitations feels like opening a specially tailored gift rather than an average greeting card.
-	</div>
 
 
 
@@ -159,16 +95,18 @@
 
 	<article id="homepage_copywriting" class="centred phablet_width_80 width_50 tablet_width_70 mobile_width_97">
 
-		<p class="body">That's why that our envelopes come as something of an unexpected surprise. Tailor-made by hand, and imprinted with your own monogram, each envelope is also printed both inside and out with a matching intricate design that co-ordinates beautifully in the
+		<p class="body">That's why that our envelopes come as something of an unexpected surprise</p>
+		
+		<p class="body">Tailor-made by hand, and imprinted with your own monogram, each envelope is optionally adorned with a breathtaking foil seal and printed inside and out with a matching design that co-ordinates beautifully in the
 			same colour as the invitation it contains.</p>
 
-		<p class="body">They even come individually addressed to each guest: and if you opt for our box-envelopes, your guests really will feel like they are opening an invitation to an important event. </p>
+		<p class="body">Each envelope comes individually addressed to your guests: and if you opt for our box-envelopes, your guests really will feel like they are opening an invitation to an important event. </p>
 
 		<h2 class="width_66 font_d mob_font_d  subhead mobile_width_90">
-			The intricacy of our envelopes lend an exclusivity to your wedding invitations that will have your guests wondering how you made them.
+			Our highly bespoke envelopes lend an exclusivity to your wedding invitations that will have your guests wondering how you made them.
 		</h2>
 
-		<h2 class="width_90 font_d mob_font_d  text_center subhead">
+		<h2 class="width_90 font_c mob_font_c  text_center padding_bottom_large subhead">
 			But the envelopes are just the beginning...
 		</h2>
 
@@ -196,9 +134,16 @@
 
 	<div class="width_30  phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
 		<img src="/images/homepage/pointer_up.svg" class="w12px" /><br/>
-		You won't find anything like our exclusive envelopes: too many beautiful invitations are let down by boring unco-ordinating envelopes that leave them feeling unfinished. Our co-ordinating envelopes are the pièce de résistance that you won't be able to stop looking at.
+		You won't find anything like our exclusive envelopes: too many beautiful invitations are let down by boring unco-ordinating envelopes that leave them feeling unfinished. Our co-ordinating envelopes are the pièce de résistance that your guests won't be able to stop looking at.
 	</div>
 
+
+<form action="/sample?sample=<%=sample%>"method="get">
+	
+	<input type="hidden"name="sample" value="<%= sample%>">
+  <button type="submit" style="max-width:425px;min-width:400px;border-radius-top-right:20px;border-radius-bottom-right:20px;" class="margin_top_small margin_bottom_large width_70 margin_top_medium centred pure-button pure-button-primary font_f ">
+    <img src="/images/homepage/gifticon.svg" class="inline_block" style="vertical-align:center;width:22px;" /> Get your sample box now <img src="/images/homepage/rightarrow.svg" class="inline_block" style="width:20px;" />
+  </button></form>
 
 
 
@@ -272,18 +217,11 @@
 
 
 
-
-
-
-
-
-
-    <h2 class="subhead center width_80 font_e width_70">
-    	And while you're waiting for it to arrive, why not
-    	<a style="background-color:white;padding:2px;border:1px dashed grey;" href="/products">browse our designs <img src="/images/exit-top-right.svg " class="inline w15px opacity7" /></a>
-    	to see what takes your fancy&hellip;
-    </h2>
-
+<form action="/sample?sample=<%=sample%>" method="get">
+	<input type="hidden"name="sample" value="<%= sample%>">
+  <button type="submit" style="max-width:425px;min-width:400px;border-radius-top-right:20px;border-radius-bottom-right:20px;" class="margin_top_small margin_bottom_large width_70 margin_top_medium centred pure-button pure-button-primary font_f ">
+    <img src="/images/homepage/gifticon.svg" class="inline_block" style="vertical-align:center;width:22px;" /> Get your sample box now <img src="/images/homepage/rightarrow.svg" class="inline_block" style="width:20px;" />
+  </button></form>
 		<p class="body">P.S. If you have any questions at all, please just drop me an email at
 			<a href="mailto:david.p@casamiento.co.uk" class="bottom_dotted hover_1_underline">david@casamiento.co.uk</a>,
 			or feel free to
@@ -294,6 +232,8 @@
 		</p>
 
 	</article>
+	
+	
 
 
 		<%- include("partials/navigation/footer") %>

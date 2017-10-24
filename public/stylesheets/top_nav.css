@@ -25,6 +25,7 @@ body {
     position: fixed;
     right: 0;
     left: 0;
+    display:none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 0 5px 5px 5px;
@@ -159,7 +160,8 @@ li {
 .caption {
   font: 300 italic 1em /1.4em 'Raleway';
   text-align: center;
-  padding-bottom: 1em;
+  padding:0;
+  position:relative;top:-2em;
 }
 
 .subhead {

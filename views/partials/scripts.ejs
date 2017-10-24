@@ -82,12 +82,12 @@
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
 		// SLIDESHOW
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////
-	var default_slides = ["art-deco", "a-love-story","chess"];
-	var additional_slides = ["birds-of-paradise-diamante-spirals", "ace-of-hearts"];
+	var default_slides = ["simplicity", "serif-frame","chess"];
+	var additional_slides = ["butterfly", "art-deco-mono", "bride-and-groom"];
 
 	var slides_html = "";
 	default_slides.forEach(function(product) {
-		slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/four_700.jpg 700w, /images/invitations/' + product + '/four.jpg 1300w, /images/invitations/' + product + '/four_2000.jpg 2000w" class="rounded_corner_20"></a>'
+		slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a>'
 	})
 
 	$('#slides').html(slides_html)
@@ -95,7 +95,7 @@
 	if($('body').width() > 60) {
 		var slides_html = "";
 		additional_slides.forEach(function(product) {
-			slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a><a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/four_700.jpg 700w, /images/invitations/' + product + '/four.jpg 1300w, /images/invitations/' + product + '/four_2000.jpg 2000w" class="rounded_corner_20"></a>'
+			slides_html = slides_html + '<a href="/products/' + product + '"><img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite"></a>'
 		})
 		$('#slides').append(slides_html)
 	}
