@@ -4,10 +4,11 @@ $(function() {
 	var sendSampleView = Backbone.View.extend({
 		el: $('#form_sample'),
 		events: {
-			"submit": "sendForm",
+			"click #get_sample": "sendForm",
 			"click #paypal_button": "sendPaypal",
 		},
 		sendPaypal: function(e) {
+		alert("Pushed")
 			dataLayer.push({
 					"event": "FreeSampleRequest"
 				})
