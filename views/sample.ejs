@@ -48,6 +48,22 @@
 
 		<%- include("partials/html_flexbox_benefits") %>
 
+	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
+
+		<div id="sample_slides" class="centred width_95 phablet_width_95 mobile_width_95">
+
+			<% products.forEach(function(product) { %>
+				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
+			<% }) %>
+
+		</div>
+
+
+		<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
+			<%= products[0].clean_name %>
+		</div>
+	</div>
+
 <% if (sample) { %>
 
 	<div class="sans_subhead font_d text_center padding_bottom_medium padding_top_large margin_bottom_2em">
