@@ -48,13 +48,29 @@
 
 		<%- include("partials/html_flexbox_benefits") %>
 
-	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
+		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
+
+		<img src="/images/1.svg" class="valign_middle opacity7 w20px inline_block" /> Choose the sample invitation suite you'd like to receive:
+
+	</div>
+	<div id="choose_sample" class="width_80 mobile_width_97 phablet_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
 
 		<div id="sample_slides" class="centred width_95 phablet_width_95 mobile_width_95">
 
 			<% products.forEach(function(product) { %>
-				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
+				<img style="border-radius:20px;" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
 			<% }) %>
+
+      <a href="#" class="slidesjs-previous slidesjs-navigation">
+      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
+      </a>
+      
+      
+       
+       
+      <a href="#" class="slidesjs-next slidesjs-navigation">
+      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
+      </a>
 
 		</div>
 
@@ -65,10 +81,10 @@
 	</div>
 
 <% if (sample) { %>
-
-	<div class="sans_subhead font_d text_center padding_bottom_medium padding_top_large margin_bottom_2em">
-		Just press the PayPal button:
-	</div>
+<div class="sans_subhead font_ee text_left italic padding_bottom_medium padding_top_large">
+	<img src="/images/2.svg" class="w20px inline" style="vertical-align:middle;" />
+	Just press the PayPal button&hellip;
+</div>
 
 	<%- include("partials/html_paypal_button",{ chosen_sample:products[0].clean_name}) %>
 
