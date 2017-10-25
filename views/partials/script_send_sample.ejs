@@ -4,7 +4,21 @@ $(function() {
 	var sendSampleView = Backbone.View.extend({
 		el: $('#form_sample'),
 		events: {
-			"submit": "sendForm"
+			"submit": "sendForm",
+			"click #paypal_button": "sendPaypal",
+		},
+		sendPaypal: function(e) {
+			dataLayer.push({
+					"event": "FreeSampleRequest"
+				})
+				$.ajax({
+					type: "POST",
+					url: "/emails",
+					data: { type: "PayPal" },
+					success: function(data) {
+					}
+				});
+		 	
 		},
 		sendForm: function(e) {
 			e.preventDefault();
@@ -21,7 +35,9 @@ $(function() {
 			}
 
 			var postcode_regex = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/gi;
+			if(message.postcode) {
 			var postcode = message.postcode.match(postcode_regex);
+			}
 
 			if (!message.address) {
 				$('#error_address').removeClass("hidden")

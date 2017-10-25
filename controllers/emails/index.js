@@ -3,9 +3,50 @@ var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.co
 /* */
 exports.create = function(req, res, next) {
 
+
+if (req.body.type == "PayPal") {
+             MongoClient.connect(url, function(err, db) {
+
+        var sample_requests = db.collection("sample_requests");
+        
+        
+        sample_requests.insert({
+            name: "The PayPal button has been clicked!"
+        }, function(err, result) {
+            console.log(err, result)
+
+            db.close();
+        })
+    });
+    
+     var from_email = new helper.Email('david@dizzy.co.uk');
+            var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
+            var subject = 'A sample box request from PayPal';
+            var content = new helper.Content('text/plain', "PayPal butto has been pressed");
+
+            var mail = new helper.Mail(from_email, subject, to_email, content);
+
+            var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+            var request = sg.emptyRequest({
+                method: 'POST',
+                path: '/v3/mail/send',
+                body: mail.toJSON(),
+            });
+
+            sg.API(request, function(error, response) {
+                console.log(error, response)
+                if (!error) {
+                    res.sendStatus(200)
+                }
+            });
+            
+        }
+        else {
     MongoClient.connect(url, function(err, db) {
 
         var sample_requests = db.collection("sample_requests");
+        
+        
         sample_requests.insert({
             name: req.body.name,
             email: req.body.email,
@@ -74,4 +115,5 @@ exports.create = function(req, res, next) {
     else if (req.body.template == "download") {
 
     }
+        }
 }
