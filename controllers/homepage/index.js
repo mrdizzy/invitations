@@ -21,6 +21,7 @@ exports.index = function(req, res) {
         });
 
         sg.API(request, function(error, response) {
+            console.log(error, response)
             if (!error) {
                 res.sendStatus(200)
             }
