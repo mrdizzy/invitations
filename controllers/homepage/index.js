@@ -9,13 +9,11 @@ exports.index = function(req, res) {
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
         var subject = 'Homepage has been hit!';
         var details =  req.headers["user-agent"] 
-        var referr = "" || req.get("Referer")
      
-        var content = new helper.Content('text/plain', "Homepage has been hit\n" +referr + "\n" +  details);
+        var content = new helper.Content('text/plain', "Homepage has been hit\n" + "\n" +  details);
 
         var mail = new helper.Mail(from_email, subject, to_email, content);
 
-            
         var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
         var request = sg.emptyRequest({
             method: 'POST',
@@ -24,7 +22,6 @@ exports.index = function(req, res) {
         });
 
         sg.API(request, function(error, response) {
-            console.log(error, response)
             if (!error) {
                 res.sendStatus(200)
             }
