@@ -8,7 +8,7 @@ exports.index = function(req, res) {
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
         var subject = 'Homepage has been hit!';
-        var details = req.headers.referer + "\n" + req.headers["user-agent"] 
+        var details =  req.headers["user-agent"] 
         var content = new helper.Content('text/plain', "Homepage has been hit\n" + details);
 
         var mail = new helper.Mail(from_email, subject, to_email, content);
