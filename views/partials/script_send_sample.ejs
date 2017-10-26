@@ -8,7 +8,6 @@ $(function() {
 			"click #paypal_button": "sendPaypal",
 		},
 		sendPaypal: function(e) {
-		alert("Pushed")
 			dataLayer.push({
 					"event": "FreeSampleRequest"
 				})
@@ -19,6 +18,11 @@ $(function() {
 					success: function(data) {
 					}
 				});
+				
+window.uetq = window.uetq || []; 
+window.uetq.push
+({ 'ec':'buttonclick', 'ea':'', 'el':'getsample' }); 
+
 		 	
 		},
 		sendForm: function(e) {
