@@ -10,7 +10,7 @@ exports.index = function(req, res) {
         var subject = 'Homepage has been hit!';
         var details =  req.headers["user-agent"] 
      
-        var content = new helper.Content('text/plain', "Homepage has been hit\n" + "\n" +  details);
+        var content = new helper.Content('text/plain', "Homepage has been hit\n" + req.get("Referer") + "\n" +  details);
 
         var mail = new helper.Mail(from_email, subject, to_email, content);
 
@@ -23,7 +23,6 @@ exports.index = function(req, res) {
 
         sg.API(request, function(error, response) {
             if (!error) {
-                res.sendStatus(200)
             }
         });
     var cookie = req.cookies.sample_request;
