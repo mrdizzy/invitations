@@ -17,7 +17,7 @@ var emailLog = function(req, res, next) {
       var helper = require('sendgrid').mail;
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
-        var subject = 'A page has been hit on casamiento.co.uk';
+        var subject = req.ip + " has requested a page on casamiento"
         var details =  req.headers["user-agent"] 
      
         var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + details);
