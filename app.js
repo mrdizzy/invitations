@@ -18,7 +18,7 @@ var emailLog = function(req, res, next) {
         var subject = req.ip + " has requested a page on casamiento"
         var details =  req.headers["user-agent"] 
      
-        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + details +" \n\n" +  /Pingdom/.test(req.get("Referer"));
+        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + details +" \n\n" +  /Pingdom/.test(req.get("Referer")));
 
         var mail = new helper.Mail(from_email, subject, to_email, content);
 
