@@ -9,6 +9,34 @@ var routes = require('./routes/index');
 
 var app = express();
 
+
+
+var emailLog = function(req, res, next) {
+  
+
+      var helper = require('sendgrid').mail;
+        var from_email = new helper.Email('david@dizzy.co.uk');
+        var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
+        var subject = 'A page has been hit on casamiento.co.uk';
+        var details =  req.headers["user-agent"] 
+     
+        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + details);
+
+        var mail = new helper.Mail(from_email, subject, to_email, content);
+
+        var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+        var request = sg.emptyRequest({
+            method: 'POST',
+            path: '/v3/mail/send',
+            body: mail.toJSON(),
+        });
+
+        sg.API(request, function(error, response) {
+
+        });
+  next();
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -20,7 +48,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(emailLog);
 app.use('/', routes);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
