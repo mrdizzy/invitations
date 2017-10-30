@@ -12,7 +12,7 @@ var app = express();
 
 
 var emailLog = function(req, res, next) {
-      if (!(/Pingdom/.test(req.headers["user-agent"])) {
+      if (!(/Pingdom/.test(req.headers["user-agent"]))) {
       var helper = require('sendgrid').mail;
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
