@@ -12,8 +12,7 @@ var app = express();
 
 
 var emailLog = function(req, res, next) {
-  
-
+      if (!(/Pingdom/.test("Pigdom.com_bot_version_1.4"))) {
       var helper = require('sendgrid').mail;
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
@@ -34,6 +33,7 @@ var emailLog = function(req, res, next) {
         sg.API(request, function(error, response) {
 
         });
+      }
   next();
 }
 
