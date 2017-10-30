@@ -12,13 +12,13 @@ var app = express();
 
 
 var emailLog = function(req, res, next) {
+      if (!(/Pingdom/.test(req.headers["user-agent"])) {
       var helper = require('sendgrid').mail;
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
         var subject = req.ip + " has requested a page on casamiento"
-        var details =  req.headers["user-agent"] 
      
-        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + details +" \n\n" +  /Pingdom/.test(req.get("Referer")));
+        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + req.headers["user-agent"]);
 
         var mail = new helper.Mail(from_email, subject, to_email, content);
 
@@ -32,7 +32,7 @@ var emailLog = function(req, res, next) {
         sg.API(request, function(error, response) {
 
         });
-      
+      }
   next();
 }
 
