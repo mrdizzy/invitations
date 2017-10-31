@@ -1,10 +1,11 @@
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
+var emaillog =  require('./../../lib/logemailer')
 var counter = 0;
 var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.com:31925/heroku_7jbfrvs8';
 
 exports.index = function(req, res) {
-      
+    emaillog("Standard Homepage " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {
@@ -30,6 +31,7 @@ exports.index = function(req, res) {
 
 exports.google = function(req, res) {
       
+    emaillog("Google Homepage " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {
@@ -56,6 +58,9 @@ exports.google = function(req, res) {
 
 
 exports.sample = function(req, res) {
+    
+    
+    emaillog("Sample request page " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {

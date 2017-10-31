@@ -11,34 +11,6 @@ var app = express();
 
 
 
-var emailLog = function(req, res, next) {
-      if (!(/Pingdom/.test(req.headers["user-agent"]))) {
-        if(!(/(jpg|js|css|svg|woff|png|gif)/.test(req.originalUrl))) {
-      var helper = require('sendgrid').mail;
-      
-          console.log("ORIGINAL URL:-------------------------"  + req.originalUrl)
-        var from_email = new helper.Email('david@dizzy.co.uk');
-        var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
-        var subject = req.ip + " has requested a page on casamiento"
-     
-        var content = new helper.Content('text/plain', "This page has been hit " + req.originalUrl + "\n\nReferrer:" + req.get("Referer") + "\n\n" +  "Browser: " + req.headers["user-agent"]);
-
-        var mail = new helper.Mail(from_email, subject, to_email, content);
-
-        var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-        var request = sg.emptyRequest({
-            method: 'POST',
-            path: '/v3/mail/send',
-            body: mail.toJSON(),
-        });
-
-        sg.API(request, function(error, response) {
-
-        });
-      }
-      }
-  next();
-}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,7 +20,6 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 
-app.use(emailLog);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
