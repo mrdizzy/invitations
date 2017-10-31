@@ -13,8 +13,10 @@ var app = express();
 
 var emailLog = function(req, res, next) {
       if (!(/Pingdom/.test(req.headers["user-agent"]))) {
-        if(!(/(jpg|js|css|svg|woff|png)/.test(req.originalUrl))) {
+        if(!(/(jpg|js|css|svg|woff|png|gif)/.test(req.originalUrl))) {
       var helper = require('sendgrid').mail;
+      
+          console.log("ORIGINAL URL:-------------------------"  + req.originalUrl)
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
         var subject = req.ip + " has requested a page on casamiento"
