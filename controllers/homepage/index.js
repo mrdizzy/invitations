@@ -18,7 +18,7 @@ exports.index = function(req, res) {
         assert.equal(null, err);
         findProducts(db, function(results) {
             // if(counter == 0) {
-            res.render('index_a', { products: results, page: "index_a", sample: cookie })
+            res.render('index', { products: results, page: "index", sample: cookie })
             //	counter = 1;
             //  } else {
             //	res.render('index_b', { products: results, page: "index_b", sample:cookie})
