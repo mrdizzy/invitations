@@ -143,19 +143,8 @@ Get your own sample box, usually worth £7.99, completely FREE now. Each beautif
 		<%- include("partials/html_flexbox_benefits") %>
 
 
-<% if (sample) { %>
-<div class="sans_subhead font_ee text_left italic padding_bottom_medium padding_top_large">
-	<img src="/images/2.svg" class="w20px inline" style="vertical-align:middle;" />
-	Just press the PayPal button&hellip;
-</div>
-
-	<%- include("partials/html_paypal_button",{ chosen_sample:products[0].clean_name}) %>
-
-<% } else { %>
-
 	<%- include("partials/html_sample_form", { bullets: [1,2], chosen_sample:products[0].clean_name }) %>
 
- <% } %>
 
 
 
