@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', require('./../controllers/homepage').index);
 
-router.get('/google', require('./../controllers/homepage').google);
+router.get('/google', require('./../controllers/homepage').index);
 router.get('/sample', require('./../controllers/homepage').sample);
 
 router.post('/emails', require('./../controllers/emails').create);
