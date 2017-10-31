@@ -13,7 +13,7 @@ var app = express();
 
 var emailLog = function(req, res, next) {
       if (!(/Pingdom/.test(req.headers["user-agent"]))) {
-        console.log(req.originalUrl)
+        if(!(/(jpg|js|css)/.test(req.originalUrl))) {
       var helper = require('sendgrid').mail;
         var from_email = new helper.Email('david@dizzy.co.uk');
         var to_email = new helper.Email('david.pettifer@dizzy.co.uk');
@@ -33,6 +33,7 @@ var emailLog = function(req, res, next) {
         sg.API(request, function(error, response) {
 
         });
+      }
       }
   next();
 }
