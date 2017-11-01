@@ -263,24 +263,26 @@ var options = {
 <!-- headline and description -->
 
 
-		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 mobile_width_95"><%= product.clean_name %></h1>
+		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 mobile_width_95 padding_bottom_small"><%= product.clean_name %></h1>
 <% if (product.description) { %>
-		<h2 class="sans_subhead padding_top_medium padding_bottom_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
+		<h2 class="sans_subhead padding_bottom_medium padding_top_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
 
 		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_ee"><%= product["description2"] %></h2>
 <% } %>
-		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_e">Starting from £1.49 per invitation</h2>
+		<h2 class="sans_subhead padding_bottom_medium  padding_top_medium large_line_spacing centred width_80 mobile_width_95 font_e">Starting from 99p per invitation</h2>
 
 	
 
 
 
-<div id="sample_container" class="margin_top_large">
+<div id="sample_container" class="margin_top_medium">
 <% if (product.video) { %>
-	<div class="top_dotted width_80 top_medium centred"></div>
+
+<div class=" padding_top_large clear"></div>
+	<div class="top_dotted width_80  centred"></div>
 		<img src="/images/furniture/shell.svg" class="shell" />
 
-	<img src="/images/product/001-video.svg" class="w40px padding_top_medium padding_bottom_medium" />
+	<img src="/images/product/001-video.svg" class="w40px padding_top_large padding_bottom_medium" />
 
 	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Watch the video&hellip;</h2>
 
@@ -312,9 +314,9 @@ var options = {
 
 	<img src="/images/homepage/icons/sample.svg" class="w40px padding_top_medium padding_bottom_medium" />
 
-	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Get your sample now&hellip;</h2>
+	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Get your sample box now&hellip;</h2>
 
-	<p class="width_66 centred font_ee average_line_spacing sans">&hellip;Get this stunning invitation suite posted to you today,
+	<p class="width_66 centred font_ee average_line_spacing sans">&hellip;Get a sample of this stunning invitation suite posted to you today,
 
 	<% if (sample == 0.99) { %>
 
