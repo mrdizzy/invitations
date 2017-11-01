@@ -1,0 +1,53 @@
+<script>
+$(function() {
+    
+
+	    ///////////////////////////////////////////////////////////////////////////////////////////////////
+		// SLIDESHOW
+	    ///////////////////////////////////////////////////////////////////////////////////////////////////
+	var default_slides = ["ace-of-hearts", "simplicity","art-deco-mono", "art-deco"];
+	var additional_slides = ["chess", "butterfly","bride-and-groom", "serif-frame", "a-love-story"];
+
+	var slides_html = "";
+	default_slides.forEach(function(product) {
+		slides_html = slides_html + '<img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite">'
+	})
+
+	$('#slides').html(slides_html)
+
+	if($('body').width() > 60) {
+		var slides_html = "";
+		additional_slides.forEach(function(product) {
+			slides_html = slides_html + '<img sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/' + product + '/collage_700.jpg 700w, /images/invitations/' + product + '/collage_1300.jpg 1300w, /images/invitations/' + product + '/collage_2000.jpg 2000w" alt="Wedding stationery suite">'
+		})
+		$('#slides').append(slides_html)
+	}
+
+		$("#slides").slidesjs({
+			width: 2000,
+			height: 1409,
+
+			pagination: {
+				active: false
+			},
+			effect: {
+				slide: {
+					speed: 1000,
+				},
+			},
+			play: {
+				active: false,
+				auto: true,
+				interval: 2500,
+			},
+			navigation: {
+				active: false
+			},
+			callback: {
+				loaded: function(n) {
+					$('#slides_spinner').hide();
+				}
+			}
+		})
+}
+</script>

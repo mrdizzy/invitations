@@ -190,9 +190,9 @@ var options = {
 	
 		<script src="/javascripts/isInViewport.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
-
+<!--
 	<script src="/javascripts/items_cost.js"></script>
-	<script src="/javascripts/product.js"></script>
+	<script src="/javascripts/product.js"></script> -->
 	<%- include("../partials/script_send_sample") %>
 	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
@@ -218,11 +218,14 @@ var options = {
 <%- include("../partials/navigation/header") %>
 
 	<div class="width_70 centred tablet_full_width phablet_full_width mobile_full_width">
+		<% if(product.existing_images.length > 1 ) { %>
 		<img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
+		<% } %>
 		<div id="slides" class="mobile_full_width">
-		<% ["collage", "vellum", "boxenvelope", "closeup", "envelope", "rsvp", "info"].forEach(function(image) { %>
+		<% product.existing_images.forEach(function(image) { %>
 			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w,  /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
 		<% }) %>
+		<% if (product.existing_images.length > 1 ) { %>
       <a href="#" class="slidesjs-previous slidesjs-navigation">
       	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
       </a>
@@ -231,7 +234,7 @@ var options = {
       	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
       </a>
 		</div>
-
+<% } %>
 		<div class="left sans font_g" style="padding-top:3px;position:relative;padding-right:5px;z-index:99999;margin-top:-70px;padding-bottom:5px;border-top-right-radius:5px;background-color:white;"><img src="/images/furniture/zoom/001-interface.svg" class="inline w12px opacity6" style="padding-left:2px"> Click image to zoom</div>
 		
 <!-- Share icons -->
@@ -261,20 +264,21 @@ var options = {
 
 
 		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 mobile_width_95"><%= product.clean_name %></h1>
-
+<% if (product.description) { %>
 		<h2 class="sans_subhead padding_top_medium padding_bottom_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
 
 		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_ee"><%= product["description2"] %></h2>
-
+<% } %>
 		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_e">Starting from £1.49 per invitation</h2>
 
-		<div class="top_dotted width_80 top_medium centred"></div>
-		<img src="/images/furniture/shell.svg" class="shell" />
-
+	
 
 
 
 <div id="sample_container" class="margin_top_large">
+<% if (product.video) { %>
+	<div class="top_dotted width_80 top_medium centred"></div>
+		<img src="/images/furniture/shell.svg" class="shell" />
 
 	<img src="/images/product/001-video.svg" class="w40px padding_top_medium padding_bottom_medium" />
 
@@ -291,7 +295,7 @@ var options = {
 			Your browser does not support the video tag.
 		</video>
 	</div>
-
+<% } %>
 <div class=" padding_top_large clear"></div>
 		<div class="top_dotted width_80 top_medium centred"></div>
 		<img src="/images/furniture/shell.svg" class="shell" />
@@ -386,7 +390,7 @@ var options = {
 
 
 
-
+<!--
 <div>
 
 	<img src="/images/furniture/007-commerce.svg" style="width:50px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
@@ -404,8 +408,8 @@ var options = {
 
 
 
-<%- include("options", { options:options}) %>
-<%- include("show_quantities")%>
+<% include("options", { options:options}) %>
+<% include("show_quantities")%>
 
 				<button type="submit" class="clear pure-button pure-button-primary margin_top_medium margin_bottom_medium">Place order now<br/>
 				<img src="/images/furniture/bag.svg" class="padding_top_small" style="width:55px;" /></button>
@@ -413,11 +417,11 @@ var options = {
 				</div>
 
 
-
+-->
 
 
 <%- include(".././partials/navigation/footer") %>
-
+<% if(product.existing_images.length > 1) { %>
 <script>
 		$(function() {
 			$("#slides").slidesjs({
@@ -454,7 +458,6 @@ var options = {
 			var slidesTimeout;
 			$('#slides img').bind('cloudzoom_start_zoom', function() {
 				clearTimeout(slidesTimeout)
-				alert("stop")
 				$('.slidesjs-stop').click();
 			})
 			$('#slides img').bind('cloudzoom_end_zoom', function() {
@@ -468,6 +471,7 @@ var options = {
 })
 
 	</script>
+	<%} %>
 <script>
 	$(function() {
 
