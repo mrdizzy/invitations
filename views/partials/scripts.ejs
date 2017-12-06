@@ -7,13 +7,22 @@
 		//
 		////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+$('#slides_next').click(function() {
+	$('#sample_slides .slidesjs-next').click()
+})
+
+
+$('#slides_previous').click(function() {
+	$('#sample_slides .slidesjs-previous').click()
+})
 		var products = <%- JSON.stringify(products)  %>
 
 		$("#sample_slides").slidesjs({
 			width: 1500,
 			height: 1057,
 			navigation: {
-				active:false,
+				active:true,
 				effect: "fade"
 			},
 			pagination: {
@@ -21,12 +30,15 @@
 			},
 			effect: {
 				fade: {
-					speed: 1,
+					speed: 500,
+					crossfade: false
 				}
 			},
 			play: {
 				active: false,
-				auto: false
+				auto: true,
+				interval:3000,
+				effect: "fade",
 			},
 			callback: {
 				complete: function(number) {

@@ -1,11 +1,8 @@
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
-var emaillog =  require('./../../lib/logemailer')
-var counter = 0;
 var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.com:31925/heroku_7jbfrvs8';
 
 exports.index = function(req, res) {
-    emaillog("Standard Homepage " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {
@@ -17,13 +14,7 @@ exports.index = function(req, res) {
 
         assert.equal(null, err);
         findProducts(db, function(results) {
-            // if(counter == 0) {
             res.render('index', { products: results, page: "index", sample: cookie })
-            //	counter = 1;
-            //  } else {
-            //	res.render('index_b', { products: results, page: "index_b", sample:cookie})
-            //		counter = 0;
-            //   }
             db.close();
         })
     });
@@ -31,7 +22,6 @@ exports.index = function(req, res) {
 
 exports.google = function(req, res) {
       
-    emaillog("Google Homepage " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {
@@ -43,13 +33,7 @@ exports.google = function(req, res) {
 
         assert.equal(null, err);
         findProducts(db, function(results) {
-            // if(counter == 0) {
-            res.render('index_z', { products: results, page: "index_z", sample: cookie })
-            //	counter = 1;
-            //  } else {
-            //	res.render('index_b', { products: results, page: "index_b", sample:cookie})
-            //		counter = 0;
-            //   }
+            res.render('index_anim', { products: results, page: "index_z", sample: cookie })
             db.close();
         })
     });
@@ -59,8 +43,6 @@ exports.google = function(req, res) {
 
 exports.sample = function(req, res) {
     
-    
-    emaillog("Sample request page " + req.query.sample, req)  
     var cookie = req.cookies.sample_request;
 
     if ((cookie === undefined) && req.query.sample) {
@@ -72,13 +54,7 @@ exports.sample = function(req, res) {
 
         assert.equal(null, err);
         findProducts(db, function(results) {
-            // if(counter == 0) {
             res.render('sample', { products: results, page: "sample", sample: cookie })
-            //	counter = 1;
-            //  } else {
-            //	res.render('index_b', { products: results, page: "index_b", sample:cookie})
-            //		counter = 0;
-            //   }
             db.close();
         })
     });

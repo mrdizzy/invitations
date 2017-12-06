@@ -1,138 +1,194 @@
 <!doctype html>
 
-	<head>
+<head>
 
-<!-- Event snippet for Free sample box request conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<!-- Global site tag (gtag.js) - Google AdWords: 955776693 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-955776693"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-955776693');
-</script>
-
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-955776693/Pn9oCPXQ9G4Qtf3fxwM',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="/javascripts/isInViewport.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
-
-		<script src="/javascripts/jquery.slides.min.js"></script>
-		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-		<link href="http://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Raleway:200,200i,300,300i,400,400i" rel="stylesheet">
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
-		
+	<%- include("partials/script_google_tag_manager") %>
 	
-	</head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-955776693"></script>
+
+	<meta name="viewport" content="initial-scale=1,user-scalable=no">
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
 
 	<%- include("partials/script_noscript_gtm") %>
 	<%- include("partials/navigation/header") %>
-<div class="padding_top_medium">&nbsp;</div>
-	<div class="centred padding_bottom_small padding_top_large phablet_width_90 bring_to_front subhead font_c phablet_font_aa mob_font_b width_50 tablet_width_80 mobile_width_90">
- 
-From the moment your guests see the envelope, they&rsquo;ll know it&rsquo;s something special&hellip;
- 
-	</div>
-
-
-<!-- VIDEO--------------------------------------------
---------------------------------------------------------
---------------------------------------------------------->
-
-	<div class="video">
-		<video muted preload loop autoplay playsinline src="/images/invitations/ace-of-hearts/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
-			<source id="first_video_source" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
-	<div class="centred padding_bottom_small padding_top_medium phablet_width_90 bring_to_front subhead font_d  phablet_font_aa mob_font_c width_50 tablet_width_80 mobile_width_90">
- 
-<br/>
-		<div class="top_dotted full_width"></div>
-		<img src="/images/furniture/shell.svg" class="shell padding_bottom_small" />
 	
-Get your own sample box, usually worth £7.99, completely FREE now. Each beautifully wrapped box contains the following goodies:
- 
+	
+
+
+
+	<div id="sample_slides" class="left rounded_corner_20 mobile_no_rounded centred width_66 padding_top_medium phablet_no_float tablet_no_float mobile_full_width">
+
+		<% products.forEach(function(product) { %>
+			<img sizes="(max-width: 1200px) 100vw,66vw" 
+				srcset="/images/invitations/<%= product.name %>/collage_800.jpg 800w, 
+						/images/invitations/<%= product.name %>/collage_1000.jpg 1000w,
+						/images/invitations/<%= product.name %>/collage_1300.jpg 1300w,
+						/images/invitations/<%= product.name %>/collage_1500.jpg 1500w,
+						/images/invitations/<%= product.name %>/collage_2000.jpg 2000w" 
+						alt="Wedding stationery suite">
+		<% }) %>
+
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="margin_left_67 centred  padding_top_small mobile_full_width phablet_full_width tablet_full_width mobile_no_margin phablet_no_margin tablet_no_margin">
+		
+		<div class="subhead font_d phablet_font_aa mob_font_d width_90 tablet_width_80 mobile_width_90">
+			Get your own sample box, usually worth £7.99, completely FREE now
+		</div>
+	
+		<div class="sans_subhead font_f text_left padding_bottom_medium ">
+
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="22px" height="22px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<path d="M256,0C114.609,0,0,114.609,0,256c0,141.391,114.609,256,256,256c141.391,0,256-114.609,256-256
+		C512,114.609,397.391,0,256,0z M256,472c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z
+		"/>
+				<path d="M249.703,201.25H188v-25h19.312c6.859,0,13.422-1.219,19.5-3.594c6.172-2.375,11.438-5.641,15.797-9.797
+			c4.358-4.203,7.922-9.25,10.547-15.234c2.734-5.906,4.047-12.5,4.047-19.625H284v256h-34.297V201.25z"/>
+			</svg>
+
+ 			Choose the sample invitation suite to receive:
+
+		</div>
+	
+		<div class="centred">
+	
+			<a href="#" id="slides_previous">
+			  <img src="/images/left-chevron.svg" class="element_hover padding_top_small w50px inline">
+			</a>
+			
+			<a href="#" id="slides_next">
+			  <img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
+			</a>
+		
+			<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
+				<%= products[0].clean_name %>
+			</div>
+		</div>
+		
+		
+		<%- include("partials/html_sample_form", { bullets: [2,3], chosen_sample:products[0].clean_name }) %>
+	
+	</div>
+
+
+
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	<div class="padding_top_small centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 margin_bottom_large">
 
-		<img src="/images/product/samplebox.png" style="width:95%;max-width:350px;" />
+	<div class="centred clear padding_bottom_small padding_top_medium phablet_width_90 bring_to_front subhead font_c  phablet_font_aa mob_font_c width_40 tablet_width_80 mobile_width_90">
+ 
+		<br/>
+
+		<div class="top_dotted full_width"></div>
+	
+	
+		<img src="/images/furniture/shell.svg" class="shell padding_bottom_large" />
+	 Each beautifully wrapped box contains the following goodies:
+ 
+	</div>
+ 
+ 
+
+	<img src="/images/sample_unboxing/sample_frame_1_1920.jpg" class="rounded_corner_20 width_70 mobile_full_width phablet_full_width tablet_full_width" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/sample_unboxing/sample_frame_1_1920.jpg 1920w, /images/sample_unboxing/sample_frame_1_960.jpg 960w" />
+	
+
+
+	<div class="padding_top_large centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 margin_bottom_large">
+
 
 		<%- include("partials/html_flexbox_benefits") %>
 
-		<div class="sans_subhead font_ee text_left padding_bottom_medium padding_top_large">
-
-		<img src="/images/1.svg" class="valign_middle opacity7 w20px inline_block" /> Choose the sample invitation suite you'd like to receive:
-
 	</div>
-
-	<div id="choose_sample" class="width_80 mobile_width_95 centred padding_top_medium rounded_corner_20" style="border:1px solid grey;">
-
-		<div id="sample_slides" class="centred width_95 phablet_width_95 mobile_width_95">
-
-			<% products.forEach(function(product) { %>
-				<img style="border-radius:20px;" sizes="(max-width: 1200px) 95vw,100vw" srcset="/images/invitations/<%= product.name %>/collage_700.jpg 700w, /images/invitations/<%= product.name %>/collage_1300.jpg 1300w, /images/invitations/<%= product.name %>/collage_1500.jpg 2000w" alt="Wedding stationery suite" class="rounded_corner_20">
-			<% }) %>
-
-      <a href="#" class="slidesjs-previous slidesjs-navigation">
-      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
-      </a>
-      
-      
-       
-       
-      <a href="#" class="slidesjs-next slidesjs-navigation">
-      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
-      </a>
-
+	
+	
+	
+	
+	
+	
+	
+	
+  
+  
+  
+  
+		<div class="centred padding_bottom_small width_50  padding_top_large phablet_width_90 bring_to_front subhead font_c phablet_font_aa mob_font_b tablet_width_80 mobile_width_90">
+	 		From the moment your guests see the envelope, they&rsquo;ll know it&rsquo;s something special&hellip;
 		</div>
 
-
-		<div class="serif_headline font_c letter-spaced padding_top_small padding_bottom_medium" id="sample_name">
-			<%= products[0].clean_name %>
-		</div>
-	</div>
-
-
-	<%- include("partials/html_sample_form", { bullets: [2,3], chosen_sample:products[0].clean_name }) %>
-
-
-
-
-</div>
-</div>
-
   
   
-  
-  
-	<article id="homepage_copywriting" class="padding_top_large centred phablet_width_80 width_50 tablet_width_70 mobile_width_97">
+	<article id="homepage_copywriting" class="padding_top_large centred phablet_width_80 width_50 tablet_width_70 mobile_width_97 clear">
 
 		<div class="top_dotted full_width"></div>
 		<img src="/images/furniture/shell.svg" class="shell padding_bottom_medium" />
@@ -198,18 +254,6 @@ Get your own sample box, usually worth £7.99, completely FREE now. Each beautif
 
 
 
-
-
-<!-- VIDEO--------------------------------------------
---------------------------------------------------------
---------------------------------------------------------->
-
-	<div class="video">
-		<video preload muted loop autoplay playsinline id="second_video" src="/images/invitations/art-deco/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
-			<source id="second_video_source" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
 
 	<div class="width_30 phablet_width_80 tablet_width_70 mobile_width_80 centred caption clear">
 		<img src="/images/homepage/pointer_up.svg" class="w12px margin_bottom_small" />
@@ -294,12 +338,22 @@ Get your own sample box, usually worth £7.99, completely FREE now. Each beautif
 
 	</article>
 
+		
 
-		<%- include("partials/navigation/footer") %>
-		<%- include("partials/scripts") %>
-		<%- include("partials/script_video") %>
-		<%- include("partials/script_send_sample") %>
+	<%- include("partials/navigation/footer") %>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
+	<link rel="stylesheet" href="/stylesheets/top_nav.min.css" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Junge');
 
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+	<script src="/javascripts/jquery.slides.min.js"></script>
+	
+	<%- include("partials/scripts") %>
+	<%- include("partials/script_send_sample") %>
 </body>
 
 </html>
