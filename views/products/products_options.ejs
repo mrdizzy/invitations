@@ -1,4 +1,176 @@
-
+<% page = "products" + "/" + product.clean_name %>
+<%
+var options = {
+  "card_format": {
+    "A6_Flat": {
+      "description": "Printed front and back on A6 card",
+      "type": "radio",
+      "cost": 0
+    },
+    "A6_Foldout": {
+      "description": "Printed inside and outside, with a matching printed vellum cover to protect your invitation",
+      "type": "radio",
+      "cost": 0.59
+    }
+  },
+  "card_texture": {
+    "Plain_lightweight": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0
+    },
+    "Plain_middleweight": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": "0.10"
+    },
+    "Plain_heavyweight": {
+      "description": "Smooth, matt, white card: no texture or gloss. It might be the lowest-cost option, but don't underestimate the beauty of simplicity: this thick, 400gsm card feels gorgeous in your hands. Works brilliantly with our more contemporary designs.",
+      "type": "radio",
+      "cost": 0.15
+    },
+    "Pearlescent": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.44
+    },
+    "Linen": {
+      "description": "Linen paper looks and feels like the fine linen fabric for which it is named. It has a subtle embossed texture with a crosshatch pattern that is reminiscent of a fine linen table cloth.",
+      "type": "rdio",
+      "cost": 0.24
+    },
+    "Laid": {
+      "description": "Laid paper is a type of paper having a ribbed texture imparted by the manufacturing process",
+      "type": "radio",
+      "cost": 0.24
+    },
+    "Hammered": {
+      "description": "HammeredThis texture has indentations produced or appearing to have been produced by hammering, and is considered a traditional choice for wedding invitations: works well with our floral and vintage styles.",
+      "type": "radio",
+      "cost": 0.24
+    },
+    "Kraft": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.4
+    }
+  },
+  "embellishment": {
+    "Paper_wrap": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.17,
+      "extension": "png",
+      "width": 110
+    },
+    "Acrylic_Heart": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.57,
+      "extension": "png"
+    },
+    "Acrylic_Oval": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.49,
+      "extension": "png",
+      "width": "50"
+    },
+    "Diamante_square": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 1.47,
+      "extension": "png"
+    },
+    "Diamante_circle": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 1.47,
+      "extension": "png"
+    },
+    "Diamante_Heart": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 1.29,
+      "extension": "png"
+    },
+    "Ribbon": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "type": "radio",
+      "cost": 0.32,
+      "extension": "png"
+    }
+  },
+  "envelope_style": {
+    "Plain": {
+      "description": "Unprinted envelopes in the same texture as your chosen card texture above.",
+      "type": "radio",
+      "cost": 0
+    },
+    "Matching": {
+      "description": "Printed inside and outside with a beautiful matching intricate design, this is the ultimate choice for stunning invitations.",
+      "type": "radio",
+      "cost": 0.89,
+      "extension": "png"
+    },
+    "Plain_box": {
+      "description": "Envelope boxes make opening your invitation feel like opening a gift. Not only do they keep your invitations safer, but they are essential for invitations with embellishments such as ribbons and for invitations containing a lot of enclosures (reply cards, direction cards).",
+      "type": "radio",
+      "cost": 0.67,
+      "width": 80
+    },
+    "Matching_box": {
+      "description": "The absolute pinnacle of invitation envelopes: a box envelope printed with your invitation's matching design.",
+      "type": "radio",
+      "cost": 1.36,
+      "extension": "png",
+      "width": 80
+    }
+  },
+  "guest_personalisation": {
+    "Envelope_addressing": {
+      "description": "Send us a list of your guest names and addresses and we will individually print each one on the envelope.",
+      "type": "checkbox",
+      "cost": 0.18
+    },
+    "Invitation_addressing": {
+      "description": "Your guest names will be printed on each invitation and any accompanying RSVP cards, just send us a list.",
+      "type": "checkbox",
+      "cost": 0.17
+    }
+  },
+  "extras": {
+    "RSVP": {
+      "description": "Make it easy for guests to reply to your invitation.",
+      "type": "checkbox",
+      "cost": 0.37
+    },
+    "Information_card": {
+      "description": "Provide essential information for guests about your wedding.",
+      "type": "checkbox",
+      "cost": 0.49
+    },
+    "Direction_map": {
+      "description": "Save time and hassle for you and your guests by having a custom drawn map and directions to your venue, avoiding the need to field calls on your big day from lost guests. You pay a one-off cost of £25.00 regardless of how many invitations you order",
+      "type": "checkbox",
+      "cost": 25
+    },
+    "Corner_rounding": {
+      "description": "Each item of your stationery will have rounded corners, for an even more bespoke look.",
+      "type": "checkbox",
+      "cost": 0.25
+    },
+    "Tissue_paper": {
+      "description": "Delicate tissue paper, printed with your invitation's matching design, comes free of charge to separate each item within your suite.",
+      "type": "checkbox",
+      "disabled": true,
+      "cost": 0,
+      "extension": "png",
+      "width": "90"
+    }
+  }
+}
+%>
 
 <!--
 <div>

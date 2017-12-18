@@ -1,8 +1,9 @@
+var products = [ "ace-of-hearts", "art-deco", "simplicity", "art-deco-mono", "chess", "birds-of-paradise-diamante-spirals", "bride-and-groom", "butterfly", "floral-woodcut", "serif-frame", "together-forever", "typeface","wild-magic"]
+
 $('#slides_next').click(function(e) {
 	e.preventDefault()
 	$('#sample_slides .slidesjs-next').click()
 })
-
 
 $('#slides_previous').click(function(e) {
 	e.preventDefault()
@@ -37,9 +38,10 @@ $("#sample_slides").slidesjs({
 		},
 		complete: function(number) {
 			var cp = products[number - 1];
-			$('#sample_name').html(cp.clean_name)
-			$('#which_sample').val(cp.clean_name)
-			$('#paypal_item').val(cp.clean_name)
+			cp = cp.split("-").join(" ")
+			$('#sample_name').html(cp)
+			$('#which_sample').val(cp)
+			$('#paypal_item').val(cp)
 		}
 	}
 })
@@ -103,6 +105,10 @@ $(function() {
 					url: "/emails",
 					data: message,
 					success: function(data) {
+						window.uetq = window.uetq || []; 
+						window.uetq.push
+						({ 'ec':'buttonclick', 'ea':'getsample', 'el':'', 'ev':'0' }); 
+						
 						$('#form_sample_spinner').hide();
 						$('#post_text').hide();
 						$('#form_check').show();

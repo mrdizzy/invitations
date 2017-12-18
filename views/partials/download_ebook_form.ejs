@@ -63,3 +63,45 @@
 	<div class="top_solid full_width"></div>
 	<img src="/images/furniture/flourish.svg" class="flourish" />
 </div>
+
+<script>
+	
+	$('#download_form').submit(function(e) {
+		e.preventDefault();
+		$('#error_download_name').addClass("hidden");
+		$('#error_download_email').addClass("hidden");
+	
+		var message = {
+			name: $('#download_name').val(),
+			email: $('#download_email').val(),
+			template: 'download'
+		}
+	
+		if (!message.name) {
+			$('#error_download_name').removeClass("hidden")
+			$('#download_name').css("border-color", "#81BF08").css("border-width", "2px")
+		}
+	
+		if (!message.email) {
+			$('#error_download_email').removeClass("hidden")
+			$('#download_email').css("border-color", "#81BF08").css("border-width", "2px")
+		}
+	
+		if (message.name && message.email) {
+	
+			$('#form_download_spinner').show();
+			$.ajax({
+				type: "POST",
+				url: "/emails",
+				data: message,
+				success: function(data) {
+					$('#form_download_spinner').hide();
+					$('#post_text').hide();
+					
+					$('#download_icon').hide();
+					$('#download_form_check').show();
+				}
+			});
+		}
+	})
+</script>

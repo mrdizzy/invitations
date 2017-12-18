@@ -40,6 +40,52 @@
 .bottom_dotted { border-bottom: 1px dotted #000 }
 .top_solid { border-top: 1px solid #000 }
 
+@media all and (min-width: 800px) and (max-width: 1200px) {
+	/* ----------------------------------------------------------------------------- */
+
+	.tablet_no_rounded { border-radius: 0; }
+	.tablet_no_float { float: none;	}
+	.tablet_full_width {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	.no_padding_tablet { padding: 0; }
+	.tablet_no_margin { margin: 0; }
+	.tablet_clear {	clear: both; }
+	
+	.tablet_width_40 { width: 40%; }
+	.tablet_width_50 { width: 50%; }
+	.tablet_width_60 { width: 60%; }
+	.tablet_width_66 { width: 66%; }
+	.tablet_width_70 { width: 70%; }
+	.tablet_width_80 { width: 80%; }
+	.tablet_width_90 { width: 90%; }
+}
+/* Phablet */
+
+@media all and (min-width: 600px) and (max-width: 800px) {
+	/* ----------------------------------------------------------------------------- */
+	.phablet_no_rounded { border-radius: 0; }
+	.phablet_no_margin { margin: 0 auto; }
+	.phablet_clear { clear: both; }
+
+	.no_padding_phablet { padding: 0; }
+
+	.phablet_full_width {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+	.phablet_width_40 { width: 40%; }
+	.phablet_width_50 {	width: 50%;	}
+	.phablet_width_60 {	width: 60%;	}
+	.phablet_width_66 {	width: 66%;	}
+	.phablet_width_70 { width: 70%;	}
+	.phablet_width_80 {	width: 80%;	}
+	.phablet_width_90 {	width: 90%;	}
+	.phablet_width_95 {	width: 95%;	}
+}
 @media all and (min-width: 100px) and (max-width: 600px) {
 	#casamiento_logo {
 		float: left;
