@@ -1,28 +1,74 @@
 <!doctype html>
-
+<html>
 	<head>
 		<meta name="viewport" content="initial-scale=1,user-scalable=no">
+	<style type="text/css">.subhead, #browse_container { font-family:sans-serif;}</style>
 	</head>
+	<style type="text/css">
+		img { width:100%; }
+		#slides { display:none; }
+		h3 { font-family: Junge;
+		
+	</style>
 
-<body>
+<body>		<h3>Another style of stuff</h3>
+<p>Kirsty dearlove is everything to me</p>
+<p>William Kelly is here on my sofa</p>
+<p>Jennifer is smelling of poo poo</p>	<h3>Another style of stuff</h3>
+<p>Kirsty dearlove is everything to me</p>
+<p>William Kelly is here on my sofa</p>
+<p>Jennifer is smelling of poo poo</p>
+<div id="loading">
 	
-	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
-
-<div id="browse_container" class="centred bring_to_front">
-	<a href="/products"><img src="/images/furniture/browse.svg" id="book" /></a>
-	<a href="/products" class="sans bottom_dotted hover_1_underline">BROWSE DESIGNS</a>
+	<img src="/images/invitations/ace-of-hearts/collage_100.jpg" />
 </div>
-
-<img src="/images/logo/drms.svg" class="bring_to_front" id="dreams_slogan" />
+	<div id="slides">
 	
-	<div class="centred padding_bottom_small padding_top_large phablet_width_90 bring_to_front subhead font_c phablet_font_aa mob_font_b width_50 tablet_width_80 mobile_width_90">
- 		From the moment your guests see the envelope, they&rsquo;ll know it&rsquo;s something special&hellip;
+	<img src="/images/invitations/ace-of-hearts/vellum_100.jpg" />
+	
+	<img src="/images/invitations/ace-of-hearts/closeup_800.jpg" />
 	</div>
-<video playsinline autoplay muted loop src="/images/sample_unboxing/verylow.mp4" preload class="mobile_width_90">
-	
-  <source src="/images/sample_unboxing/verylow.mp4" type="video/mp4" />
-</video>
+	<h2>Here we go</h2>
+	<h3>Another style of stuff</h3>
+<p>Kirsty dearlove is everything to me</p>
+<p>William Kelly is here on my sofa</p>
+<p>Jennifer is smelling of poo poo</p>
+<footer></footer>
 </body>
+<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Junge" rel="stylesheet">
+</noscript>
 
-		<link href="http://fonts.googleapis.com/css?family=Junge|Playfair+Display+SC|Raleway:300,300i" rel="stylesheet">
+ <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+<script>
+
+	var tag = document.createElement("script");
+tag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+tag.src.async = false
+document.getElementsByTagName("footer")[0].appendChild(tag);
+
+	var tag = document.createElement("script");
+tag.src = "/javascripts/jquery.slides.min.js";
+tag.src.async = false
+document.getElementsByTagName("footer")[0].appendChild(tag);
+
+	var tag = document.createElement("script");
+tag.src = "/javascripts/slides.js";
+tag.src.async = false
+document.getElementsByTagName("footer")[0].appendChild(tag);
+
+</script>
+
 </html>

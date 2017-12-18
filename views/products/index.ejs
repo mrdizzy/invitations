@@ -1,16 +1,8 @@
 <!doctype html>
+<html>
 	<head>
 		
-		<%- include(".././partials/script_google_tag_manager") %>
-		
-		<meta name="viewport" content="initial-scale=1,user-scalable=no">
-		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css">
-		<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css">
 	
-		<%- include(".././partials/script_noscript_gtm") %>
-		
 			<% function CasamientoTruncatetitle(title) {
 				if (title) {
 					 var newtitle =  title.split(" ").slice(0,15);
@@ -18,139 +10,90 @@
 				}
 			}
 		%>
+		
+		<style>
+			<%- include("../partials/css_main") %>
+			<%- include("../partials/css_fonts") %>
+			<%- include("../partials/css_widths_margins_padding") %>
+		</style>
+		
+		<meta name="viewport" content="initial-scale=1,user-scalable=no">
 	</head>
 	
 	<body>
+		
+	<%- include("../partials/navigation/header", { hide_browse: true}) %>
 
-
-	<a href="/"><img src="/images/logo/casamiento_black.svg" class="bring_to_front" id="casamiento_logo" /></a>
-
-	<img src="/images/logo/drms.svg" id="dreams_slogan" class="bring_to_front" />
-
-	<div class="width_85 centred tablet_width_90 phablet_width_95 clear mobile_full_width padding_top_larger no_padding_mobile ">
-
+<div class="width_90 centred mob_full_width padding_top_larger">
 		<% var counter = 0; %>
 			<% products.forEach(function(group) { %>
 
 				<% if (counter == 1) { %>
+<!--
 
-
-
-					<div class="width_75 phablet_width_90 tablet_width_80 centred mobile_width_95">
-						<img src="/images/horror_icons/car-collision.svg" class="padding_top_large w50px" />
-						<p class="padding_top_small font_c width_50 sans_subhead centred mob_font_c mobile_width_90">Avoid expensive mistakes! Don't buy your invitations until you've read this&hellip;</p>
-
-						<p class="padding_top_medium sans font_ee width_66 phablet_width_80 table_width_80 centred average_line_spacing mobile_width_90">
-							...empower yourself with knowledge by learning from the embarassing mistakes made by others! Download <span class="slant">The Invitation Horror Story Book</span> completely free now and discover:</p>
-
-
-						<img src="/images/homepage/horror_book.jpg" style="max-width:425px;" class="mobile_width_95 centred padding_top_medium" />
-						
-
-						<div class="padding_top_medium width_50 tablet_width_70 mobile_width_80 sans font_ee average_line_spacing centred">
-								<img src="/images/horror_icons/black-evil-cat.svg" class="w35px opacity4" />
-								<span class="slant">Three important reasons</span> why you must never order your stationery without asking for this first
-						</div>
-
-
-						<div class="padding_top_medium  width_50 tablet_width_70  mobile_width_80 sans font_ee average_line_spacing centred">
-								<img src="/images/horror_icons/creepy-ghost.svg" class="padding_top_small w35px opacity4" />
-							In our online age, <span class="slant">discover the one thing  brides aren't doing</span> any more when it comes to choosing their invitations and why they are living to regret it
-						</div>
-
-						<div class="padding_top_medium  width_50 tablet_width_70  mobile_width_80 sans font_ee average_line_spacing centred">
-								<img src="/images/horror_icons/ghost.svg" class="padding_top_small w35px opacity4" />
-							The one thing no one thinks to ask their stationery company: <span class="slant">this can spoil the most beautiful invitations</span> if you don't check first
-						</div>
-
-
-						<div class="padding_top_medium width_50 tablet_width_70 mobile_width_80 sans font_ee average_line_spacing centred">
-								<img src="/images/horror_icons/halloween.svg" class="padding_top_smal w35px opacity4" />
-							What you won't know about until your guests tell you: <span class="slant">don't hear it from your guests first,</span> avoid this happening to you 
-						</div>
-
-					</div>
+<%- include(".././partials/download_ebook_form") %>
 					
-					
-					
-					<form id="download_form" class="padding_bottom_large pure-form pure-form-stacked tablet_width_70  width_33 phablet_width_70 mobile_width_95 centred">
-						<fieldset>
-							<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_name">
-								<img src="/images/furniture/danger.svg"class="w25px opacity4" /> 
-								Please enter your name
-							</p>
-		
-
-							<input type="text" id="download_name" name="download_name" placeholder="Name" autocomplete></input>
-							<p class="sans  font_ee average_line_spacing padding_top_medium centred hidden" style="color:#999" id="error_download_email"><img src="/images/furniture/danger.svg" style="width:25px;opacity:0.4" /> Please enter your email</p>
-		
-							<input id="download_email" type="email" name="download_email" placeholder="Email address" autocomplete></input>
-
-						</fieldset>
-
-						<button type="submit" class="width_90 mobile_full_width centred pure-button pure-button-primary margin_bottom">Download Free Now! 
-											
-						<img src="/images/furniture/check.svg" id="download_form_check" style="display:none;width:80px;padding-top:1em;padding-bottom:1em;" />
-						<img src="/images/furniture/ellipsis.svg" style="display:none;" id="form_download_spinner"/></button>
-
-					</form>
-					
-					
-					<div class="padding_top_large padding_bottom_large">
-						<div class="top_solid full_width"></div>
-						<img src="/images/furniture/flourish.svg" class="flourish" />
-					</div>
-					
-					
+					-->
 					<% } %>
 
 
 
 
+<div class="left width_60 padding_top_large mob_padding_top_small mob_clear phablet_clear mob_full_width phablet_width_80">
 
+	<h1 class="font_large letter-spaced text_center cinzel padding_bottom_small">
+		<a href="/products/<%= group[0].name %>"><%= group[0].clean_name %></a>
+	</h1>
 
+	<a href="/products/<%= group[0].name %>">
 
-
-
-				<div class="left_column left width_60 clear_mobile phablet_clear mobile_full_width phablet_width_80 phablet_centred mobile_centred ">
-
-					<h1 class="font_b mob_font_b phablet_font_a letter-spaced text_center serif_headline padding_bottom_small product_name">
-						<a href="/products/<%= group[0].name %>" class="hover_2_underline_dotted"><%= group[0].clean_name %></a>
-					</h1>
-
-					<a href="/products/<%= group[0].name %>">
-
-					<img src="/images/invitations/<%= group[0].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[0].name %>/collage_800.jpg 700w, /images/invitations/<%= group[0].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[0].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[0].name %>/collage_800.jpg 300w" class="rounded_corner_20 width_90 mobile_width_95">
+		<img src="/images/invitations/<%= group[0].name %>/collage_800.jpg" 
+			sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 
+			
+			srcset="/images/invitations/<%= group[0].name %>/collage_800.jpg 700w, 
+			/images/invitations/<%= group[0].name %>/collage_1000.jpg 1000w, 
+			/images/invitations/<%= group[0].name %>/collage_1500.jpg 1500w,
+			/images/invitations/<%= group[0].name %>/collage_800.jpg 300w" 
+			
+			class="rounded_corner_20 width_90 mob_width_95">
 <!--
-					<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small  width_50 centred" />
-					
-					<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_e mob_font_e phablet_font_d width_90 mobile_width_95 phablet_full_width">
-						<a href="/products/<%= group[0].name %>" class="block small_padding"><span class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></span></a>
-					</div>
-					-->
-					<div class="top_solid width_90 centred margin_top_large"></div>
-					<img src="/images/furniture/flourish.svg" class="flourish" />
-
-				</div>
-
-
-
-
-
-
-
-	<% if (group[1]) { %>
-		<div class="right_column right width_40 clear_mobile mobile_width_95 phablet_clear phablet_centred phablet_width_80 mobile_centred">
-			<h1 class="serif_headline letter-spaced font_d text_center quarter_padding_vertical product_name phablet_font_a mob_font_b">
-				<a href="/products/<%= group[1].name %>" class="hover_2_underline_dotted">
-					<%= group[1].clean_name %>
-				</a>
-			</h1>
-
-			<a href="/products/<%= group[1].name %>">
+	<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small  width_50 centred" />
 	
-					<img src="/images/invitations/<%= group[1].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[1].name %>/collage_800.jpg 700w, /images/invitations/<%= group[1].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[1].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[1].name %>/collage_800.jpg 300w" class="rounded_corner_20">
+	<div class="light_grey_background small_rounded_border centred sans_subhead average_line_spacing font_e mob_font_e phablet_font_d width_90 mobile_width_95 phablet_full_width">
+		<a href="/products/<%= group[0].name %>" class="block small_padding"><span class="hover_1_underline_dotted"><%= group[0].description %> <%= CasamientoTruncatetitle(group[0].description2) %></span></a>
+	</div>
+	-->
+	<div class="top_solid width_90  mob_full_width centred margin_top_large"></div>
+	<img src="/images/furniture/flourish.svg" style="position:relative;top:-0.75em;padding:0.25em;" class="bgwhite w50px" />
+
+</div>
+
+
+
+
+
+
+
+<% if (group[1]) { %>
+	<div class="width_40 right mob_full_width phablet_clear phablet_centred phablet_width_80 mob_clear">
+		<h1 class="cinzel font_large padding_bottom_small letter-spaced text_center product_name">
+			<a href="/products/<%= group[1].name %>">
+				<%= group[1].clean_name %>
 			</a>
+		</h1>
+
+		<a href="/products/<%= group[1].name %>">
+
+				<img src="/images/invitations/<%= group[1].name %>/collage_800.jpg" 
+				sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 
+				
+				srcset="/images/invitations/<%= group[1].name %>/collage_800.jpg 700w, 
+				/images/invitations/<%= group[1].name %>/collage_1000.jpg 1000w, 
+				/images/invitations/<%= group[1].name %>/collage_1500.jpg 1500w,
+				/images/invitations/<%= group[1].name %>/collage_800.jpg 300w" 
+				
+				class="rounded_corner_20 width_90 mob_width_95">
+		</a>
 <!--
 			<img src="/images/furniture/triangle_up.svg" class="negative_top_margin_small width_50 centred" />
 
@@ -161,11 +104,11 @@
 				</a>
 			</div>
 			-->
-			<div class="top_solid full_width margin_top_large width_80 centred"></div>
-			<img src="/images/furniture/flourish.svg" class="flourish" />
+		<div class="top_solid margin_top_large  mob_full_width  width_90 centred"></div>
+		<img src="/images/furniture/flourish.svg" style="position:relative;top:-0.75em;padding:0.25em;" class="bgwhite w50px" />
 		
-		</div>
-		<% } %>
+	</div>
+<% } %>
 
 
 
@@ -173,19 +116,27 @@
 
 
 
-
+			<!-- MIDDLE COLUMN -->
 
 			<% if (group[2]) { %>
-				<div class="middle_column centred clear width_70 phablet_width_80 mobile_width_95">
-					<h1 class="font_a serif_headline padding_bottom_small letter-spaced product_name mob_font_b  phablet_font_a ">
+				<div class="centred clear width_66 phablet_width_80 mob_full_width">
+					<h1 class="cinzel font_large padding_bottom_small  letter-spaced">
 						<a href="/products/<%= group[2].name %>" class="hover_2_underline_dotted">
 							<%= group[2].clean_name %>
 						<a>
 					</h1>
 
 					<a href="/products/<%= group[2].name %>">
-					
-					<img src="/images/invitations/<%= group[2].name %>/collage_800.jpg" sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" srcset="/images/invitations/<%= group[2].name %>/collage_800.jpg 700w, /images/invitations/<%= group[2].name %>/collage_1000.jpg 1000w, /images/invitations/<%= group[2].name %>/collage_1500.jpg 1500w,/images/invitations/<%= group[2].name %>/collage_800.jpg 300w" class="rounded_corner_20">
+						
+						<img src="/images/invitations/<%= group[2].name %>/collage_800.jpg" 
+						sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 
+						
+						srcset="/images/invitations/<%= group[2].name %>/collage_800.jpg 700w, 
+						/images/invitations/<%= group[2].name %>/collage_1000.jpg 1000w, 
+						/images/invitations/<%= group[2].name %>/collage_1500.jpg 1500w,
+						/images/invitations/<%= group[2].name %>/collage_800.jpg 300w" 
+						
+						class="rounded_corner_20 width_90 mob_width_95">
 					</a>
 
 <!--
@@ -196,20 +147,34 @@
 						<a href-"/products/<%= group[2].name %>" class="block small_padding"><span class="hover_2_underline_dotted"><%= group[2].description %>	<%= CasamientoTruncatetitle(group[2].description2) %></span></a>
 					</div>
 -->
-					<div class="top_solid full_width margin_top_large"></div>
-					<img src="/images/furniture/flourish.svg" class="flourish" />
+					<div class="top_solid width_90 mob_full_width centred margin_top_large"></div>
+					<img src="/images/furniture/flourish.svg" style="position:relative;top:-0.75em;padding:0.25em;" class="bgwhite w50px" />
 				
 				</div>
 				
 				<% } %>
 					<% counter = counter + 1 %>
-						<% }) %>
-				</div>
-
+						<% }) %></div>
 	<%- include("../partials/navigation/footer") -%>
+	
+<noscript id="deferred-styles">
+	<link href="http://fonts.googleapis.com/css?family=Junge|Cinzel|Raleway:300,300i" rel="stylesheet">
+</noscript>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
+
+	var loadDeferredStyles = function() {
+		var addStylesNode = document.getElementById("deferred-styles");
+		var replacement = document.createElement("div");
+		replacement.innerHTML = addStylesNode.textContent;
+		document.body.appendChild(replacement)
+		addStylesNode.parentElement.removeChild(addStylesNode);
+	};
+	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+	if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+	else window.addEventListener('load', loadDeferredStyles);
+	
 	$('#download_form').submit(function(e) {
 		e.preventDefault();
 		$('#error_download_name').addClass("hidden");
@@ -250,3 +215,4 @@
 	})
 	</script>
 </body>
+</html>

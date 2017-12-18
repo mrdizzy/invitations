@@ -172,110 +172,102 @@ var options = {
   }
 }
 %>
-
-<head>
-	<title>Casamiento: personalised wedding invitations with beautifully customised envelopes: <%= product.clean_name %></title>
-
-
-	<script>
-		var caz_options = <%- JSON.stringify(options) %>
-	</script>
-<!-- Global site tag (gtag.js) - Google AdWords: 955776693 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-955776693"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-955776693');
-</script>
+<html>
+	<head>
+		<title><%= product.clean_name %> wedding invitations</title>
 
 
-
-<!-- Event snippet for Free sample box request conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-955776693/Pn9oCPXQ9G4Qtf3fxwM',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/javascripts/cloudzoom/cloudzoom.css" />
-	<script src="/javascripts/cloudzoom/cloudzoom2.js"></script>
-	<script src="/javascripts/jquery.slides.min.js"></script>
-	
-		<script src="/javascripts/isInViewport.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <!--
 	<script src="/javascripts/items_cost.js"></script>
 	<script src="/javascripts/product.js"></script> -->
-	<%- include("../partials/script_send_sample") %>
-	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
-	<meta name="description"							content="Casamiento: Personalised wedding invitations: <%= product.clean_name %>" />
-	<meta name="viewport" 								content="initial-scale=1,user-scalable=no">
-	<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
-	<meta property="og:type"               content="product" />
-	<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
-	<meta property="og:description"        content="<%= product.description %>" />
-	<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
-
-	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Junge|Playfair+Display+SC|Playfair+Display:400i|Raleway:300,300i,500" rel="stylesheet">
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css">
-	<link rel="stylesheet" href="/stylesheets/forms.css" type="text/css" />
-	<link rel="stylesheet" href="/stylesheets/top_nav.css" type="text/css" />
-
-</head>
+	
+		<meta name="description"							content=" <%= product.clean_name %> wedding invitations" />
+		<meta name="viewport" 								content="initial-scale=1,user-scalable=no">
+		<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
+		<meta property="og:type"               content="product" />
+		<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
+		<meta property="og:description"        content="<%= product.description %>" />
+		<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
+	
+		<style>
+			<%- include("../partials/css_main") %>
+			<%- include("../partials/css_fonts") %>
+			<%- include("../partials/css_widths_margins_padding") %>
+		</style>
+	</head>
 
 <body>
 
-
-<%- include(".././partials/script_noscript_gtm") %>
 <%- include("../partials/navigation/header") %>
 
-	<div class="width_70 centred tablet_full_width phablet_full_width mobile_full_width">
-		<% if(product.existing_images.length > 1 ) { %>
-		<img id="slides_spinner" src="/images/furniture/360.gif" class="centred w80px padding_top_xlarge" />
-		<% } %>
-		<div id="slides" class="mobile_full_width">
-		<% product.existing_images.forEach(function(image) { %>
-			<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" sizes="(max-width: 600px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw,70vw" srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, /images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w,  /images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" class="cloudzoom" data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
-		<% }) %>
-		<% if (product.existing_images.length > 1 ) { %>
-      <a href="#" class="slidesjs-previous slidesjs-navigation">
-      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
-      </a>
-      
-      <a href="#" class="slidesjs-next slidesjs-navigation">
-      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
-      </a>
-		</div>
-<% } %>
-		<div class="left sans font_g" style="padding-top:3px;position:relative;padding-right:5px;z-index:99999;margin-top:-70px;padding-bottom:5px;border-top-right-radius:5px;background-color:white;"><img src="/images/furniture/zoom/001-interface.svg" class="inline w12px opacity6" style="padding-left:2px"> Click image to zoom</div>
+	<div class="width_66 clear centred tablet_full_width phablet_full_width mob_full_width">
+		<div id="slides">
+			<% product.existing_images.forEach(function(image) { %>
+				<img src="/images/invitations/<%= product.name %>/<%= image %>_1300.jpg" 
+				sizes="(max-width: 600px) 100vw, 
+							(max-width: 800px) 100vw, 
+							(max-width: 1200px) 100vw,70vw" 
+							srcset="/images/invitations/<%=product.name %>/<%= image %>_2000.jpg 2000w, 
+							/images/invitations/<%= product.name %>/<%= image %>_1300.jpg 1300w, 
+							/images/invitations/<%= product.name %>/<%= image %>_1000.jpg 1000w, 
+							/images/invitations/<%= product.name %>/<%= image %>_1500.jpg 1500w, 
+							/images/invitations/<%= product.name %>/<%= image %>_800.jpg 800w" 
+							class="cloudzoom" 
+							data-cloudzoom="zoomImage: '/images/invitations/<%=product.name %>/<%= image %>_2000.jpg', zoomPosition: 'inside', zoomOffsetX: 0" />
+			<% }) %>
 		
-<!-- Share icons -->
+			<% if (product.existing_images.length > 1 ) { %>
+		      <a href="#" class="slidesjs-previous slidesjs-navigation">
+		      	<img src="/images/left-chevron.svg" class="element_hover padding_top_medium w50px inline">
+		      </a>
+		      
+		      <a href="#" class="slidesjs-next slidesjs-navigation">
+		      	<img src="/images/right-chevron.svg" class="element_hover padding_top_small w50px inline">
+		      </a>
+		<% } %>
 
-			<a class="right element_hover w35px padding_3px block"  href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=<%= product.clean_name %>&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg">
-				<img src="/images/social_media_buttons/002-facebook.svg"  />
+		</div>
+		
+		<div class="left clear_mobile bring_to_front" style="padding-top:3px;position:relative;padding-right:5px;margin-top:-70px;padding-bottom:5px;border-top-right-radius:5px;">
+			<img src="/images/furniture/zoom/001-interface.svg" class="inline w12px" style="padding-left:2px"> 
+			Click image to zoom
+		</div>
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+			<a class="right element_hover w30px block"  
+				href="http://www.facebook.com/sharer/sharer.php?u=http://www.casamiento.co.uk/products/<%= product.name %>&title=<%= product.clean_name %>&image=http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg">
+					<img src="/images/social_media_buttons/002-facebook.svg"  />
 			</a>
 
-			<a  class="right element_hover w35px padding_3px vlock" href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg" data-pin-description="<%= product.description %>" data-pin-custom="true">
-		    <img src="/images/social_media_buttons/001-pinterest.svg" />
+			<a  class="right element_hover w30px block" 
+				href="https://www.pinterest.com/pin/create/button/" 
+				data-pin-do="buttonPin" 
+				data-pin-media="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/collage_2000.jpg" 
+				data-pin-description="<%= product.description %>" 
+				data-pin-custom="true">
+		  			 <img src="/images/social_media_buttons/001-pinterest.svg" />
 			</a>
 
-		<img src="/images/social_media_buttons/share-symbol.svg" id="share_icon" style="margin-top:9px;display:inline-block;vertical-align:middle;" class="w15px right" />
+			<img src="/images/social_media_buttons/share-symbol.svg" 
+				id="share_icon" 
+				style="margin-top:9px;display:inline-block;vertical-align:middle;"
+				class="w20px right" />
 
 
 
@@ -284,295 +276,226 @@ function gtag_report_conversion(url) {
 
 
 
-
-
-
-
-<!-- headline and description -->
-
-
-		<h1 class="clear letter-spaced serif_headline centred font_a mob_font_a width_90 mobile_width_95 padding_bottom_small"><%= product.clean_name %></h1>
-<% if (product.description) { %>
-		<h2 class="sans_subhead padding_bottom_medium padding_top_medium large_line_spacing centred width_80 mobile_width_95 font_e"><%= product.description %></h2>
-
-		<h2 class="sans_subhead padding_bottom_large large_line_spacing centred width_80 mobile_width_95 font_ee"><%= product["description2"] %></h2>
-<% } %>
-		<h2 class="sans_subhead padding_bottom_medium  padding_top_medium large_line_spacing centred width_80 mobile_width_95 font_e">Starting from 99p per invitation</h2>
+			
+			
+			
+			
+			<h1 class="clear letter-spaced cinzel centred font_vlarge width_90 mob_width_95 padding_bottom_small">
+				<%= product.clean_name %>
+			</h1>
+			
+			<% if (product.description) { %>
+				<h2 class="junge padding_bottom_medium padding_top_medium double_line_spacing centred width_80 mob_width_95 font_big">
+					<%= product.description %>
+				</h2>
+			
+				<h2 class="junge padding_bottom_large double_line_spacing centred width_80 mob_width_95 font_medium">
+					<%= product["description2"] %>
+				</h2>
+			<% } %>
+			<h2 class="junge padding_bottom_medium  padding_top_medium double_line_spacing centred width_80 mob_width_95 font_big">
+				Starting from 99p per invitation
+			</h2>
 
 	
 
 
 
-<div id="sample_container" class="margin_top_medium">
-<% if (product.video) { %>
-
-<div class=" padding_top_large clear"></div>
-	<div class="top_dotted width_80  centred"></div>
-		<img src="/images/furniture/shell.svg" class="shell" />
-
-	<img src="/images/product/001-video.svg" class="w40px padding_top_large padding_bottom_medium" />
-
-	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Watch the video&hellip;</h2>
-
-
-<!-- VIDEO--------------------------------------------
---------------------------------------------------------
---------------------------------------------------------->
-
-	<div class="video margin_top_large">
-		<video muted preload loop autoplay playsinline src="/images/invitations/<%=product.name%>/" class="mobile_no_rounded mobile_full_width phablet_width_70 tablet_width_70 width_60 centred" >
-			<source id="first_video_source" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</div>
-<% } %>
-<div class=" padding_top_large clear"></div>
-		<div class="top_dotted width_80 top_medium centred"></div>
-		<img src="/images/furniture/shell.svg" class="shell" />
-
-
-
-
-
-
-<!-- SAMPLE ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-
-<div id="sample_container" class="margin_top_large">
-
-	<img src="/images/homepage/icons/sample.svg" class="w40px padding_top_medium padding_bottom_medium" />
-
-	<h2 class="sans_subhead margin_top_small margin_bottom_small width_66 font_c average_line_spacing centred">Get your sample box now&hellip;</h2>
-
-	<p class="width_66 centred font_ee average_line_spacing sans">&hellip;Get a sample of this stunning invitation suite posted to you today,
-
-	<% if (sample == 0.99) { %>
-
-	for just <span style="text-decoration: line-through;">£7.99</span> 99p.
-
-	<% } else if (sample) { %>
-
-	for just <span style="text-decoration: line-through;">£7.99</span> &pound;<%= sample %>.
-
-	<% } else { %>
-
-	normally worth &pound7.99, completely free for a limited time only&hellip;
-
+<div class="margin_top_medium">
+	
+	<% if (product.video) { %>
+	
+		<svg viewBox="0 0 38.148 38.148" class="w40px padding_top_large padding_bottom_medium">
+			<path d="M38.148,19.12v12.363c0,1.006-0.815,1.823-1.823,1.823h-3.951c-0.267,0-0.528-0.059-0.771-0.172l-3.182-1.479v2.006
+				c0,1.008-0.816,1.824-1.824,1.824H1.823C0.815,35.485,0,34.668,0,33.661V16.943c0-1.008,0.815-1.824,1.823-1.824h24.774
+				c1.008,0,1.824,0.816,1.824,1.824v2.006l3.182-1.482c0.24-0.113,0.504-0.17,0.771-0.17h3.951
+				C37.333,17.296,38.148,18.113,38.148,19.12z M20.864,13.527c2.993,0,5.429-2.436,5.429-5.43s-2.436-5.433-5.429-5.433
+				c-2.995,0-5.433,2.438-5.433,5.433S17.869,13.527,20.864,13.527z M6.418,13.527c2.994,0,5.43-2.436,5.43-5.43
+				s-2.436-5.433-5.43-5.433c-2.994,0-5.433,2.438-5.433,5.433S3.424,13.527,6.418,13.527z"/>
+		</svg>
+	
+		<h2 class="junge margin_top_small margin_bottom_small width_66 font_big centred">Watch the video&hellip;</h2>
+		
+		<div class="video margin_top_large">
+			<video muted preload loop autoplay playsinline src="/images/invitations/<%=product.name%>/" class="mob_no_rounded mob_full_width phablet_width_70 tablet_width_70 width_80 centred" >
+				<source id="first_video_source" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
 	<% } %>
-Each carefully crafted box contains the following goodies:</p>
-
-	<img src="/images/product/samplebox.png" class="margin_top_large width_90" style="max-width:350px;" />
-
-
-
-	<%- include('.././partials/html_flexbox_benefits') %>
-
-
-
-	<p  class="font_e subhead width_66 margin_top_medium margin_bottom_medium">
-		Get your sample suite containing all these beautiful items
-
-		<% if (sample == 0.99) { %>
-
-		for only 99p: just click the PayPal button now&hellip;
-
-
-    <%- include("./../partials/html_paypal_button", { chosen_sample: product.clean_name}) %>
-
-		<% } else if(sample) { %>
-
-		for only £<%= sample %>: just click the PayPal button now&hellip;
-
-
-    <%- include("./../partials/html_paypal_button", { chosen_sample:product.clean_name}) %>
-
-		<% } else { %>
-
-		completely free today:
-
-    <%- include("./../partials/html_sample_form", {bullets: [1,2], chosen_sample: product.clean_name}) %>
-		<% } %>
-	</p>
-
-
-</div>
-
-
-
-<div class="width_80 margin_top_xlarge margin_bottom_xlarge centred">
-
-<%- include("./../partials/html_chloe_testimonial") %>
-
-</div>
+	
 
 
 
 
+	<div class="clear top_dotted margin_top_large"></div>
+
+	<svg viewBox="-0.33 -0.18 18 13" class="shell bgwhite">
+
+		<path d="M15.6,3.33c0,0.09-0.12,0.49-0.12,0.58c0,0.12,0.1,0.21,0.35,0.23c0.33,0.03,0.94,0.4,0.94,1.05
+	c0,0.4-0.11,0.68-0.19,0.84c-0.05,0.07-0.07,0.14-0.07,0.19c0,0.07,0.04,0.14,0.09,0.21c0.16,0.19,0.61,0.51,0.61,1.22
+	c0,0.73-0.86,1.45-0.86,1.69c0,0.31,0.26,0.23,0.26,0.57c0,0.91-1.95,2.25-4.14,2.25c-2.27,0-3.02-0.82-3.25-1.06
+	c-0.16-0.19-0.37-0.28-0.58-0.28s-0.42,0.07-0.61,0.24c-0.3,0.24-1.94,1.1-3.18,1.1c-3.04,0-4.82-1.92-4.82-2.56
+	c0-0.4,0.42-0.31,0.42-0.66C0.47,8.65,0,8.36,0,7.57c0-0.82,0.37-1.13,0.66-1.31c0.09-0.05,0.12-0.1,0.12-0.19
+	c0-0.05-0.04-0.12-0.09-0.19C0.61,5.79,0.44,5.39,0.44,4.97c0-0.7,0.56-0.98,1-1.05C1.73,3.87,1.8,3.73,1.8,3.38
+	c0-1.57,0.84-1.57,1.45-1.57c0.12,0,0.25-0.02,0.37-0.07c0.35-0.17,0.37-0.52,0.5-0.73C4.35,0.7,4.75,0.4,5.38,0.4
+	c0.49,0,0.85,0.23,1.15,0.42c0.1,0.07,0.19,0.1,0.3,0.1s0.21-0.05,0.3-0.16C7.35,0.49,7.78,0,8.67,0c0.94,0,1.28,0.38,1.55,0.77
+	c0.1,0.16,0.24,0.21,0.37,0.21c0.1,0,0.19-0.03,0.26-0.09c0.19-0.16,0.58-0.42,1.12-0.42c0.71,0,1.2,0.54,1.34,1.12
+	c0.04,0.16,0.17,0.24,0.33,0.24C14.83,1.73,15.6,2.55,15.6,3.33z M13.49,8.92c-0.52,0.33-1.05,0.68-1.05,0.73
+	c0,0.1,0.21,0.16,0.35,0.16c2.18,0,3.63-1.4,3.63-2.02c0-0.25-0.24-0.47-0.52-0.47c-0.21,0-0.45,0.12-0.73,0.35
+	C14.75,8.04,14,8.58,13.49,8.92z M13.65,6.95c0,0.19,0.09,0.56,0.4,0.56c0.66,0,1.97-1.36,1.97-2.15c0-0.4-0.38-0.52-0.63-0.52
+	c-0.23,0-0.49,0.1-0.71,0.33C14.13,5.74,13.65,6.28,13.65,6.95z M10.96,8.39c-0.12,0.05-0.19,0.19-0.19,0.31
+	c0,0.3,0.4,0.45,0.73,0.45c0.47,0,1.38-0.42,1.36-1.46c-0.02-1-0.65-1.48-1.62-1.48S9.09,6.98,9.09,8.6c0,2.76,3.02,2.86,3.28,2.86
+	c2.18,0,3.33-1.2,3.33-1.4c0-0.12-0.12-0.23-0.26-0.23c-0.05,0-0.11,0-0.16,0.03c-1.22,0.8-2.32,0.8-2.88,0.8
+	c-0.07,0-2.57-0.07-2.57-2.06c0-0.84,0.77-1.5,1.55-1.5c0.38,0,0.68,0.11,0.68,0.54c0,0.4-0.35,0.52-0.52,0.59
+	C11.34,8.34,11.17,8.32,10.96,8.39z M12.48,5.15c0,0.61,0.5,0.68,0.63,0.68c0.72,0,1.8-1.95,1.8-2.5c0-0.54-0.66-0.79-0.94-0.79
+	c-0.21,0-0.4,0.07-0.58,0.28C13.03,3.19,12.48,4.73,12.48,5.15z M10.19,4.85c0,0.33,0.04,0.68,0.42,0.68c1.33,0,2.07-3.3,2.07-3.47
+	c0-0.45-0.31-0.77-0.8-0.77c-0.38,0-0.7,0.28-0.89,0.58C10.5,2.62,10.19,3.96,10.19,4.85z M8.67,0.82c-0.79,0-1.15,0.94-1.15,1.67
+	c0,1.19,0.49,3.96,1.13,3.96c0.82,0,1.19-3.28,1.19-3.94c0-0.19-0.02-0.37-0.05-0.49C9.67,1.55,9.34,0.82,8.67,0.82z M1.15,9.53
+	c-0.12,0-0.21,0.09-0.21,0.19c0,0.31,1.97,1.67,3.99,1.67c0.49,0,3.28-0.37,3.28-2.81c0-1.43-0.85-2.32-2.02-2.32
+	c-0.98,0-1.87,0.63-1.87,1.47c0,0.94,0.75,1.36,1.26,1.36c0.33,0,0.85-0.19,0.85-0.49c0-0.12-0.03-0.26-0.19-0.26
+	c-0.09,0-0.35,0.18-0.42,0.18c-0.12,0-0.59-0.16-0.59-0.58c0-0.24,0.28-0.77,0.96-0.77c0.24,0,1.15,0.17,1.15,1.17
+	c0,1.73-1.69,2.3-2.48,2.3c-0.58,0-1.33-0.09-1.94-0.31c-0.56-0.21-1.36-0.65-1.66-0.77C1.24,9.53,1.19,9.53,1.15,9.53z M6.74,5.43
+	c0.23,0,0.42-0.12,0.42-0.38c0-0.11-0.19-3.84-1.69-3.84c-0.07,0-0.8,0.07-0.8,0.87C4.66,2.74,5.71,5.43,6.74,5.43z M2.57,3.31
+	c0,0.91,1.24,2.56,1.9,2.56c0.26,0,0.66-0.26,0.66-0.59c0-0.1-0.63-1.34-0.68-1.45C3.93,2.79,3.8,2.55,3.16,2.55
+	c-0.09,0-0.17,0.02-0.24,0.05C2.69,2.74,2.57,2.95,2.57,3.31z M1.12,7.1c-0.29,0-0.49,0.4-0.49,0.65c0,1.24,3.04,2.04,3.8,2.04
+	c0.14,0,0.23-0.05,0.23-0.12c0-0.07-0.7-0.56-0.91-0.68C3.37,8.72,1.62,7.1,1.12,7.1z M1.75,4.52c-0.46,0-0.58,0.44-0.58,0.73
+	c0,0.75,1.17,2.04,1.99,2.04c0.37,0,0.63-0.32,0.63-0.59c0-0.3-1.27-1.92-1.45-2.02C2.18,4.59,1.95,4.52,1.75,4.52z"/>
+	</svg>
+			<br/>
 
 
-</div>
 
+		<img src="/images/homepage/icons/sample.svg" class="w40px padding_top_large padding_bottom_medium" />
 
+		<h2 class="junge width_66 font_large centred mob_width_95">Get your FREE sample box now&hellip;</h2>
 
-<!-- STEPS -->
+		<p class="width_66 centred mob_width_95">Get a sample of this stunning wedding invitation suite posted to you today, normally worth &pound7.99, completely free for a limited time only&hellip;
 
-
-
-
-<!--
-<div>
-
-	<img src="/images/furniture/007-commerce.svg" style="width:50px;padding:1em;padding-top:2em;padding-bottom:0.25em;" />
-
-	<h2 class="sans_subhead width_66 font_c average_line_spacing centred text_center">Place your order today&hellip;</h2>
-
-	<p class="width_66 centred font_ee small_line_spacing sans">&hellip;we require only a 10% deposit to start working on your stationery</p>
-
-</div>
-
-
-
-		<div id="steps" class="full_width mobile_full_width phablet_full_width tablet_full_width centred margin_bottom_xlarge">
+			Each carefully crafted box contains the following goodies:
+		</p>
 
 
 
 
-<% include("options", { options:options}) %>
-<% include("show_quantities")%>
 
-				<button type="submit" class="clear pure-button pure-button-primary margin_top_medium margin_bottom_medium">Place order now<br/>
-				<img src="/images/furniture/bag.svg" class="padding_top_small" style="width:55px;" /></button>
-
+		<%- include('.././partials/html_flexbox_benefits') %>
+	
+	
+	
+	
+	
+	
+		<p  class="width_66 centred junge font_big padding_top_large padding_bottom_medium mob_width_95">
+			Get your sample of this wedding invitation suite containing all these beautiful items
+	
+	
+				completely free today:
+				<div class="width_66 centred mob_full_width">
+				<%- include("./../partials/html_sample_form", {bullets: [1,2], chosen_sample: product.clean_name}) %>
 				</div>
+			
+		</p>
 
 
--->
+	</div>
+
+	<div class="width_66 centred mob_width_80">
+		<%- include("./../partials/html_chloe_testimonial") %>
+	</div>
+
+
+
+
+</div>
 
 
 <%- include(".././partials/navigation/footer") %>
-<% if(product.existing_images.length > 1) { %>
+
+
+
+
+
+
+
+
+<noscript id="deferred-styles">
+	<link href="http://fonts.googleapis.com/css?family=Junge|Cinzel|Raleway:300,300i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/javascripts/cloudzoom/cloudzoom.css" />
+</noscript>
+
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 <script>
-		$(function() {
-			$("#slides").slidesjs({
-				width: 2000,
-				height: 1409,effect: {
-					fade: {
-        speed: 600,
-          // [number] Speed in milliseconds of the fade animation.
-        crossfade: true
-          // [boolean] Cross-fade the transition.
-					}
-				},
-				pagination: {
-					active: false
-				},			
-			navigation: {
-				active:false,
-				effect: "fade"
-			},
-				play: {
-					active: true, // shows the play/pause buttons, we hide these but we need them on the page so that the cloudzoom callback functions can stop and start the slideshow when zooming in/out
-					auto: true,
-					interval: 2500,
-					restartDelay: 2500,
-					pauseOnHover: true
-				},
-				callback: {
-					loaded: function(n) {
-						$('#slides_spinner').hide();
-            CloudZoom.quickStart();
-					}
-				}
-			})
-			var slidesTimeout;
-			$('#slides img').bind('cloudzoom_start_zoom', function() {
-				clearTimeout(slidesTimeout)
-				$('.slidesjs-stop').click();
-			})
-			$('#slides img').bind('cloudzoom_end_zoom', function() {
-				slidesTimeout = setTimeout(function() {
-			
-					$('.slidesjs-play').click();
-			
-				}, 2500)
-			});
+
+	var loadDeferredStyles = function() {
+		var addStylesNode = document.getElementById("deferred-styles");
+		var replacement = document.createElement("div");
+		replacement.innerHTML = addStylesNode.textContent;
+		document.body.appendChild(replacement)
+		addStylesNode.parentElement.removeChild(addStylesNode);
+	};
+	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+	if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+	else window.addEventListener('load', loadDeferredStyles);
 	
-})
-
-	</script>
-	<%} %>
-<script>
-	$(function() {
+	var tag = document.createElement("script");
+	tag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
 
 
-		// Javascript for playing responsive video
-		var videoView = Backbone.View.extend({
-			isMobile: function() {
-				if($('body').width() < 1200) {
-					return "mobile"
-				}
-			},
-			initialize: function() {
+	<% if(product.existing_images.length > 1) { %>
+		var tag = document.createElement("script");
+		tag.src = "/javascripts/jquery.slides.min.js";
+		tag.async = false
+		document.getElementsByTagName("footer")[0].appendChild(tag);
+	
+		var tag = document.createElement("script");
+		tag.src = "/javascripts/product_slideshow.js";
+		tag.async = false
+		document.getElementsByTagName("footer")[0].appendChild(tag);
+	<% } %>
 
-				var that = this;
+	var tag = document.createElement("script");
+	tag.src = "/javascripts/cloudzoom/cloudzoom2.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
 
-				this.render();
-				this.$video = this.$('video');
-				this.dom_video = this.$('video')[0];
+	var tag = document.createElement("script");
+	tag.src = "/javascripts/isInViewport.min.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
 
-				this.$video.on("playing", function(e) {
-        			 that.$el.trigger('playing');
-				})
-				this.$video.on("pause", function(e) {
-        			 that.$el.trigger('pause');
-				})
+	var tag = document.createElement("script");
+	tag.src = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
 
-				$(window).scroll(function() {
-			    	if (that.$video.is(":in-viewport") && that.dom_video.paused) {
-						that.dom_video.play();
-			    } else if (!that.$video.is(":in-viewport") && !that.dom_video.paused) {
-			    	that.dom_video.pause();
-			    }
-			})
+	var tag = document.createElement("script");
+	tag.src = "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
 
-			},
-			events: {
-				"click .video_play": "playVideo",
-				"click .video_pause": "pauseVideo",
-				"playing": "hidePlay",
-				"pause": "hidePause"
-			},
-			playVideo: function() {
-				this.dom_video.play();
-			},
-			pauseVideo: function() {
-				this.dom_video.pause();
-			},
-			hidePlay: function() {
-				this.$('.video_play').hide();
-				this.$('.video_pause').show();
-			},
-			hidePause: function() {
-				this.$('.video_pause').hide();
-				this.$('.video_play').show();
-			},
-			render: function() {
-				var resolution = "high"
-				if(this.isMobile()) {
-					var resolution = "low"
-				}
-				var video = this.$('video')
-				video.attr("src", video.attr("src") + resolution + ".mp4")
-
-				video.after('<div class="width_50 mobile_width_90 centred"><img src="/images/furniture/play.svg" class="video_play hover_opacity padding_top_small right centred w50px" /><img src="/images/furniture/pause.svg" style="display:none;" class="w50px video_pause hover_opacity right padding_top_small"/></div>')
-				return this
+	var tag = document.createElement("script");
+	tag.src = "/javascripts/slideshow.js";
+	tag.async = false
+	document.getElementsByTagName("footer")[0].appendChild(tag);
+	
+	// Event snippet for Free sample box request conversion page
+	// In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+	function gtag_report_conversion(url) {
+		var callback = function() {
+			if (typeof(url) != 'undefined') {
+				window.location = url;
 			}
-		})
-				$('.video').each(function() {
-				 var	vv = new videoView({el:this})
-			    })
-	})
+		};
+		gtag('event', 'conversion', {
+			'send_to': 'AW-955776693/Pn9oCPXQ9G4Qtf3fxwM',
+			'event_callback': callback
+		});
+		return false;
+	}
 </script>
-
 
 </html>
