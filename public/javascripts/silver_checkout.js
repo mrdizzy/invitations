@@ -50,6 +50,12 @@ $(function() {
 	})
 	$('#checkout').click(function() {
 		$('#form_sample_spinner').show()
-		$('#post_text').hide()
+		$('#post_text').hide();
+		fbq('track', 'InitiateCheckout');
+	})
+	$('#sample_checkout').click(function() {
+		$('#sample_form_sample_spinner').show()
+		$('#sample_post_text').hide();
+		fbq('track', 'InitiateCheckout');
 	})
 })
