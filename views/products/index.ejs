@@ -28,11 +28,7 @@
 			<% products.forEach(function(group) { %>
 
 				<% if (counter == 1) { %>
-<!--
-
-<%- include(".././partials/download_ebook_form") %>
-					
-					-->
+				
 					<% } %>
 
 
@@ -41,10 +37,10 @@
 <div class="left width_60 padding_top_large mob_padding_top_small mob_clear phablet_clear mob_full_width phablet_width_80">
 
 	<h1 class="font_large letter-spaced text_center cinzel padding_bottom_small">
-		<a href="/products/<%= group[0].name %>"><%= group[0].clean_name %></a>
+		<a href="/wedding-invitations/<%= group[0].name %>"><%= group[0].clean_name %></a>
 	</h1>
 
-	<a href="/products/<%= group[0].name %>">
+	<a href="/wedding-invitations/<%= group[0].name %>">
 
 		<img src="/images/invitations/<%= group[0].name %>/collage_800.jpg" 
 			sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 
@@ -76,12 +72,12 @@
 <% if (group[1]) { %>
 	<div class="width_40 right mob_full_width phablet_clear phablet_centred phablet_width_80 mob_clear">
 		<h1 class="cinzel font_large padding_bottom_small letter-spaced text_center product_name">
-			<a href="/products/<%= group[1].name %>">
+			<a href="/wedding-invitations/<%= group[1].name %>">
 				<%= group[1].clean_name %>
 			</a>
 		</h1>
 
-		<a href="/products/<%= group[1].name %>">
+		<a href="/wedding-invitations/<%= group[1].name %>">
 
 				<img src="/images/invitations/<%= group[1].name %>/collage_800.jpg" 
 				sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 
@@ -120,12 +116,12 @@
 			<% if (group[2]) { %>
 				<div class="centred clear width_66 phablet_width_80 mob_full_width">
 					<h1 class="cinzel font_large padding_bottom_small  letter-spaced">
-						<a href="/products/<%= group[2].name %>" class="hover_2_underline_dotted">
+						<a href="/wedding-invitations/<%= group[2].name %>" class="hover_2_underline_dotted">
 							<%= group[2].clean_name %>
 						<a>
 					</h1>
 
-					<a href="/products/<%= group[2].name %>">
+					<a href="/wedding-invitations/<%= group[2].name %>">
 						
 						<img src="/images/invitations/<%= group[2].name %>/collage_800.jpg" 
 						sizes="(max-width: 600px) 95vw, max-width(800px) 80vw, 60vw" 

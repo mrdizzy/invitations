@@ -32,6 +32,9 @@ $("#sample_slides").slidesjs({
 		interval: 3000,
 		effect: "fade",
 	},
+		loaded: function() {
+			$('#loading_slide').hide();
+		},
 	callback: {
 		loaded: function() {
 			$('#loading_slide').hide();
@@ -112,6 +115,8 @@ $(function() {
 						$('#form_sample_spinner').hide();
 						$('#post_text').hide();
 						$('#form_check').show();
+							$('#thank_you_text').show();
+						$('#get_sample').attr('disabled','disabled');
 					}
 				});
 			}

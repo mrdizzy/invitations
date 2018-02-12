@@ -1,18 +1,26 @@
 .right { float:right }
 .left {float: left }
+.both { float:none;clear:both; }
+#checkout { background-color:#AE0023 }
+#checkout:hover{ background-color: #7A001D }
 
 .w12px { width:12px }
+.w15px { width:15px }
 .w20px { width: 20px }
 .w25px { width: 25px }
 .w30px { width: 30px }
+.w35px { width: 35px }
 .w40px { width: 40px }
 .w50px { width: 50px }
 .w60px { width: 60px }
+.w80px { width:80px }
+.w200px {width:200px }
 .width_30 { width:30% }
 .width_40 {	width: 40%}
 .width_50 {	width: 50%	}	
 .width_60 {width: 60% }
 .width_66 {	width: 66%	}
+.width_70 { width:70%; }
 .width_80 {	width: 80% }
 .width_90 { width:90% }
 
@@ -39,7 +47,7 @@
 .top_dotted { border-top: 1px dotted #000 }
 .bottom_dotted { border-bottom: 1px dotted #000 }
 .top_solid { border-top: 1px solid #000 }
-
+.bottom_solid { border-bottom: 1px solid #000 }
 @media all and (min-width: 800px) and (max-width: 1200px) {
 	/* ----------------------------------------------------------------------------- */
 
@@ -54,13 +62,13 @@
 	.tablet_no_margin { margin: 0; }
 	.tablet_clear {	clear: both; }
 	
-	.tablet_width_40 { width: 40%; }
-	.tablet_width_50 { width: 50%; }
-	.tablet_width_60 { width: 60%; }
-	.tablet_width_66 { width: 66%; }
-	.tablet_width_70 { width: 70%; }
-	.tablet_width_80 { width: 80%; }
-	.tablet_width_90 { width: 90%; }
+	.tablet_width_40 { width: 40% }
+	.tablet_width_50 { width: 50% }
+	.tablet_width_60 { width: 60% }
+	.tablet_width_66 { width: 66% }
+	.tablet_width_70 { width: 70% }
+	.tablet_width_80 { width: 80% }
+	.tablet_width_90 { width: 90% }
 }
 /* Phablet */
 
@@ -68,7 +76,8 @@
 	/* ----------------------------------------------------------------------------- */
 	.phablet_no_rounded { border-radius: 0; }
 	.phablet_no_margin { margin: 0 auto; }
-	.phablet_clear { clear: both; }
+	.phablet_clear { clear: both; margin:0 auto; }
+	.phablet_centred { margin:0 auto; }
 
 	.no_padding_phablet { padding: 0; }
 
@@ -77,14 +86,15 @@
 		float: none;
 		margin: 0 auto;
 	}
-	.phablet_width_40 { width: 40%; }
-	.phablet_width_50 {	width: 50%;	}
-	.phablet_width_60 {	width: 60%;	}
-	.phablet_width_66 {	width: 66%;	}
-	.phablet_width_70 { width: 70%;	}
-	.phablet_width_80 {	width: 80%;	}
-	.phablet_width_90 {	width: 90%;	}
-	.phablet_width_95 {	width: 95%;	}
+	.phablet_text_center { text-align:center; }
+	.phablet_width_40 { width: 40% }
+	.phablet_width_50 {	width: 50%	}
+	.phablet_width_60 {	width: 60%	}
+	.phablet_width_66 {	width: 66%	}
+	.phablet_width_70 { width: 70%	}
+	.phablet_width_80 {	width: 80%	}
+	.phablet_width_90 {	width: 90%	}
+	.phablet_width_95 {	width: 95%	}
 }
 @media all and (min-width: 100px) and (max-width: 600px) {
 	#casamiento_logo {
@@ -136,5 +146,6 @@
 	.mob_no_padding { padding:0 }
 	.mob_no_rounded { border-radius: 0	}
 	.mob_clear { clear:both }
+	.mob_text_center { text-align:center; }
 
 }

@@ -1,3 +1,4 @@
+
 .slant { font-style: italic }
 
 a {
@@ -5,12 +6,13 @@ a {
 	color: #000;
 }
 
-p {
+p,ul {
 	line-height: 1.5em;
 	font-size: 1.4em;
 	text-align: left;
 	padding-top: 2em;
 }
+li { margin-left:2em;  list-style-type: disc; }
 
 .line_1-5 {	line-height: 1.5em }
 .letter-spaced { letter-spacing: 0.1em }
@@ -20,11 +22,15 @@ p {
 .junge { font-family: Junge, sans-serif }
 
 .font_vlarge {	font-size:4em }
+.font_xlarge { font-size:3em; }
 .font_large { font-size: 2.4em }
+.font_bigger { font-size:2.2em; }
 .font_big { font-size: 1.8em }
 .font_medium { font-size: 1.5em }
 .font_normal { font-size: 1.3em }
+.font_small { font-size:1.1em; }
 
+.tight_line_spacing { line-height:1.2em; }
 .triple_line_spacing { line-height: 3em }
 .double_line_spacing { line-height: 2em}
 
@@ -36,7 +42,10 @@ p {
 @media all and (min-width: 600px) and (max-width: 800px) {
 	/* ----------------------------------------------------------------------------- */
 		.font_vlarge {	font-size:2.4em }
+		
+.font_xlarge { font-size:1.8em; }
 	.font_large { font-size: 1.6em	}
+	.font_bigger { font-size: 1.5em }
 	.font_big {	font-size: 1.4em }
 	.font_medium {	font-size: 1.3em }
 	.font_normal { font-size: 1.1em }
@@ -45,7 +54,10 @@ p {
 /*--------------------------------------------------------------------*/
 
 	.font_vlarge {	font-size:2.4em }
+	
+.font_xlarge { font-size:1.8em; }
 	.font_large { font-size: 1.6em	}
+	.font_bigger { font-size:1.5em }
 	.font_big {	font-size: 1.4em }
 	.font_medium {	font-size: 1.3em }
 	.font_normal { font-size: 1.1em }

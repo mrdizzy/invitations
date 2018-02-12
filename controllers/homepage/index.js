@@ -20,6 +20,11 @@ exports.index = function(req, res) {
     });
 }
 
+
+exports.silver = function(req, res) {
+    res.render('silver')
+}
+
 exports.google = function(req, res) {
       
     var cookie = req.cookies.sample_request;
@@ -39,26 +44,6 @@ exports.google = function(req, res) {
     });
 }
 
-
-
-exports.sample = function(req, res) {
-    
-    var cookie = req.cookies.sample_request;
-
-    if ((cookie === undefined) && req.query.sample) {
-        // no: set a new cookie
-        res.cookie('sample_request', req.query.sample / 100, { maxAge: 900000 });
-        cookie = req.query.sample / 100
-    }
-    MongoClient.connect(url, function(err, db) {
-
-        assert.equal(null, err);
-        findProducts(db, function(results) {
-            res.render('sample', { products: results, page: "sample", sample: cookie })
-            db.close();
-        })
-    });
-}
 
 var findProducts = function(db, callback) {
     var results = db.collection('products').find().sort({ "position": -1 }).toArray(function(err, results) {

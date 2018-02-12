@@ -1,27 +1,29 @@
 <!doctype html>
-
 <html>
 	<head>
 		<title><%= product.clean_name %> wedding invitations</title>
 	
-		<meta name="description"							content=" <%= product.clean_name %> wedding invitations" />
-		<meta name="viewport" 								content="initial-scale=1,user-scalable=no">
-		<meta property="og:url"                content="http://www.casamiento.co.uk/products/<%= product.name %>" />
-		<meta property="og:type"               content="product" />
-		<meta property="og:title"              content="<%= product.clean_name %> Wedding Stationery Suite" />
-		<meta property="og:description"        content="<%= product.description %>" />
-		<meta property="og:image"              content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
+		<meta name="description"				content=" <%= product.clean_name %> wedding invitations" />
+		<meta name="viewport" 					content="initial-scale=1,user-scalable=no">
+		<meta property="og:url" 				content="http://www.casamiento.co.uk/products/<%= product.name %>" />
+		<meta property="og:type"            	content="product" />
+		<meta property="og:title"           	content="<%= product.clean_name %> Wedding Stationery Suite" />
+		<meta property="og:description"     	content="<%= product.description %>" />
+		<meta property="og:image"           	content="http://www.casamiento.co.uk/images/invitations/<%= product.name %>/facebook.jpg" />
 	
 		<style>
 			<%- include("../partials/css_main") %>
 			<%- include("../partials/css_fonts") %>
 			<%- include("../partials/css_widths_margins_padding") %>
+			
+.slidesjs-navigation {visibility:hidden; }
+#slides { display:none; }
 		</style>
 	</head>
 
 <body>
 
-<%- include("../partials/navigation/header") %>
+	<%- include("../partials/navigation/header") %>
 
 	<div class="width_66 clear centred tablet_full_width phablet_full_width mob_full_width">
 		<div id="slides">
@@ -51,7 +53,7 @@
 
 		</div>
 		
-		<div class="left clear_mobile bring_to_front" style="padding-top:3px;position:relative;padding-right:5px;margin-top:-70px;padding-bottom:5px;border-top-right-radius:5px;">
+		<div class="left clear_mobile bring_to_front" style="padding-top:3px;position:relative;padding-right:5px;margin-top:-60px;padding-bottom:5px;border-top-right-radius:8px;">
 			<img src="/images/furniture/zoom/001-interface.svg" class="inline w12px" style="padding-left:2px"> 
 			Click image to zoom
 		</div>
@@ -222,7 +224,7 @@
 
 	</div>
 
-	<div class="width_66 centred mob_width_80">
+	<div class="width_66 centred mob_width_95">
 		<%- include("./../partials/html_chloe_testimonial") %>
 	</div>
 
@@ -299,25 +301,7 @@
 	tag.async = false
 	document.getElementsByTagName("footer")[0].appendChild(tag);
 
-	var tag = document.createElement("script");
-	tag.src = "/javascripts/slideshow.js";
-	tag.async = false
-	document.getElementsByTagName("footer")[0].appendChild(tag);
 	
-	// Event snippet for Free sample box request conversion page
-	// In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	function gtag_report_conversion(url) {
-		var callback = function() {
-			if (typeof(url) != 'undefined') {
-				window.location = url;
-			}
-		};
-		gtag('event', 'conversion', {
-			'send_to': 'AW-955776693/Pn9oCPXQ9G4Qtf3fxwM',
-			'event_callback': callback
-		});
-		return false;
-	}
 </script>
 
 </html>

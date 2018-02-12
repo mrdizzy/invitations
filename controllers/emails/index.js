@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://heroku_7jbfrvs8:76hige1vltbholks0vdnmmpdpo@ds031925.mlab.com:31925/heroku_7jbfrvs8';
-/* */
+
 exports.create = function(req, res, next) {
 
 
@@ -57,7 +57,8 @@ exports.create = function(req, res, next) {
                 referer: req.headers.referer,
                 address: req.body.address,
                 postcode: req.body.postcode,
-                sample: req.body.sample
+                sample: req.body.sample,
+                date: new Date().toDateString()
             }, function(err, result) {
                 console.log(err, result)
 

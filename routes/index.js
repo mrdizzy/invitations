@@ -24,13 +24,13 @@ var cache = (duration) => {
 }
 
 /* GET home page. */
-router.get('/', cache(10000), require('./../controllers/homepage').index);
-
+router.get('/', cache(10000), require('./../controllers/homepage').silver);
+router.get('/silver', cache(10000), require('./../controllers/homepage').silver);
 router.get('/google', require('./../controllers/homepage').google);
-router.get('/sample', require('./../controllers/homepage').sample);
+router.get('/wedding-invitation-horror-stories',  function(req,res) {res.render('horror')})
 
 router.post('/emails', require('./../controllers/emails').create);
-router.get('/products', cache(10000), require('./../controllers/products').index)
-router.get('/products/:id', cache(10000), require('./../controllers/products').show)
+router.get('/wedding-invitations', cache(10000), require('./../controllers/products').index)
+router.get('/wedding-invitations/:id', cache(10000), require('./../controllers/products').show)
 
 module.exports = router;

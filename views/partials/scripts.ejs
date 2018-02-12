@@ -1,53 +1,45 @@
 <script>
-	$(function() {
-
-		///////////////////////////////////////////////////////////////////////////////////////////////
-		//
-		// SAMPLE SELECTIOn
-		//
-		////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-$('#slides_next').click(function() {
-	$('#sample_slides .slidesjs-next').click()
-})
-
-
-$('#slides_previous').click(function() {
-	$('#sample_slides .slidesjs-previous').click()
-})
-		var products = <%- JSON.stringify(products)  %>
-
-		$("#sample_slides").slidesjs({
-			width: 1500,
-			height: 1057,
-			navigation: {
-				active:true,
-				effect: "fade"
-			},
-			pagination: {
-				active: false
-			},
-			effect: {
-				fade: {
-					speed: 500,
-					crossfade: false
+$(function() {
+	$('#slides_next').click(function() {
+		$('#sample_slides .slidesjs-next').click()
+	})
+	
+	
+	$('#slides_previous').click(function() {
+		$('#sample_slides .slidesjs-previous').click()
+	})
+			var products = <%- JSON.stringify(products)  %>
+	
+			$("#sample_slides").slidesjs({
+				width: 1500,
+				height: 1057,
+				navigation: {
+					active:true,
+					effect: "fade"
+				},
+				pagination: {
+					active: false
+				},
+				effect: {
+					fade: {
+						speed: 500,
+						crossfade: false
+					}
+				},
+				play: {
+					active: false,
+					auto: true,
+					interval:3000,
+					effect: "fade",
+				},
+				callback: {
+					complete: function(number) {
+						var current_product = products[number - 1];
+						$('#sample_name').html(current_product.clean_name)
+						$('#which_sample').val(current_product.clean_name)
+						$('#paypal_item').val(current_product.clean_name)
+					}
 				}
-			},
-			play: {
-				active: false,
-				auto: true,
-				interval:3000,
-				effect: "fade",
-			},
-			callback: {
-				complete: function(number) {
-					var current_product = products[number - 1];
-					$('#sample_name').html(current_product.clean_name)
-					$('#which_sample').val(current_product.clean_name)
-					$('#paypal_item').val(current_product.clean_name)
-				}
-			}
-		})
+			})
 	})
 </script>
