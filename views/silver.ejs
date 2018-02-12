@@ -17,12 +17,14 @@
 			f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-59HLPVG');
 	</script>
+	
 	<style>
 		<%- include("partials/css_main") %><%- include("partials/css_fonts") %>
 		<%- include("partials/css_widths_margins_padding") %>
 		#checkout { background-color:#AE0023 }
 		#checkout:hover{ background-color: #7A001D }
 	</style>
+	
 	<meta name="viewport" content="initial-scale=1,user-scalable=no">
 </head>
 
@@ -39,6 +41,7 @@
 
 
 		<div class="padding_top_large"></div>
+		
 		<div class="video padding_top_large">
 			<video muted preload loop autoplay playsinline src="/images/silver/frame_" class="rounded_corner_20 mob_no_rounded mob_full_width phablet_width_70 tablet_width_70 width_50 centred">
 			<source id="first_video_source" type="video/mp4">
@@ -95,7 +98,6 @@
 
 			<p class="junge font_bigger padding_top_medium centred">
 				Everyone who sees our hand-foiled, silver metallic photographs reacts with the same mixture of surprise and curiosity:
-
 			</p>
 
 			<p class="junge font_big padding_top_medium centred">
@@ -128,11 +130,8 @@
 
 
 			<div>
-
 				<img src="/images/furniture/007-commerce.svg" class="w50px padding_top_large padding_bottom_medium" />
-
 				<h2 class="average_line_spacing padding_bottom_large">Start placing your order today by following these easy steps&hellip;</h2>
-
 			</div>
 
 			<img src="/images/silver/pointdown.svg" class="w30px padding_bottom_small opacity_4" />
@@ -311,19 +310,20 @@
 				<input type="hidden" name="amount" id="paypal_amount" value="17.94">
 				<input type="hidden" name="currency_code" value="GBP">
 
-
-				<button type="submit" class="junge white font_big center" style="min-width:300px" id="checkout">
-<img src="/images/furniture/bag.svg" class="padding_top_small padding_bottom_small" style="width:55px;" />
-		<span id="post_text">Place order!</span>
-			<svg viewBox="0 9.722 100 80.555" id="form_check" class="hidden padding_top_small padding_bottom_small" style="width:80px;" >
-				<polygon fill="#FFFFFF" points="84.719,9.722 34.719,59.712 15.282,40.282 0,55.563 34.719,90.277 100,25.005 "/>
-			</svg><br/>
-			
-		<span id="thank_you_text" class="hidden">Thank you!</span>
-
-		<img src="/images/furniture/ellipsis.svg" id="form_sample_spinner" class="hidden"/>
+<button type="submit" class="junge white font_big center" style="min-width:300px" id="checkout">
+	<img src="/images/furniture/bag.svg" class="padding_top_small padding_bottom_small w60px" />
+	<span id="post_text">Place order!</span>
 		
-	</button>
+	<svg viewBox="0 9.722 100 80.555" id="form_check" class="hidden padding_top_small padding_bottom_small w80px">
+		<polygon fill="#FFF" points="84.719,9.722 34.719,59.712 15.282,40.282 0,55.563 34.719,90.277 100,25.005 "/>
+	</svg>
+	<br/>
+			
+	<span id="thank_you_text" class="hidden">Thank you!</span>
+
+	<img src="/images/furniture/ellipsis.svg" id="form_sample_spinner" style="margin-top:-3em;margin-bottom:-3em;" class="no_padding hidden"/>
+		
+</button>
 			</form>
 
 
@@ -371,6 +371,11 @@
 				tag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
 				tag.async = false
 				document.getElementsByTagName("footer")[0].appendChild(tag);
+				
+				var tag = document.createElement("script");
+				tag.src = "/javascripts/isInViewport.min.js";
+				tag.async = false
+				document.getElementsByTagName("footer")[0].appendChild(tag);
 
 				var tag = document.createElement("script");
 				tag.src = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js";
@@ -381,7 +386,6 @@
 				tag.src = "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js";
 				tag.async = false
 				document.getElementsByTagName("footer")[0].appendChild(tag);
-
 
 				var tag = document.createElement("script");
 				tag.src = "/javascripts/video.js";
