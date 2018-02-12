@@ -24,6 +24,7 @@ var cache = (duration) => {
 }
 
 /* GET home page. */
+router.get('/home', cache(10000), require('./../controllers/homepage').index);
 router.get('/', cache(10000), require('./../controllers/homepage').silver);
 router.get('/silver', cache(10000), require('./../controllers/homepage').silver);
 router.get('/google', require('./../controllers/homepage').google);
