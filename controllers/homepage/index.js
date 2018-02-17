@@ -25,6 +25,11 @@ exports.silver = function(req, res) {
     res.render('silver')
 }
 
+exports.mother = function(req, res) {
+    res.render('mother')
+}
+
+
 exports.google = function(req, res) {
       
     var cookie = req.cookies.sample_request;

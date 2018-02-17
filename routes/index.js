@@ -27,6 +27,8 @@ var cache = (duration) => {
 router.get('/home', cache(10000), require('./../controllers/homepage').index);
 router.get('/', cache(10000), require('./../controllers/homepage').silver);
 router.get('/silver', cache(10000), require('./../controllers/homepage').silver);
+
+router.get('/mothers-day-gift', cache(10000), require('./../controllers/homepage').mother);
 router.get('/google', require('./../controllers/homepage').google);
 router.get('/wedding-invitation-horror-stories',  function(req,res) {res.render('horror')})
 
