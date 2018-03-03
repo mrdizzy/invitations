@@ -33,7 +33,7 @@ exports.show = function(req, res) {
         findProduct(db, id, function(results) {
             var product = results[0].name
             var path = "public/images/invitations/" + product
-            var images = ["collage", "boxenvelope", "closeup", "info", "envelope", "vellum", "rsvp"];
+            var images = ["collage", "box_envelope_angle", "boxenvelope_invitefront", "flat_angle_ribbon", "wrap", "info", "flat_wording_overhead", "seals", "wraps", "flat_ribbon", "map", "foldout","boxenvelope_overhead", "rsvp", "boxenvelope_tissue", "boxenvelope_vellum"];
             var existing_images = []
             images.forEach(function(img) {
                 if (fs.existsSync(__dirname + "/../../" + path + "/" + img + "_2000.jpg")) {
