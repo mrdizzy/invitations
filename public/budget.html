@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <script>
+        
+            var average_month = 365/12
+            
+            var home_insurance = 68.95 / 365; // 1st Marcg
+            var rent = (221.74*12)/365 // 1st of each month
+            var Three =(14.99*12)/365 // 26th of each month
+            var EON = (28.50*12)/365
+            var water = (29.50* 12)/365 //25th of each month
+            var heating = (22*12)/365 // 15th
+            var aidan_travel = (3.30*52)/365 //Mondays
+            var council_tax = 1297.55 // 1st of Each Month
+            var single_person_discount = (25./100) * 1297.55
+            council_tax = (council_tax - single_person_discount)/365
+            
+            
+            var monthly_costs = ((home_insurance + rent + Three+ EON + water +heating+ aidan_travel + council_tax)*average_month)
+            console.log(monthly_costs)
+            
+            var cutoffs = [17,14,19,16,14,18,15,20,17,15,19];
+            var pay_dates = [26,26,25,26,26,24,26,26,26,21,25];
+            
+            
+            var cutoffs = ["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January"];
+            var today = new Date();
+            
+            var bus_to_work = (3.3*52*3)-(3.3*3*5);
+            bus_to_work = bus_to_work/365;
+            
+            var dayOfMonth = today.getDate();  
+            var month = today.getMonth();
+            var current_pay_date = pay_dates[month-2];
+            if(current_pay_date > dayOfMonth) {
+                var daysLeftBeforePayDay = current_pay_date - dayOfMonth;
+                
+            }
+            
+            console.log("Current pay date", pay_dates[month-2])
+            console.log(dayOfMonth,month)
+            console.log(bus_to_work, home_insurance)
+        </script>
+    </head>
+</html>

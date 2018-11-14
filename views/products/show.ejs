@@ -141,7 +141,7 @@
 		<h2 class="junge margin_top_small margin_bottom_small width_66 font_big centred">Watch the video&hellip;</h2>
 		
 		<div class="video margin_top_large">
-			<video muted preload loop autoplay playsinline src="/images/invitations/<%=product.name%>/" class="mob_no_rounded mob_full_width phablet_width_70 tablet_width_70 width_80 centred" >
+			<video muted preload loop autoplay playsinline src="/images/invitations/<%=product.name%>/" class="mob_no_rounded mob_full_width phablet_width_70 tablet_width_70 width_80 centred rounded_corner_20" >
 				<source id="first_video_source" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -223,7 +223,7 @@
 
 
 	</div>
-
+<%- include("./../products/show_embellishments") %>
 	<div class="width_66 centred mob_width_95">
 		<%- include("./../partials/html_chloe_testimonial") %>
 	</div>
